@@ -67,6 +67,9 @@ function IndexContent() {
   const navigate = useNavigate();
   const [isAdmin, setIsAdmin] = useState(false);
   const [topic, setTopic] = useState("");
+  const [anthropicKey, setAnthropicKey] = useState(() => {
+    try { return localStorage.getItem('anthropic-api-key') || ""; } catch { return ""; }
+  });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [generateProgress, setGenerateProgress] = useState(0);
   const [genLogs, setGenLogs] = useState<string[]>([]);
