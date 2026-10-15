@@ -1133,6 +1133,7 @@ function IndexContent() {
           minNodes,
           maxNodes,
           contextNodes: contextNodes.length > 0 ? contextNodes : undefined,
+          anthropicKey: anthropicKey.trim() || undefined,
         }),
       });
 
@@ -1384,6 +1385,18 @@ function IndexContent() {
                 </SheetHeader>
                 <div className="mt-6 space-y-6">
                   <div className="space-y-2">
+                  <Label htmlFor="anthropicKey1">Anthropic API Key</Label>
+                  <Input
+                    id="anthropicKey1"
+                    type="password"
+                    placeholder="sk-ant-..."
+                    value={anthropicKey}
+                    onChange={(e) => { setAnthropicKey(e.target.value); try { localStorage.setItem('anthropic-api-key', e.target.value); } catch {} }}
+                    autoComplete="off"
+                  />
+                  <p className="text-xs text-muted-foreground">Saved only in this browser. Used for topic generation.</p>
+                </div>
+                <div className="space-y-2">
                     <Label htmlFor="dataFolder">Data Folder Location</Label>
                     <div className="flex gap-2">
                       <Input
@@ -1608,6 +1621,18 @@ function IndexContent() {
                 <SheetTitle>Settings</SheetTitle>
               </SheetHeader>
               <div className="mt-6 space-y-6">
+                <div className="space-y-2">
+                  <Label htmlFor="anthropicKey2">Anthropic API Key</Label>
+                  <Input
+                    id="anthropicKey2"
+                    type="password"
+                    placeholder="sk-ant-..."
+                    value={anthropicKey}
+                    onChange={(e) => { setAnthropicKey(e.target.value); try { localStorage.setItem('anthropic-api-key', e.target.value); } catch {} }}
+                    autoComplete="off"
+                  />
+                  <p className="text-xs text-muted-foreground">Saved only in this browser. Used for topic generation.</p>
+                </div>
                 <div className="space-y-2">
                   <Label htmlFor="dataFolder2">Data Folder Location</Label>
                   <div className="flex gap-2">
