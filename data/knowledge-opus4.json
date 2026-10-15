@@ -1,0 +1,593 @@
+{
+  "seo": {
+    "title": "Space Exploration: Past, Present, Future",
+    "description": "A comprehensive journey through humanity's quest to explore the cosmos",
+    "prose": "Today we embark on an extraordinary journey through time and space, examining humanity's greatest adventure - our relentless pursuit to explore the cosmos. From ancient stargazers to modern Mars rovers, from the Space Race to commercial spaceflight, and from the International Space Station to dreams of interstellar travel, we'll explore how we've reached for the stars, where we stand today, and what incredible futures await us beyond Earth's atmosphere."
+  },
+  "pageTitle": "Space Exploration: Past, Present, Future",
+  "pageDescription": "A Dynamic Tree representation of humanity's journey to the stars",
+  "knowledgeTree": {
+    "node": "The Space Exploration Timeline",
+    "weight": 100,
+    "prose": "Space exploration represents humanity's boldest endeavor - our attempt to transcend our planetary boundaries and understand our place in the universe. This journey spans from ancient astronomical observations to modern Mars missions and beyond. We'll examine three critical eras: our historical foundations that sparked the dream, our present capabilities that are revolutionizing access to space, and the future possibilities that could fundamentally transform human civilization.",
+    "widgets": [
+      {
+        "name": "https://www.youtube.com/watch?v=CbIZU8cQWXc",
+        "title": "Overview Effect",
+        "subtitle": "Why space matters to humanity",
+        "notes": "Astronauts describe how seeing Earth from space transforms perspective on humanity's shared destiny"
+      }
+    ],
+    "children": [
+      {
+        "node": "Past: Foundations of Space Exploration",
+        "weight": 90,
+        "prose": "The story of space exploration begins not with rockets but with human curiosity. From ancient civilizations tracking celestial movements to the fierce competition of the Space Race, our past laid the groundwork for everything that followed. These early achievements, born from rivalry and dreams, proved that humans could break free from Earth's gravity and survive in the hostile environment of space.",
+        "widgets": [
+          {
+            "name": "https://www.youtube.com/watch?v=xvaEvCNZymo",
+            "title": "History of Space Exploration",
+            "subtitle": "From Sputnik to Apollo",
+            "notes": "Comprehensive overview of early space achievements and the geopolitical forces that drove them"
+          }
+        ],
+        "children": [
+          {
+            "node": "Pre-Space Age Foundations",
+            "weight": 40,
+            "prose": "Before we could reach space, we had to dream it and understand it. Ancient astronomers laid the mathematical foundations, while visionary writers and early rocket pioneers imagined the possibilities.",
+            "widgets": [
+              {
+                "name": "/space/galileo_telescope.jpg",
+                "title": "Galileo's Revolution",
+                "subtitle": "First telescopic observations",
+                "notes": "1609: Galileo's telescope revealed moons orbiting Jupiter, proving Earth wasn't the center of everything"
+              },
+              {
+                "name": "https://www.youtube.com/watch?v=YH3c1QZzRK4",
+                "title": "Rocket Pioneers",
+                "subtitle": "Tsiolkovsky to von Braun",
+                "notes": "Early 20th century visionaries who developed the mathematics and engineering for spaceflight"
+              }
+            ]
+          },
+          {
+            "node": "The Space Race Era",
+            "weight": 80,
+            "prose": "The Cold War transformed space exploration from dream to reality. What began as a competition for technological supremacy between superpowers resulted in humanity's greatest achievements, pushing us to accomplish the impossible in less than a decade.",
+            "widgets": [
+              {
+                "name": "https://www.youtube.com/watch?v=cwZb2mqId0A",
+                "title": "Sputnik's Beep",
+                "subtitle": "The sound that started it all",
+                "notes": "October 4, 1957: The simple beep that shocked the world and launched the Space Age"
+              },
+              {
+                "name": "/space/yuri_gagarin.jpg",
+                "title": "First Human in Space",
+                "subtitle": "Yuri Gagarin's 108 minutes",
+                "notes": "April 12, 1961: 'Poyekhali!' (Let's go!) - Gagarin's historic flight proved humans could survive in space"
+              }
+            ],
+            "children": [
+              {
+                "node": "Apollo Program",
+                "weight": 95,
+                "prose": "Apollo represents humanity's most audacious achievement - landing humans on another celestial body. In just 8 years, we went from barely reaching orbit to walking on the Moon, driven by Kennedy's bold deadline and national determination.",
+                "widgets": [
+                  {
+                    "name": "https://www.youtube.com/watch?v=S9HdPi9Ikhk",
+                    "title": "Apollo 11 Landing",
+                    "subtitle": "20 seconds of fuel remaining",
+                    "notes": "July 20, 1969: Armstrong manually pilots to safety with seconds of fuel left - 'The Eagle has landed'"
+                  },
+                  {
+                    "name": "https://www.youtube.com/watch?v=RONIax0_1ec",
+                    "title": "Apollo 13 Survival",
+                    "subtitle": "Failure was not an option",
+                    "notes": "1970: NASA's finest hour - bringing crew home after explosion using duct tape and ingenuity"
+                  },
+                  {
+                    "name": "/space/moon_footprint.jpg",
+                    "title": "Eternal Footprint",
+                    "subtitle": "No wind to erase it",
+                    "notes": "Buzz Aldrin's footprint will remain on the Moon for millions of years - humanity's permanent mark"
+                  }
+                ]
+              },
+              {
+                "node": "Soviet Achievements",
+                "weight": 70,
+                "prose": "While America won the race to the Moon, the Soviet Union pioneered many crucial firsts that shaped space exploration. Their approach emphasized robotic missions and long-duration spaceflight.",
+                "widgets": [
+                  {
+                    "name": "/space/luna_9.jpg",
+                    "title": "First Soft Landing",
+                    "subtitle": "Luna 9 on the Moon",
+                    "notes": "1966: First successful soft landing on another celestial body, proving it was solid not dust"
+                  },
+                  {
+                    "name": "/space/venera_13.jpg",
+                    "title": "Venus Surface Photos",
+                    "subtitle": "Surviving hell",
+                    "notes": "1982: Venera 13 survived 127 minutes in 457°C heat and 89 atm pressure to send back color photos"
+                  },
+                  {
+                    "name": "https://www.youtube.com/watch?v=RVmvEpPLiEQ",
+                    "title": "Mir Space Station",
+                    "subtitle": "15 years in orbit",
+                    "notes": "1986-2001: Proved long-term space habitation possible, paving way for ISS"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "node": "Early Space Science",
+            "weight": 60,
+            "prose": "Beyond the headline-grabbing human missions, early space exploration revolutionized our understanding of the cosmos through robotic probes and space telescopes.",
+            "widgets": [
+              {
+                "name": "https://www.youtube.com/watch?v=p1PgNbgWSyY",
+                "title": "Voyager Golden Record",
+                "subtitle": "Message to the cosmos",
+                "notes": "1977: Humanity's greeting to the universe - includes sounds of Earth and instructions to play it"
+              },
+              {
+                "name": "/space/pioneer_plaque.jpg",
+                "title": "Pioneer Plaque",
+                "subtitle": "Our cosmic address",
+                "notes": "1972-73: Pictographic message showing humans and Earth's location using pulsar map"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "node": "Present: The New Space Age",
+        "weight": 100,
+        "prose": "We're living through the most exciting period in space exploration since Apollo. Private companies have revolutionized access to space, the ISS serves as humanity's outpost, and sophisticated robots explore Mars while astronomers discover thousands of exoplanets. Space is becoming democratized, commercialized, and integrated into daily life in ways unimaginable just decades ago.",
+        "widgets": [
+          {
+            "name": "https://www.youtube.com/watch?v=A0FZIwabctw",
+            "title": "SpaceX Falcon Heavy",
+            "subtitle": "Boosters landing simultaneously",
+            "notes": "2018: Like science fiction made real - reusable rockets landing in perfect synchronization"
+          },
+          {
+            "name": "https://www.youtube.com/watch?v=TeVbYCIFVa8",
+            "title": "Mars Helicopter Flight",
+            "subtitle": "First powered flight on Mars",
+            "notes": "2021: Ingenuity proves controlled flight possible in Mars' thin atmosphere - Wright Brothers moment"
+          }
+        ],
+        "children": [
+          {
+            "node": "Commercial Space Revolution",
+            "weight": 85,
+            "prose": "Private companies have transformed spaceflight from government monopoly to competitive marketplace. Reusable rockets, space tourism, and satellite constellations are creating a true space economy.",
+            "widgets": [
+              {
+                "name": "https://www.youtube.com/watch?v=bqYbgWbKMPc",
+                "title": "Starship Development",
+                "subtitle": "Fully reusable super heavy-lift",
+                "notes": "Largest rocket ever built - designed to make life multiplanetary at $2M per launch"
+              },
+              {
+                "name": "https://www.youtube.com/watch?v=GEyQgsM9BSs",
+                "title": "Blue Origin Tourism",
+                "subtitle": "11 minutes above the Karman line",
+                "notes": "$200K tickets for suborbital flights - space tourism becoming reality for wealthy"
+              },
+              {
+                "name": "/space/starlink_constellation.jpg",
+                "title": "Starlink Mega-constellation",
+                "subtitle": "42,000 planned satellites",
+                "notes": "Global broadband from space - already serving remote areas and Ukraine's defense"
+              }
+            ],
+            "children": [
+              {
+                "node": "SpaceX Innovations",
+                "weight": 75,
+                "prose": "SpaceX didn't just make rockets cheaper - they made space cool again. Their innovations in reusability and rapid iteration have fundamentally changed what's possible.",
+                "widgets": [
+                  {
+                    "name": "https://www.youtube.com/watch?v=VBlIvghQTlI",
+                    "title": "Booster Catch with Chopsticks",
+                    "subtitle": "Mechazilla catches Super Heavy",
+                    "notes": "2024: Catching a 200-ton booster with tower arms - eliminates landing legs weight penalty"
+                  },
+                  {
+                    "name": "/space/crew_dragon.jpg",
+                    "title": "Crew Dragon",
+                    "subtitle": "Ending NASA's dependence on Russia",
+                    "notes": "2020: First commercial human spacecraft - touchscreen controls and autonomous docking"
+                  }
+                ]
+              },
+              {
+                "node": "Small Satellite Revolution",
+                "weight": 45,
+                "prose": "CubeSats and smallsats have democratized space access. Universities and startups can now afford their own space missions, enabling unprecedented innovation.",
+                "widgets": [
+                  {
+                    "name": "/space/cubesat.jpg",
+                    "title": "CubeSat Standard",
+                    "subtitle": "10cm cube building blocks",
+                    "notes": "$100K to orbit - students can build and launch satellites during undergraduate studies"
+                  },
+                  {
+                    "name": "/space/planet_labs.jpg",
+                    "title": "Planet Labs Imaging",
+                    "subtitle": "Daily Earth observation",
+                    "notes": "200+ satellites photograph entire Earth daily - tracking deforestation and disasters in real-time"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "node": "International Space Station Era",
+            "weight": 70,
+            "prose": "The ISS represents humanity's greatest collaborative achievement - former enemies working together 400km above Earth. For over 20 years, it's been continuously inhabited, serving as our laboratory for living in space.",
+            "widgets": [
+              {
+                "name": "https://www.youtube.com/watch?v=SGP6Y0Pnhe4",
+                "title": "ISS Time-lapse",
+                "subtitle": "One orbit in 90 minutes",
+                "notes": "Astronauts see 16 sunrises/sunsets daily - perspective-changing view of borderless Earth"
+              },
+              {
+                "name": "/space/iss_cupola.jpg",
+                "title": "Cupola Observatory",
+                "subtitle": "360-degree Earth views",
+                "notes": "2010 addition: 7-window dome where astronauts control robotics and contemplate existence"
+              },
+              {
+                "name": "https://www.youtube.com/watch?v=KaOC9danxNo",
+                "title": "Space Station Tour",
+                "subtitle": "Living in microgravity",
+                "notes": "How astronauts eat, sleep, exercise and work while floating - adaptation to 3D living"
+              }
+            ]
+          },
+          {
+            "node": "Mars Exploration Today",
+            "weight": 80,
+            "prose": "Mars has become humanity's most explored planet after Earth. With multiple rovers, orbiters, and even a helicopter, we're preparing for eventual human arrival while searching for signs of past or present life.",
+            "widgets": [
+              {
+                "name": "https://www.youtube.com/watch?v=4czjS9h4Fpg",
+                "title": "Perseverance Landing",
+                "subtitle": "Seven minutes of terror",
+                "notes": "2021: Sky crane precision landing - most sophisticated Mars landing ever attempted"
+              },
+              {
+                "name": "/space/mars_samples.jpg",
+                "title": "Sample Return Mission",
+                "subtitle": "Bringing Mars to Earth",
+                "notes": "Collecting samples for future return - could definitively answer if Mars had life"
+              },
+              {
+                "name": "https://www.youtube.com/watch?v=PF0NbbTuNzw",
+                "title": "Mars Sounds",
+                "subtitle": "First audio from another planet",
+                "notes": "Eerie recordings of Martian wind and rover wheels crunching over ancient lakebed"
+              }
+            ]
+          },
+          {
+            "node": "Space Telescopes Revolution",
+            "weight": 65,
+            "prose": "Modern space telescopes have revealed the universe in unprecedented detail. From discovering exoplanets to seeing the first galaxies, they're rewriting astronomy textbooks.",
+            "widgets": [
+              {
+                "name": "https://www.youtube.com/watch?v=8gvxr-UsX2w",
+                "title": "JWST First Images",
+                "subtitle": "Looking back 13.5 billion years",
+                "notes": "2022: Infrared vision reveals first galaxies forming just after Big Bang - time machine to cosmic dawn"
+              },
+              {
+                "name": "/space/exoplanet_types.jpg",
+                "title": "5,000+ Exoplanets",
+                "subtitle": "Worlds beyond imagination",
+                "notes": "Hot Jupiters, super-Earths, diamond planets - diversity exceeds science fiction"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "node": "Future: The Next Frontier",
+        "weight": 95,
+        "prose": "The future of space exploration promises to transform humanity into a multiplanetary species. From establishing permanent bases on the Moon and Mars to mining asteroids and searching for alien life, the next decades will see science fiction become reality. The decisions we make now about space will determine whether humanity remains confined to one world or spreads across the solar system and beyond.",
+        "widgets": [
+          {
+            "name": "https://www.youtube.com/watch?v=tU8d3r3D9lE",
+            "title": "Artemis Moon Base",
+            "subtitle": "Permanent lunar presence by 2030s",
+            "notes": "NASA's plan for sustainable Moon exploration - gateway to Mars and asteroid mining"
+          },
+          {
+            "name": "/space/oneil_cylinder.jpg",
+            "title": "O'Neill Cylinders",
+            "subtitle": "Cities in space",
+            "notes": "Rotating habitats for millions - artificial gravity and Earth-like conditions in space"
+          }
+        ],
+        "children": [
+          {
+            "node": "Moon Colonization",
+            "weight": 75,
+            "prose": "The Moon will be humanity's first off-world colony. With water ice at the poles and only 3 days from Earth, it's the perfect stepping stone for deeper space exploration and a backup for human civilization.",
+            "widgets": [
+              {
+                "name": "https://www.youtube.com/watch?v=vl6jn-DdafM",
+                "title": "Lunar Gateway",
+                "subtitle": "Space station orbiting Moon",
+                "notes": "2028: Permanent outpost in lunar orbit - staging point for surface missions and deep space"
+              },
+              {
+                "name": "/space/lunar_base.jpg",
+                "title": "3D Printed Habitats",
+                "subtitle": "Building with regolith",
+                "notes": "Robots will 3D print bases from lunar soil before humans arrive - radiation shielding included"
+              },
+              {
+                "name": "/space/helium3_mining.jpg",
+                "title": "Helium-3 Mining",
+                "subtitle": "Fuel for fusion reactors",
+                "notes": "Moon contains millions of tons of He-3 - could power Earth for thousands of years"
+              }
+            ]
+          },
+          {
+            "node": "Mars Settlement",
+            "weight": 85,
+            "prose": "Mars represents humanity's best chance for becoming a multiplanetary species. With a day similar to Earth's, water ice, and an atmosphere that can be processed for fuel, it could host a self-sustaining civilization.",
+            "widgets": [
+              {
+                "name": "https://www.youtube.com/watch?v=A5uOoFbMP2A",
+                "title": "SpaceX Mars City",
+                "subtitle": "Million people by 2050",
+                "notes": "Musk's plan: 1000 Starships delivering 100 tons each - building self-sufficient Mars civilization"
+              },
+              {
+                "name": "/space/mars_terraforming.jpg",
+                "title": "Terraforming Concepts",
+                "subtitle": "Making Mars Earth-like",
+                "notes": "Releasing CO2 from poles, creating magnetic field - thousands of years but technically possible"
+              }
+            ],
+            "children": [
+              {
+                "node": "In-Situ Resource Utilization",
+                "weight": 50,
+                "prose": "Living off the land on Mars is essential for permanent settlement. The ability to produce water, fuel, and building materials from the Martian environment will determine success or failure.",
+                "widgets": [
+                  {
+                    "name": "/space/moxie.jpg",
+                    "title": "MOXIE Oxygen Production",
+                    "subtitle": "Breathing Martian air",
+                    "notes": "2021: Successfully produced oxygen from Mars CO2 atmosphere - proof of concept for human missions"
+                  },
+                  {
+                    "name": "/space/sabatier_reactor.jpg",
+                    "title": "Sabatier Process",
+                    "subtitle": "Making rocket fuel on Mars",
+                    "notes": "Combine CO2 and water to create methane fuel - enabling return trips without Earth resupply"
+                  }
+                ]
+              },
+              {
+                "node": "Psychological Challenges",
+                "weight": 30,
+                "prose": "The mental health challenges of Mars settlement are as daunting as the technical ones. Isolation, confinement, and the inability to return quickly could break even the strongest minds.",
+                "widgets": [
+                  {
+                    "name": "/space/mars_delay.jpg",
+                    "title": "Communication Delay",
+                    "subtitle": "24-minute conversations",
+                    "notes": "Up to 24 min delay each way when Mars is furthest - no real-time Earth support possible"
+                  },
+                  {
+                    "name": "/space/biosphere2.jpg",
+                    "title": "Biosphere 2 Lessons",
+                    "subtitle": "Closed ecosystem challenges",
+                    "notes": "1991-93: Oxygen depletion, crop failures, crew conflicts - preview of Mars colony challenges"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "node": "Asteroid Mining",
+            "weight": 60,
+            "prose": "Asteroids contain more wealth than Earth's entire economy. A single metallic asteroid could contain more platinum than has ever been mined, while water-rich asteroids could fuel expansion across the solar system.",
+            "widgets": [
+              {
+                "name": "https://www.youtube.com/watch?v=VINzk4AKKB4",
+                "title": "Psyche Mission",
+                "subtitle": "Visiting a metal world",
+                "notes": "2023 launch to asteroid worth $10,000 quadrillion - exposed core of ancient planet"
+              },
+              {
+                "name": "/space/asteroid_redirect.jpg",
+                "title": "Asteroid Redirect",
+                "subtitle": "Bringing asteroids to Earth orbit",
+                "notes": "Capture small asteroids and park them in lunar orbit for easier mining access"
+              }
+            ]
+          },
+          {
+            "node": "Interstellar Ambitions",
+            "weight": 55,
+            "prose": "While still in the realm of far-future planning, serious scientists and engineers are working on technologies that could take humanity to the stars. The journey would span generations, but it represents our ultimate destiny.",
+            "widgets": [
+              {
+                "name": "https://www.youtube.com/watch?v=EzZGPCyrpSU",
+                "title": "Breakthrough Starshot",
+                "subtitle": "Laser-propelled nanosails",
+                "notes": "20% speed of light using laser array - reach Proxima Centauri in 20 years with tiny probes"
+              },
+              {
+                "name": "/space/generation_ship.jpg",
+                "title": "Generation Ships",
+                "subtitle": "Multi-generational voyages",
+                "notes": "Thousands live and die aboard ship during centuries-long journey - mobile civilization"
+              }
+            ],
+            "children": [
+              {
+                "node": "Propulsion Breakthroughs",
+                "weight": 40,
+                "prose": "Getting to the stars requires revolutionary propulsion. From fusion rockets to theoretical warp drives, physicists are exploring every possibility.",
+                "widgets": [
+                  {
+                    "name": "/space/fusion_rocket.jpg",
+                    "title": "Fusion Rockets",
+                    "subtitle": "10% speed of light possible",
+                    "notes": "Direct Fusion Drive could reach nearest star in 40 years - awaiting fusion breakthrough"
+                  },
+                  {
+                    "name": "https://www.youtube.com/watch?v=94ed4v_T6YM",
+                    "title": "Alcubierre Warp Drive",
+                    "subtitle": "Faster than light travel?",
+                    "notes": "Warping spacetime itself - requires exotic matter but mathematically possible"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "node": "Search for Alien Life",
+            "weight": 70,
+            "prose": "The discovery of alien life would be the most profound moment in human history. With thousands of exoplanets discovered and sophisticated new instruments, the question is no longer if, but when.",
+            "widgets": [
+              {
+                "name": "https://www.youtube.com/watch?v=NQfA-iqcGoY",
+                "title": "Europa Clipper",
+                "subtitle": "Exploring Jupiter's ocean moon",
+                "notes": "2024 launch: Will fly through water plumes from subsurface ocean - best chance for finding life"
+              },
+              {
+                "name": "/space/biosignatures.jpg",
+                "title": "Biosignature Detection",
+                "subtitle": "Oxygen + methane = life?",
+                "notes": "JWST can detect atmospheric signs of life on exoplanets - results expected this decade"
+              }
+            ],
+            "children": [
+              {
+                "node": "SETI Advances",
+                "weight": 35,
+                "prose": "The Search for Extraterrestrial Intelligence has evolved from listening for radio signals to searching for megastructures and laser communications across thousands of star systems.",
+                "widgets": [
+                  {
+                    "name": "https://www.youtube.com/watch?v=ByLWJwMo0r4",
+                    "title": "Breakthrough Listen",
+                    "subtitle": "Scanning million stars",
+                    "notes": "$100M project using AI to analyze signals from nearest million stars for technosignatures"
+                  }
+                ]
+              },
+              {
+                "node": "Fermi Paradox Solutions",
+                "weight": 25,
+                "prose": "If life is common, where is everybody? The Fermi Paradox haunts astrobiology, suggesting either we're alone, we're first, or something prevents civilizations from spreading.",
+                "widgets": [
+                  {
+                    "name": "/space/great_filter.jpg",
+                    "title": "The Great Filter",
+                    "subtitle": "What stops civilizations?",
+                    "notes": "Self-destruction? Rare intelligence? Or is the filter behind us - making us incredibly rare?"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "node": "Space Habitats",
+            "weight": 50,
+            "prose": "Rather than terraforming planets, we might build our own worlds in space. Rotating habitats could house billions while preserving Earth as a nature reserve.",
+            "widgets": [
+              {
+                "name": "https://www.youtube.com/watch?v=4xzh1FuERMw",
+                "title": "Stanford Torus Design",
+                "subtitle": "10,000 person space city",
+                "notes": "1975 NASA design: 1.8km diameter rotating wheel with artificial gravity - suburban life in space"
+              },
+              {
+                "name": "/space/dyson_sphere.jpg",
+                "title": "Dyson Spheres",
+                "subtitle": "Capturing all solar energy",
+                "notes": "Ultimate megastructure: swarm of habitats surrounding sun - energy for quadrillion humans"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "node": "Challenges and Ethics",
+        "weight": 40,
+        "prose": "Space exploration isn't just about technology - it raises profound questions about humanity's future. Who owns space resources? Should we contaminate other worlds? How do we prevent space warfare? These decisions will shape the future of our species.",
+        "widgets": [
+          {
+            "name": "/space/space_debris.jpg",
+            "title": "Kessler Syndrome",
+            "subtitle": "Cascading collision catastrophe",
+            "notes": "Runaway debris could make orbit unusable for generations - already 34,000 tracked objects"
+          },
+          {
+            "name": "/space/outer_space_treaty.jpg",
+            "title": "Space Law",
+            "subtitle": "1967 treaty outdated",
+            "notes": "No nation can claim celestial bodies - but what about companies mining asteroids?"
+          }
+        ],
+        "children": [
+          {
+            "node": "Planetary Protection",
+            "weight": 30,
+            "prose": "We must be careful not to contaminate other worlds with Earth life, or vice versa. The discovery of Martian life could be ruined if we accidentally introduce Earth microbes first.",
+            "widgets": [
+              {
+                "name": "/space/clean_room.jpg",
+                "title": "Spacecraft Sterilization",
+                "subtitle": "Preventing contamination",
+                "notes": "Mars rovers baked at 110°C for 30 hours - but some extremophiles might still survive"
+              }
+            ]
+          },
+          {
+            "node": "Space Militarization",
+            "weight": 35,
+            "prose": "As space becomes economically vital, military competition follows. The risk of space warfare could deny humanity access to orbit and trigger devastating conflicts on Earth.",
+            "widgets": [
+              {
+                "name": "/space/asat_test.jpg",
+                "title": "Anti-Satellite Weapons",
+                "subtitle": "Debris as denial weapon",
+                "notes": "2021 Russian ASAT test created 1,500 trackable debris pieces - threatened ISS crew"
+              }
+            ]
+          },
+          {
+            "node": "Environmental Concerns",
+            "weight": 25,
+            "prose": "Rocket launches affect Earth's atmosphere, and satellite mega-constellations change our night sky. We must balance space development with environmental protection.",
+            "widgets": [
+              {
+                "name": "/space/rocket_exhaust.jpg",
+                "title": "Rocket Emissions",
+                "subtitle": "Ozone layer impacts",
+                "notes": "Rockets deposit soot directly in stratosphere - 500x more warming effect than at ground level"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

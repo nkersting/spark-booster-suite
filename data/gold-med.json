@@ -1,0 +1,681 @@
+{
+  "seo": {
+    "title": "The Golden Thread: Past, Present, and Future of Gold Mining",
+    "description": "Nick Kersting",
+    "prose": "Today I want to take you on a journey through one of humanity's oldest and most enduring pursuits: gold mining. From ancient civilizations panning in rivers to modern mega-mines moving mountains, gold has shaped economies, sparked migrations, and driven technological innovation. But as we stand at the crossroads of tradition and transformation, we must ask ourselves: what is the true cost of our golden obsession, and how can we mine more responsibly for future generations?"
+  },
+  "pageTitle": "The Golden Thread: Past, Present, and Future of Gold Mining",
+  "pageDescription": "A Dynamic Tree representation",
+  "knowledgeTree": {
+    "node": "The Allure of Gold",
+    "weight": 100,
+    "prose": "Gold has captivated humanity for over 6,000 years, and for good reason. It's one of the few elements that occurs naturally in pure form, it doesn't tarnish or corrode, and its distinctive yellow gleam has made it synonymous with wealth and power across virtually every culture. But beyond its aesthetic appeal, gold has unique properties that make it invaluable in modern technology - from electronics to medicine. This dual nature - both ancient treasure and modern necessity - drives an industry that moves more earth than any other mining sector.",
+    "widgets": [
+      {
+        "name": "https://pixabay.com/get/g3f8b6662f92894df7d0b7bd7b0720bc3957924658e9363bfe37ddff848b87cbcce32ec1f0dc291e41b278667a4412e674637d89c4d3751a949c77b5d0ca620ee_1280.jpg",
+        "title": "Element 79",
+        "subtitle": "The chemistry of desire",
+        "image_only": true,
+        "notes": "⦿ Atomic number 79 \n⦿ Density: 19.3 g/cm³ \n⦿ Melting point: 1,064°C \n⦿ Doesn't oxidize in air or water \n⦿ Only dissolves in aqua regia",
+        "url": "https://www.youtube.com/watch?v=yJDw4R5SUQo",
+        "prose": "Gold sits at atomic number 79, and its electron configuration gives it remarkable stability. This is why you can find gold nuggets that have sat unchanged for millions of years, while iron turns to rust in decades."
+      },
+      {
+        "name": "https://pixabay.com/get/geff38cb552f7b6a7246b6be4495006638740beeb959f6624de58b7538f244b12ba5066fd8d137aad373061df6dd5da250b6c2428b480e8df95a6ca1f30984bf4_1280.jpg",
+        "title": "Cultural Significance",
+        "subtitle": "5,000 years of obsession",
+        "image_only": true,
+        "notes": "⦿ Found in tombs from 4600 BCE \n⦿ First coins: Lydia, 650 BCE \n⦿ Symbol of divinity in most religions \n⦿ Wedding rings tradition: Roman Empire",
+        "prose": "From Tutankhamun's mask to modern wedding rings, gold has been the ultimate symbol of permanence and value. No other material has maintained such consistent cultural significance across time and geography."
+      },
+      {
+        "name": "https://pixabay.com/get/ge78979b6c5bc72f96437fbea7b029a948881b47a2802ad1812bfe3780e16f7134f730ca85282467fe2966f1673dd1026747d5ebfcd9496932eff392a7a8057d4_1280.jpg",
+        "title": "Economic Anchor",
+        "subtitle": "The gold standard legacy",
+        "image_only": true,
+        "notes": "⦿ Gold standard: 1870s-1971 \n⦿ Fort Knox: 147.3 million oz \n⦿ Central banks hold 35,000 tonnes \n⦿ Daily trading: $145 billion",
+        "url": "https://www.youtube.com/watch?v=CTtf5s2HFkA",
+        "prose": "Even though we abandoned the gold standard in 1971, central banks still hoard gold as the ultimate reserve asset. Fort Knox alone holds over 4,500 metric tons, worth about $250 billion at current prices."
+      }
+    ],
+    "children": [
+      {
+        "node": "Geological Formation",
+        "weight": 80,
+        "prose": "To understand gold mining, we first need to understand how gold forms and where to find it. Gold doesn't just appear randomly - it's the product of incredible geological processes spanning billions of years. Most gold on Earth actually came from asteroid impacts after the planet's crust solidified, which is why it's so rare in the crust but abundant in the core.",
+        "widgets": [
+          {
+            "name": "https://pixabay.com/get/g839f410f4fd37edc176fc5981d17f4faf4d9ea8113d463ad6ceb6913c4d30fa41ef10e74a52536617c198961bb9d821ebfe47845ef200d08114bbe6aa209affd_1280.jpg",
+            "title": "Hydrothermal Deposits",
+            "subtitle": "Nature's gold factories",
+            "notes": "⦿ Hot water dissolves gold from rocks \n⦿ Deposits in quartz veins \n⦿ Temperature: 150-400°C \n⦿ Forms over millions of years",
+            "prose": "Most hard rock gold comes from hydrothermal deposits - essentially ancient hot springs that dissolved gold from surrounding rocks and concentrated it in quartz veins. These can be incredibly rich but also incredibly narrow."
+          },
+          {
+            "name": "https://pixabay.com/get/g242281e7282cdeac9d35f6f58c9534db8eb4e32b7343ea1871f181dff36539b1eb8f83b98c8c910ca3f2ff03d28f165fcf0ffba41ad095b8f612abb0cef73dce_1280.jpg",
+            "title": "Placer Deposits",
+            "subtitle": "Gold concentrated by gravity",
+            "notes": "⦿ Erosion frees gold from rock \n⦿ Rivers sort by density \n⦿ Gold 19x heavier than water \n⦿ Concentrates in river bends",
+            "prose": "Placer deposits are nature's own gold panning operation. Over millions of years, erosion breaks gold out of rocks, and rivers sort it by weight, concentrating it in specific spots like inside bends and behind boulders."
+          },
+          {
+            "name": "https://pixabay.com/get/gaa6d78c5904dca53ff0d2d53257b73ddd00ee0fb059f1de54667645cc424d3ee20c86533603596c7d9c2eae8b008be7aca33940cb9138a7a44fcca454ed6d1dc_1280.jpg",
+            "title": "Witwatersrand Basin",
+            "subtitle": "Earth's gold motherlode",
+            "notes": "⦿ 40% of all gold ever mined \n⦿ 2.7 billion years old \n⦿ Ancient river delta \n⦿ Depths to 4,000 meters",
+            "url": "https://www.youtube.com/watch?v=ZQsjTWwvDYI",
+            "prose": "The Witwatersrand Basin in South Africa is the world's largest gold deposit, an ancient seabed that has produced over 50,000 tonnes of gold - about 40% of all gold ever mined. Some mines here go down 4 kilometers."
+          }
+        ],
+        "children": [
+          {
+            "node": "Ore Grades",
+            "weight": 40,
+            "prose": "One of the most critical factors in gold mining is ore grade - how much gold is actually in the rock. This has been declining dramatically over the past century as we've exhausted the easy deposits.",
+            "widgets": [
+              {
+                "name": "https://pixabay.com/get/gbb3b7217f2add2b7612ed63cd0c53845c7b9266569a69d010965e723f7613b1fd82f8cf777c18adca51425f88fa8c3bc81277bdc5250286070885db5bf7c1ce9_1280.jpg",
+                "title": "The Declining Grade Crisis",
+                "subtitle": "From ounces to grams",
+                "notes": "⦿ 1900: 20 g/t average \n⦿ 1950: 12 g/t average \n⦿ 2000: 3 g/t average \n⦿ 2024: 1.2 g/t average",
+                "prose": "In 1900, average ore grades were 20 grams per tonne. Today, we're mining deposits with just 1-2 grams per tonne. That means moving 20 times more rock for the same amount of gold."
+              },
+              {
+                "name": "https://pixabay.com/get/g9c74b4d48ee7b1b36d74b50b3de5ba846623544043760027feaf79be01ac04fe03f22785a887d295b7390a4094db253e4f056cac5bc3e244299d55aa42d8b3bb_1280.jpg",
+                "title": "Economic Cutoff",
+                "subtitle": "When mining becomes unprofitable",
+                "notes": "⦿ Open pit: 0.5-1.0 g/t cutoff \n⦿ Underground: 2.5-3.0 g/t cutoff \n⦿ Heap leach: 0.2-0.5 g/t \n⦿ Depends on gold price",
+                "prose": "The cutoff grade - below which mining isn't profitable - varies by method. Open pit mines can go as low as 0.5 grams per tonne, while underground mines typically need at least 2.5 grams to break even."
+              }
+            ]
+          },
+          {
+            "node": "Exploration Technology",
+            "weight": 50,
+            "prose": "Finding gold deposits has evolved from prospectors with pans to satellites and AI. Modern exploration combines geology, geochemistry, and geophysics with big data analytics.",
+            "widgets": [
+              {
+                "name": "https://pixabay.com/get/g0a86febf84bcf37e5419b6d71428836f947da2d641521bd7a04543514b263abb513bb3b53bfd9b482806e8ecc65005fc_1280.jpg",
+                "title": "Remote Sensing",
+                "subtitle": "Finding gold from space",
+                "notes": "⦿ Hyperspectral imaging \n⦿ Identifies alteration minerals \n⦿ ASTER satellite data \n⦿ Machine learning analysis",
+                "prose": "Satellites can now detect the subtle mineral alterations that indicate gold deposits. Hyperspectral imaging sees hundreds of light wavelengths, revealing mineral signatures invisible to the human eye."
+              },
+              {
+                "name": "https://pixabay.com/get/g120ae133bdce1108fd4ac910726f26b145e0dcee54a87a309296de2f50214457318c7938d750311ff6238bbe1a5a0f79970071a942296ef7d80e6dafccfa447e_1280.jpg",
+                "title": "Diamond Drilling",
+                "subtitle": "The truth is in the core",
+                "notes": "⦿ Costs $100-500 per meter \n⦿ Core samples every deposit \n⦿ GPS positioned precisely \n⦿ 3D deposit modeling",
+                "prose": "Diamond drilling remains the only way to definitively prove a deposit. Each hole costs tens of thousands of dollars, but the cylindrical core samples reveal exactly what's underground."
+              },
+              {
+                "name": "https://pixabay.com/get/g0dc67948244ba3f2a25664b2e7c3c8edf3ab3ca15f3fab6109bfcadf554e62141eb8630eaa155c089f8d72054597daefd2e08fdd46bc223bd0c44b057e96100b_1280.jpg",
+                "title": "Geochemical Fingerprints",
+                "subtitle": "Following the chemical trail",
+                "notes": "⦿ Soil sampling grids \n⦿ Stream sediment analysis \n⦿ Pathfinder elements (As, Sb, Hg) \n⦿ Parts per billion detection",
+                "prose": "Gold often travels with other elements like arsenic and antimony. By mapping these 'pathfinder' elements in soil and stream sediments, geologists can trace deposits back to their source."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "node": "Mining Methods",
+        "weight": 90,
+        "prose": "The way we extract gold has evolved dramatically from simple panning to massive industrial operations. Each method has its place, depending on the type of deposit, ore grade, and local conditions. What's remarkable is that some methods invented thousands of years ago are still used today, while others employ cutting-edge technology that would seem like magic to miners of the past.",
+        "widgets": [
+          {
+            "name": "https://pixabay.com/get/g5f0683582e391f6b011785ba7ed2eaa1bb6fc5535b4b49bb482569fc1fad195b68cb08f4f087cc2b25eb2b592824fd82c70758f699f19a1a01b3aee16092863d_1280.jpg",
+            "title": "Artisanal Mining",
+            "subtitle": "The original method",
+            "notes": "⦿ 15-20 million artisanal miners \n⦿ Produce 20% of global gold \n⦿ Often mercury-based \n⦿ Major environmental concerns",
+            "prose": "Artisanal mining still produces about 20% of the world's gold. While it provides livelihoods for millions, the widespread use of mercury creates massive environmental and health problems."
+          },
+          {
+            "name": "https://pixabay.com/get/g8f8706be631136e3c33d5d32dfcab1b4426762c155242eefc32eee0eba08ba94a033f0379da909a92555657d254e3042b1f24572230529d7b59b21cd2d8b5af7_1280.jpg",
+            "title": "Open Pit Mining",
+            "subtitle": "Moving mountains for gold",
+            "notes": "⦿ Typical depth: 150-300m \n⦿ Strips ratio: 5-10:1 \n⦿ Trucks carry 400 tonnes \n⦿ Lowest cost per tonne",
+            "url": "https://www.youtube.com/watch?v=d3WPvRN0xU4",
+            "prose": "Open pit mining is like digging an inverted pyramid. For every tonne of ore, you might move 5-10 tonnes of waste rock. The largest gold mine trucks can carry 400 tonnes - about 250 cars worth."
+          },
+          {
+            "name": "https://pixabay.com/get/g73dc556bd8258ba4b16d30a6fbe2f1ca3f165d00c5fc6bdab4c05c109ec0f62dd33cb22198a33eef551de24dc593722e7fb7c293e98f09c6a58996ed79908fe0_1280.jpg",
+            "title": "Underground Mining",
+            "subtitle": "Following the veins deep",
+            "notes": "⦿ Depths to 4,000m \n⦿ Rock temp: 60°C at depth \n⦿ Requires ventilation/cooling \n⦿ Higher grade required",
+            "prose": "Underground mining follows rich veins deep into the earth. The deepest gold mines reach 4 kilometers down, where rock temperatures exceed 60°C and massive refrigeration plants are needed to make work possible."
+          }
+        ],
+        "children": [
+          {
+            "node": "Extraction Processes",
+            "weight": 70,
+            "prose": "Getting gold out of ore is where chemistry meets engineering. The processes have evolved from simple gravity separation to complex chemical treatments, each suited to different ore types.",
+            "widgets": [
+              {
+                "name": "https://pixabay.com/get/gf4eae78ab9804d3d9a90843deb905713658354b2480c44622138c65edabe81c45fbd803a3fbfcbb706463623b6b1fa2529050ef88520e44034d98e50ca09f1c7_1280.jpg",
+                "title": "Comminution",
+                "subtitle": "Breaking rock to powder",
+                "notes": "⦿ Crushers reduce to 10-20mm \n⦿ Ball mills grind to 75 microns \n⦿ Uses 3% of global electricity \n⦿ Biggest energy cost in mining",
+                "prose": "Crushing and grinding consume enormous energy - about 3% of all global electricity goes to comminution. The goal is to liberate gold particles, which might be smaller than the width of a human hair."
+              },
+              {
+                "name": "https://pixabay.com/get/gf61db89a7bc8025cff6b44d7d0226b1d539aed6811928a0975148cf920a19ab71934d6501a0d7a99e9090bee3213f53e1ce0538d6437f9535c809baaa34ee6de_1280.jpg",
+                "title": "Gravity Separation",
+                "subtitle": "Using gold's weight advantage",
+                "notes": "⦿ Sluices, jigs, spirals \n⦿ No chemicals needed \n⦿ Recovers free gold \n⦿ Environmentally friendly",
+                "prose": "Gravity separation exploits gold's high density - it's 19 times heavier than water. Modern centrifugal concentrators can recover gold particles as small as 10 microns using forces 60 times gravity."
+              },
+              {
+                "name": "https://pixabay.com/get/g9be656b72c7a0bc745c9f382b299e1a70bb1155d167a4a2a076f685d858ef5539716781b7e9d2af0266ab55944b5592ccd91633307eddbac0f905f201114bafc_1280.jpg",
+                "title": "Cyanidation",
+                "subtitle": "The gold dissolver",
+                "notes": "⦿ Invented 1887 \n⦿ 0.05% cyanide solution \n⦿ 24-48 hour leaching \n⦿ 90-95% recovery rates",
+                "url": "https://www.youtube.com/watch?v=YBa6Md0w_-k",
+                "prose": "Cyanide leaching revolutionized gold mining. A dilute cyanide solution dissolves gold, which is then recovered using activated carbon or zinc. Despite its toxicity, it's still the most effective method we have."
+              },
+              {
+                "name": "https://pixabay.com/get/g36016871bb170abf975d8f5e4cb8ffdd9d445ac5b6fe24ad10080cc8072bcf8a9d050f232ec513c4140e348d1876aa7494dddc8930afe48e53dd07ffa7f84713_1280.jpg",
+                "title": "Heap Leaching",
+                "subtitle": "Low-grade, low-cost extraction",
+                "notes": "⦿ For grades 0.3-1.0 g/t \n⦿ Ore stacked 5-10m high \n⦿ Sprinkled with cyanide \n⦿ 60-70% recovery",
+                "prose": "Heap leaching makes low-grade deposits economical. Ore is crushed, piled on an impermeable pad, and sprinkled with cyanide solution for months. It's slow but cheap - perfect for disseminated deposits."
+              },
+              {
+                "name": "https://pixabay.com/get/g13f8af9e1a2e7297272a3e4dc0a7400862117357b93fb4137718509e20c07015ac8fcbc71318fc351e81413561a76f94d4ac0f294b4ce931c6ffc8df6bd66910_1280.jpg",
+                "title": "Carbon Adsorption",
+                "subtitle": "Catching dissolved gold",
+                "notes": "⦿ Activated carbon absorbs gold \n⦿ Carbon stripped with hot cyanide \n⦿ Gold electroplated out \n⦿ Carbon recycled 100+ times",
+                "prose": "Activated carbon acts like a sponge for dissolved gold. The loaded carbon is then stripped with hot cyanide solution, and gold is recovered by electrowinning - basically electroplating in reverse."
+              }
+            ]
+          },
+          {
+            "node": "Processing Challenges",
+            "weight": 60,
+            "prose": "Not all gold ore is created equal. Refractory ores - those that resist standard cyanidation - now make up an increasing portion of reserves as easy ores are depleted.",
+            "widgets": [
+              {
+                "name": "https://pixabay.com/get/g2d562802debfe923bcf6f509060b011ed7f1f6c5a8c9c7de6473721038cfd0054ebfa4c5e1cabb9209c8c90a5147e26ca52f3a1d4371887988f8eb084606ad20_1280.jpg",
+                "title": "Refractory Ores",
+                "subtitle": "When gold plays hard to get",
+                "notes": "⦿ Gold locked in sulfides \n⦿ Requires pre-treatment \n⦿ Roasting or bio-oxidation \n⦿ Adds 30-50% to costs",
+                "prose": "Refractory ores have gold locked inside sulfide minerals like pyrite. You need to break down these minerals first through roasting at 500°C or using bacteria - adding significant cost and complexity."
+              },
+              {
+                "name": "https://pixabay.com/get/g9f7e9365e4cc1da6d71c75b846e21a3045ef11d26ff1267763b66fa2b17cb76663f5cc69ebca649571c59ff8170ce6074d8ea8126afeaf8ef713cf8992132638_1280.jpg",
+                "title": "Preg-Robbing Ores",
+                "subtitle": "Carbon that steals gold",
+                "notes": "⦿ Organic carbon in ore \n⦿ Competes with added carbon \n⦿ Reduces recovery to 30-50% \n⦿ Requires special treatment",
+                "prose": "Some ores contain natural carbon that absorbs dissolved gold before your recovery circuit can. These 'preg-robbing' ores are a nightmare - they can cut recovery rates in half if not properly managed."
+              },
+              {
+                "name": null,
+                "title": "Biological Processing",
+                "subtitle": "Bacteria as tiny miners",
+                "notes": "⦿ Bacteria oxidize sulfides \n⦿ Takes 3-5 days \n⦿ Works at 40-50°C \n⦿ Lower energy than roasting",
+                "prose": "Biooxidation uses bacteria that literally eat sulfide minerals, liberating the gold. It's slower than roasting but uses far less energy and produces fewer emissions - nature's way of processing refractory ore."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "node": "Environmental Impact",
+        "weight": 85,
+        "prose": "Gold mining's environmental footprint is massive and often devastating. For every gold ring, about 20 tonnes of waste rock are generated. The industry is grappling with legacy contamination from centuries of mining while trying to develop more sustainable practices for the future. The challenge is that gold's very rarity means enormous amounts of material must be processed.",
+        "widgets": [
+          {
+            "name": "https://pixabay.com/get/gb0d3e4d7c68b60154213d5c7ed3726fd9ed8b10ec3b3f2975f656cc64583bcfa094de8b0d7fd04de3b52e1d5080e321124ded682ed39906ab3e392ccb07fc94d_1280.png",
+            "title": "Tailings Management",
+            "subtitle": "Mountains of toxic waste",
+            "notes": "⦿ 7 billion tonnes annually \n⦿ Contains cyanide, heavy metals \n⦿ Dam failures catastrophic \n⦿ Must be managed forever",
+            "url": "https://www.youtube.com/watch?v=gGX5aH9kBBE",
+            "prose": "Tailings - the waste slurry after gold extraction - are mining's biggest environmental challenge. The industry produces 7 billion tonnes annually, stored behind dams that must hold forever. When they fail, the results are catastrophic."
+          },
+          {
+            "name": "https://pixabay.com/get/g9052a24d519c1880daa79427a0d9f2667817c7803c4ac15c04efd3a3bade4089714ab447ea30ac1ee84acfa07a58cfbea381d26993b385ebf3405abdaa73a8ee_1280.jpg",
+            "title": "Mercury Contamination",
+            "subtitle": "The invisible killer",
+            "notes": "⦿ 1,400 tonnes/year released \n⦿ Bioaccumulates in food chain \n⦿ Causes neurological damage \n⦿ Persists for centuries",
+            "prose": "Artisanal miners use about 1,400 tonnes of mercury annually, making gold mining the largest source of mercury pollution. It bioaccumulates up the food chain, causing permanent neurological damage."
+          },
+          {
+            "name": "https://pixabay.com/get/ge5f34fd1baade48b0db4dfbf293154a8bde3bbbb8bedf05908c60e46f07724e9faa39c51fb92dc68a8b8edb38b3e4d6b5036ecc5eff7324576e609dba19aa347_1280.jpg",
+            "title": "Habitat Destruction",
+            "subtitle": "Trading forests for gold",
+            "notes": "⦿ 10% of Amazon deforestation \n⦿ Destroys watersheds \n⦿ Soil erosion accelerates \n⦿ Biodiversity collapse",
+            "prose": "In the Amazon alone, gold mining has deforested an area the size of Manhattan every year. Beyond the trees, it destroys entire watersheds and the indigenous communities that depend on them."
+          },
+          {
+            "name": "https://pixabay.com/get/g7d0cda34e48f0c0010b0e23c5d994cd37622169ea6653acc1f413f695d8415527b9835bc670bbf32ca363a28f93970e063de07df594a821dab786c40a40d2581_1280.jpg",
+            "title": "Acid Mine Drainage",
+            "subtitle": "Rivers running orange",
+            "notes": "⦿ Sulfides + oxygen + water = acid \n⦿ pH can drop below 3 \n⦿ Dissolves heavy metals \n⦿ Can last millennia",
+            "prose": "When sulfide minerals in waste rock contact air and water, they form sulfuric acid. This acid mine drainage can turn rivers orange with dissolved iron and kill all aquatic life for hundreds of kilometers downstream."
+          }
+        ],
+        "children": [
+          {
+            "node": "Water Usage",
+            "weight": 40,
+            "prose": "Gold mining is incredibly water-intensive, often in regions where water is already scarce. The competition for water between mines and communities is intensifying with climate change.",
+            "widgets": [
+              {
+                "name": "https://pixabay.com/get/g3e032c32f7a228693e86ae5f4af9b9e128371ebf1501a69e685183deba40d29bcc0dea17fcfac0379f52b10cc210bf2e585fdda75ee48de6ac0567a86d215e1b_1280.jpg",
+                "title": "Thirsty Industry",
+                "subtitle": "Water consumption per ounce",
+                "notes": "⦿ 1 oz gold = 100,000 gallons water \n⦿ Processing: 75% of use \n⦿ Dust suppression: 15% \n⦿ Often in water-scarce regions",
+                "prose": "Producing one ounce of gold requires about 100,000 gallons of water - enough to supply a family of four for two years. Most goes to processing, but dust suppression in desert mines is also significant."
+              },
+              {
+                "name": "https://pixabay.com/get/g19b53e73e7b3fb11581e9b6f8c7c10d35ab7d4718d6eb52cb829786ebf0bc80dbe01ee63b7640de2ae7baebd308279eda98785fda3086079de06e481801d1958_1280.jpg",
+                "title": "Recycling Systems",
+                "subtitle": "Closing the water loop",
+                "notes": "⦿ Modern mines recycle 70-90% \n⦿ Thickeners recover process water \n⦿ Reduces freshwater intake \n⦿ Still significant losses",
+                "prose": "Modern mines recycle 70-90% of their water, but in arid regions, even 10% loss is significant. Advanced thickeners and paste tailings can push recycling rates above 95%, but at considerable cost."
+              }
+            ]
+          },
+          {
+            "node": "Carbon Footprint",
+            "weight": 45,
+            "prose": "Gold mining is energy-intensive, contributing significantly to greenhouse gas emissions. As ore grades decline, the energy required per ounce of gold continues to rise.",
+            "widgets": [
+              {
+                "name": "https://pixabay.com/get/g82ebbef7a27cbf23d3b5ec0aed6299a0b931077e1e5ed1309b734e2d41646a9bd151dfb22390c0d6408922be802391001b254a563c0ca8d0cca78a3c95a14dea_1280.jpg",
+                "title": "Energy Hunger",
+                "subtitle": "The carbon cost of gold",
+                "notes": "⦿ 1 oz = 35,000 kWh energy \n⦿ 16 tonnes CO2 per oz \n⦿ 0.3% of global emissions \n⦿ Rising with declining grades",
+                "prose": "Producing an ounce of gold requires about 35,000 kWh of energy - enough to power an American home for three years. This generates about 16 tonnes of CO2, equivalent to driving 40,000 miles."
+              },
+              {
+                "name": "https://pixabay.com/get/g506e7e0d83035a9520a7248d0a38f9464107694a0c2b8fdcff2534ebee6bd9c1563a19358a43112a4f32b0d1a603cf449fb118849f67888d283cabe66121b85f_1280.jpg",
+                "title": "Renewable Integration",
+                "subtitle": "Solar and wind at mines",
+                "notes": "⦿ Solar farms at desert mines \n⦿ 10-30% renewable feasible \n⦿ Battery storage emerging \n⦿ Payback 5-7 years",
+                "prose": "Some mines are installing massive solar farms and wind turbines. While they can't run entirely on renewables due to 24/7 operations, 30% renewable energy is increasingly feasible and economic."
+              }
+            ]
+          },
+          {
+            "node": "Rehabilitation",
+            "weight": 35,
+            "prose": "Mine closure and rehabilitation is mining's final challenge. Modern regulations require companies to restore sites, but legacy mines from before environmental laws remain toxic scars on the landscape.",
+            "widgets": [
+              {
+                "name": "https://pixabay.com/get/g8f46d7a4c6904e96f38314cad9f3a77a5326c992deb89f83021eac02d485e4f4362c596de291f61a081055eca9eade8db0d8dd52112393e5f9e92a6bf3d0f5ff_1280.jpg",
+                "title": "Restoration Efforts",
+                "subtitle": "Healing the land",
+                "notes": "⦿ Costs 10-15% of revenue \n⦿ Recontouring landforms \n⦿ Revegetation programs \n⦿ Decades-long process",
+                "prose": "Proper mine rehabilitation costs 10-15% of total revenue over a mine's life. It involves recontouring the land, treating contaminated soil, and establishing vegetation - a process that takes decades to complete."
+              },
+              {
+                "name": "https://pixabay.com/get/g2bb1f2550b147c609933c295f099ecd7b7a4982bd6338b082dd59122f5e59f6e3d8813ce0c726ed816b34d8e62fee870639046426960638eaca30ad2f8a3c642_1280.jpg",
+                "title": "Legacy Contamination",
+                "subtitle": "Ghosts of gold rushes past",
+                "notes": "⦿ 500,000 abandoned mines (US) \n⦿ $50 billion cleanup cost \n⦿ Many still leaching toxins \n⦿ Taxpayers foot the bill",
+                "prose": "There are over 500,000 abandoned mines in the US alone, many from the gold rush era. They continue leaching heavy metals and acid, with cleanup costs estimated at $50 billion - paid by taxpayers, not the long-gone miners."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "node": "Economics of Gold",
+        "weight": 75,
+        "prose": "The economics of gold mining are fascinating and often counterintuitive. Unlike other commodities, gold demand isn't driven by consumption - almost all gold ever mined still exists. The price is set by a complex interplay of investment demand, central bank policies, jewelry consumption, and industrial use. Mining companies walk a tightrope between gold prices and rising costs.",
+        "widgets": [
+          {
+            "name": "https://pixabay.com/get/g9ef4cf7788cea8f4fc163123699a8d9d80f57be2c15af724ddf6cae74f44dba24ef37bf70541ab2f1f7b51140e8d0fba385a4accd3f30a8f061424614e13e33d_1280.jpg",
+            "title": "Price Volatility",
+            "subtitle": "The golden rollercoaster",
+            "notes": "⦿ 1970: $35/oz \n⦿ 1980: $850/oz \n⦿ 2011: $1,900/oz \n⦿ 2024: $2,000/oz",
+            "url": "https://www.youtube.com/watch?v=DYDqPb0oxZc",
+            "prose": "Gold prices have been on a wild ride since the end of the gold standard. From $35 per ounce in 1970 to peaks over $2,000, volatility makes long-term mine planning incredibly challenging."
+          },
+          {
+            "name": "https://pixabay.com/get/g1fb7590f77eac95621fc3b8394b60119e43f0479da6c4ad2392780e6513c6ad610bd5557301e9fec9c93d9583b9a4cbedf4d5eeb8e0d8de06e9f36efdf80334d_1280.jpg",
+            "title": "All-In Sustaining Costs",
+            "subtitle": "The real cost of mining",
+            "notes": "⦿ Global average: $1,200/oz \n⦿ Labor: 30-40% \n⦿ Energy: 20-30% \n⦿ Consumables: 20-25%",
+            "prose": "The all-in sustaining cost averages $1,200 per ounce globally, but varies widely. Labor is the biggest component, followed by energy. When gold drops below $1,300, many mines become unprofitable."
+          },
+          {
+            "name": "https://pixabay.com/get/gae3611bfbf91e4320700afaeb221e55a9b0904993a4c33b89e6501ae8a3de0a8646b09ecb98911f0aafff9a46826b5f314215f3337b914c6f2eb836def824e4e_1280.jpg",
+            "title": "Supply and Demand",
+            "subtitle": "Who's buying all this gold?",
+            "notes": "⦿ Jewelry: 47% demand \n⦿ Investment: 25% \n⦿ Central banks: 15% \n⦿ Technology: 8%",
+            "prose": "Jewelry still drives nearly half of gold demand, mostly from India and China. Investment demand surges during uncertainty, while central banks have become net buyers again after decades of selling."
+          }
+        ],
+        "children": [
+          {
+            "node": "Mining Finance",
+            "weight": 50,
+            "prose": "Developing a gold mine requires enormous upfront capital - often billions of dollars spent over 10-15 years before seeing any return. This makes financing particularly challenging and risky.",
+            "widgets": [
+              {
+                "name": "https://pixabay.com/get/gf6303e1514253b523b9ebd891eb4880977b4a724bbf30fe7c2e2a3b8e9e7e091f6657e07e27717bfefd43eb91cf40faa519744c10feaac7bbca3bb0529a85ac4_1280.jpg",
+                "title": "Capital Requirements",
+                "subtitle": "Billion dollar bets",
+                "notes": "⦿ Large mine: $1-5 billion \n⦿ 10-15 years to production \n⦿ Exploration: 5% success rate \n⦿ Payback: 5-7 years",
+                "prose": "A major gold mine costs $1-5 billion to develop, with money spent for 10-15 years before production. Only 5% of exploration projects become mines, making this one of the riskiest investments in the world."
+              },
+              {
+                "name": "https://pixabay.com/get/g2f13b453aa7bf2fe54c02de37e009fea6b9ea18b72b8367879669f4508dd18353b0ac125a4f08228e4829c3efe8213ade2482b16b4efa6b4a494459fc1325f09_1280.jpg",
+                "title": "Alternative Financing",
+                "subtitle": "Streaming and royalties",
+                "notes": "⦿ Upfront payment for future gold \n⦿ Avoids equity dilution \n⦿ Transfers price risk \n⦿ Popular since 2008",
+                "prose": "Streaming deals provide upfront capital in exchange for the right to buy future gold at a fixed price. This transfers price risk to the streaming company while giving miners needed capital without diluting shareholders."
+              }
+            ]
+          },
+          {
+            "node": "Resource Nationalism",
+            "weight": 40,
+            "prose": "Governments increasingly want a bigger share of gold mining profits, leading to tax increases, nationalization threats, and local content requirements that significantly impact project economics.",
+            "widgets": [
+              {
+                "name": "https://pixabay.com/get/g0e9fbdfea51c7515db07b7752ca2998d387d33ce4ff6ed5e05f30427ee3e82f2b9e67e841aeba02b45fc6e12f003cafe8562125c8eb9368eae027af8c71568f2_1280.jpg",
+                "title": "Rising Government Takes",
+                "subtitle": "The tax burden grows",
+                "notes": "⦿ Royalties: 3-8% typical \n⦿ Corporate tax: 25-35% \n⦿ Windfall taxes emerging \n⦿ Total take can exceed 50%",
+                "prose": "Governments typically take 35-50% of mining profits through royalties and taxes. When gold prices spike, many impose windfall taxes, sometimes pushing the total government take above 60%."
+              },
+              {
+                "name": "https://pixabay.com/get/g2883d270eddc5972ca61cf2ebb04fab4f94f2cabdc40a4a242242256ebd0be53a82ea95a7ed09a562ae9be8e76c8631622d42c61467f6907a46ecc177de82ac5_1280.jpg",
+                "title": "Local Content Rules",
+                "subtitle": "Forced local participation",
+                "notes": "⦿ Local ownership requirements \n⦿ Local employment quotas \n⦿ Local procurement rules \n⦿ Skills transfer mandates",
+                "prose": "Many countries now require local ownership stakes, employment quotas, and local procurement. While supporting development, these requirements can significantly increase costs and operational complexity."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "node": "Social Dimensions",
+        "weight": 70,
+        "prose": "Gold mining's social impacts are profound and often contradictory. Mines can bring jobs and development to remote regions, but also displacement, cultural disruption, and conflict. The industry increasingly recognizes that social license to operate is as important as government permits.",
+        "widgets": [
+          {
+            "name": "https://pixabay.com/get/ge59d722a4fc4cd9157997f6ee768e49b7615111eb4bd69d8cb64272b667aae9ace6d4bd0436fe6a3091f5fc07f5139d3ceed41ef458d14297a5d824d350e6933_1280.jpg",
+            "title": "Community Engagement",
+            "subtitle": "Beyond the fence line",
+            "notes": "⦿ Free prior informed consent \n⦿ Benefit sharing agreements \n⦿ Local employment priority \n⦿ Infrastructure development",
+            "prose": "Modern mining requires extensive community engagement. Companies must obtain 'social license' through benefit-sharing agreements, local employment, and infrastructure development that serves both mine and community."
+          },
+          {
+            "name": "https://pixabay.com/get/g21566b257bc43ab847310ad70cc00ac9fa3361149e22b7b6537b15535b0ec2392f3cb5266635b49c2fd20c820ff36b294dd343050468bd7d9bdd0c35f7483a02_1280.jpg",
+            "title": "Artisanal Mining",
+            "subtitle": "Poverty's gold rush",
+            "notes": "⦿ 15-20 million miners \n⦿ 100 million dependents \n⦿ $30 billion annual value \n⦿ Often illegal/dangerous",
+            "prose": "Artisanal mining employs 15-20 million people directly, supporting 100 million dependents. It's often the only economic option in poor regions, but comes with enormous health and environmental costs."
+          },
+          {
+            "name": "https://pixabay.com/get/gd6cf3bbf99f5b16bd9239c400a0754597c0ea13dadf282688014fc45a3aae32c233e4442b7c46b2668c7873646d46df9c9edf33af21dce1ff4648c6a6bd1093f_1280.jpg",
+            "title": "Indigenous Rights",
+            "subtitle": "Sacred lands vs. gold",
+            "notes": "⦿ Often on indigenous territory \n⦿ Cultural site destruction \n⦿ Water source contamination \n⦿ Increasing legal challenges",
+            "prose": "Many gold deposits lie under indigenous territories. The clash between mining development and indigenous rights has led to protests, legal battles, and international campaigns that can delay or stop projects."
+          }
+        ],
+        "children": [
+          {
+            "node": "Labor Issues",
+            "weight": 45,
+            "prose": "Gold mining labor ranges from highly paid technical professionals to exploited artisanal miners. Safety remains a critical issue, especially in deep underground mines.",
+            "widgets": [
+              {
+                "name": "https://pixabay.com/get/gebb2fc88ddb4153c9d1909a5fe48772fa47eaad152916fd8102c19caa8898ea124410849a05b51fa474ad375975777d1ba071740f3af9a3f2bba794c993a345a_1280.jpg",
+                "title": "Safety Challenges",
+                "subtitle": "The human cost",
+                "notes": "⦿ Fatality rate: 12.5 per 100,000 \n⦿ Silicosis epidemic \n⦿ Heat stress at depth \n⦿ Seismic events underground",
+                "prose": "Mining remains one of the world's most dangerous occupations. Deep mines face rock bursts, extreme heat, and silica dust that causes fatal lung disease in thousands of miners annually."
+              },
+              {
+                "name": "https://pixabay.com/get/gde182b4d9b9b2c4b47ab8898820bbb3baaad21085795bcf6924d8234e7ffc7c194a67035896fbe54ec709d50e1d35798d9480dfb3c9d4a3a7b56490916ded5a1_1280.jpg",
+                "title": "Automation Impact",
+                "subtitle": "Robots replacing miners",
+                "notes": "⦿ Autonomous trucks common \n⦿ Remote operation centers \n⦿ 30-40% fewer workers \n⦿ Higher skills required",
+                "prose": "Automation is transforming mining. Autonomous trucks and remote-controlled equipment improve safety but eliminate jobs. A modern automated mine employs 30-40% fewer workers than traditional operations."
+              }
+            ]
+          },
+          {
+            "node": "Conflict Gold",
+            "weight": 35,
+            "prose": "Gold has financed conflicts throughout history and continues to do so. Efforts to track and prevent conflict gold face significant challenges in complex global supply chains.",
+            "widgets": [
+              {
+                "name": "https://pixabay.com/get/g2f903f649a1d4996f7dc614e8ffc24095e49acdaa6e05fa2fd52cd847c6ae5de9da082e0c2247fd717fbea332016a6bd7becac4d21a34477c0b149c0d70260f6_1280.jpg",
+                "title": "Financing Violence",
+                "subtitle": "Blood gold",
+                "notes": "⦿ DRC, Sudan, Colombia hotspots \n⦿ Funds armed groups \n⦿ Human rights abuses \n⦿ Difficult to track",
+                "prose": "In conflict zones, gold mining finances armed groups and perpetuates violence. The Democratic Republic of Congo alone sees hundreds of millions in gold smuggled annually, funding ongoing conflicts."
+              },
+              {
+                "name": "https://pixabay.com/get/gce55f38ebc54042a677c95d585e8d09651b085589826955306d159dfa9b11490c84665af80e1097c88aed3c77d2f49869158efb4f398c9edff8dfc366007c304_1280.jpg",
+                "title": "Chain of Custody",
+                "subtitle": "Tracking responsible gold",
+                "notes": "⦿ OECD due diligence \n⦿ Responsible gold standards \n⦿ Blockchain tracking \n⦿ Refiner certification",
+                "prose": "New systems track gold from mine to market, ensuring it doesn't fund conflict. But with gold easily melted and mixed, maintaining chain of custody remains challenging, especially for artisanal production."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "node": "Technological Innovation",
+        "weight": 80,
+        "prose": "Technology is revolutionizing gold mining, from AI-powered exploration to automated operations. These innovations promise to make mining safer, more efficient, and potentially less environmentally damaging, though they also bring new challenges around employment and energy use.",
+        "widgets": [
+          {
+            "name": "https://pixabay.com/get/gaa1458d38a4610d3b4e82af0f034be91d03b498b8c2655b41bcb17a70af7211475d83738ac59e947b278175d0374b97b936ccc50985a6dea8060559604303e5c_1280.jpg",
+            "title": "AI in Exploration",
+            "subtitle": "Machine learning finds gold",
+            "notes": "⦿ Pattern recognition in data \n⦿ Predicts deposit locations \n⦿ Reduces drilling needed \n⦿ Success rate improving",
+            "url": "https://www.youtube.com/watch?v=_9mzmvhwMqw",
+            "prose": "Artificial intelligence is revolutionizing exploration. Machine learning algorithms analyze vast geological datasets to predict where gold deposits might be, significantly improving discovery success rates and reducing expensive drilling."
+          },
+          {
+            "name": "https://pixabay.com/get/gc59af56e366d4962c8fb04e0161ac2b9ef0defdc99fa3a8112208b39ac0ca4d0dd9e4e46f5d9fd6cfaba263f531729f955951692a6ac976e69afcaa0d1338ff6_1280.jpg",
+            "title": "Autonomous Operations",
+            "subtitle": "The mine that runs itself",
+            "notes": "⦿ Driverless trucks save 15% \n⦿ Autonomous drilling rigs \n⦿ AI optimizes processes \n⦿ Remote operation centers",
+            "prose": "Fully autonomous mines are becoming reality. Rio Tinto operates mines from control centers 1,500 km away. Autonomous equipment runs 24/7, improving efficiency by 15-20% while removing workers from dangerous areas."
+          },
+          {
+            "name": "https://pixabay.com/get/g8a6a03fb972515dc26b66d6625ca62dae1939cfc414fa25007b547679a1705c05e784ecab0adbf668a1d1825ddc20725d0cbe767750affa8f465f61c7925b865_1280.jpg",
+            "title": "IoT and Sensors",
+            "subtitle": "The connected mine",
+            "notes": "⦿ Thousands of sensors per mine \n⦿ Real-time optimization \n⦿ Predictive maintenance \n⦿ Environmental monitoring",
+            "prose": "Modern mines deploy thousands of sensors monitoring everything from equipment health to air quality. This Internet of Things enables real-time optimization and predictive maintenance, preventing costly breakdowns."
+          }
+        ],
+        "children": [
+          {
+            "node": "Processing Innovation",
+            "weight": 55,
+            "prose": "New processing technologies promise to extract more gold from lower grade ores while reducing environmental impact. Some could revolutionize how we think about gold extraction.",
+            "widgets": [
+              {
+                "name": null,
+                "title": "Alternative Lixiviants",
+                "subtitle": "Beyond cyanide",
+                "notes": "⦿ Thiosulfate non-toxic \n⦿ Chloride for refractory \n⦿ Slower than cyanide \n⦿ Higher costs currently",
+                "prose": "Thiosulfate leaching offers a non-toxic alternative to cyanide, particularly for carbonaceous ores. While slower and currently more expensive, it could transform gold processing in environmentally sensitive areas."
+              },
+              {
+                "name": null,
+                "title": "Phytomining",
+                "subtitle": "Plants that mine gold",
+                "notes": "⦿ Plants absorb gold \n⦿ Harvest and burn for ash \n⦿ 1-2 g/t in plant tissue \n⦿ Works on waste dumps",
+                "prose": "Some plants naturally accumulate gold from soil. Researchers are developing 'phytomining' where plants extract gold from low-grade deposits or mine waste. It's slow but could rehabilitate contaminated sites while producing gold."
+              },
+              {
+                "name": "https://pixabay.com/get/g95120735d6ab5348e5d7f271d34778ab47bceafabe23d37a029959b83edf2a1e29ccedcf287d6877de876d0c6e04b6934eb84473fa34420b9a74712c15850caa_1280.jpg",
+                "title": "Plasma Technology",
+                "subtitle": "Star-hot gold extraction",
+                "notes": "⦿ 15,000°C plasma arc \n⦿ Destroys all organics \n⦿ Recovers from e-waste \n⦿ High energy but clean",
+                "prose": "Plasma arc technology uses 15,000°C temperatures to completely break down ore or electronic waste, recovering gold and other metals. While energy-intensive, it can process materials nothing else can touch."
+              }
+            ]
+          },
+          {
+            "node": "Digital Twins",
+            "weight": 40,
+            "prose": "Digital twin technology creates virtual replicas of entire mining operations, enabling optimization and troubleshooting without risking actual equipment or personnel.",
+            "widgets": [
+              {
+                "name": "https://pixabay.com/get/g4c8407d41ab79ef15dc94e453b05d5a03e5a8fe73431c667b65b66270b58c603fdcb90fc4ba41eda841e456b5455615c7b5d1775b23519070f52cbf3f5e0b6c6_1280.jpg",
+                "title": "Virtual Mining",
+                "subtitle": "The mine in the computer",
+                "notes": "⦿ Complete virtual replica \n⦿ Test scenarios safely \n⦿ Optimize before implementing \n⦿ Training without risk",
+                "prose": "A digital twin is a complete virtual replica of a mine, updated in real-time with sensor data. Operators can test different scenarios, optimize processes, and train personnel without any real-world risk."
+              },
+              {
+                "name": "https://pixabay.com/get/gd5c3e5a82942e3dc89dd52f46e439635c3ea3cbff55c6d738dd389f91b375f8cfd8b86bf9f1673f0a8d2f6a3d0550840dc29ff4e868f078237ddfc43fde4319a_1280.jpg",
+                "title": "Predictive Analytics",
+                "subtitle": "Seeing problems before they happen",
+                "notes": "⦿ Equipment failure prediction \n⦿ Ore grade forecasting \n⦿ Safety incident prevention \n⦿ 20-30% less downtime",
+                "prose": "AI analyzes patterns from millions of data points to predict equipment failures days in advance, forecast ore grades, and even predict safety incidents. This reduces unplanned downtime by 20-30%."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "node": "Future of Gold Mining",
+        "weight": 95,
+        "prose": "The future of gold mining will be shaped by depleting terrestrial resources, climate change, technological advancement, and evolving social expectations. We're approaching fundamental limits on Earth while eyeing resources beyond our planet. The industry must transform to survive.",
+        "widgets": [
+          {
+            "name": "https://pixabay.com/get/g56f4b3b444d94155ea85f04b5f989d6c5f4866b0426e52e56017457e85a25ddbe989b14be40abdab5b2fa8b5b21c8f2cd2042cbdfb7a8020edea3f50218b62b8_1280.jpg",
+            "title": "Peak Gold",
+            "subtitle": "Have we found it all?",
+            "notes": "⦿ Discovery rate declining \n⦿ 2018 production peak? \n⦿ Grades falling 5% annually \n⦿ Exploration budgets rising",
+            "url": "https://www.youtube.com/watch?v=ZMsHKgweLNs",
+            "prose": "Many analysts believe we've hit 'peak gold' - the maximum production rate. Discoveries have declined for 30 years despite increased exploration spending. We might have found all the easy gold Earth has to offer."
+          },
+          {
+            "name": "https://pixabay.com/get/gabccd8ad2fb65f4b284e7908e275f1000d8048b0eb88803ab44cc3ac4f2ee2d4d6e62e73126c647c2a8dc35853947af7c4e380d5044ffe9a29f8318b2e5571a3_1280.jpg",
+            "title": "Deep Sea Mining",
+            "subtitle": "The next frontier",
+            "notes": "⦿ Polymetallic nodules \n⦿ 3-6 km deep \n⦿ Rich in gold, copper, cobalt \n⦿ Environmental concerns huge",
+            "prose": "The deep ocean floor contains polymetallic nodules rich in gold and other metals. While technically feasible, deep-sea mining faces enormous environmental concerns and regulatory hurdles."
+          },
+          {
+            "name": "https://pixabay.com/get/gc4910d537da1a73afa6ab92da972ff0057e33b6dd852919d52f439c37b76508a80aeaec0c8635b1d617493d349db7197aff188d6936d7b25c2467415f02f3533_1280.jpg",
+            "title": "Asteroid Mining",
+            "subtitle": "Infinite gold in space",
+            "notes": "⦿ 16 Psyche: $10,000 quadrillion \n⦿ Near-Earth asteroids accessible \n⦿ Technology developing \n⦿ Economics uncertain",
+            "prose": "Asteroid 16 Psyche contains enough gold to make everyone on Earth a billionaire. While asteroid mining sounds like science fiction, companies are seriously developing the technology. The economics remain highly uncertain."
+          }
+        ],
+        "children": [
+          {
+            "node": "Urban Mining",
+            "weight": 60,
+            "prose": "Cities are becoming the richest gold deposits on Earth. Electronic waste contains more gold per tonne than most gold ore, and recycling technology is rapidly improving.",
+            "widgets": [
+              {
+                "name": null,
+                "title": "Electronic Waste",
+                "subtitle": "Cities as gold mines",
+                "notes": "⦿ 1 tonne phones = 350g gold \n⦿ 50x richer than ore \n⦿ 50 million tonnes e-waste/year \n⦿ Only 20% recycled",
+                "prose": "A tonne of mobile phones contains 350 grams of gold - 50 times more than typical ore. With 50 million tonnes of e-waste generated annually, cities have become the richest gold deposits on the planet."
+              },
+              {
+                "name": "https://pixabay.com/get/ga9492821e7f6ccbfcef43d6c2f731909baaa3b09f25fe7bc9fd4b06a6433c437f1a56615c540b05bb0da5f7652ce1988d2d0bb6224a2295c96f16c99080fe41f_1280.jpg",
+                "title": "Advanced Recovery",
+                "subtitle": "Mining the technosphere",
+                "notes": "⦿ Bioleaching circuit boards \n⦿ Plasma arc furnaces \n⦿ Chemical dissolution \n⦿ 95% recovery possible",
+                "prose": "New recycling technologies can recover 95% of gold from electronics. Bacteria dissolve metals from circuit boards, while advanced chemical processes selectively extract gold with minimal environmental impact."
+              },
+              {
+                "name": "https://pixabay.com/get/g083e979e58a28ec625178ce8dc292609bef71dd9b24d3649a281eaa88ece76de5179986639b615c5c7474472a4d264b09a5099832d4cda5006cb351df4d5b22d_1280.jpg",
+                "title": "Circular Gold Economy",
+                "subtitle": "Endless recycling",
+                "notes": "⦿ Gold 100% recyclable \n⦿ No quality loss \n⦿ 30% of supply from recycling \n⦿ Could reach 50% by 2030",
+                "prose": "Gold is infinitely recyclable without quality loss. Currently 30% of gold supply comes from recycling, but this could reach 50% by 2030 as urban mining technology improves and virgin ore grades decline."
+              }
+            ]
+          },
+          {
+            "node": "Climate Adaptation",
+            "weight": 50,
+            "prose": "Climate change is forcing the mining industry to radically rethink operations. From water scarcity to extreme weather events, mines must adapt or close.",
+            "widgets": [
+              {
+                "name": "https://pixabay.com/get/gfb7a648cdab5e40caa0288b27d7bdb6fbe0d2ed80605076091922e7b500a52c7b9589d9e023b5272ea23338d8cab479f9613f99386c30505282766721ce000e8_1280.jpg",
+                "title": "Water Crisis",
+                "subtitle": "Mining without water",
+                "notes": "⦿ 50% mines in water stress \n⦿ Dry processing emerging \n⦿ Desalination at coastal mines \n⦿ Zero discharge systems",
+                "prose": "Half of gold mines operate in water-stressed regions. The industry is developing dry processing technologies and closed-loop water systems. Some coastal mines are building desalination plants despite the high cost."
+              },
+              {
+                "name": "https://pixabay.com/get/g24c3b7bf240e42338b55e70d19e4c88ef42c0016140d879853a23882f5486f6b5771b629ae3102ea19b109284bf13263d374008b6a5b4345106ecca4a2157a63_1280.jpg",
+                "title": "Extreme Weather",
+                "subtitle": "Mining in climate chaos",
+                "notes": "⦿ Flooding increases 30% \n⦿ Permafrost melting \n⦿ Drought affecting operations \n⦿ Infrastructure damage rising",
+                "prose": "Extreme weather events have increased 30% at mine sites. Permafrost melting threatens Arctic mines, while unprecedented floods and droughts disrupt operations globally. Climate adaptation is now essential for mine planning."
+              },
+              {
+                "name": "https://pixabay.com/get/g3a1739e7d25975fae561a2a8d3a9cbdae433bdd7d36e70322bc4b3b0befc65b2eeeeea27c4f304542f3b4d35416f4e21af5c223cfb719047e7afe4610745ee2f_1280.jpg",
+                "title": "Net Zero Mining",
+                "subtitle": "The carbon-free mine",
+                "notes": "⦿ 2050 net zero targets \n⦿ Renewable energy adoption \n⦿ Electric mining equipment \n⦿ Carbon capture research",
+                "prose": "Major miners have committed to net zero emissions by 2050. This requires massive renewable energy deployment, electric mining equipment, and potentially carbon capture technology. The transition will cost billions."
+              }
+            ]
+          },
+          {
+            "node": "Biotechnology",
+            "weight": 45,
+            "prose": "Biotechnology could revolutionize gold mining. From bacteria that extract gold to synthetic biology creating custom organisms, biology might replace traditional mining.",
+            "widgets": [
+              {
+                "name": null,
+                "title": "Bacterial Mining",
+                "subtitle": "Microbes as miners",
+                "notes": "⦿ Bacteria concentrate gold \n⦿ Work at room temperature \n⦿ Low energy requirement \n⦿ Selective extraction",
+                "prose": "Certain bacteria naturally concentrate gold from solution, potentially replacing energy-intensive chemical processes. Some can even precipitate gold nanoparticles, creating pure gold from dilute solutions."
+              },
+              {
+                "name": "https://pixabay.com/get/g71e153c370a6b8f9078119500f5135efa2fdc17ca176069b21ce4b7cb838007e8f28869844c2f7966c48cc387ee11235b76fa99bd54ed3fae8a1e78511af04f2_1280.jpg",
+                "title": "Engineered Organisms",
+                "subtitle": "Designer gold collectors",
+                "notes": "⦿ Custom organisms for gold \n⦿ Enhanced accumulation \n⦿ Work in extreme conditions \n⦿ Self-replicating workers",
+                "prose": "Scientists are engineering organisms specifically to extract gold. These could work in extreme conditions, self-replicate, and potentially extract gold from sources we can't currently process economically."
+              }
+            ]
+          },
+          {
+            "node": "Social License Future",
+            "weight": 40,
+            "prose": "The future of gold mining depends on maintaining social license. Communities demand more benefits, less impact, and genuine partnership in development.",
+            "widgets": [
+              {
+                "name": "https://pixabay.com/get/gab5e6f880166187600efa20a410b32d6002fd5c916ffbb5bce88445a5e6596400b8f55c8f53adfb8334b56d8158d80fa58da04939880c17d3865dd96f85b87e0_1280.jpg",
+                "title": "Community Ownership",
+                "subtitle": "Sharing the wealth",
+                "notes": "⦿ Equity participation models \n⦿ Revenue sharing increases \n⦿ Local processing requirements \n⦿ Development partnerships",
+                "prose": "Future mines will likely require significant community ownership. Models where local communities hold equity stakes and share directly in profits are becoming standard in many jurisdictions."
+              },
+              {
+                "name": "https://pixabay.com/get/ga927c7ef44fe5ddf9fec34f280ac5780317f8c3781e2a2d5b33c188ec61c1852b8bf0e20e75970ed97afe4db87128c2b4cab490db6678c19a7013e3137b849a3_1280.jpg",
+                "title": "Radical Transparency",
+                "subtitle": "Nothing to hide",
+                "notes": "⦿ Real-time monitoring public \n⦿ Blockchain payment tracking \n⦿ Open book accounting \n⦿ Community oversight boards",
+                "prose": "Future mines will operate with radical transparency - real-time environmental monitoring available publicly, blockchain tracking of all payments, and community members on operational oversight boards."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,1060 @@
+{
+  "seo": {
+    "title": "Technetium: The Coolest Metal You've Never Heard Of",
+    "description": "Exploring the remarkable story of element 43",
+    "prose": "Today we're diving into one of the most fascinating elements on the periodic table - technetium. It's a metal with a story so unusual that it challenges our basic assumptions about the elements around us. From its mysterious absence in nature to its critical role in modern medicine, technetium is full of surprises that will change how you think about chemistry and the universe itself."
+  },
+  "pageTitle": "Technetium: The Coolest Metal You've Never Heard Of",
+  "pageDescription": "A Dynamic Tree exploration of element 43",
+  "knowledgeTree": {
+    "node": "The Missing Element",
+    "weight": 100,
+    "prose": "Technetium holds a unique distinction - it was the first element to be artificially produced before being found in nature. For decades, element 43 was a gap in the periodic table, a mystery that puzzled chemists worldwide. Its story begins with prediction, continues through discovery, and extends into surprising modern applications.",
+    "widgets": [
+      {
+        "name": "https://www.youtube.com/watch?v=VTRl5SxUW-I",
+        "title": "The Periodic Table Gap",
+        "subtitle": "Why element 43 was missing",
+        "notes": "Mendeleev predicted it in 1869 as 'eka-manganese'"
+      },
+      {
+        "name": "/technetium/periodic_gap.jpg",
+        "title": "The Empty Space",
+        "subtitle": "A hole in chemistry",
+        "image_only": true,
+        "url": "https://www.chemistryworld.com/opinion/technetium/3008330.article",
+        "notes": "Element 43 sat empty for 70 years while all neighbors were known"
+      }
+    ],
+    "children": [
+      {
+        "node": "Discovery Story",
+        "weight": 90,
+        "prose": "The discovery of technetium is a tale of scientific perseverance, false claims, and eventual triumph. Multiple teams claimed to have found it, but only one succeeded in 1937.",
+        "widgets": [
+          {
+            "name": "https://www.youtube.com/watch?v=6nJ3vUajk3Y",
+            "title": "Perrier and Segrè",
+            "subtitle": "The true discoverers",
+            "notes": "Italian scientists who finally isolated element 43 in 1937"
+          },
+          {
+            "name": "/technetium/cyclotron.jpg",
+            "title": "Berkeley's Cyclotron",
+            "subtitle": "The machine that made it possible",
+            "image_only": true,
+            "url": "https://www.aps.org/publications/apsnews/200704/physicshistory.cfm",
+            "notes": "Ernest Lawrence's cyclotron bombarded molybdenum to create Tc"
+          },
+          {
+            "name": "/technetium/false_claims.jpg",
+            "title": "False Discoveries",
+            "subtitle": "Masurium, illinium, and more",
+            "image_only": true,
+            "url": "https://www.nature.com/articles/d41586-019-01380-7",
+            "notes": "At least 5 false claims before real discovery"
+          }
+        ],
+        "children": [
+          {
+            "node": "The Name's Origin",
+            "weight": 40,
+            "prose": "The name 'technetium' comes from the Greek word 'technetos' meaning artificial, making it the only element named for how it was discovered rather than its properties or discoverers.",
+            "widgets": [
+              {
+                "name": "/technetium/greek_technetos.jpg",
+                "title": "Greek Etymology",
+                "subtitle": "τεχνητός - artificial",
+                "image_only": true,
+                "url": "https://www.etymonline.com/word/technetium",
+                "notes": "First artificially produced element in human history"
+              }
+            ]
+          },
+          {
+            "node": "Noddack's Controversy",
+            "weight": 30,
+            "prose": "Ida Noddack claimed discovery in 1925 as 'masurium' but couldn't reproduce her results. Modern analysis suggests she might have actually detected it.",
+            "widgets": [
+              {
+                "name": "/technetium/ida_noddack.jpg",
+                "title": "Ida Noddack",
+                "subtitle": "Controversial claim from 1925",
+                "image_only": true,
+                "url": "https://www.chemistryworld.com/news/technetium/3007741.article",
+                "notes": "X-ray data might have shown real technetium traces"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "node": "Why So Rare?",
+        "weight": 95,
+        "prose": "Technetium is the lightest element with no stable isotopes. Every single atom of technetium is radioactive, which explains why it's virtually absent from Earth's crust despite being relatively light.",
+        "widgets": [
+          {
+            "name": "https://www.youtube.com/watch?v=Qe5WT22-AO8",
+            "title": "Nuclear Instability",
+            "subtitle": "No stable isotopes exist",
+            "notes": "All 33 known isotopes are radioactive"
+          },
+          {
+            "name": "/technetium/half_life.jpg",
+            "title": "Half-Life Problem",
+            "subtitle": "Too short for primordial survival",
+            "image_only": true,
+            "url": "https://www.webelements.com/technetium/isotopes.html",
+            "notes": "Longest half-life: 4.21 million years (Tc-98)"
+          },
+          {
+            "name": "/technetium/nuclear_valley.jpg",
+            "title": "Island of Instability",
+            "subtitle": "Gap in nuclear stability",
+            "image_only": true,
+            "url": "https://www.nuclear-power.com/nuclear-power/reactor-physics/",
+            "notes": "Odd proton number creates nuclear instability"
+          }
+        ],
+        "children": [
+          {
+            "node": "Promethium Connection",
+            "weight": 25,
+            "prose": "Technetium shares this distinction with promethium - they're the only two elements lighter than bismuth with no stable isotopes.",
+            "widgets": [
+              {
+                "name": "/technetium/pm_tc_comparison.jpg",
+                "title": "Two Unstable Lightweights",
+                "subtitle": "Tc (43) and Pm (61)",
+                "image_only": true,
+                "url": "https://www.chemistrylearner.com/promethium.html",
+                "notes": "Both missing from nature for same reason"
+              }
+            ]
+          },
+          {
+            "node": "Primordial Extinction",
+            "weight": 35,
+            "prose": "Any technetium from Earth's formation decayed away billions of years ago. What little exists today comes from recent nuclear processes.",
+            "widgets": [
+              {
+                "name": "/technetium/earth_formation.jpg",
+                "title": "4.5 Billion Years Ago",
+                "subtitle": "All original Tc long gone",
+                "image_only": true,
+                "url": "https://www.space.com/19175-how-was-earth-formed.html",
+                "notes": "Even Tc-98 would've had >1000 half-lives since Earth formed"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "node": "Natural Occurrence",
+        "weight": 75,
+        "prose": "Despite its rarity, tiny amounts of technetium do exist naturally, produced by spontaneous uranium fission and cosmic ray bombardment.",
+        "widgets": [
+          {
+            "name": "/technetium/uranium_fission.jpg",
+            "title": "Uranium Decay Product",
+            "subtitle": "Spontaneous fission creates traces",
+            "image_only": true,
+            "url": "https://www.nuclear-power.com/nuclear-power/fission/",
+            "notes": "1 kg of uranium ore contains ~1 nanogram Tc"
+          },
+          {
+            "name": "https://www.youtube.com/watch?v=CyVKlgCKOkQ",
+            "title": "Cosmic Ray Production",
+            "subtitle": "High-energy particles create Tc",
+            "notes": "Molybdenum in atmosphere bombarded by cosmic rays"
+          }
+        ],
+        "children": [
+          {
+            "node": "Oklo Natural Reactor",
+            "weight": 40,
+            "prose": "The Oklo natural nuclear reactor in Gabon produced technetium 2 billion years ago - evidence found in isotope ratios.",
+            "widgets": [
+              {
+                "name": "https://www.youtube.com/watch?v=yS53AA_WaUk",
+                "title": "Natural Nuclear Reactor",
+                "subtitle": "2 billion years ago in Gabon",
+                "notes": "Operated for hundreds of thousands of years"
+              },
+              {
+                "name": "/technetium/oklo_site.jpg",
+                "title": "Oklo Mine Site",
+                "subtitle": "Where nature went nuclear",
+                "image_only": true,
+                "url": "https://www.iaea.org/newscenter/news/meet-oklo",
+                "notes": "Natural chain reaction produced many fission products"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "node": "Stellar Technetium",
+        "weight": 85,
+        "prose": "The discovery of technetium in stars in 1952 revolutionized our understanding of stellar nucleosynthesis and proved stars are still creating elements.",
+        "widgets": [
+          {
+            "name": "https://www.youtube.com/watch?v=Xs_gHwsv7xc",
+            "title": "S-Type Stars",
+            "subtitle": "Red giants making technetium",
+            "notes": "Paul Merrill's 1952 discovery changed astronomy"
+          },
+          {
+            "name": "/technetium/stellar_spectrum.jpg",
+            "title": "Spectral Lines",
+            "subtitle": "Tc signature in starlight",
+            "image_only": true,
+            "url": "https://www.aanda.org/articles/aa/full/2006/16/aa4523-05/aa4523-05.html",
+            "notes": "Absorption lines at 4238, 4262, and 4297 Angstroms"
+          },
+          {
+            "name": "/technetium/s_process.jpg",
+            "title": "S-Process Nucleosynthesis",
+            "subtitle": "Slow neutron capture",
+            "image_only": true,
+            "url": "https://www.annualreviews.org/doi/10.1146/annurev-astro-081817",
+            "notes": "Stars actively creating elements heavier than iron"
+          }
+        ],
+        "children": [
+          {
+            "node": "Proof of Active Creation",
+            "weight": 45,
+            "prose": "Since technetium's half-life is shorter than stellar lifetimes, its presence proves stars are actively creating new elements right now.",
+            "widgets": [
+              {
+                "name": "/technetium/stellar_factory.jpg",
+                "title": "Stellar Element Factory",
+                "subtitle": "Real-time nucleosynthesis",
+                "image_only": true,
+                "url": "https://www.sciencedirect.com/topics/physics-and-astronomy/nucleosynthesis",
+                "notes": "Stars must be making Tc continuously for us to see it"
+              }
+            ]
+          },
+          {
+            "node": "AGB Stars",
+            "weight": 35,
+            "prose": "Asymptotic Giant Branch stars are technetium factories, dredging up freshly made Tc from their cores to their surfaces.",
+            "widgets": [
+              {
+                "name": "https://www.youtube.com/watch?v=aFPKpC2agzY",
+                "title": "Third Dredge-Up",
+                "subtitle": "Bringing Tc to surface",
+                "notes": "Convection brings s-process products to photosphere"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "node": "Medical Revolution",
+        "weight": 100,
+        "prose": "Technetium-99m is the workhorse of nuclear medicine, used in over 30 million procedures annually. Its perfect nuclear properties make it ideal for medical imaging.",
+        "widgets": [
+          {
+            "name": "https://www.youtube.com/watch?v=RzKIIiQqnHY",
+            "title": "Tc-99m in Medicine",
+            "subtitle": "Most used medical isotope",
+            "notes": "80% of all nuclear medicine procedures use Tc-99m"
+          },
+          {
+            "name": "/technetium/gamma_camera.jpg",
+            "title": "Gamma Camera Imaging",
+            "subtitle": "Perfect 140 keV photons",
+            "image_only": true,
+            "url": "https://www.insideradiology.com.au/gamma-camera/",
+            "notes": "Ideal energy for imaging, minimal patient dose"
+          },
+          {
+            "name": "/technetium/sestamibi.jpg",
+            "title": "Heart Perfusion Scan",
+            "subtitle": "Tc-99m sestamibi",
+            "image_only": true,
+            "url": "https://www.hopkinsmedicine.org/heart_vascular_institute/",
+            "notes": "Shows blood flow to heart muscle"
+          },
+          {
+            "name": "/technetium/bone_scan.jpg",
+            "title": "Bone Scanning",
+            "subtitle": "Tc-99m MDP",
+            "image_only": true,
+            "url": "https://www.cancer.gov/publications/dictionaries/cancer-terms/def/bone-scan",
+            "notes": "Detects fractures, cancer metastases"
+          }
+        ],
+        "children": [
+          {
+            "node": "Perfect Properties",
+            "weight": 50,
+            "prose": "Tc-99m has ideal characteristics: 6-hour half-life, pure gamma emission, and easy chemistry for attaching to targeting molecules.",
+            "widgets": [
+              {
+                "name": "/technetium/decay_scheme.jpg",
+                "title": "Isomeric Transition",
+                "subtitle": "Meta-stable to ground state",
+                "image_only": true,
+                "url": "https://www.nuclear-power.com/technetium-99m/",
+                "notes": "Emits only gamma rays, no harmful beta particles"
+              },
+              {
+                "name": "/technetium/half_life_comparison.jpg",
+                "title": "6-Hour Sweet Spot",
+                "subtitle": "Long enough to image, short to clear",
+                "image_only": true,
+                "url": "https://www.radiologyinfo.org/en/info/gennuclear",
+                "notes": "Balances imaging time with radiation exposure"
+              }
+            ]
+          },
+          {
+            "node": "Generator System",
+            "weight": 45,
+            "prose": "The molybdenum-99/technetium-99m generator is a brilliant invention allowing hospitals to produce Tc-99m on-site daily.",
+            "widgets": [
+              {
+                "name": "https://www.youtube.com/watch?v=OBvwO0oRZYg",
+                "title": "Moly Cow Generator",
+                "subtitle": "Milking radioactive cows",
+                "notes": "Mo-99 decays to Tc-99m, eluted with saline"
+              },
+              {
+                "name": "/technetium/generator_diagram.jpg",
+                "title": "Generator Design",
+                "subtitle": "Alumina column system",
+                "image_only": true,
+                "url": "https://www.nrc.gov/materials/miau/med-use-toolkit/",
+                "notes": "Mo-99 stuck to column, Tc-99m washes off"
+              }
+            ],
+            "children": [
+              {
+                "node": "Supply Chain Crisis",
+                "weight": 30,
+                "prose": "Global Tc-99m supply depends on just 6 aging reactors, creating periodic shortages and concerns about future availability.",
+                "widgets": [
+                  {
+                    "name": "/technetium/reactor_map.jpg",
+                    "title": "Six Critical Reactors",
+                    "subtitle": "Aging infrastructure",
+                    "image_only": true,
+                    "url": "https://www.oecd-nea.org/med-radio/",
+                    "notes": "Average age over 50 years"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "node": "Diagnostic Applications",
+            "weight": 60,
+            "prose": "Tc-99m compounds target specific organs: brain, heart, lungs, liver, kidneys, bones, thyroid - virtually every organ can be imaged.",
+            "widgets": [
+              {
+                "name": "/technetium/brain_spect.jpg",
+                "title": "Brain Perfusion",
+                "subtitle": "Tc-99m HMPAO",
+                "image_only": true,
+                "url": "https://www.snmmi.org/AboutSNMMI/Content.aspx?ItemNumber=13663",
+                "notes": "Shows blood flow patterns in brain tissue"
+              },
+              {
+                "name": "/technetium/lung_scan.jpg",
+                "title": "Lung Ventilation",
+                "subtitle": "Tc-99m DTPA aerosol",
+                "image_only": true,
+                "url": "https://radiopaedia.org/articles/ventilation-perfusion-scan",
+                "notes": "Detects pulmonary embolism"
+              },
+              {
+                "name": "/technetium/sentinel_node.jpg",
+                "title": "Sentinel Node",
+                "subtitle": "Cancer staging",
+                "image_only": true,
+                "url": "https://www.cancer.org/treatment/understanding-your-diagnosis/",
+                "notes": "First lymph node cancer would spread to"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "node": "Nuclear Waste Component",
+        "weight": 70,
+        "prose": "Technetium-99 is a major component of nuclear waste, creating long-term storage challenges due to its 211,000-year half-life and chemical mobility.",
+        "widgets": [
+          {
+            "name": "/technetium/fission_yield.jpg",
+            "title": "6% Fission Yield",
+            "subtitle": "Major fission product",
+            "image_only": true,
+            "url": "https://www.nuclear-power.com/nuclear-power-plant/nuclear-fuel/",
+            "notes": "One of highest yields from uranium fission"
+          },
+          {
+            "name": "/technetium/waste_storage.jpg",
+            "title": "Storage Challenge",
+            "subtitle": "Mobile in environment",
+            "image_only": true,
+            "url": "https://www.world-nuclear.org/information-library/nuclear-fuel-cycle/",
+            "notes": "Pertechnetate ion very soluble in water"
+          }
+        ],
+        "children": [
+          {
+            "node": "Environmental Mobility",
+            "weight": 40,
+            "prose": "The pertechnetate ion (TcO4-) is highly mobile in groundwater, making technetium one of the most problematic radionuclides in repositories.",
+            "widgets": [
+              {
+                "name": "/technetium/pertechnetate.jpg",
+                "title": "Pertechnetate Ion",
+                "subtitle": "TcO4- anion",
+                "image_only": true,
+                "url": "https://www.chemspider.com/Chemical-Structure.145342.html",
+                "notes": "Similar to perchlorate, doesn't bind to soil"
+              }
+            ]
+          },
+          {
+            "node": "Transmutation Research",
+            "weight": 25,
+            "prose": "Scientists are researching ways to transmute Tc-99 into stable ruthenium-100 using neutron bombardment.",
+            "widgets": [
+              {
+                "name": "/technetium/transmutation.jpg",
+                "title": "Nuclear Transmutation",
+                "subtitle": "Tc-99 to Ru-100",
+                "image_only": true,
+                "url": "https://www.sciencedirect.com/science/article/pii/",
+                "notes": "Could eliminate long-term hazard"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "node": "Chemical Properties",
+        "weight": 80,
+        "prose": "Technetium's chemistry is remarkably versatile, with oxidation states from -1 to +7, making it useful for diverse applications despite its radioactivity.",
+        "widgets": [
+          {
+            "name": "/technetium/oxidation_states.jpg",
+            "title": "Nine Oxidation States",
+            "subtitle": "From -1 to +7",
+            "image_only": true,
+            "url": "https://www.webelements.com/technetium/chemistry.html",
+            "notes": "Most diverse oxidation states of any element"
+          },
+          {
+            "name": "https://www.youtube.com/watch?v=FpLgzLXCuYk",
+            "title": "Transition Metal Chemistry",
+            "subtitle": "Group 7 element",
+            "notes": "Between manganese and rhenium"
+          },
+          {
+            "name": "/technetium/metal_sample.jpg",
+            "title": "Metallic Technetium",
+            "subtitle": "Silvery-gray metal",
+            "image_only": true,
+            "url": "https://www.periodictable.com/Elements/043/index.html",
+            "notes": "Tarnishes slowly in moist air"
+          }
+        ],
+        "children": [
+          {
+            "node": "Coordination Chemistry",
+            "weight": 35,
+            "prose": "Technetium forms complex coordination compounds, crucial for medical imaging agents that target specific organs.",
+            "widgets": [
+              {
+                "name": "/technetium/complexes.jpg",
+                "title": "Tc Complexes",
+                "subtitle": "Diverse ligand chemistry",
+                "image_only": true,
+                "url": "https://pubs.acs.org/doi/10.1021/cr200334n",
+                "notes": "Forms stable complexes with N, O, S, P donors"
+              }
+            ]
+          },
+          {
+            "node": "Corrosion Inhibitor",
+            "weight": 30,
+            "prose": "Pertechnetate is an excellent corrosion inhibitor for steel, but its radioactivity limits this application.",
+            "widgets": [
+              {
+                "name": "/technetium/corrosion.jpg",
+                "title": "Steel Protection",
+                "subtitle": "55 ppm prevents rust",
+                "image_only": true,
+                "url": "https://corrosionpedia.com/definition/",
+                "notes": "More effective than chromate but radioactive"
+              }
+            ]
+          },
+          {
+            "node": "Superconductivity",
+            "weight": 25,
+            "prose": "Technetium becomes superconducting at 7.46 K, higher than any other single element except niobium.",
+            "widgets": [
+              {
+                "name": "/technetium/superconductor.jpg",
+                "title": "Second-Best Element",
+                "subtitle": "Tc at 7.46 K",
+                "image_only": true,
+                "url": "https://www.nature.com/articles/s41598-020-68003-4",
+                "notes": "Only Niobium (9.3 K) is higher for elements"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "node": "Industrial Applications",
+        "weight": 60,
+        "prose": "Beyond medicine, technetium has niche industrial uses in non-destructive testing and as a catalyst, though radiation limits widespread adoption.",
+        "widgets": [
+          {
+            "name": "/technetium/ndt_testing.jpg",
+            "title": "Radiographic Testing",
+            "subtitle": "Weld inspection",
+            "image_only": true,
+            "url": "https://www.twi-global.com/technical-knowledge/faqs/radiographic-testing",
+            "notes": "Tc-99 sources for pipeline inspection"
+          },
+          {
+            "name": "/technetium/catalyst.jpg",
+            "title": "Catalysis Research",
+            "subtitle": "Unique properties",
+            "image_only": true,
+            "url": "https://www.sciencedirect.com/science/article/abs/pii/",
+            "notes": "Rhenium analog but radioactive"
+          }
+        ],
+        "children": [
+          {
+            "node": "Optoelectronics",
+            "weight": 20,
+            "prose": "Technetium compounds show interesting optical and electronic properties, spurring research despite practical limitations.",
+            "widgets": [
+              {
+                "name": "/technetium/nanocluster.jpg",
+                "title": "Tc Nanoclusters",
+                "subtitle": "Quantum properties",
+                "image_only": true,
+                "url": "https://pubs.rsc.org/en/content/articlelanding/",
+                "notes": "Unique electronic structures"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "node": "Production Methods",
+        "weight": 75,
+        "prose": "Commercial technetium production relies on nuclear reactors, either from uranium fission or neutron bombardment of molybdenum.",
+        "widgets": [
+          {
+            "name": "https://www.youtube.com/watch?v=ZIWoCgoTRFk",
+            "title": "Reactor Production",
+            "subtitle": "Fission and activation",
+            "notes": "Two main pathways to make Tc"
+          },
+          {
+            "name": "/technetium/target_irradiation.jpg",
+            "title": "Mo-98 Targets",
+            "subtitle": "Neutron activation",
+            "image_only": true,
+            "url": "https://www.iaea.org/publications/10801/",
+            "notes": "Mo-98(n,γ)Mo-99 → Tc-99m"
+          },
+          {
+            "name": "/technetium/reprocessing.jpg",
+            "title": "Spent Fuel Recovery",
+            "subtitle": "Kilograms available",
+            "image_only": true,
+            "url": "https://www.world-nuclear.org/information-library/",
+            "notes": "1 ton spent fuel contains ~1 kg Tc"
+          }
+        ],
+        "children": [
+          {
+            "node": "Accelerator Production",
+            "weight": 30,
+            "prose": "Cyclotrons can produce Tc-99m directly via Mo-100(p,2n) reaction, offering a reactor-free alternative.",
+            "widgets": [
+              {
+                "name": "https://www.youtube.com/watch?v=aBBIcSVXrZU",
+                "title": "Cyclotron Route",
+                "subtitle": "Direct Tc-99m production",
+                "notes": "Requires high-energy protons (>20 MeV)"
+              }
+            ]
+          },
+          {
+            "node": "Future Alternatives",
+            "weight": 25,
+            "prose": "Photo-neutron sources and electron accelerators are being developed as alternative production methods.",
+            "widgets": [
+              {
+                "name": "/technetium/linac.jpg",
+                "title": "Linear Accelerator",
+                "subtitle": "Photo-fission route",
+                "image_only": true,
+                "url": "https://www.triumf.ca/research-program/",
+                "notes": "Uses bremsstrahlung to induce fission"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "node": "Isotopes Overview",
+        "weight": 65,
+        "prose": "Technetium has 33 known isotopes from Tc-85 to Tc-118, none stable, with half-lives from microseconds to millions of years.",
+        "widgets": [
+          {
+            "name": "/technetium/isotope_chart.jpg",
+            "title": "Isotope Chart",
+            "subtitle": "33 radioactive variants",
+            "image_only": true,
+            "url": "https://www-nds.iaea.org/relnsd/vcharthtml/VChartHTML.html",
+            "notes": "Mass numbers 85-118, all unstable"
+          },
+          {
+            "name": "/technetium/decay_modes.jpg",
+            "title": "Decay Modes",
+            "subtitle": "Beta, EC, IT",
+            "image_only": true,
+            "url": "https://www.nndc.bnl.gov/nudat3/",
+            "notes": "Beta-minus, electron capture, isomeric transition"
+          }
+        ],
+        "children": [
+          {
+            "node": "Long-Lived Isotopes",
+            "weight": 35,
+            "prose": "Tc-97 (4.21 Myr), Tc-98 (4.2 Myr), and Tc-99 (211,000 yr) are the longest-lived, important for nuclear waste.",
+            "widgets": [
+              {
+                "name": "/technetium/long_lived.jpg",
+                "title": "Million-Year Club",
+                "subtitle": "Tc-97 and Tc-98",
+                "image_only": true,
+                "url": "https://periodictable.com/Isotopes/043.97/index.html",
+                "notes": "Only isotopes surviving millions of years"
+              }
+            ]
+          },
+          {
+            "node": "Medical Isotopes",
+            "weight": 40,
+            "prose": "Besides Tc-99m, isotopes like Tc-94m and Tc-96 are being investigated for PET imaging.",
+            "widgets": [
+              {
+                "name": "/technetium/pet_isotopes.jpg",
+                "title": "PET Candidates",
+                "subtitle": "Positron emitters",
+                "image_only": true,
+                "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/",
+                "notes": "Tc-94m (52 min) ideal for PET"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "node": "Safety and Handling",
+        "weight": 55,
+        "prose": "Working with technetium requires radiation safety protocols, though Tc-99's weak beta emission makes it less hazardous than many radionuclides.",
+        "widgets": [
+          {
+            "name": "/technetium/radiation_symbol.jpg",
+            "title": "Radiation Hazard",
+            "subtitle": "Beta emitter",
+            "image_only": true,
+            "url": "https://www.cdc.gov/nceh/radiation/emergencies/",
+            "notes": "0.294 MeV max beta energy"
+          },
+          {
+            "name": "/technetium/glove_box.jpg",
+            "title": "Glove Box Work",
+            "subtitle": "Contained handling",
+            "image_only": true,
+            "url": "https://www.labconco.com/glove-boxes",
+            "notes": "Prevents contamination spread"
+          },
+          {
+            "name": "/technetium/dosimetry.jpg",
+            "title": "Dose Monitoring",
+            "subtitle": "Personal dosimeters",
+            "image_only": true,
+            "url": "https://www.nrc.gov/about-nrc/radiation/health-effects/",
+            "notes": "Track exposure levels continuously"
+          }
+        ],
+        "children": [
+          {
+            "node": "Biological Impact",
+            "weight": 25,
+            "prose": "Tc-99 concentrates in thyroid like iodine, but its long half-life means low dose rate despite persistence.",
+            "widgets": [
+              {
+                "name": "/technetium/thyroid_uptake.jpg",
+                "title": "Thyroid Accumulation",
+                "subtitle": "Similar to iodine",
+                "image_only": true,
+                "url": "https://www.epa.gov/radiation/radionuclide-basics-technetium-99",
+                "notes": "Pertechnetate mimics iodide ion"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "node": "Historical Significance",
+        "weight": 70,
+        "prose": "Technetium's discovery filled the first gap in the periodic table and validated Mendeleev's predictions about undiscovered elements.",
+        "widgets": [
+          {
+            "name": "/technetium/mendeleev.jpg",
+            "title": "Mendeleev's Prediction",
+            "subtitle": "Eka-manganese properties",
+            "image_only": true,
+            "url": "https://www.rsc.org/periodic-table/element/43/technetium",
+            "notes": "Predicted atomic weight ~100, actual 98"
+          },
+          {
+            "name": "https://www.youtube.com/watch?v=fkPPkDwH_0c",
+            "title": "First Artificial Element",
+            "subtitle": "Breaking nature's pattern",
+            "notes": "Changed how we think about elements"
+          }
+        ],
+        "children": [
+          {
+            "node": "Manhattan Project",
+            "weight": 30,
+            "prose": "Glenn Seaborg identified technetium in uranium fission products during the Manhattan Project, confirming its production in reactors.",
+            "widgets": [
+              {
+                "name": "/technetium/seaborg.jpg",
+                "title": "Seaborg's Work",
+                "subtitle": "Fission product studies",
+                "image_only": true,
+                "url": "https://www.osti.gov/opennet/manhattan-project-history/",
+                "notes": "Found Tc-99 in reactor waste 1945"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "node": "Global Distribution",
+        "weight": 50,
+        "prose": "Human nuclear activities have distributed technetium globally - it's detectable in soil, seawater, and organisms worldwide.",
+        "widgets": [
+          {
+            "name": "/technetium/global_fallout.jpg",
+            "title": "Nuclear Testing Legacy",
+            "subtitle": "1945-1980 contamination",
+            "image_only": true,
+            "url": "https://www.ctbto.org/nuclear-testing/",
+            "notes": "Atmospheric tests spread Tc-99 globally"
+          },
+          {
+            "name": "/technetium/ocean_distribution.jpg",
+            "title": "Ocean Contamination",
+            "subtitle": "Sellafield and La Hague",
+            "image_only": true,
+            "url": "https://www.sciencedirect.com/science/article/pii/",
+            "notes": "Reprocessing plants release Tc to sea"
+          }
+        ],
+        "children": [
+          {
+            "node": "Biosphere Cycling",
+            "weight": 20,
+            "prose": "Technetium cycles through ecosystems, taken up by plants and accumulating in some organisms like lobsters and seaweed.",
+            "widgets": [
+              {
+                "name": "/technetium/seaweed.jpg",
+                "title": "Seaweed Accumulation",
+                "subtitle": "Brown algae concentrate Tc",
+                "image_only": true,
+                "url": "https://www.sciencedirect.com/science/article/abs/",
+                "notes": "Fucus species bio-accumulate technetium"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "node": "Research Frontiers",
+        "weight": 65,
+        "prose": "Current research focuses on technetium chemistry for nuclear waste treatment, new medical isotopes, and fundamental nuclear physics.",
+        "widgets": [
+          {
+            "name": "https://www.youtube.com/watch?v=M8FmWp2MwIM",
+            "title": "Waste Immobilization",
+            "subtitle": "Glass and ceramic forms",
+            "notes": "Trapping Tc in stable matrices"
+          },
+          {
+            "name": "/technetium/metal_organic.jpg",
+            "title": "MOF Capture",
+            "subtitle": "Selective Tc removal",
+            "image_only": true,
+            "url": "https://pubs.acs.org/doi/10.1021/jacs.7b09496",
+            "notes": "Metal-organic frameworks trap TcO4-"
+          }
+        ],
+        "children": [
+          {
+            "node": "Therapeutic Applications",
+            "weight": 35,
+            "prose": "Researchers are developing Tc-based therapeutic radiopharmaceuticals, moving beyond just diagnostic imaging.",
+            "widgets": [
+              {
+                "name": "/technetium/therapy.jpg",
+                "title": "Tc Therapeutics",
+                "subtitle": "Beyond imaging",
+                "image_only": true,
+                "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/",
+                "notes": "Tc-188 for therapy research"
+              }
+            ]
+          },
+          {
+            "node": "Fundamental Studies",
+            "weight": 30,
+            "prose": "Technetium helps test nuclear models and understand the island of instability in the periodic table.",
+            "widgets": [
+              {
+                "name": "/technetium/nuclear_theory.jpg",
+                "title": "Nuclear Structure",
+                "subtitle": "Testing shell model",
+                "image_only": true,
+                "url": "https://journals.aps.org/prc/abstract/",
+                "notes": "Tc isotopes probe nuclear forces"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "node": "Economic Aspects",
+        "weight": 45,
+        "prose": "The technetium medical market is worth billions annually, but disposal costs for Tc-99 waste also run into billions.",
+        "widgets": [
+          {
+            "name": "/technetium/market_value.jpg",
+            "title": "Medical Market",
+            "subtitle": "$5+ billion annually",
+            "image_only": true,
+            "url": "https://www.grandviewresearch.com/industry-analysis/",
+            "notes": "Tc-99m generators and radiopharmaceuticals"
+          },
+          {
+            "name": "/technetium/disposal_costs.jpg",
+            "title": "Waste Management",
+            "subtitle": "Long-term liability",
+            "image_only": true,
+            "url": "https://www.gao.gov/products/gao-21-603",
+            "notes": "Centuries of monitoring needed"
+          }
+        ]
+      },
+      {
+        "node": "Future Prospects",
+        "weight": 60,
+        "prose": "Technetium's future involves balancing its invaluable medical uses with environmental concerns and developing sustainable production.",
+        "widgets": [
+          {
+            "name": "https://www.youtube.com/watch?v=K1MuvpDGlpQ",
+            "title": "Next-Gen Production",
+            "subtitle": "Accelerator-based methods",
+            "notes": "Moving away from reactor dependence"
+          },
+          {
+            "name": "/technetium/green_chemistry.jpg",
+            "title": "Green Tc Chemistry",
+            "subtitle": "Sustainable practices",
+            "image_only": true,
+            "url": "https://pubs.rsc.org/en/content/articlelanding/",
+            "notes": "Reducing environmental impact"
+          }
+        ],
+        "children": [
+          {
+            "node": "Alternative Isotopes",
+            "weight": 25,
+            "prose": "Competition from F-18 PET and other imaging modalities may reduce Tc-99m dominance in nuclear medicine.",
+            "widgets": [
+              {
+                "name": "/technetium/pet_vs_spect.jpg",
+                "title": "PET vs SPECT",
+                "subtitle": "Imaging competition",
+                "image_only": true,
+                "url": "https://www.mayoclinic.org/tests-procedures/",
+                "notes": "F-18 FDG challenging Tc-99m"
+              }
+            ]
+          },
+          {
+            "node": "Space Applications",
+            "weight": 20,
+            "prose": "Technetium's properties make it interesting for space nuclear power and propulsion systems research.",
+            "widgets": [
+              {
+                "name": "/technetium/space_nuclear.jpg",
+                "title": "Nuclear Space Tech",
+                "subtitle": "RTG considerations",
+                "image_only": true,
+                "url": "https://www.nasa.gov/directorates/spacetech/",
+                "notes": "Potential for radioisotope power"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "node": "Cultural Impact",
+        "weight": 40,
+        "prose": "Technetium appears in science fiction as the element that shouldn't exist naturally, symbolizing human technological achievement.",
+        "widgets": [
+          {
+            "name": "/technetium/scifi.jpg",
+            "title": "Science Fiction Element",
+            "subtitle": "The artificial metal",
+            "image_only": true,
+            "url": "https://www.tor.com/2019/07/23/",
+            "notes": "Symbol of human mastery over nature"
+          }
+        ],
+        "children": [
+          {
+            "node": "Educational Symbol",
+            "weight": 15,
+            "prose": "Technetium teaches students about nuclear stability, the limits of natural occurrence, and human ability to create new elements.",
+            "widgets": [
+              {
+                "name": "/technetium/education.jpg",
+                "title": "Teaching Tool",
+                "subtitle": "Nuclear chemistry lessons",
+                "image_only": true,
+                "url": "https://edu.rsc.org/resources/technetium/",
+                "notes": "Perfect example of nuclear instability"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "node": "Comparisons",
+        "weight": 55,
+        "prose": "Comparing technetium to its periodic neighbors and analogs reveals unique properties and helps predict undiscovered chemistry.",
+        "widgets": [
+          {
+            "name": "/technetium/periodic_neighbors.jpg",
+            "title": "Mn, Tc, Re Column",
+            "subtitle": "Group 7 trends",
+            "image_only": true,
+            "url": "https://www.webelements.com/technetium/",
+            "notes": "Bridge between Mn and Re properties"
+          }
+        ],
+        "children": [
+          {
+            "node": "Rhenium Analog",
+            "weight": 30,
+            "prose": "Rhenium chemistry often predicts technetium behavior, making Re compounds useful models for Tc research.",
+            "widgets": [
+              {
+                "name": "/technetium/re_tc_comparison.jpg",
+                "title": "Re-Tc Similarities",
+                "subtitle": "Chemical twins",
+                "image_only": true,
+                "url": "https://pubs.acs.org/doi/10.1021/ic50019a003",
+                "notes": "Similar size, electronegativity, chemistry"
+              }
+            ]
+          },
+          {
+            "node": "Molybdenum Relationship",
+            "weight": 25,
+            "prose": "Molybdenum-technetium separation is crucial for medical isotope production and nuclear waste processing.",
+            "widgets": [
+              {
+                "name": "/technetium/mo_tc_separation.jpg",
+                "title": "Mo-Tc Separation",
+                "subtitle": "Chemical challenge",
+                "image_only": true,
+                "url": "https://www.sciencedirect.com/science/article/",
+                "notes": "Critical for generator function"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "node": "Mysteries Remaining",
+        "weight": 50,
+        "prose": "Despite decades of study, technetium still holds secrets - its exact role in stars, potential undiscovered isotopes, and exotic chemistry.",
+        "widgets": [
+          {
+            "name": "https://www.youtube.com/watch?v=HS0MM6zcLlY",
+            "title": "Unsolved Questions",
+            "subtitle": "What we don't know",
+            "notes": "Nuclear, chemical, cosmological mysteries"
+          },
+          {
+            "name": "/technetium/neutron_star.jpg",
+            "title": "Neutron Star Tc?",
+            "subtitle": "Extreme environment chemistry",
+            "image_only": true,
+            "url": "https://arxiv.org/abs/",
+            "notes": "How Tc behaves in extreme gravity/pressure"
+          }
+        ],
+        "children": [
+          {
+            "node": "Superheavy Connections",
+            "weight": 20,
+            "prose": "Understanding technetium's instability helps predict properties of superheavy elements and the island of stability.",
+            "widgets": [
+              {
+                "name": "/technetium/island_stability.jpg",
+                "title": "Island of Stability",
+                "subtitle": "Lessons from Tc",
+                "image_only": true,
+                "url": "https://www.scientificamerican.com/article/",
+                "notes": "Tc instability informs superheavy research"
+              }
+            ]
+          },
+          {
+            "node": "Primordial Puzzle",
+            "weight": 15,
+            "prose": "Why did nature skip technetium? The answer involves subtle nuclear physics and the specific conditions of element creation.",
+            "widgets": [
+              {
+                "name": "/technetium/nucleosynthesis.jpg",
+                "title": "Element Creation",
+                "subtitle": "Why no stable Tc?",
+                "image_only": true,
+                "url": "https://www.annualreviews.org/doi/abs/",
+                "notes": "Odd-even effect and nuclear shell structure"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

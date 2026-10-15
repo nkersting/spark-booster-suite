@@ -1,0 +1,1146 @@
+{
+  "seo": {
+    "title": "Specialized Epic 8 EVO Expert: The Trail Bike Revolution",
+    "description": "Deep dive into the game-changing mountain bike",
+    "prose": "Today we're exploring what might be the most versatile trail bike ever created - the Specialized Epic 8 EVO Expert. This isn't just another mountain bike; it's a complete reimagining of what a modern trail bike can be, combining XC efficiency with trail capability in ways that seemed impossible just a few years ago."
+  },
+  "pageTitle": "Specialized Epic 8 EVO Expert: The Trail Bike Revolution",
+  "pageDescription": "A Dynamic Tree exploration of the ultimate do-it-all mountain bike",
+  "knowledgeTree": {
+    "node": "The Evolution of Epic",
+    "weight": 100,
+    "prose": "The Epic 8 EVO represents a fundamental shift in mountain bike design philosophy. Where previous generations forced riders to choose between climbing efficiency and descending capability, this bike refuses to compromise. It's the culmination of decades of suspension development, geometry evolution, and materials science.",
+    "widgets": [
+      {
+        "name": "https://www.youtube.com/watch?v=RBOqkNFrMkA",
+        "title": "Epic 8 EVO Launch",
+        "subtitle": "The new benchmark",
+        "notes": "120mm travel front and rear, completely redesigned"
+      },
+      {
+        "name": "/epic8evo/hero_shot.jpg",
+        "title": "2024 Epic 8 EVO Expert",
+        "subtitle": "The goldilocks bike",
+        "image_only": true,
+        "url": "https://www.specialized.com/us/en/epic-8-evo-expert",
+        "notes": "Not too much, not too little, just right"
+      },
+      {
+        "name": "/epic8evo/trail_action.jpg",
+        "title": "Trail Capability",
+        "subtitle": "Beyond XC limits",
+        "image_only": true,
+        "url": "https://www.pinkbike.com/news/specialized-epic-8-evo-review.html",
+        "notes": "120mm travel transforms the Epic platform"
+      }
+    ],
+    "children": [
+      {
+        "node": "Frame Technology",
+        "weight": 95,
+        "prose": "The heart of the Epic 8 EVO is its revolutionary frame design. Using FACT 11m carbon fiber, Specialized created a chassis that's simultaneously lighter and stiffer than its predecessors, while adding more capability.",
+        "widgets": [
+          {
+            "name": "https://www.youtube.com/watch?v=7Pb2uH-1aBk",
+            "title": "Frame Manufacturing",
+            "subtitle": "FACT 11m carbon process",
+            "notes": "Advanced layup techniques for optimal strength-to-weight"
+          },
+          {
+            "name": "/epic8evo/frame_detail.jpg",
+            "title": "Rider-First Engineering",
+            "subtitle": "Size-specific tuning",
+            "image_only": true,
+            "url": "https://www.specialized.com/us/en/rider-first-engineered",
+            "notes": "Each size optimized for its typical rider weight"
+          },
+          {
+            "name": "/epic8evo/downtube_storage.jpg",
+            "title": "SWAT Storage",
+            "subtitle": "Integrated tool storage",
+            "image_only": true,
+            "url": "https://www.bikeradar.com/reviews/bikes/mountain-bikes",
+            "notes": "Downtube storage for tools and spare tube"
+          }
+        ],
+        "children": [
+          {
+            "node": "Carbon Construction",
+            "weight": 50,
+            "prose": "FACT 11m carbon represents Specialized's highest level of carbon fiber technology, using military-grade materials and automated fiber placement for consistency.",
+            "widgets": [
+              {
+                "name": "/epic8evo/carbon_layup.jpg",
+                "title": "Carbon Layup",
+                "subtitle": "Directional fiber placement",
+                "image_only": true,
+                "url": "https://www.compositesworld.com/articles/bike-frame-manufacturing",
+                "notes": "Fibers oriented for specific load paths"
+              },
+              {
+                "name": "/epic8evo/carbon_grades.jpg",
+                "title": "Material Grades",
+                "subtitle": "FACT 11m vs 10m",
+                "image_only": true,
+                "url": "https://cyclingtips.com/2020/03/carbon-fiber-bikes",
+                "notes": "30% stiffer than FACT 10m at same weight"
+              }
+            ]
+          },
+          {
+            "node": "Geometry Evolution",
+            "weight": 45,
+            "prose": "The Epic 8 EVO features completely revised geometry with a 66.5-degree head angle, longer reach, and steeper seat tube for the perfect balance.",
+            "widgets": [
+              {
+                "name": "https://www.youtube.com/watch?v=4yL3Pp1FQJM",
+                "title": "Geometry Explained",
+                "subtitle": "Modern trail geometry",
+                "notes": "Slack enough to descend, steep enough to climb"
+              },
+              {
+                "name": "/epic8evo/geometry_chart.jpg",
+                "title": "Size Chart",
+                "subtitle": "Six sizes from S1 to S6",
+                "image_only": true,
+                "url": "https://www.specialized.com/us/en/epic-8-evo-geometry",
+                "notes": "455mm reach on size S3 (medium)"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "node": "Suspension Innovation",
+        "weight": 100,
+        "prose": "The Epic 8 EVO's suspension is nothing short of revolutionary. The new Ride Dynamics system delivers 120mm of perfectly controlled travel, eliminating the need for lockouts while maintaining incredible efficiency.",
+        "widgets": [
+          {
+            "name": "https://www.youtube.com/watch?v=KXbP5T_I4sY",
+            "title": "Ride Dynamics Explained",
+            "subtitle": "The magic behind the ride",
+            "notes": "Position-sensitive damping changes everything"
+          },
+          {
+            "name": "/epic8evo/suspension_linkage.jpg",
+            "title": "Flex-Stay Design",
+            "subtitle": "Simplicity meets performance",
+            "image_only": true,
+            "url": "https://www.pinkbike.com/news/epic-8-evo-suspension-analysis.html",
+            "notes": "No pivots at seatstays reduces weight and complexity"
+          },
+          {
+            "name": "/epic8evo/shock_detail.jpg",
+            "title": "Custom Shock Tune",
+            "subtitle": "RockShox SIDLuxe Ultimate",
+            "image_only": true,
+            "url": "https://www.sram.com/rockshox/products/sidluxe-ultimate",
+            "notes": "Specialized-specific damping tune"
+          }
+        ],
+        "children": [
+          {
+            "node": "Position-Sensitive Damping",
+            "weight": 60,
+            "prose": "The key innovation is damping that automatically adjusts based on shock position - firm for pedaling, open for bumps, without switches or sensors.",
+            "widgets": [
+              {
+                "name": "/epic8evo/damping_graph.jpg",
+                "title": "Damping Curve",
+                "subtitle": "Automatic adjustment",
+                "image_only": true,
+                "url": "https://www.specialized.com/ride-dynamics",
+                "notes": "Firm in sag zone, opens up for bigger hits"
+              },
+              {
+                "name": "https://www.youtube.com/watch?v=OiEEZxrWKhc",
+                "title": "How It Works",
+                "subtitle": "No electronics needed",
+                "notes": "Mechanical system responds instantly"
+              }
+            ]
+          },
+          {
+            "node": "Anti-Squat Optimization",
+            "weight": 40,
+            "prose": "The suspension kinematics deliver 115% anti-squat at sag, providing excellent pedaling efficiency without harsh feedback.",
+            "widgets": [
+              {
+                "name": "/epic8evo/anti_squat.jpg",
+                "title": "Anti-Squat Values",
+                "subtitle": "Optimized for climbing",
+                "image_only": true,
+                "url": "https://www.pinkbike.com/news/suspension-setup-articles",
+                "notes": "Maintains efficiency throughout travel"
+              }
+            ]
+          },
+          {
+            "node": "Fork Selection",
+            "weight": 35,
+            "prose": "The RockShox SID SL Ultimate fork with 120mm travel perfectly complements the rear suspension with its lightweight yet capable performance.",
+            "widgets": [
+              {
+                "name": "/epic8evo/sid_fork.jpg",
+                "title": "SID SL Ultimate",
+                "subtitle": "35mm stanchions",
+                "image_only": true,
+                "url": "https://www.rockshox.com/sid-sl",
+                "notes": "Charger 3 damper for superior control"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "node": "Component Specification",
+        "weight": 85,
+        "prose": "The Expert build level hits the sweet spot of performance and value, featuring a wireless SRAM GX Eagle AXS drivetrain and high-end components throughout.",
+        "widgets": [
+          {
+            "name": "https://www.youtube.com/watch?v=uXP6KpO3mKQ",
+            "title": "SRAM GX Eagle AXS",
+            "subtitle": "Wireless shifting perfection",
+            "notes": "Electronic precision at a reasonable price"
+          },
+          {
+            "name": "/epic8evo/drivetrain.jpg",
+            "title": "12-Speed Range",
+            "subtitle": "10-52T cassette",
+            "image_only": true,
+            "url": "https://www.sram.com/sram/mountain/products/gx-eagle-axs",
+            "notes": "520% gear range handles any climb"
+          },
+          {
+            "name": "/epic8evo/cockpit.jpg",
+            "title": "Roval Control Carbon",
+            "subtitle": "Bar and stem combo",
+            "image_only": true,
+            "url": "https://www.specialized.com/roval-control-sl",
+            "notes": "760mm width, 20mm rise"
+          }
+        ],
+        "children": [
+          {
+            "node": "Wheelset",
+            "weight": 45,
+            "prose": "The Roval Control Carbon wheels bring serious performance with 25mm internal width rims that support modern tire volumes.",
+            "widgets": [
+              {
+                "name": "/epic8evo/roval_wheels.jpg",
+                "title": "Roval Control Carbon",
+                "subtitle": "1,450g wheelset",
+                "image_only": true,
+                "url": "https://www.rovalcomponents.com/wheels/control-carbon",
+                "notes": "DT Swiss 350 hubs with 36T ratchet"
+              },
+              {
+                "name": "https://www.youtube.com/watch?v=VkXZz7_xfEU",
+                "title": "Wheel Technology",
+                "subtitle": "Carbon rim construction",
+                "notes": "Impact-resistant design for trail use"
+              }
+            ]
+          },
+          {
+            "node": "Braking System",
+            "weight": 40,
+            "prose": "SRAM G2 RSC brakes provide reliable four-piston power with excellent modulation for technical terrain.",
+            "widgets": [
+              {
+                "name": "/epic8evo/g2_brakes.jpg",
+                "title": "G2 RSC Brakes",
+                "subtitle": "4-piston power",
+                "image_only": true,
+                "url": "https://www.sram.com/sram/mountain/products/g2-rsc",
+                "notes": "200mm front, 180mm rear rotors"
+              }
+            ]
+          },
+          {
+            "node": "Dropper Post",
+            "weight": 35,
+            "prose": "The S-Works Carbon dropper post offers 150mm of travel with ultralight construction and reliable OneUp internals.",
+            "widgets": [
+              {
+                "name": "/epic8evo/dropper.jpg",
+                "title": "Carbon Dropper",
+                "subtitle": "150mm travel",
+                "image_only": true,
+                "url": "https://www.specialized.com/us/en/components/dropper-posts",
+                "notes": "Under-bar remote for clean cockpit"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "node": "Riding Characteristics",
+        "weight": 90,
+        "prose": "The Epic 8 EVO rides like nothing else - it climbs with XC bike efficiency but descends with trail bike confidence. The balanced geometry and advanced suspension create a bike that excels everywhere.",
+        "widgets": [
+          {
+            "name": "https://www.youtube.com/watch?v=Muf3bZ5B_Lw",
+            "title": "Trail Test",
+            "subtitle": "Real-world performance",
+            "notes": "Pro riders push the limits"
+          },
+          {
+            "name": "/epic8evo/climbing.jpg",
+            "title": "Climbing Prowess",
+            "subtitle": "Efficient yet comfortable",
+            "image_only": true,
+            "url": "https://www.bicycling.com/bikes-gear/mountain-bike/epic-8-evo",
+            "notes": "75.5° effective seat angle keeps weight forward"
+          },
+          {
+            "name": "/epic8evo/descending.jpg",
+            "title": "Descending Confidence",
+            "subtitle": "Stable at speed",
+            "image_only": true,
+            "url": "https://www.mbr.co.uk/reviews/epic-8-evo",
+            "notes": "66.5° head angle provides control"
+          }
+        ],
+        "children": [
+          {
+            "node": "Climbing Performance",
+            "weight": 50,
+            "prose": "Despite the trail-oriented geometry, the Epic 8 EVO climbs incredibly well thanks to the efficient suspension and steep seat angle.",
+            "widgets": [
+              {
+                "name": "/epic8evo/tech_climb.jpg",
+                "title": "Technical Climbing",
+                "subtitle": "Traction and efficiency",
+                "image_only": true,
+                "url": "https://www.singletracks.com/bike-reviews/",
+                "notes": "Suspension maintains traction on rough climbs"
+              },
+              {
+                "name": "https://www.youtube.com/watch?v=n3JgFOqD_H4",
+                "title": "Uphill Flow",
+                "subtitle": "Efficiency testing",
+                "notes": "Comparable to pure XC bikes on smooth climbs"
+              }
+            ]
+          },
+          {
+            "node": "Descending Capability",
+            "weight": 45,
+            "prose": "The 120mm travel and modern geometry transform the Epic platform into a genuine trail ripper that inspires confidence on technical descents.",
+            "widgets": [
+              {
+                "name": "/epic8evo/rock_garden.jpg",
+                "title": "Rock Garden Performance",
+                "subtitle": "Composure through chunk",
+                "image_only": true,
+                "url": "https://www.vitalmtb.com/reviews/",
+                "notes": "Suspension soaks up repeated hits"
+              }
+            ]
+          },
+          {
+            "node": "Cornering Dynamics",
+            "weight": 35,
+            "prose": "The combination of geometry, suspension kinematics, and tire clearance creates predictable, confidence-inspiring cornering.",
+            "widgets": [
+              {
+                "name": "https://www.youtube.com/watch?v=2CECpW8AmPg",
+                "title": "Corner Analysis",
+                "subtitle": "Grip and precision",
+                "notes": "Maintains speed through turns"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "node": "Weight Analysis",
+        "weight": 75,
+        "prose": "At approximately 26.5 pounds (12kg) for a size S3, the Epic 8 EVO Expert is remarkably light for a 120mm trail bike with this level of capability.",
+        "widgets": [
+          {
+            "name": "/epic8evo/weight_scale.jpg",
+            "title": "Complete Bike Weight",
+            "subtitle": "26.5 lbs (12kg)",
+            "image_only": true,
+            "url": "https://www.specialized.com/specifications",
+            "notes": "Without pedals, size S3"
+          },
+          {
+            "name": "/epic8evo/weight_distribution.jpg",
+            "title": "Weight Distribution",
+            "subtitle": "Balanced F/R",
+            "image_only": true,
+            "url": "https://www.pinkbike.com/news/tech-analysis.html",
+            "notes": "Optimized for handling"
+          }
+        ],
+        "children": [
+          {
+            "node": "Frame Weight",
+            "weight": 30,
+            "prose": "The FACT 11m carbon frame weighs approximately 2,100 grams with shock, making it one of the lightest trail frames available.",
+            "widgets": [
+              {
+                "name": "/epic8evo/frame_weight.jpg",
+                "title": "Bare Frame",
+                "subtitle": "1,850g without shock",
+                "image_only": true,
+                "url": "https://weightweenies.starbike.com/",
+                "notes": "Competitive with XC frames"
+              }
+            ]
+          },
+          {
+            "node": "Component Weights",
+            "weight": 25,
+            "prose": "Strategic component selection keeps weight low without sacrificing durability or performance.",
+            "widgets": [
+              {
+                "name": "/epic8evo/component_chart.jpg",
+                "title": "Weight Breakdown",
+                "subtitle": "Every gram counts",
+                "image_only": true,
+                "url": "https://www.bikerumor.com/weights/",
+                "notes": "Optimized spec throughout"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "node": "Tire Technology",
+        "weight": 70,
+        "prose": "The Epic 8 EVO Expert comes with Specialized's latest tire technology - Fast Trak front and rear with GRID casing and T7 compound.",
+        "widgets": [
+          {
+            "name": "https://www.youtube.com/watch?v=DZmKKpXBMvQ",
+            "title": "Fast Trak Design",
+            "subtitle": "Speed meets grip",
+            "notes": "Low rolling resistance with cornering confidence"
+          },
+          {
+            "name": "/epic8evo/tire_tread.jpg",
+            "title": "Tread Pattern",
+            "subtitle": "Optimized for mixed terrain",
+            "image_only": true,
+            "url": "https://www.specialized.com/us/en/tires/fast-trak",
+            "notes": "2.35\" width, tubeless-ready"
+          },
+          {
+            "name": "/epic8evo/grid_casing.jpg",
+            "title": "GRID Casing",
+            "subtitle": "Trail-rated protection",
+            "image_only": true,
+            "url": "https://www.specialized.com/technology/grid",
+            "notes": "Puncture protection without weight penalty"
+          }
+        ],
+        "children": [
+          {
+            "node": "Compound Technology",
+            "weight": 30,
+            "prose": "T7 rubber compound provides the ideal balance of grip, durability, and rolling efficiency for trail riding.",
+            "widgets": [
+              {
+                "name": "/epic8evo/compound_test.jpg",
+                "title": "T7 Compound",
+                "subtitle": "Gripton technology",
+                "image_only": true,
+                "url": "https://www.specialized.com/gripton",
+                "notes": "Silica-infused for all-weather grip"
+              }
+            ]
+          },
+          {
+            "node": "Tire Clearance",
+            "weight": 25,
+            "prose": "The frame accommodates up to 2.4\" tires, allowing riders to customize their setup for different conditions.",
+            "widgets": [
+              {
+                "name": "/epic8evo/clearance.jpg",
+                "title": "Mud Clearance",
+                "subtitle": "Room for 2.4\" tires",
+                "image_only": true,
+                "url": "https://www.mtbr.com/threads/tire-clearance.html",
+                "notes": "Plenty of room for mud buildup"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "node": "Integration Features",
+        "weight": 65,
+        "prose": "Modern integration touches make the Epic 8 EVO cleaner and more functional, from internal cable routing to the SWAT storage system.",
+        "widgets": [
+          {
+            "name": "/epic8evo/cable_routing.jpg",
+            "title": "Internal Routing",
+            "subtitle": "Clean and quiet",
+            "image_only": true,
+            "url": "https://www.specialized.com/technology/cable-routing",
+            "notes": "Guided internal routing for easy service"
+          },
+          {
+            "name": "https://www.youtube.com/watch?v=Iy8LCRmJzzw",
+            "title": "SWAT System",
+            "subtitle": "Integrated storage",
+            "notes": "Tools and tube in downtube"
+          },
+          {
+            "name": "/epic8evo/bottle_mount.jpg",
+            "title": "Bottle Compatibility",
+            "subtitle": "Two bottle mounts",
+            "image_only": true,
+            "url": "https://www.specialized.com/features",
+            "notes": "Room for two bottles on all sizes"
+          }
+        ],
+        "children": [
+          {
+            "node": "SWAT Storage",
+            "weight": 35,
+            "prose": "The downtube storage compartment holds a tube, tire lever, CO2, and multi-tool without affecting handling or aesthetics.",
+            "widgets": [
+              {
+                "name": "/epic8evo/swat_contents.jpg",
+                "title": "Storage Contents",
+                "subtitle": "Everything you need",
+                "image_only": true,
+                "url": "https://www.specialized.com/swat",
+                "notes": "Custom tool roll included"
+              }
+            ]
+          },
+          {
+            "node": "Electronic Integration",
+            "weight": 30,
+            "prose": "The frame is fully compatible with AXS wireless components, with hidden battery mounting and clean wire-free setup.",
+            "widgets": [
+              {
+                "name": "/epic8evo/axs_battery.jpg",
+                "title": "AXS Battery Mount",
+                "subtitle": "Hidden integration",
+                "image_only": true,
+                "url": "https://www.sram.com/technologies/axs",
+                "notes": "Battery tucked under downtube"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "node": "Sizing and Fit",
+        "weight": 60,
+        "prose": "The S-sizing system offers six sizes to fit riders from 5'0\" to 6'6\", with geometry optimized for modern riding positions and techniques.",
+        "widgets": [
+          {
+            "name": "/epic8evo/size_range.jpg",
+            "title": "Size Range",
+            "subtitle": "S1 through S6",
+            "image_only": true,
+            "url": "https://www.specialized.com/size-guide",
+            "notes": "Covers 98% of adult riders"
+          },
+          {
+            "name": "https://www.youtube.com/watch?v=fqJRC8bgEJ0",
+            "title": "Sizing Guide",
+            "subtitle": "Finding your fit",
+            "notes": "How to choose the right size"
+          }
+        ],
+        "children": [
+          {
+            "node": "Reach Numbers",
+            "weight": 25,
+            "prose": "Modern reach numbers from 410mm to 500mm provide proper weight distribution for aggressive riding.",
+            "widgets": [
+              {
+                "name": "/epic8evo/reach_chart.jpg",
+                "title": "Reach by Size",
+                "subtitle": "Progressive sizing",
+                "image_only": true,
+                "url": "https://www.specialized.com/geometry",
+                "notes": "Longer reach for better descending"
+              }
+            ]
+          },
+          {
+            "node": "Stack Heights",
+            "weight": 20,
+            "prose": "Stack heights are optimized to work with modern stem lengths and bar rises for comfortable all-day positioning.",
+            "widgets": [
+              {
+                "name": "/epic8evo/stack_measurements.jpg",
+                "title": "Stack Dimensions",
+                "subtitle": "Balanced proportions",
+                "image_only": true,
+                "url": "https://www.specialized.com/fit-data",
+                "notes": "Not too low, not too high"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "node": "Value Proposition",
+        "weight": 80,
+        "prose": "At $7,500, the Epic 8 EVO Expert delivers exceptional value with high-end performance at a price that undercuts many competitors with similar specs.",
+        "widgets": [
+          {
+            "name": "/epic8evo/price_compare.jpg",
+            "title": "Market Comparison",
+            "subtitle": "Competitive pricing",
+            "image_only": true,
+            "url": "https://www.bicyclebluebook.com/value-guide/",
+            "notes": "Lower than comparable Santa Cruz, Yeti"
+          },
+          {
+            "name": "https://www.youtube.com/watch?v=HFG6LhI6tLo",
+            "title": "Value Analysis",
+            "subtitle": "Bang for buck",
+            "notes": "Expert vs Pro vs Comp comparison"
+          }
+        ],
+        "children": [
+          {
+            "node": "Versus Competition",
+            "weight": 40,
+            "prose": "Compared to bikes like the Santa Cruz Tallboy, Yeti SB120, and Trek Top Fuel, the Epic 8 EVO Expert offers superior value.",
+            "widgets": [
+              {
+                "name": "/epic8evo/competitor_chart.jpg",
+                "title": "Competitor Analysis",
+                "subtitle": "Spec comparison",
+                "image_only": true,
+                "url": "https://www.bikeradar.com/buyers-guides/",
+                "notes": "Better spec at lower price point"
+              }
+            ]
+          },
+          {
+            "node": "Build Options",
+            "weight": 35,
+            "prose": "The Epic 8 EVO comes in multiple build levels from Comp to S-Works, with the Expert hitting the sweet spot.",
+            "widgets": [
+              {
+                "name": "/epic8evo/build_hierarchy.jpg",
+                "title": "Model Lineup",
+                "subtitle": "Four build levels",
+                "image_only": true,
+                "url": "https://www.specialized.com/epic-8-evo-family",
+                "notes": "Comp, Expert, Pro, S-Works"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "node": "Trail Categories",
+        "weight": 70,
+        "prose": "The Epic 8 EVO excels across multiple riding styles - from XC racing to trail riding to light enduro, making it a true quiver-killer.",
+        "widgets": [
+          {
+            "name": "https://www.youtube.com/watch?v=jJ7LQNKeH3Q",
+            "title": "Multi-Discipline",
+            "subtitle": "One bike, many trails",
+            "notes": "XC to All-Mountain capability"
+          },
+          {
+            "name": "/epic8evo/xc_race.jpg",
+            "title": "XC Racing",
+            "subtitle": "Marathon capable",
+            "image_only": true,
+            "url": "https://www.epicrides.com/",
+            "notes": "Light enough for 100-mile races"
+          },
+          {
+            "name": "/epic8evo/trail_riding.jpg",
+            "title": "Trail Riding",
+            "subtitle": "All-day comfort",
+            "image_only": true,
+            "url": "https://www.singletracks.com/",
+            "notes": "Perfect for epic adventures"
+          }
+        ],
+        "children": [
+          {
+            "node": "Race Performance",
+            "weight": 35,
+            "prose": "Despite being a trail bike, the Epic 8 EVO is winning XC races at the highest level, proving its efficiency.",
+            "widgets": [
+              {
+                "name": "/epic8evo/race_podium.jpg",
+                "title": "Race Results",
+                "subtitle": "Winning at World Cup",
+                "image_only": true,
+                "url": "https://www.uci.org/mountain-bike/results",
+                "notes": "Podiums in XC and Marathon"
+              }
+            ]
+          },
+          {
+            "node": "Bikepacking Setup",
+            "weight": 30,
+            "prose": "The geometry and mounting points make the Epic 8 EVO an excellent platform for lightweight bikepacking adventures.",
+            "widgets": [
+              {
+                "name": "/epic8evo/bikepacking.jpg",
+                "title": "Adventure Ready",
+                "subtitle": "Mounting options",
+                "image_only": true,
+                "url": "https://bikepacking.com/bikes/",
+                "notes": "Frame bag compatible design"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "node": "Maintenance Requirements",
+        "weight": 55,
+        "prose": "The Epic 8 EVO's simple flex-stay design and quality components result in lower maintenance requirements than many full-suspension bikes.",
+        "widgets": [
+          {
+            "name": "/epic8evo/service_manual.jpg",
+            "title": "Service Intervals",
+            "subtitle": "Recommended maintenance",
+            "image_only": true,
+            "url": "https://www.specialized.com/support/",
+            "notes": "50hr lower link service, 100hr full"
+          },
+          {
+            "name": "https://www.youtube.com/watch?v=UxiW_Kn9Y5U",
+            "title": "Home Maintenance",
+            "subtitle": "DIY service guide",
+            "notes": "Basic maintenance you can do yourself"
+          }
+        ],
+        "children": [
+          {
+            "node": "Suspension Service",
+            "weight": 30,
+            "prose": "The RockShox suspension requires basic service every 50 hours and full rebuilds annually for optimal performance.",
+            "widgets": [
+              {
+                "name": "/epic8evo/suspension_service.jpg",
+                "title": "Service Schedule",
+                "subtitle": "Keep it smooth",
+                "image_only": true,
+                "url": "https://www.sram.com/service",
+                "notes": "Lower leg service is easy DIY"
+              }
+            ]
+          },
+          {
+            "node": "Bearing Replacement",
+            "weight": 25,
+            "prose": "The main pivot bearings are easily replaceable with basic tools, typically lasting 1-2 seasons of regular riding.",
+            "widgets": [
+              {
+                "name": "/epic8evo/bearing_kit.jpg",
+                "title": "Bearing Kit",
+                "subtitle": "Full replacement set",
+                "image_only": true,
+                "url": "https://www.specialized.com/bearings",
+            "notes": "Sealed cartridge bearings throughout"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "node": "Upgrade Potential",
+        "weight": 60,
+        "prose": "The Expert model provides an excellent platform for upgrades, with the frame quality justifying future component improvements.",
+        "widgets": [
+          {
+            "name": "https://www.youtube.com/watch?v=4Vu5d_XMwRE",
+            "title": "Upgrade Path",
+            "subtitle": "Worth improving over time",
+            "notes": "Frame deserves top-tier components"
+          },
+          {
+            "name": "/epic8evo/carbon_wheels.jpg",
+            "title": "Wheel Upgrades",
+            "subtitle": "Lighter, stiffer options",
+            "image_only": true,
+            "url": "https://www.enve.com/products/m-series",
+            "notes": "Save 200-300g with premium wheels"
+          }
+        ],
+        "children": [
+          {
+            "node": "Drivetrain Options",
+            "weight": 30,
+            "prose": "Upgrading to XX1 or X01 Eagle AXS saves weight and improves shift quality marginally.",
+            "widgets": [
+              {
+                "name": "/epic8evo/xx1_upgrade.jpg",
+                "title": "XX1 Eagle AXS",
+                "subtitle": "Ultimate performance",
+                "image_only": true,
+                "url": "https://www.sram.com/xx1-eagle-axs",
+                "notes": "300g lighter than GX, carbon cranks"
+              }
+            ]
+          },
+          {
+            "node": "Suspension Tuning",
+            "weight": 25,
+            "prose": "Custom suspension tuning or aftermarket shocks can further optimize the ride for specific preferences.",
+            "widgets": [
+              {
+                "name": "/epic8evo/custom_tune.jpg",
+                "title": "Custom Damper Tune",
+                "subtitle": "Personalized setup",
+                "image_only": true,
+                "url": "https://www.push-industries.com/",
+                "notes": "Push or EXT upgrade options"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "node": "Technology Integration",
+        "weight": 65,
+        "prose": "The Epic 8 EVO embraces modern technology with app connectivity, ride tracking capabilities, and future-proof design.",
+        "widgets": [
+          {
+            "name": "https://www.youtube.com/watch?v=XrKMicPV9o4",
+            "title": "Specialized Ride App",
+            "subtitle": "Digital integration",
+            "notes": "Track rides, compare efforts, tune suspension"
+          },
+          {
+            "name": "/epic8evo/app_screen.jpg",
+            "title": "Mission Control",
+            "subtitle": "Tune and track",
+            "image_only": true,
+            "url": "https://www.specialized.com/ride-app",
+            "notes": "Suspension setup recommendations"
+          }
+        ],
+        "children": [
+          {
+            "node": "Future E-Bike Platform",
+            "weight": 20,
+            "prose": "The Epic 8 EVO platform shares development with the Turbo Levo SL, suggesting future lightweight e-bike potential.",
+            "widgets": [
+              {
+                "name": "/epic8evo/platform_sharing.jpg",
+                "title": "Platform Development",
+                "subtitle": "Shared DNA",
+                "image_only": true,
+                "url": "https://www.specialized.com/turbo",
+                "notes": "Technology trickles between models"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "node": "Manufacturing Process",
+        "weight": 50,
+        "prose": "Built in Specialized's Morgan Hill facility using advanced automated fiber placement and precision molding techniques.",
+        "widgets": [
+          {
+            "name": "/epic8evo/factory.jpg",
+            "title": "Morgan Hill Factory",
+            "subtitle": "California manufacturing",
+            "image_only": true,
+            "url": "https://www.specialized.com/us/en/inside-specialized",
+            "notes": "High-end frames made in USA"
+          },
+          {
+            "name": "https://www.youtube.com/watch?v=Lw7mhdPLcSk",
+            "title": "Carbon Process",
+            "subtitle": "How it's made",
+            "notes": "Automated fiber placement technology"
+          }
+        ]
+      },
+      {
+        "node": "Environmental Considerations",
+        "weight": 45,
+        "prose": "Specialized's commitment to sustainability includes recycled materials in packaging and carbon offset programs.",
+        "widgets": [
+          {
+            "name": "/epic8evo/sustainability.jpg",
+            "title": "Green Initiatives",
+            "subtitle": "Reducing impact",
+            "image_only": true,
+            "url": "https://www.specialized.com/sustainability",
+            "notes": "Carbon neutral shipping program"
+          }
+        ],
+        "children": [
+          {
+            "node": "Lifetime Warranty",
+            "weight": 25,
+            "prose": "The frame carries a lifetime warranty for the original owner, demonstrating confidence in durability.",
+            "widgets": [
+              {
+                "name": "/epic8evo/warranty.jpg",
+                "title": "Lifetime Coverage",
+                "subtitle": "Frame protection",
+                "image_only": true,
+                "url": "https://www.specialized.com/warranty",
+                "notes": "Covers manufacturing defects forever"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "node": "Professional Racing",
+        "weight": 70,
+        "prose": "The Epic platform has won multiple World Championships and Olympics, with the EVO variant now appearing at World Cup XC races.",
+        "widgets": [
+          {
+            "name": "https://www.youtube.com/watch?v=2qD5PpLDyQU",
+            "title": "Race Heritage",
+            "subtitle": "Proven at highest level",
+            "notes": "Schurter, Langvad, Ferrand-Prévot victories"
+          },
+          {
+            "name": "/epic8evo/world_cup.jpg",
+            "title": "World Cup Success",
+            "subtitle": "Elite competition",
+            "image_only": true,
+            "url": "https://www.redbull.com/world-cup",
+            "notes": "Winning XCO and XCM races"
+          }
+        ],
+        "children": [
+          {
+            "node": "Athlete Feedback",
+            "weight": 35,
+            "prose": "Direct input from pro riders like Christopher Blevins shaped the Epic 8 EVO's development.",
+            "widgets": [
+              {
+                "name": "/epic8evo/blevins.jpg",
+                "title": "Pro Development",
+                "subtitle": "Athlete-driven design",
+                "image_only": true,
+                "url": "https://www.specialized.com/athletes",
+                "notes": "Real-world testing and feedback"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "node": "Terrain Versatility",
+        "weight": 75,
+        "prose": "From smooth flow trails to technical rock gardens, the Epic 8 EVO adapts to diverse terrain with remarkable composure.",
+        "widgets": [
+          {
+            "name": "/epic8evo/flow_trail.jpg",
+            "title": "Flow Trail Performance",
+            "subtitle": "Speed and control",
+            "image_only": true,
+            "url": "https://www.trailforks.com/",
+            "notes": "Carries speed through berms"
+          },
+          {
+            "name": "https://www.youtube.com/watch?v=PyQGmhF6H0Q",
+            "title": "Technical Terrain",
+            "subtitle": "Rock garden testing",
+            "notes": "Maintains composure in chunk"
+          },
+          {
+            "name": "/epic8evo/roots_wet.jpg",
+            "title": "Wet Conditions",
+            "subtitle": "All-weather capable",
+            "image_only": true,
+            "url": "https://www.mtbproject.com/",
+            "notes": "Predictable in slippery conditions"
+          }
+        ]
+      },
+      {
+        "node": "Community and Culture",
+        "weight": 40,
+        "prose": "The Epic 8 EVO has quickly developed a passionate following, with active online communities and group rides worldwide.",
+        "widgets": [
+          {
+            "name": "/epic8evo/group_ride.jpg",
+            "title": "Epic Owners Group",
+            "subtitle": "Global community",
+            "image_only": true,
+            "url": "https://www.facebook.com/groups/epic8evo",
+            "notes": "Thousands of riders sharing experiences"
+          }
+        ],
+        "children": [
+          {
+            "node": "Online Resources",
+            "weight": 20,
+            "prose": "Extensive online resources including setup guides, modification threads, and riding tips from the community.",
+            "widgets": [
+              {
+                "name": "/epic8evo/forum.jpg",
+                "title": "Owner Forums",
+                "subtitle": "Knowledge sharing",
+                "image_only": true,
+                "url": "https://www.mtbr.com/forums/",
+                "notes": "Setup tips, mods, trail recommendations"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "node": "Comparison Testing",
+        "weight": 65,
+        "prose": "Independent testing consistently ranks the Epic 8 EVO among the best trail bikes, often winning comparison tests.",
+        "widgets": [
+          {
+            "name": "https://www.youtube.com/watch?v=rKnhZ-DG7qY",
+            "title": "Shootout Winner",
+            "subtitle": "Best trail bike 2024",
+            "notes": "Beats Pivot, Santa Cruz, Trek"
+          },
+          {
+            "name": "/epic8evo/comparison_chart.jpg",
+            "title": "Performance Metrics",
+            "subtitle": "Leading the class",
+            "image_only": true,
+            "url": "https://www.outdoorgearlab.com/",
+            "notes": "Top scores in efficiency and descending"
+          }
+        ]
+      },
+      {
+        "node": "Color Options",
+        "weight": 35,
+        "prose": "The Expert model comes in multiple colorways, allowing riders to choose their aesthetic preference.",
+        "widgets": [
+          {
+            "name": "/epic8evo/colorways.jpg",
+            "title": "Available Colors",
+            "subtitle": "Multiple options",
+            "image_only": true,
+            "url": "https://www.specialized.com/colors",
+            "notes": "Satin Carbon/Red, White/Black options"
+          }
+        ]
+      },
+      {
+        "node": "Women's Considerations",
+        "weight": 45,
+        "prose": "While unisex, the size range and geometry work well for women riders, with appropriate contact points easily swapped.",
+        "widgets": [
+          {
+            "name": "/epic8evo/women_riding.jpg",
+            "title": "Inclusive Design",
+            "subtitle": "Fits all riders",
+            "image_only": true,
+            "url": "https://www.specialized.com/womens-mountain",
+            "notes": "S1 and S2 perfect for smaller riders"
+          }
+        ]
+      },
+      {
+        "node": "Travel Adjustment",
+        "weight": 40,
+        "prose": "While designed for 120mm, the Epic 8 EVO can be adjusted to 110mm or 130mm travel with different shock stroke lengths.",
+        "widgets": [
+          {
+            "name": "/epic8evo/travel_adjust.jpg",
+            "title": "Travel Options",
+            "subtitle": "Tunable to preference",
+            "image_only": true,
+            "url": "https://www.specialized.com/support/travel-adjust",
+            "notes": "Change shock stroke for different travel"
+          }
+        ]
+      },
+      {
+        "node": "Resale Value",
+        "weight": 50,
+        "prose": "Specialized bikes historically hold value well, with Epic models particularly sought-after in the used market.",
+        "widgets": [
+          {
+            "name": "/epic8evo/resale_chart.jpg",
+            "title": "Depreciation Curve",
+            "subtitle": "Strong value retention",
+            "image_only": true,
+            "url": "https://www.bicyclebluebook.com/",
+            "notes": "Retains 60-70% after 2 years"
+          }
+        ]
+      },
+      {
+        "node": "Safety Features",
+        "weight": 35,
+        "prose": "Modern safety considerations include MIPS-compatible geometry, predictable handling, and excellent braking power.",
+        "widgets": [
+          {
+            "name": "/epic8evo/safety.jpg",
+            "title": "Safety Design",
+            "subtitle": "Predictable handling",
+            "image_only": true,
+            "url": "https://www.specialized.com/safety",
+            "notes": "Stable geometry prevents OTB scenarios"
+          }
+        ]
+      },
+      {
+        "node": "Innovation Timeline",
+        "weight": 55,
+        "prose": "The Epic line has evolved continuously since 2001, with each generation bringing significant improvements.",
+        "widgets": [
+          {
+            "name": "/epic8evo/timeline.jpg",
+            "title": "Epic Evolution",
+            "subtitle": "23 years of development",
+            "image_only": true,
+            "url": "https://www.specialized.com/epic-history",
+            "notes": "From Brain shock to Ride Dynamics"
+          },
+          {
+            "name": "https://www.youtube.com/watch?v=Vn6M9Ei7tT8",
+            "title": "Epic History",
+            "subtitle": "Generation by generation",
+            "notes": "How we got to the Epic 8 EVO"
+          }
+        ]
+      },
+      {
+        "node": "Accessory Ecosystem",
+        "weight": 40,
+        "prose": "Specialized offers a complete ecosystem of compatible accessories from computers to bags to protective gear.",
+        "widgets": [
+          {
+            "name": "/epic8evo/accessories.jpg",
+            "title": "Matched Accessories",
+            "subtitle": "Complete system",
+            "image_only": true,
+            "url": "https://www.specialized.com/accessories",
+            "notes": "Color-matched bottles, bags, tools"
+          }
+        ]
+      },
+      {
+        "node": "Demo Programs",
+        "weight": 30,
+        "prose": "Many Specialized dealers offer demo programs, allowing riders to test the Epic 8 EVO before purchasing.",
+        "widgets": [
+          {
+            "name": "/epic8evo/demo.jpg",
+            "title": "Try Before Buy",
+            "subtitle": "Demo availability",
+            "image_only": true,
+            "url": "https://www.specialized.com/dealers",
+            "notes": "Test ride programs at dealers"
+          }
+        ]
+      }
+    ]
+  }
+}

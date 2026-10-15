@@ -1,0 +1,1536 @@
+{
+  "seo": {
+    "title": "Safety and Humanity in the Age of AI",
+    "description": "Nick Kersting"
+  },
+  "pageTitle": "Preserving Safety and Humanity in the Age of AI",
+  "pageDescription": "A clear, bottom-up view of your JSON-defined knowledge tree with tooltips on each node.",
+  "knowledgeTree": {
+    "node": "Safety First",
+    "weight": 100,
+    "widgets": [
+      {
+        "name": "examples/INFORMS/agc.jpg",
+        "title": "Frequent Recalibration",
+        "subtitle": "avoid metric drift",
+        "image_only": true,
+        "notes": "e.g. continual recalibration of Apollo Guidance Computer (AGC) \n without updating Inertial Measurement Unit (IMU), errors accumulate unacceptably \n\n e.g., 10% thrust for 30s to measure spaceship stability (P63 landing phase, 50k ft alt.)",
+        "url":"https://www.youtube.com/watch?v=B1J2RMorJXM&t=1410s"
+      },
+      {
+        "name": "examples/INFORMS/gemini.jpeg",
+        "title": "Loose Coupling",
+        "image_only": true,
+        "subtitle": "accommodate imperfection",
+        "url":"https://space1.com/pdf/gemini_docking_simV2_1.pdf",
+        "notes": "Moon Landing = Safety Critical \n Avoid single points of failure \n Avoid domino effects \n e.g. Gemini spacecraft magnetic docking"
+      },
+      {
+        "name": "examples/INFORMS/Apollo_Pad_Abort_Test_-2.jpg",
+        "title": "A Backup Plan for Everything",
+        "subtitle": "don't be caught without a parachute (or two)",
+        "notes": "e.g. Apollo Launch Escape System",
+        "url":"https://spaceflighthistory.blogspot.com/2015/08/failure-was-option-what-if-apollo.html"
+      }
+    ],
+    "children": [
+      {
+        "node": "Back-reaction to Safety",
+        "weight": 50,
+        "widgets": [
+          {
+            "name": "examples/INFORMS/safety_satire.png",
+            "subtitle": "(all over the mainstream culture)",
+            "title": "Satire",
+            "notes": "seen as overly cautious"
+          },
+          {
+            "name": "examples/INFORMS/sayno.png",
+            "subtitle": "(this kind of backfired)",
+            "url": "https://nationalaffairs.com/publications/detail/how-to-think-about-the-drug-crisis",
+            "image_only": true,
+            "title": "Just Say No",
+            "notes": "intent was good, but delivery too weak \n\n drug overdoses increasing exponentially since 1980s \n\n 'drug' = 'anything that chemically changes your body'"
+          },
+          {
+            "name": "examples/INFORMS/lookma.png",
+            "subtitle": "(pride in the unsafe)",
+            "title": "Look Ma, No Hands!",
+            "notes": ""
+          },
+          {
+            "name": "examples/INFORMS/top_gun.png",
+            "subtitle": "(Top Gun and MI, etc.) ",
+            "title": "Glorification of Risk",
+            "notes": "bravado and machismo, disregard all protocol! \n Deepwater Horizon oil rig disaster"
+          },
+          {
+            "name": "examples/INFORMS/safety_dance.png",
+            "subtitle": "(some satire here)",
+            "title": "Let's Safety Dance",
+            "notes": "safety as a euphemism for xenophobia, protectionism, isolationism"
+          }
+        ],
+        "children": []
+      },
+      {
+        "node": "Safety => Progress",
+        "weight": 50,
+        "widgets": [
+          {
+            "name": "examples/INFORMS/note7.jpg",
+            "title": "The Tautology",
+            "image_only": true,
+            "subtitle": "unsafe tech is naturally selected away",
+            "notes": "No one will use it if they have a choice \n e.g., Samsung Galaxy Note 7 \n Do not use the phone while charging (!)",
+            "url":"https://blog.easyacc.com/2016/10/14/how-to-avoid-samsung-note-7-from-explosio/"
+  
+          },
+          {
+            "name": "examples/INFORMS/sword.jpg",
+            "subtitle": "",
+            "title": "Sword Hilts",
+            "image_only": true,
+            "notes": "without a hand, you can't use a sword",
+            "url": "https://www.metmuseum.org/art/collection/search/35367"
+          },
+          {
+            "name": "examples/INFORMS/gun_safety.jpg",
+            "subtitle": "",
+            "notes": "accidental discharge = bad \n accidental gun deaths down 4x since 1980s \n applies to other triggered devices (table saws, gas stoves, etc.)",
+            "title": "Gun Safeties",
+            "image_only": true,
+            "url":"https://www.gunfacts.info/wp-content/uploads/2025/02/ACCIDENTAL-GUN-DEATHS-U.S.-Accidental-Firearm-Death-Count-and-Rate-1981-through-2016-b.png"
+          },
+          {
+            "name": "examples/INFORMS/seatbelt.jpg",
+            "subtitle": "",
+            "title": "Seat Belts",
+            "image_only": true,
+            "notes": "seatbelts reduce the risk of fatal injury to front-seat occupants by 45%",
+            "url":"https://www.nhtsa.gov/book/countermeasures-that-work/seat-belts-and-child-restraints"
+          },
+          {
+            "name": "examples/INFORMS/internet.jpg",
+            "subtitle": "",
+            "title": "Web Security",
+            "notes": "0-1 type enabler \n SSL/TLS \n SHA \n RSA \n e-commerce depends on this"
+          },
+          {
+            "name": "examples/INFORMS/ultima.png",
+            "subtitle": "(in gaming)",
+            "title": "Quit and Save",
+            "notes": "Zork (1980) \n Ultima \n Civilization ..."
+          }
+        ],
+        "children": []
+      },
+      {
+        "node": "Safety ~ Classical Physics",
+        "weight": 30,
+        "widgets": [
+          {
+            "name": "examples/INFORMS/action.png",
+            "title": "Classical Physics = Minimal Action",
+            "subtitle": "",
+            "notes": "• S = <KE> – <PE> is minimal \n\n • Energy is Conserved at All Times \n\n • Deterministic Motion \n\n • Only One Path between A and B \n\n • e.g., ballistics, orbital motion, electricity, fluids, etc. "
+          },
+          {
+            "name": "examples/INFORMS/quantum.png",
+            "title": "Quantum Physics = Measured Deviations from Classical",
+            "subtitle": "(measured by Planck's Constant, h)",
+            "notes": "• S = <KE> – <PE> swings around minimum \n\n • Energy Can Be Violated (for short times) \n\n • Non-Deterministic Motion \n\n • Many Paths between A and B (all coexist) \n\n • e.g., decay of a Uranium atom, Casimir Effect, Hawking Radiation, etc. "
+          },
+          {
+            "name": "examples/INFORMS/pipe.png",
+            "title": "This is Why Safety First",
+            "subtitle": "",
+            "notes": "The lowest order (classical) solution should be paramount \n Then add perturbations (quantum) as needed"
+          },
+          {
+            "name": "examples/INFORMS/banking.png",
+            "title": "A Banking Analogy",
+            "subtitle": "(don't spend what you don't have)",
+            "notes": "Classical: buy only what you can afford \n Quantum: use credit (in moderation ... that's why Planck's Constant is small!)"
+          }
+        ],
+        "children": []
+      },
+      {
+        "node": "Humane => Progress",
+        "weight": 50,
+        "widgets": [
+          {
+            "name": "examples/INFORMS/tautology.png",
+            "title": "The Tautology",
+            "subtitle": "if it wasn't humane, it would kill us!",
+            "notes": ""
+          },
+          {
+            "name": "examples/INFORMS/inhumane1.png",
+            "subtitle": "",
+            "title": "Example 1",
+            "notes": ""
+          },
+          {
+            "name": "examples/INFORMS/inhumane2.png",
+            "subtitle": "",
+            "notes": "",
+            "title": ""
+          }
+        ],
+        "children": []
+      },
+      {
+        "node": "Motivation/Urgency",
+        "weight": 90,
+        "children": [
+          {
+            "node": "Humanoid Robots",
+            "weight": 70,
+            "widgets": [
+              {
+                "name": "examples/INFORMS/https://www.youtube.com/watch?v=eCNVet_wXGA",
+                "title": "Tesla Optimus",
+                "subtitle": "... a bit more than a sideshow now",
+                "notes": ""
+              },
+              {
+                "name": "examples/INFORMS/https://www.youtube.com/shorts/EdIAA1zROiA",
+                "subtitle": "",
+                "title": "NVIDIA NEO",
+                "notes": ""
+              },
+              {
+                "name": "examples/INFORMS/https://www.youtube.com/watch?v=I44_zbEwz_w",
+                "subtitle": "",
+                "title": "Boston Dynamics Atlas",
+                "notes": ""
+              },
+              {
+                "name": "examples/INFORMS/https://www.youtube.com/watch?v=mSPxRVTJW1I",
+                "title": "Unitree",
+                "subtitle": "",
+                "notes": ""
+              }
+            ],
+            "children": [
+              {
+                "node": "Why Humanoid?",
+                "weight": 30,
+                "widgets": [
+                  {
+                    "name": "examples/INFORMS/asimov-humanoid.png",
+                    "title": "Asimov's Argument",
+                    "subtitle": "",
+                    "notes": ""
+                  },
+                  {
+                    "name": "examples/INFORMS/life-humanoid.png",
+                    "title": "We like it? (see integration below)",
+                    "subtitle": "",
+                    "notes": ""
+                  }
+                ]
+              },
+              {
+                "node": "Robotic Rights",
+                "weight": 20,
+                "widgets": [
+                  {
+                    "name": "examples/INFORMS/robotic-udrr.png",
+                    "title": "Universal Declation of Robotic Rights",
+                    "image_only": true,
+                    "url":"https://lawandthesenses.org/robot-rights-sentience-as-a-basis-for-moral-rights/",
+                    "subtitle": "",
+                    "notes": ""
+                  },
+                  {
+                    "name": "examples/INFORMS/foundation.png",
+                    "title": "Asimov anticipated this",
+                    "subtitle": "(70 years ago)",
+                    "notes": "Robotic servants/slaves \n Robotic spouses"
+                  },
+                  {
+                    "name": "examples/INFORMS/https://www.youtube.com/watch?v=mSPxRVTJW1I",
+                    "title": "Abuse is Happening",
+                    "subtitle": "Would you stand for this?",
+                    "notes": "• If this doesn't scare the hell out of you ... \n\n • Abuse at 1:33 \n\n • What if this weren't a robot, but a newly integrated human, or even (sub)human ? "
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "node": "Aliens",
+            "weight": 30,
+            "widgets": [
+              {
+                "name": "examples/INFORMS/aliens.png",
+                "title": "Are we alone?",
+                "subtitle": "",
+                "notes": ""
+              },
+              {
+                "name": "examples/INFORMS/drake.png",
+                "title": "The Fermi Paradox",
+                "subtitle": "",
+                "notes": ""
+              },
+              {
+                "name": "examples/INFORMS/great-filter.png",
+                "title": "The Great Filter",
+                "subtitle": "",
+                "notes": ""
+              },
+              {
+                "name": "examples/INFORMS/asimov-victory.png",
+                "title": "We'll see their robots first",
+                "subtitle": "",
+                "notes": ""
+              },
+              {
+                "name": "examples/INFORMS/annihilation.png",
+                "title": "Or maybe no warning instant annihilation",
+                "subtitle": "",
+                "notes": ""
+              }
+            ]
+          },
+          {
+            "node": "The next ChatGPT Moment",
+            "weight": 70,
+            "widgets": [
+              {
+                "name": "examples/INFORMS/chatgpt.png",
+                "title": "The next ChatGPT Moment",
+                "subtitle": "",
+                "notes": ""
+              },
+              {
+                "name": "examples/INFORMS/chatgpt-warnings.png",
+                "title": "Warnings and Precursors to the ChatGPT Moment",
+                "subtitle": "",
+                "notes": "BERT \n GAN"
+              }
+            ],
+            "children": [
+              {
+                "node": "Robo Moment",
+                "weight": 60,
+                "widgets": [
+                  {
+                    "name": "examples/INFORMS/robots_at_work.png",
+                    "title": "Robots at Work",
+                    "subtitle": "",
+                    "notes": ""
+                  },
+                  {
+                    "name": "examples/INFORMS/robots_at_home.png",
+                    "title": "Robots in the Home",
+                    "subtitle": "",
+                    "notes": ""
+                  },
+                  {
+                    "name": "examples/INFORMS/robots_street.png",
+                    "title": "Robots in the Street",
+                    "subtitle": "",
+                    "notes": ""
+                  }
+                ]
+              },
+              { 
+                "node": "AI-Robo Precursors",
+                "weight": 50,
+                "widgets": [
+                  {
+                    "name": "examples/INFORMS/agentic.png",
+                    "title": "Agentic AI",
+                    "subtitle": "",
+                    "notes": "• Agentic AI is about organizing AI \n\n • Similar to industrial organization early 1900s \n\n • Like the app store revolution for iPhones"
+                  }
+                ]
+              },
+              {
+                "node": "Autonomous Vehicles",
+                "weight": 30,
+                "widgets": [
+                  {
+                    "name": "examples/INFORMS/autonomous_vehicles.png",
+                    "title": "Autonomous Vehicles",
+                    "subtitle": "",
+                    "notes": ""
+                  },
+                  {
+                    "name": "examples/INFORMS/autonomous_vehicles2.png",
+                    "title": "Autonomous Vehicles",
+                    "subtitle": "",
+                    "notes": ""
+                  }
+                ]
+              },
+              {
+                "node": "Drones",
+                "weight": 20,
+                "widgets": [
+                  {
+                    "name": "examples/INFORMS/drones.png",
+                    "title": "Drones",
+                    "subtitle": "",
+                    "notes": ""
+                  },
+                  {
+                    "name": "examples/INFORMS/drones2.png",
+                    "title": "Drones",
+                    "subtitle": "",
+                    "notes": ""
+                  }
+                ]
+              }
+
+            ]
+          },
+          {
+            "node": "What if we don't deal with this?",
+            "weight": 10,
+            "widgets": [
+              {
+                "name": "examples/INFORMS/ostrich.png",
+                "title": "Ignore It",
+                "subtitle": "",
+                "notes": "We also do this already with climate change, the inner workings of our bodies, etc."
+              },
+              {
+                "name": "examples/INFORMS/fatalism.png",
+                "title": "塞翁失馬 (Sài Wēng Shī Mǎ)",
+                "subtitle": "",
+                "notes": "Some merit to this \n But, can we really just sit by and watch?"
+              }
+            ],
+            "children": []
+          },
+          {
+            "node": "How do we deal with this?",
+            "weight": 60,
+            "widgets": [],
+            "children": [
+              {
+                "node": "Controls, Bounds, Accountability",
+                "weight": 50,
+                "children": [
+                  {
+                    "node": "Governance",
+                    "weight": 20,
+                    "widgets": [
+                      {
+                        "name": "examples/INFORMS/predictive_AI.png",
+                        "title": "Traditional Metrics",
+                        "subtitle": "",
+                        "notes": ""
+                      },
+                      {
+                        "name": "examples/INFORMS/guardrails.png",
+                        "title": "Training + Filters + Guardrails + Explainability",
+                        "subtitle": "",
+                        "notes": ""
+                      },
+                      {
+                        "name": "examples/INFORMS/irobot.png",
+                        "title": "The Three Laws of Robotics",
+                        "subtitle": "(Asimov, 1942)",
+                        "notes": "1. A robot may not injure a human being or, through inaction, allow a human being to come to harm. \n 2. A robot must obey the orders given it by human beings except where such orders would conflict with the First Law. \n 3. A robot must protect its own existence as long as such protection does not conflict with the First or Second Law."
+                      },
+                      {
+                        "name": "examples/INFORMS/accountability.png",
+                        "title": "Accountability",
+                        "subtitle": "",
+                        "notes": ""
+                      }
+                    ]
+                  },
+                  {
+                    "node": "IronAction AI",
+                    "weight": 30,
+                    "widgets": [
+                      {
+                        "name": "examples/INFORMS/ironaction.jpeg",
+                        "title": "IronAction AI",
+                        "subtitle": "",
+                        "notes": "Iron: the most stable element in the universe \n Action: average (PE - KE), optimal dynamic"
+                      },
+                      {
+                        "name": "examples/INFORMS/harmonic.png",
+                        "title": "Manifold of Safety",
+                        "subtitle": "(start with Harmonic Functions)",
+                        "notes": "Stable \n Predictable \n Minimal"
+                      },
+                      {
+                        "name": "examples/INFORMS/harmonic_examples.png",
+                        "title": "Nature Likes Harmonic Functions",
+                        "subtitle": "(the laziness principle)",
+                        "notes": "Minimizing Surface Tension \n Heat Exchange \n Electrostatic Potential Drop"
+                      },
+                      {
+                        "name": "examples/INFORMS/harmonic_measure.png",
+                        "image_only": true,
+                        "url":"https://github.com/nkersting/harmonic_robustness",
+                        "title": "Direct Application to Machine Learning",
+                        "subtitle": "(this is OPEN SOURCE: https://github.com/nkersting/harmonic_robustness)",
+                        "notes": "Training/Validation \n Drift Detection \n Real-time Monitoring"
+                      },
+                      {
+                        "name": "examples/INFORMS/blackbox.png",
+                        "title": "Blackbox Metrics",
+                        "subtitle": "(everyone must be empowered to measure safety)",
+                        "notes": "Simple \n Affordable \n Effective"
+                      },
+                      {
+                        "name": "examples/INFORMS/empower.png",
+                        "title": "Empowering Everyone",
+                        "subtitle": "(again comes through safety)",
+                        "notes": "Humanity \n Self-worth \n Motivation \n Ambition"
+                      }
+                    ]
+                  },
+                  {
+                    "node": "Explainable AI",
+                    "weight": 50,
+                    "children": [
+                      {
+                        "node": "XAI",
+                        "weight": 20,
+                        "widgets": [
+                          {
+                            "name": "examples/INFORMS/explainable_ai2.png",
+                            "title": "What is an Explanation?",
+                            "subtitle": "",
+                            "notes": ""
+                          },
+                          {
+                            "name": "examples/INFORMS/traditional_explain.png",
+                            "title": "Traditional Explainability",
+                            "subtitle": "(sometimes the model provides)",
+                            "notes": ""
+                          },
+                          {
+                            "name": "examples/INFORMS/general_explain.png",
+                            "title": "General Techniques",
+                            "subtitle": "(still traditionally-based)",
+                            "notes": "LIME \n SHAP \n Saliency Maps"
+                          },
+                          {
+                            "name": "examples/INFORMS/stability.png",
+                            "title": "Stability as a proxy for Explainability",
+                            "subtitle": "(e.g., Harmoniticity)",
+                            "notes": "Predictions on a Manifold that we Trust \n Harmonic Functions are explainable and minimal"
+                          },
+                          {
+                            "name": "examples/INFORMS/harmonic_ML.png",
+                            "title": "Harmonic Machine Learning",
+                            "subtitle": "(a principle for explainability)",
+                            "notes": "Measure departure from harmoniticity \n Useful as a validation metric \n Useful in real-time drift detection"
+                          }
+                        ]
+                      },
+                      {
+                        "node": "How do you want them to explain?",
+                        "weight": 20,
+                        "widgets": [
+                          {
+                            "name": "examples/INFORMS/explanation.png",
+                            "title": "What is an Explanation?",
+                            "subtitle": "",
+                            "notes": ""
+                          },
+                          {
+                            "name": "examples/INFORMS/explanation_whom.png",
+                            "title": "To Whom?",
+                            "subtitle": "",
+                            "notes": ""
+                          }
+                        ],
+                        "children": [
+                          {
+                            "node": "The Chinese Room",
+                            "weight": 10,
+                            "widgets": [
+                              {
+                                "name": "examples/INFORMS/chinese-room.png",
+                                "title": "A Chinese Room",
+                                "subtitle": "",
+                                "notes": ""
+                              },
+                              {
+                                "name": "examples/INFORMS/chinese-room2.png",
+                                "title": "The Chinese Room is Broken",
+                                "image_only": true,
+                                "url":"https://ai.gopubby.com/ai-breaks-the-chinese-room-0c860e20b623",
+                                "subtitle": "",
+                                "notes": ""
+                              }
+                            ]
+                          },
+                          {
+                            "node": "The Turing Test",
+                            "weight": 10,
+                            "widgets": [
+                              {
+                                "name": "examples/INFORMS/turing-test.png",
+                                "title": "The Turing Test",
+                                "subtitle": "",
+                                "notes": ""
+                              },
+                              {
+                                "name": "examples/INFORMS/turing-test2.png",
+                                "title": "The Turing Test is Broken",
+                                "image_only": true,
+                                "url":"https://www.nature.com/articles/d41586-023-02361-7",
+                                "subtitle": "",
+                                "notes": ""
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "node": "Do LLMs Think?",
+                        "weight": 40,
+                        "widgets": [
+                          {
+                            "name": "examples/INFORMS/thought.png",
+                            "title": "What is Thought, Anyway?",
+                            "subtitle": "",
+                            "image_only": true,
+                            "url":"https://yogajala.com/what-is-a-thought/ ",
+                            "notes": ""
+                          },
+                          {
+                            "name": "examples/INFORMS/do-we-care.png",
+                            "title": "Do We Care?",
+                            "subtitle": "",
+                            "notes": ""
+                          }
+                        ],
+                        "children": [
+                          {
+                            "node": "Grokking",
+                            "weight": 10,
+                            "widgets": [
+                              {
+                                "name": "examples/INFORMS/grok.png",
+                                "title": "Stranger in a Strange Land",
+                                "subtitle": "",
+                                "notes": ""
+                              },
+                              {
+                                "name": "examples/INFORMS/grok2.png",
+                                "title": "Grokking2",
+                                "url":"https://pair.withgoogle.com/explorables/grokking/",
+                                "image_only": true,
+                                "subtitle": "",
+                                "notes": ""
+                              }
+                            ]
+                          },
+                          {
+                            "node": "Interpolation Power",
+                            "weight": 30,
+                            "widgets": [
+                              {
+                                "name": "examples/INFORMS/manifold.png",
+                                "title": "The Manifold of Truth",
+                                "subtitle": "",
+                                "url":"https://peterjamesthomas.com/2009/06/25/a-single-version-of-the-truth/",
+                                "image_only": true,
+                                "notes": ""
+                              }, 
+                              {
+                                "name": "examples/INFORMS/vector-embedding.png",
+                                "title": "Words to Vectors",
+                                "subtitle": "",
+                                "url":"https://www.nvidia.com/en-us/glossary/vector-database/",
+                                "image_only": true,
+                                "notes": ""
+                              },
+                              {
+                                "name": "examples/INFORMS/vector-sequence.png",
+                                "title": "Measuring the Manifold",
+                                "subtitle": "",
+                                "notes": ""
+                              },
+                              {
+                                "name": "examples/INFORMS/vector-sequences.png",
+                                "title": "The Age of Interpolation",
+                                "subtitle": "discovering ourselves",
+                                "notes": "LLMs are giving us ideas 'between the lines' \n May discover new ethics, mathematics, aesthetics, etc. \n Next 5-10 years may see much discovery here \n We will quickly max out on currently availble data"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "node": "AI Alignment",
+                    "weight": 30,
+                    "widgets": [
+                      {
+                        "name": "examples/INFORMS/alignment_problem.png",
+                        "title": "The AI Alignment Problem",
+                        "subtitle": "",
+                        "notes": "We want AI to do everything \n\n • But we don't want it to do everything \n\n • How do we specify what we want, and what we don't want? \n\n • Problem is we don't even understand ourselves"
+                      }
+                    ]
+                  },
+                  {
+                    "node": "AI Ethics",
+                    "weight": 10,
+                    "widgets": [
+                      {
+                        "name": "examples/INFORMS/ai_ethics.png",
+                        "title": "AI Ethics",
+                        "subtitle": "",
+                        "notes": "BECAUSE:"
+                      }
+                    ]
+                  },
+                  {
+                    "node": "Positronic Brain Shutoffs",
+                    "weight": 10,
+                    "widgets": [
+                      {
+                        "name": "examples/INFORMS/positronic_brain.png",
+                        "title": "Positronic Brain Shutoffs",
+                        "subtitle": "(or similar hardware controls)",
+                        "notes": ""
+                      }
+                    ]
+                  },
+                  {
+                    "node": "Regulation",
+                    "weight": 10,
+                    "widgets": [
+                      {
+                        "name": "examples/INFORMS/regulation.png",
+                        "title": "Regulation of AI and Robotics",
+                        "subtitle": "",
+                        "notes": ""
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "node": "MCP Agentic AI",
+                "weight": 10,
+                "widgets": [
+                  {
+                    "name": "examples/INFORMS/mcp.png",
+                    "title": "MCP Agentic AI",
+                    "subtitle": "see my MCP server",
+                    "url":"https://addyo.substack.com/p/mcp-what-it-is-and-why-it-matters",
+                    "image_only": true,
+                    "notes": "Distributed P2P Functionality \n\n Gated (controllable, putting $$ back to people) \n\n New Cottage Industry (like apps for smartphones)"
+                  },
+                  {
+                    "name": "examples/INFORMS/mcp2.png",
+                    "title": "Hallucination Detection MCP Server",
+                    "url":"https://medium.com/@1054h34/make-a-free-mcp-server-next-weekend-adacea5fa698",
+                    "image_only": true,
+                    "subtitle": "",
+                    "notes": ""
+                  }
+                ]
+              },
+              {
+                "node": "LLM Hallucination",
+                "weight": 40,
+                "widgets": [
+                  {
+                    "name": "examples/INFORMS/llm_hallucination.png",
+                    "title": "Type I (HK+) Hallucination",
+                    "subtitle": "bad answer despite having the knowledge",
+                    "url":"https://arxiv.org/abs/2410.22071 ",
+                    "image_only": true,
+                    "notes": "\n like getting the wrong delivery  "
+                  },
+                  {
+                    "name": "examples/INFORMS/llm_hallucination2.png",
+                    "title": "Type II (HK-) Hallucination",
+                    "subtitle": "bad answer because it doesn't have the knowledge",
+                    "notes": ""
+                  },
+                  {
+                    "name": "examples/INFORMS/RAG.png",
+                    "title": "RAG is the only trusted application",
+                    "subtitle": "(because we can verify the hallucination)",
+                    "notes": ""
+                  },
+                  {
+                    "name": "examples/INFORMS/llm_hallucination3.png",
+                    "title": "Straying from the Manifold of Truth?",
+                    "subtitle": "measure the degree of violation",
+                    "notes": ""
+                  }
+                ],
+                "children": [
+                  {
+                    "node": "Stability as a Proxy for Trustworthiness",
+                    "weight": 20,
+                    "widgets": [
+                      {
+                        "name": "examples/INFORMS/harmonic_LLM.png",
+                        "title": "Should LLMs live on Harmonic Manifolds?",
+                        "subtitle": "",
+                        "notes": ""
+                      },
+                      {
+                        "name": "examples/INFORMS/interrogate.png",
+                        "title": "Borrowing from Interrogation Techniques",
+                        "subtitle": "",
+                        "notes": "Ask the same question in different ways \n Look for variation in response"
+                      },
+                      {
+                        "name": "examples/INFORMS/gamma.png",
+                        "title": "Trustworthy -> low Gamma",
+                        "subtitle": "",
+                        "notes": ""
+                      }, 
+                      {
+                        "name": "examples/INFORMS/gamma_1.png",
+                        "title": "Untrustworthy/Ambiguous -> high Gamma",
+                        "subtitle": "",
+                        "notes": ""
+                      }, 
+                      {
+                        "name": "examples/INFORMS/xenon.png",
+                        "title": "Adversarial Example",
+                        "subtitle": "",
+                        "notes": ""
+                      },
+                      {
+                        "name": "examples/INFORMS/gamma_trends.png",
+                        "title": "Statistically Makes Sense",
+                        "subtitle": "the higher gamma is, more likely to be hallucination",
+                        "url":"https://arxiv.org/pdf/2404.19708",
+                        "image_only": true,
+                        "notes": ""
+                      },
+                      {
+                        "name": "examples/INFORMS/visa_olympics.png",
+                        "title": "At the 2024 Olympics",
+                        "subtitle": "(we used gamma to filter out bad answers)",
+                        "notes": "Here we got away with N=1 ! \n In general, need larger N \n Further work needed to maximize potential"
+                      }
+
+
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "node": "Integration",
+            "weight": 40,
+            "widgets": [
+              {
+                "name": "examples/INFORMS/integration.png",
+                "title": "Integration of AI and Robotics",
+                "subtitle": "",
+                "notes": ""
+              }
+            ],
+            "children": [
+              {
+                "node": "Historical Precedent",
+                "weight": 20,
+                "widgets": [
+                  {
+                    "name": "examples/INFORMS/history1.png",
+                    "title": "Pacemakers",
+                    "subtitle": "",
+                    "notes": ""
+                  },
+                  {
+                    "name": "examples/INFORMS/history2.png",
+                    "title": "Prosthetic Limbs",
+                    "subtitle": "",
+                    "notes": ""
+                  },
+                  {
+                    "name": "examples/INFORMS/history3.png",
+                    "title": "ChatGPT in your Life",
+                    "subtitle": "",
+                    "notes": ""
+                  }
+                ]
+              },
+              {
+                "node": "The Remedy to Superintelligence",
+                "weight": 20,
+                "widgets": [
+                  {
+                    "name": "examples/INFORMS/superintelligence.png",
+                    "title": "Dealing with Superintelligence",
+                    "subtitle": "You can't beat it",
+                    "notes": "Nick Bostrom ..."
+                  },
+                  {
+                    "name": "examples/INFORMS/uncanny.png",
+                    "title": "Navigating the Uncannny Valley",
+                    "subtitle": "",
+                    "notes": "(see first 3 minutes) \n rest of the video is full of Chinese wow innovations"
+                  },
+                  {
+                    "name": "examples/INFORMS/https://www.youtube.com/watch?v=or0iYHjoptE",
+                    "title": "Uncanny is Everywhere",
+                    "subtitle": "",
+                    "notes": ""
+                  },
+                  {
+                    "name": "examples/INFORMS/superintelligence3.png",
+                    "title": "Might is Right",
+                    "subtitle": "...what choice do you really have?",
+                    "url":"https://en.wikipedia.org/wiki/Near-Earth_supernova",
+                    "image_only": true,
+                    "notes": ""
+                  },
+                  {
+                    "name": "examples/INFORMS/https://www.youtube.com/watch?v=imNtSPM3-r4&list=LL&index=89&t=300s&pp=gAQBiAQB",
+                    "title": "All Tomorrows?",
+                    "subtitle": "...changing ourselves is inevitable?",
+                    "notes": ""
+                  }
+                ],
+                "children": [
+                  {
+                    "node": "Optimizing Ourselves",
+                    "weight": 10,
+                    "widgets": [
+                      {
+                        "name": "examples/INFORMS/https://www.youtube.com/watch?v=2rhbh6BpxVc&list=LL&index=138&pp=gAQBiAQB",
+                        "title": "Transhumanism",
+                        "subtitle": "",
+                        "notes": ""
+                      },
+                      {
+                        "name": "examples/INFORMS/KarlSims.png",
+                        "url":"https://www.karlsims.com/evolved-virtual-creatures.html", 
+                        "title": "Karl Sims' experiments",
+                        "subtitle": "",
+                        "notes": ""
+                      },
+                      {
+                        "name": "examples/INFORMS/https://www.youtube.com/watch?v=JBgG_VSP7f8",
+                        "title": "Evolved Creatures",
+                        "subtitle": "",
+                        "notes": ""
+                      }
+                    ]
+                  },
+                  {
+                    "node": "Variety",
+                    "weight": 20,
+                    "widgets": [
+                      {
+                        "name": "examples/INFORMS/variety.png",
+                        "image_only": true,
+                        "url": "https://medium.com/@1054h34/identifying-chatgpt-with-variety-ce392b09e38e",
+                        "title": "Variety is the Spice of Life",
+                        "subtitle": "(from which it gets its flavor)",
+                        "notes": ""
+                      },
+                      {
+                        "name": "examples/INFORMS/energy.png",
+                        "image_only": true,
+                        "url": "https://medium.com/@1054h34/identifying-ai-content-with-variety-128b4c728724",
+                        "title": "Don't Spend Too Much Energy",
+                        "subtitle": "",
+                        "notes": ""
+                      }
+                    ]
+                  },
+                  { 
+                    "node": "An LLM for Motion?",
+                    "weight": 10,
+                    "widgets": [
+                      {
+                        "name": "examples/INFORMS/pose.png",
+                        "title": "An LLM for Motion?",
+                        "subtitle": "Sequences of Words -> Sequences of Poses",
+                        "notes": "• First make for Humans \n\n • Consider other body topologies as needed"
+                      },   
+                      {
+                        "name": "examples/INFORMS/https://www.youtube.com/watch?v=zV1qLYukTH8",
+                        "title": "Dance",
+                        "subtitle": "",
+                        "notes": "• What motions are natural? \n\n • What motions are beautiful? \n\n • Unexplored regimes of the Art?\n\n • Collaborative Choreography"
+                      },
+                      {
+                        "name": "examples/INFORMS/https://www.youtube.com/watch?v=3uHxgQ_hHs8&t=80s",
+                        "title": "Wushu (Kungfu)",
+                        "subtitle": "(martial arts in general)",
+                        "notes": "• What motions are efficient? \n\n • What motions are unexpected? \n\n • Hidden/unexplored techniques? \n\n • Adversarial applications"
+                      },
+                      {
+                        "name": "examples/INFORMS/https://www.youtube.com/watch?v=UcK2XtwaK5M",
+                        "title": "Collaborative Robotics",
+                        "subtitle": "(creative dancing)",
+                        "notes": "• 3D Printing \n\n • Swarm/Group Coordination \n\n • Transformers?"
+                      },
+                      
+                      {
+                        "name": "examples/INFORMS/https://www.youtube.com/shorts/n33eMQ3GNgY",
+                        "title": "Industrial Motion",
+                        "subtitle": "",
+                        "notes": "• What worker motions are dominant? \n\n • Robotic training \n\n • Efficiency/Ergonomics"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "node": "Losing Control",
+            "weight": 20,
+            "widgets": [
+              {
+                "name": "examples/INFORMS/losing_control.png",
+                "title": "Humanity Enslaved",
+                "subtitle": "",
+                "notes": ""
+              },
+              {
+                "name": "examples/INFORMS/https://www.youtube.com/watch?v=1UufaK3pQMg",
+                "title": "Humanity Eliminated",
+                "subtitle": "AI 2027",
+                "notes": "5:13"
+              },
+              {
+                "name": "examples/INFORMS/chaos.png",
+                "title": "Chaos",
+                "subtitle": "(though there may be structure)",
+                "notes": "Some people like Jackson Pollock"
+              }
+            ]
+          },
+          {
+            "node": "Religion, Acceptance",
+            "weight": 10,
+            "widgets": [
+              {
+                "name": "examples/INFORMS/religion_acceptance.png",
+                "title": "Ignoring It All",
+                "subtitle": "",
+                "notes": ""
+              },
+              {
+                "name": "examples/INFORMS/religion_acceptance2.png",
+                "title": "Acceptance of AI as the new God",
+                "url":"https://www.msn.com/en-gb/money/technology/rise-of-ai-religion-robotheism-inevitable-as-tech-won-t-be-humanity-s-slave-for-long/ar-AA1DHqcr",
+                "image_only": true,
+                "subtitle": "",
+                "notes": "Another Asimov prediction!"
+              },
+              {
+                "name": "examples/INFORMS/religion_acceptance3.png",
+                "title": "Acceptance of AI as our new Master",
+                "subtitle": "",
+                "notes": "Thresholds we cannot ignore: Kasparov losing to Deep Blue, Ken Jennings losing to IBM Watson in Jeopardy, AlphaGo ..."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "node": "Proposal",
+        "weight": 90,
+        "children": [
+          {
+            "node": "natural safeguards",
+            "weight": 50,
+            "widgets": [
+              {
+                "name": "examples/INFORMS/natural_safeguards.png",
+                "title": "Physical Limits",
+                "subtitle": "",
+                "notes": "• We trust things which are naturally constrained \n\n • 'Dont Be There' is one of the 'extra' 36 miliary stratgems of Sun Tzu \n\n • e.g. we trust Target shoppers to buy knives because their destructive power is very limited (relative to the car they drive to get there) \n\n • We trust drivers will not cross the yellow line because of strong negative motivation"
+              },
+              {
+                "name": "examples/INFORMS/natural_safeguards2.png",
+                "title": "Manifolds of Truth",
+                "subtitle": "",
+                "notes": "• Mathematical safeguards are even better"
+              },
+              {
+                "name": "examples/INFORMS/natural_safeguards3.png",
+                "title": "Expiration",
+                "subtitle": "",
+                "notes": ""
+              }
+            ]
+          },
+          {
+            "node": "low-tech",
+            "weight": 50,
+            "widgets": [
+              {
+                "name": "examples/INFORMS/land-rover.png",
+                "title": "Classic Cars",
+                "subtitle": "",
+                "notes": ""
+              },
+              {
+                "name": "examples/INFORMS/nuclear-tapes.png",
+                "title": "Legacy Data Formats",
+                "url":"https://www.zmescience.com/research/technology/floppy-disks-nuclear-arsenal/",
+                "image_only": true,
+                "subtitle": "",
+                "notes": ""
+              }
+            ]
+          },
+          {
+            "node": "kung-fu",
+            "weight": 50,
+            "widgets": [
+              {
+                "name": "examples/INFORMS/kung_fu.png",
+                "title": "Efficient and Responsible Motion",
+                "subtitle": "",
+                "notes": ""
+              },
+              {
+                "name": "examples/INFORMS/kung_fu2.png",
+                "title": "Doing Good Work",
+                "subtitle": "",
+                "notes": ""
+              },
+              {
+                "name": "examples/INFORMS/kung_fu3.png",
+                "title": "Work with your Environment",
+                "subtitle": "",
+                "notes": ""
+              }
+            ]
+          },
+          {
+            "node": "communication",
+            "weight": 50,
+            "widgets": [
+              {
+                "name": "examples/INFORMS/communication.png",
+                "title": "Internet",
+                "subtitle": "",
+                "notes": ""
+              },
+              {
+                "name": "examples/INFORMS/communication2.png",
+                "title": "Phone",
+                "subtitle": "",
+                "notes": ""
+              },
+              {
+                "name": "examples/INFORMS/communication3.png",
+                "title": "Radio",
+                "subtitle": "",
+                "notes": ""
+              },
+              {
+                "name": "examples/INFORMS/communication4.png",
+                "title": "Telegraph",
+                "subtitle": "",
+                "notes": ""
+              },
+              {
+                "name": "examples/INFORMS/communication5.png",
+                "title": "Voice",
+                "subtitle": "",
+                "notes": ""
+              },
+              {
+                "name": "examples/INFORMS/communication6.png",
+                "title": "Smoke Signals",
+                "subtitle": "",
+                "notes": ""
+              },
+              {
+                "name": "examples/INFORMS/communication7.png",
+                "title": "Carrier Pigeons",
+                "subtitle": "",
+                "notes": ""
+              },
+              {
+                "name": "examples/INFORMS/communication8.png",
+                "title": "Papyrus",
+                "subtitle": "",
+                "notes": ""
+              },
+              {
+                "name": "examples/INFORMS/communication9.png",
+                "title": "Stone Tablets",
+                "subtitle": "",
+                "notes": ""
+              }
+            ],
+            "children": [
+              {
+                "node": "Privacy",
+                "weight": 30,
+                "widgets": [
+                  {
+                    "url": "https://quantumrepoire.com/",
+                    "name": "examples/INFORMS/qr.png", 
+                    "title": "Quantum Repoire",
+                    "subtitle": "",
+                    "notes": ""
+                  }
+                ]
+              },
+              {
+                "node": "Security",
+                "weight": 30,
+                "widgets": [
+                  {
+                    "name": "examples/INFORMS/security.png",
+                    "title": "Security",
+                    "subtitle": "",
+                    "notes": ""
+                  },
+                  {
+                    "name": "examples/INFORMS/security2.png",
+                    "title": "Encryption",
+                    "subtitle": "",
+                    "notes": ""
+                  }
+                ]
+              },
+              {
+                "node": "Integrity",
+                "weight": 30,
+                "widgets": [
+                  {
+                    "name": "examples/INFORMS/integrity.png",
+                    "title": "How do we know it's Human?",
+                    "subtitle": "",
+                    "notes": ""
+                  },
+                  {
+                    "name": "examples/INFORMS/integrity2.png",
+                    "title": "Data Integrity",
+                    "subtitle": "",
+                    "notes": ""
+                  }
+                ]
+              },
+              {
+                "node": "P2P",
+                "weight": 10,
+                "widgets": [
+                  {
+                    "name": "examples/INFORMS/P2P.png",
+                    "title": "Peer to Peer (P2P) Networks",
+                    "subtitle": "moving away from centralized servers",
+                    "notes": "Problems with Centralized Compute: \n Expensive \n Vulnerable \n Despotic"
+                  },
+                  {
+                    "name": "examples/INFORMS/SLM.png",
+                    "title": "Small Language Models",
+                    "subtitle": "the many small beat the few large",
+                    "notes": ""
+                  },
+                  {
+                    "name": "examples/INFORMS/datacenters.png",
+                    "title": "Pending Energy Crisis",
+                    "subtitle": "",
+                    "notes": ""
+                  },
+                  {
+                    "name": "examples/INFORMS/catastrophe.png",
+                    "title": "Catastrophe Theory",
+                    "subtitle": "",
+                    "notes": "Large central systems are single points of failure"
+                  }
+                ],
+                "children": [
+                  {
+                    "node": "Virtual Currency",
+                    "weight": 5,
+                    "widgets": [
+                      {
+                        "name": "examples/INFORMS/bitcoin.png",
+                        "title": "Bitcoin",
+                        "subtitle": "The most popular Blockchain",
+                        "notes": ""
+                      },
+                      {
+                        "name": "examples/INFORMS/ethereum.png",
+                        "title": "Ethereum",
+                        "subtitle": "Smart Contracts",
+                        "notes": ""
+                      },
+                      {
+                        "name": "examples/INFORMS/blockchain.png",
+                        "title": "Blockchatin",
+                        "subtitle": "Essential Technology",
+                        "notes": ""
+                      },
+                      {
+                        "name": "examples/INFORMS/marsmoney.png",
+                        "title": "Space-Friendly Currency",
+                        "subtitle": "how else are you going to send cash to Mars?",
+                        "notes": ""
+                      }
+                    ]
+                  },
+                  {
+                    "node": "Distributed Compute",
+                    "weight": 5,
+                    "widgets": [
+                      {
+                        "name": "examples/INFORMS/federated.png",
+                        "title": "Federated Learning",
+                        "subtitle": "",
+                        "notes": "Financial Institutions / Credit Card Companies like this"
+                      },
+                      {
+                        "name": "examples/INFORMS/distributed.png",
+                        "title": "Distributed Data",
+                        "subtitle": "",
+                        "notes": ""
+                      },
+                      {
+                        "name": "examples/INFORMS/seti.png",
+                        "title": "SETI",
+                        "subtitle": "(the canonical example of Crowd Compute)",
+                        "notes": "But probably best to turn it off!"
+                      }
+                    ]
+                  },
+                  {
+                    "node": "Digital Democracy",
+                    "weight": 3,
+                    "widgets": [
+                      {
+                        "name": "examples/INFORMS/internet.png",
+                        "title": "The Internet",
+                        "subtitle": "(aspired to be digitally democratic)",
+                        "notes": "Anyone can make and serve a website \n DNS is centralized \n ISPs are centralized \n Cloud providers are centralized"
+                      },
+                      {
+                        "name": "examples/INFORMS/smartphones.png",
+                        "title": "Edge Compute",
+                        "subtitle": "We are all carrying supercomputers in our pockets",
+                        "notes": ""
+                      },
+                      {
+                        "name": "examples/INFORMS/democracy.png",
+                        "title": "Is Pure Democracy really the best system?",
+                        "subtitle": "(we like to think so)",
+                        "notes": "A lot of totalitarianism lately \n Oligarchy is a natural attractor \n Republic is a compromise"
+                      }
+                    ]
+                  }
+                ]
+              },             
+              {
+                "node": "New Methods from AI",
+                "weight": 10,
+                "widgets": [
+                  {
+                    "name": "examples/INFORMS/ai_comm_methods.png",
+                    "title": "New Methosd from AI",
+                    "subtitle": "Can AI Make us better communicators?",
+                    "notes": "AI can give us new variations on present methods \n (see Interpolation disussion above) "
+                  }
+                ],
+                "children":[
+                  {
+                    "node": "This Talk",
+                    "weight": 5,
+                    "widgets": [
+                      {
+                        "name": "examples/INFORMS/Lovable.png",
+                        "url": "https://lovable.dev/",
+                        "image_only": true,
+                        "title": "Lovable",
+                        "subtitle": "",
+                        "notes": "• A platform for webapp development \n • Powered by LLMs \n • Generates code from natural language \n • Commits to GitHub automatically \n • Makes web development accessible to everyone"
+                      },
+                      {
+                        "name": "examples/INFORMS/githubcopilot.png",
+                        "title": "GitHub Copilot",
+                        "subtitle": "(AI generation is not the panacea we thought)",
+                        "notes": "• Human needs to get involved with the code \n • Lovable is not perfect \n • Some things easier to do by hand (save credits!) \n • Interpolation limit encountered quickly \n • 'Cmon, Try Harder!''"
+                      },
+                      {
+                        "name": "examples/INFORMS/KnowledgeTree.png",
+                        "title": "Knowledge Tree",
+                        "subtitle": "",
+                        "notes": "• Thought starts out as a structured graph \n • Put talk in structured JSON \n • DIY from scratch, or ... \n • AI can do this for you from prose text!"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "node": "Human Industry",
+            "weight": 50,
+            "widgets": [
+              {
+                "name": "examples/INFORMS/human_industry.png",
+                "title": "What We Do",
+                "subtitle": "",
+                "notes": "Elevating, meaningful work \n Healthful work \n Necessary Work \n Sometimes just Fun work"
+              },
+              {
+                "name": "examples/INFORMS/human_industry2.png",
+                "title": "How We Do it",
+                "subtitle": "",
+                "notes": "Working bosonically (not fermionically) \n Degree of Selflessness \n "
+              },
+              {
+                "name": "examples/INFORMS/human_industry3.png",
+                "title": "We already know this",
+                "subtitle": "",
+                "notes": "Most belief systems of the world have these ideas at their core"
+              }
+            ],
+            "children":[
+              {
+                "node": "Art",
+                "weight": 30,
+                "widgets": [
+                  {
+                    "name": "examples/INFORMS/motorcycle.png",
+                    "title": "Can Anything Be Art?",
+                    "image_only": true,
+                    "subtitle": "(read this book)",
+                    "notes": "• Compare Author's take on motorcyle maintence to his friend's \n\n • Also many good notes on how to Write (and Think)"
+                  },
+
+                  {
+                    "name": "examples/INFORMS/mona-lisa.png",
+                    "title": "What is Art",
+                    "url": "https://medium.com/@1054h34/defining-art-and-science-for-ai-ad32b789fa1e",
+                    "image_only": true,
+                    "subtitle": "Arbitrary Creation",
+                    "notes": "• Is it Art? Only if it's ambiguous! \n\n • e.g. reduce Mona Lisa to a mathematical formula -> no longer art"
+                  },
+                  {
+                    "name": "examples/INFORMS/science.png",
+                    "title": "What is Science?",
+                    "subtitle": "",
+                    "notes": ""
+                  },
+                  {
+                    "name": "examples/INFORMS/math.png",
+                    "title": "What is Math?",
+                    "subtitle": "",
+                    "notes": ""
+                  },
+                  {
+                    "name": "examples/INFORMS/human-art.png",
+                    "title": "Why are Humans best fit for this?",
+                    "subtitle": "(we are quite random and noisy)",
+                    "notes": "Asimov's argument: our short lifespans and decent reproductive ratio"
+                  }
+                ],
+                "children":[
+                   {"node": "Music", "weight":20, "widgets":[
+                    {"name": "examples/INFORMS/classical.png", "title": "Classical Music", "subtitle": "", "notes": ""},
+                    {"name": "examples/INFORMS/jazz.png", "title": "Jazz", "subtitle": "", "notes": ""},
+                    {"name": "examples/INFORMS/rock.png", "title": "Rock", "subtitle": "", "notes": ""},
+                    {"name": "examples/INFORMS/pop.png", "title": "Pop", "subtitle": "", "notes": ""},
+                    {"name": "examples/INFORMS/hip-op.png", "title": "Hip Hop", "subtitle": "", "notes": ""},
+                    {"name": "examples/INFORMS/experimental-music.png", "title": "Experimental Music", "subtitle": "", "notes": ""}
+                   ]},
+                   {"node": "Literature", "weight":20, "widgets":[
+                    {"name": "examples/INFORMS/poetry.png", "title": "Poetry", "subtitle": "", "notes": ""},
+                    {"name": "examples/INFORMS/fiction.png", "title": "Fiction", "subtitle": "", "notes": ""},
+                    {"name": "examples/INFORMS/non-fiction.png", "title": "Non-Fiction", "subtitle": "", "notes": ""},
+                    {"name": "examples/INFORMS/drama.png", "title": "Drama", "subtitle": "", "notes": ""},
+                    {"name": "examples/INFORMS/experimental-lit.png", "title": "Experimental Music", "subtitle": "", "notes": ""}
+                   ]},
+                   {"node": "Visual Arts", "weight":20, "widgets":[
+                    {"name": "examples/INFORMS/painting.png", "title": "Painting", "subtitle": "", "notes": ""},
+                    {"name": "examples/INFORMS/sculpture.png", "title": "Sculpture", "subtitle": "", "notes": ""},
+                    {"name": "examples/INFORMS/photography.png", "title": "Photography", "subtitle": "", "notes": ""},
+                    {"name": "examples/INFORMS/digital-art.png", "title": "Digital Art", "subtitle": "", "notes": ""},
+                    {"name": "examples/INFORMS/street-art.png", "title": "Street Art", "subtitle": "", "notes": ""},
+                    {"name": "examples/INFORMS/experimental-visual.png", "title": "Experimental Visual", "subtitle": "", "notes": ""}
+                   ]},
+                   {"node": "Performing Arts", "weight":20, "widgets":[
+                    {"name": "examples/INFORMS/theater.png", "title": "Theatre", "subtitle": "", "notes": ""},
+                    {"name": "examples/INFORMS/dance.png", "title": "Dance", "subtitle": "", "notes": ""},
+                    {"name": "examples/INFORMS/magic.png", "title": "Magic", "subtitle": "", "notes": ""},
+                    {"name": "examples/INFORMS/vaudeville.png", "title": "Vaudeville", "subtitle": "", "notes": ""},
+                    {"name": "examples/INFORMS/martial-arts.png", "title": "Martial Arts", "subtitle": "", "notes": ""},
+                    {"name": "examples/INFORMS/experimental-performance.png", "title": "Experimental Performance", "subtitle": "", "notes": ""}
+                   ]},
+                   {"node": "Infinite Arts", "weight":20, "widgets":[
+                    {"name": "examples/INFORMS/fermions.png", "title": "Fermionic Matter", "subtitle": "", "notes": ""},
+                    {"name": "examples/INFORMS/bosons.png", "title": "Bosonic Matter", "subtitle": "", "notes": "Elementary (e.g., Higgs) \n Composite (e.g., Pion)"},
+                    {"name": "examples/INFORMS/undiscovered.png", "title": "Other Stuff?", "subtitle": "", "notes": "Dark Matter \n Dark Energy \n Exotic Matter \n etc."}
+                   ]},
+                   {
+                    "node": "Art is Satisfying",
+                    "weight":20,
+                    "widgets":[
+                      {"name": "examples/INFORMS/freedom.png", 
+                      "title": "Is it all about Freedom?",
+                       "subtitle": "",
+                        "notes": "Prove your freedom -> Try something new"},
+                      {"name": "examples/INFORMS/gallery.png", 
+                      "title": "Art Galleries", 
+                      "subtitle": "", 
+                      "notes": ""},
+                      {"name": "examples/INFORMS/concert.png",
+                       "title": "Concerts",
+                        "subtitle": "", 
+                        "notes": ""}
+                    ]
+                   }
+                ]
+              },
+              {
+                "node": "Disruption",
+                "weight": 20,
+                "widgets": [
+                  {
+                    "name": "examples/INFORMS/disruption.png",
+                    "title": "What is Disruption",
+                    "subtitle": "Arbitrary Destruction",
+                    "notes": "Can't really pin down a definition, because that is the core of disruption itself! \n Revolution \n Counter-culture \n The Unpalatable Valley"
+                  },
+                  {
+                    "name": "examples/INFORMS/need-for-disruption.png",
+                    "title": "Why do we need disruption?",
+                    "subtitle": "(no one really understands the universe)",
+                    "notes": "Realization of early 21st century in business/economics \n Evolution requires some disruption or mutation \n Machines / AI by itself does not have enough (we hope)"
+                  },
+                  {
+                    "name": "examples/INFORMS/dropout.png",
+                    "title": "Dropping Out",
+                    "subtitle": "(not just for high school)",
+                    "notes": "It was discovered early on that Neural Nets with drop-out perform better \n Drop-out is a form of regularization \n It is a form of noise \n Noise is good for us"
+                  },
+                  {
+                    "name": "examples/INFORMS/human-disruption.png",
+                    "title": "Why are Humans best fit for this?",
+                    "subtitle": "(we are quite random and noisy)",
+                    "notes": "Asimov's argument: our short lifespans and decent reproductive ratio \n We get bored with regularity (Variety is the Spice of Life) \n We are naturally curious \n But not too much (we have some need for safety and self-preservation)"
+                  }
+                ]
+              }
+            ] 
+          }
+        ]
+      }
+    ]
+  }
+}

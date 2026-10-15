@@ -1,0 +1,461 @@
+{
+  "seo": {
+    "title": "Space Exploration: Past, Present, and Future",
+    "description": "A comprehensive journey through humanity's quest to explore the cosmos",
+    "prose": "Today we're embarking on a journey through one of humanity's greatest adventures: space exploration. From our first tentative steps beyond Earth's atmosphere to our ambitious plans for interplanetary colonization, this is the story of how we've pushed the boundaries of what's possible. We'll explore the triumphs and tragedies of the past, examine the cutting-edge missions of today, and look ahead to a future where humans may become a multi-planetary species."
+  },
+  "pageTitle": "Space Exploration: Past, Present, and Future",
+  "pageDescription": "A Dynamic Tree representation of humanity's journey into space",
+  "knowledgeTree": {
+    "node": "The Dawn of Space Exploration",
+    "weight": 100,
+    "prose": "Our journey into space began in the mid-20th century, driven by a combination of scientific curiosity, military competition, and human ambition. The Space Race between the United States and Soviet Union catalyzed rapid technological advancement, transforming what seemed like science fiction into reality in just a few decades.",
+    "widgets": [
+      {
+        "name": "https://www.youtube.com/watch?v=QEbUrV-uFBs",
+        "title": "Sputnik 1: First Satellite in Space",
+        "subtitle": "October 4, 1957 - The beginning",
+        "notes": "The Soviet Union shocked the world by launching the first artificial satellite, a 58cm sphere that orbited Earth every 96 minutes. Its radio beeps announced the space age.",
+        "prose": "When Sputnik's metallic sphere launched into orbit in 1957, it fundamentally changed human civilization. For the first time, we had placed an object beyond Earth's atmosphere that could circle our planet."
+      },
+      {
+        "name": "https://www.youtube.com/watch?v=RONIax0_1ec",
+        "title": "Yuri Gagarin: First Human in Space",
+        "subtitle": "April 12, 1961 - Vostok 1",
+        "notes": "Gagarin's 108-minute orbital flight proved humans could survive in space. His famous quote: 'Poyekhali!' (Let's go!) became a rallying cry for space exploration.",
+        "prose": "Yuri Gagarin's single orbit around Earth was brief but profound. He demonstrated that humans could not only survive the journey to space, but return safely."
+      },
+      {
+        "name": "https://www.youtube.com/watch?v=cwZb2mqId0A",
+        "title": "Apollo 11: One Giant Leap",
+        "subtitle": "July 20, 1969 - Moon Landing",
+        "notes": "Neil Armstrong and Buzz Aldrin became the first humans to walk on another celestial body. An estimated 650 million people watched on TV.",
+        "prose": "The Apollo 11 mission represents humanity's greatest achievement in space exploration. It showed that with sufficient will and resources, seemingly impossible goals become reality."
+      }
+    ],
+    "children": [
+      {
+        "node": "The Space Race Era (1957-1975)",
+        "weight": 80,
+        "prose": "The Cold War competition between superpowers drove unprecedented investment in space technology. Both the US and USSR achieved remarkable firsts, pushing the boundaries of engineering and human endurance.",
+        "widgets": [
+          {
+            "name": "https://www.youtube.com/watch?v=s15xtJ0OL5c",
+            "title": "Mercury and Gemini Programs",
+            "subtitle": "Learning to live and work in space",
+            "notes": "NASA's Mercury program (1958-1963) proved Americans could survive space. Gemini (1961-1966) perfected rendezvous, docking, and spacewalks needed for Moon missions.",
+            "prose": "Before we could reach the Moon, we had to master basic spaceflight. Mercury taught us survival, Gemini taught us how to work in space."
+          },
+          {
+            "name": "https://www.youtube.com/watch?v=8W99vdHTx4w",
+            "title": "Soviet Space Stations",
+            "subtitle": "Salyut and early orbital outposts",
+            "notes": "The USSR launched the first space station, Salyut 1, in 1971. These stations pioneered long-duration spaceflight and scientific research in orbit.",
+            "prose": "While America focused on the Moon, the Soviets pursued a different strategy: learning to live in space for extended periods through their station program."
+          }
+        ],
+        "children": []
+      },
+      {
+        "node": "Tragedies and Setbacks",
+        "weight": 60,
+        "prose": "Space exploration has never been without risk. Several missions ended in tragedy, reminding us of the dangers inherent in pushing beyond our world. These losses, however, led to important safety improvements.",
+        "widgets": [
+          {
+            "name": "https://www.youtube.com/watch?v=fSTrmJtHLFU",
+            "title": "Apollo 1 Fire",
+            "subtitle": "January 27, 1967",
+            "notes": "A cabin fire during a launch rehearsal killed astronauts Gus Grissom, Ed White, and Roger Chaffee. Led to major redesigns emphasizing safety.",
+            "prose": "The Apollo 1 fire was a devastating reminder that space exploration demands respect. The tragedy forced NASA to prioritize safety over schedule."
+          },
+          {
+            "name": "https://www.youtube.com/watch?v=j4JOjcDFtBE",
+            "title": "Challenger Disaster",
+            "subtitle": "January 28, 1986",
+            "notes": "Space Shuttle Challenger broke apart 73 seconds after launch due to O-ring failure, killing all seven crew members including teacher Christa McAuliffe.",
+            "prose": "The Challenger disaster shocked the world and grounded the shuttle program for nearly three years. It revealed organizational failures in NASA's decision-making."
+          },
+          {
+            "name": "https://www.youtube.com/watch?v=gMPvVEZLzTo",
+            "title": "Columbia Disaster",
+            "subtitle": "February 1, 2003",
+            "notes": "Columbia disintegrated during reentry due to damage from foam striking the wing at launch. All seven astronauts perished.",
+            "prose": "Columbia's loss during reentry showed that even seemingly minor damage could prove catastrophic, leading to enhanced inspection protocols."
+          }
+        ],
+        "children": []
+      },
+      {
+        "node": "Modern Space Exploration",
+        "weight": 95,
+        "prose": "Today's space programs combine government agencies with private companies, creating a new era of innovation and accessibility. We're simultaneously exploring our solar system with robotic probes while preparing for human missions to Mars.",
+        "widgets": [
+          {
+            "name": "https://www.youtube.com/watch?v=0qo78R_yYFA",
+            "title": "International Space Station",
+            "subtitle": "Continuous human presence since 2000",
+            "notes": "The ISS orbits at 400km altitude, hosting astronauts from 20+ countries. It's humanity's laboratory for long-duration spaceflight research.",
+            "prose": "The ISS represents what we can achieve through international cooperation. It's been continuously inhabited for over two decades, teaching us how to survive in space."
+          },
+          {
+            "name": "https://www.youtube.com/watch?v=bvim4rsNHkQ",
+            "title": "SpaceX and Commercial Space",
+            "subtitle": "The new space race",
+            "notes": "Private companies like SpaceX, Blue Origin, and others have revolutionized space access with reusable rockets, dramatically reducing launch costs.",
+            "prose": "The commercialization of space has changed everything. What once cost hundreds of millions now costs a fraction, opening space to more nations and companies."
+          }
+        ],
+        "children": [
+          {
+            "node": "Mars Exploration",
+            "weight": 85,
+            "prose": "Mars has captivated human imagination for generations. Our robotic explorers have revealed a world that once had liquid water and might have harbored life. Now we're preparing to send humans.",
+            "widgets": [
+              {
+                "name": "https://www.youtube.com/watch?v=p1WX0CATyn8",
+                "title": "Mars Rovers: Spirit, Opportunity, Curiosity",
+                "subtitle": "Robotic geologists on the Red Planet",
+                "notes": "NASA's rovers have explored Mars for decades. Opportunity lasted 14 years beyond its 90-day mission. Curiosity found evidence Mars once had conditions suitable for life.",
+                "prose": "Our Mars rovers are essentially robotic field geologists, analyzing rocks and soil to understand the planet's history and potential habitability."
+              },
+              {
+                "name": "https://www.youtube.com/watch?v=4czjS9h4Fpg",
+                "title": "Perseverance and Ingenuity",
+                "subtitle": "Current Mars mission with first Mars helicopter",
+                "notes": "Perseverance seeks signs of ancient microbial life and caches samples for future return. Ingenuity proved powered flight works in Mars's thin atmosphere.",
+                "prose": "Perseverance and Ingenuity represent the cutting edge of Mars exploration, with the rover searching for ancient life and the helicopter opening new exploration possibilities."
+              },
+              {
+                "name": "https://www.youtube.com/watch?v=A_P2TlU0OdA",
+                "title": "SpaceX Starship Mars Plans",
+                "subtitle": "The vehicle designed to colonize Mars",
+                "notes": "Starship is designed to carry 100+ tons to Mars. SpaceX aims for first uncrewed Mars landings in the late 2020s, with crewed missions following.",
+                "prose": "Starship represents SpaceX's vision for making humanity multi-planetary. If successful, it could transport hundreds of people to Mars."
+              }
+            ],
+            "children": [
+              {
+                "node": "Mars Colonization Challenges",
+                "weight": 45,
+                "prose": "Establishing a permanent presence on Mars presents enormous technical and biological challenges. The journey takes 6-9 months, radiation exposure is high, and the environment is hostile.",
+                "widgets": [
+                  {
+                    "name": "https://www.youtube.com/watch?v=uqKGREZs6-w",
+                    "title": "Radiation Protection",
+                    "subtitle": "Shielding astronauts from cosmic rays",
+                    "notes": "Mars lacks Earth's magnetic field. Astronauts need radiation shielding during transit and on the surface. Solutions include water walls, regolith shelters, and plasma shields.",
+                    "prose": "Radiation is one of the biggest obstacles to Mars colonization. Without Earth's protective magnetic field, colonists need creative shielding solutions."
+                  },
+                  {
+                    "name": "https://www.youtube.com/watch?v=P1sbSJK26pM",
+                    "title": "In-Situ Resource Utilization",
+                    "subtitle": "Living off the Martian land",
+                    "notes": "ISRU means making fuel, water, and oxygen from Mars's resources. This includes extracting water ice, manufacturing methane fuel, and producing oxygen from CO2.",
+                    "prose": "We can't bring everything from Earth. ISRU technologies will let colonists manufacture essentials from Martian resources, making sustained presence possible."
+                  }
+                ],
+                "children": []
+              }
+            ]
+          },
+          {
+            "node": "Moon Return: Artemis Program",
+            "weight": 75,
+            "prose": "NASA's Artemis program aims to establish a sustainable human presence on the Moon, including the first woman and person of color on the lunar surface. The Moon will serve as a proving ground for Mars technologies.",
+            "widgets": [
+              {
+                "name": "https://www.youtube.com/watch?v=rRzxMN2c0PY",
+                "title": "Artemis I Success",
+                "subtitle": "Uncrewed test flight in 2022",
+                "notes": "Artemis I successfully tested the Orion spacecraft and Space Launch System rocket. The mission orbited the Moon and returned safely to Earth.",
+                "prose": "Artemis I validated the hardware that will carry astronauts back to the Moon, demonstrating that decades after Apollo, we can still reach our nearest neighbor."
+              },
+              {
+                "name": "https://www.youtube.com/watch?v=T0r2bngJvEY",
+                "title": "Lunar Gateway",
+                "subtitle": "Orbiting outpost for Moon missions",
+                "notes": "Gateway will orbit the Moon, serving as a staging point for surface missions and as a deep-space research laboratory. International partners are contributing modules.",
+                "prose": "Unlike Apollo, Artemis is building infrastructure. Gateway will be our permanent foothold in lunar space, supporting sustained exploration."
+              },
+              {
+                "name": "https://www.youtube.com/watch?v=P7GZiChCvyU",
+                "title": "Lunar South Pole Focus",
+                "subtitle": "Water ice and permanent sunlight",
+                "notes": "The lunar south pole has permanently shadowed craters containing water ice and peaks with near-constant sunlight for solar power, making it ideal for a base.",
+                "prose": "We're not returning to the Moon's equator where Apollo landed. The south pole offers resources that could sustain a permanent human presence."
+              }
+            ],
+            "children": []
+          },
+          {
+            "node": "Robotic Deep Space Missions",
+            "weight": 70,
+            "prose": "While humans prepare to go back to the Moon and on to Mars, robotic missions are exploring the outer planets, asteroids, and the edge of interstellar space, revealing the incredible diversity of our solar system.",
+            "widgets": [
+              {
+                "name": "https://www.youtube.com/watch?v=xrGAQCq9BMU",
+                "title": "Voyager Missions",
+                "subtitle": "Into interstellar space",
+                "notes": "Launched 1977, both Voyagers have left the heliosphere. They continue transmitting data from beyond our solar system, over 15 billion miles away.",
+                "prose": "The Voyagers are humanity's most distant ambassadors. After 45+ years, they're still sending back data from interstellar space."
+              },
+              {
+                "name": "https://www.youtube.com/watch?v=oBDZtt0vWD8",
+                "title": "James Webb Space Telescope",
+                "subtitle": "Looking at the early universe",
+                "notes": "JWST observes in infrared, seeing through cosmic dust to the first galaxies. It's revolutionizing our understanding of exoplanets, star formation, and galaxy evolution.",
+                "prose": "Webb is showing us the universe as it was 13 billion years ago, revealing the formation of the first stars and galaxies after the Big Bang."
+              },
+              {
+                "name": "https://www.youtube.com/watch?v=E7MQb9Y4FAE",
+                "title": "Europa Clipper Mission",
+                "subtitle": "Exploring Jupiter's ocean moon",
+                "notes": "Launching 2024, Clipper will conduct 50 flybys of Europa, studying its subsurface ocean and searching for conditions suitable for life.",
+                "prose": "Europa's vast underground ocean might harbor life. Clipper will investigate whether this alien sea could support biology."
+              }
+            ],
+            "children": []
+          },
+          {
+            "node": "Space Telescopes and Observatories",
+            "weight": 50,
+            "prose": "Space-based telescopes have revolutionized astronomy by observing wavelengths blocked by Earth's atmosphere. They've discovered thousands of exoplanets, imaged black holes, and peered into the universe's infancy.",
+            "widgets": [
+              {
+                "name": "https://www.youtube.com/watch?v=VcC53MBHN9A",
+                "title": "Hubble Space Telescope",
+                "subtitle": "30+ years of cosmic discoveries",
+                "notes": "Launched 1990, Hubble has taken over a million observations. It measured the universe's expansion rate, photographed planets around other stars, and captured deep field images.",
+                "prose": "Hubble transformed our view of the cosmos. Its images have become iconic, revealing the universe's beauty and complexity."
+              },
+              {
+                "name": "https://www.youtube.com/watch?v=T0r2bngJvEY",
+                "title": "Chandra X-ray Observatory",
+                "subtitle": "Viewing the violent universe",
+                "notes": "Chandra observes X-rays from extreme objects like black holes, neutron stars, and supernova remnants. It reveals processes invisible to optical telescopes.",
+                "prose": "Chandra shows us the universe's most violent phenomena, where matter spirals into black holes and stars explode."
+              }
+            ],
+            "children": []
+          }
+        ]
+      },
+      {
+        "node": "Near-Future Prospects (2025-2040)",
+        "weight": 90,
+        "prose": "The next 15 years will see unprecedented activity in space. Multiple countries and companies plan lunar landings, orbital space stations, asteroid mining ventures, and the first human missions to Mars.",
+        "widgets": [
+          {
+            "name": "https://www.youtube.com/watch?v=921VbEMAwwY",
+            "title": "Private Space Stations",
+            "subtitle": "Beyond the ISS",
+            "notes": "Companies like Axiom, Blue Origin, and others are developing commercial space stations. The ISS will deorbit around 2030, and these stations will replace it.",
+            "prose": "When the ISS retires, privately-owned stations will take over. This shift could make space more accessible to researchers, tourists, and industries."
+          },
+          {
+            "name": "https://www.youtube.com/watch?v=C4VHfmiwInM",
+            "title": "Space Tourism",
+            "subtitle": "Suborbital and orbital flights",
+            "notes": "Virgin Galactic, Blue Origin, and SpaceX are offering flights to space. Prices are dropping, though still expensive. Orbital hotels are in development.",
+            "prose": "Space tourism is transitioning from science fiction to reality. While costly now, prices will likely decrease as technology matures."
+          },
+          {
+            "name": "https://www.youtube.com/watch?v=SA8ZBJWo73E",
+            "title": "China's Space Program",
+            "subtitle": "Tiangong station and lunar plans",
+            "notes": "China operates Tiangong space station, plans lunar base, and aims for Mars samples. They're becoming a major space power.",
+            "prose": "China's rapidly advancing space program is changing the geopolitical landscape of space exploration, spurring renewed international competition."
+          }
+        ],
+        "children": [
+          {
+            "node": "Asteroid Mining",
+            "weight": 40,
+            "prose": "Asteroids contain vast quantities of metals, water, and other resources. Several companies aim to mine these resources, potentially revolutionizing space economics and enabling deep space exploration.",
+            "widgets": [
+              {
+                "name": "https://www.youtube.com/watch?v=y8XvQNt26KI",
+                "title": "Near-Earth Asteroids",
+                "subtitle": "Accessible resource deposits",
+                "notes": "Thousands of NEAs orbit near Earth. Some contain more platinum-group metals than have been mined in human history. Water from asteroids could fuel deep space missions.",
+                "prose": "Some nearby asteroids are easier to reach than the Moon. They contain resources worth trillions of dollars and water for rocket fuel."
+              },
+              {
+                "name": "https://www.youtube.com/watch?v=3mHFCxpfAu0",
+                "title": "Technical Challenges",
+                "subtitle": "Mining in microgravity",
+                "notes": "Extracting and processing materials in zero-G requires new technologies. Challenges include anchoring to asteroids, containing debris, and transporting materials.",
+                "prose": "Mining asteroids isn't like mining on Earth. Engineers are developing novel techniques for operating in microgravity environments."
+              }
+            ],
+            "children": []
+          },
+          {
+            "node": "Nuclear Propulsion",
+            "weight": 35,
+            "prose": "Nuclear propulsion could dramatically reduce travel time to Mars and enable missions to the outer planets. Both nuclear thermal and electric systems are in development.",
+            "widgets": [
+              {
+                "name": "https://www.youtube.com/watch?v=1-3uXAcLmqg",
+                "title": "DRACO Program",
+                "subtitle": "Nuclear thermal propulsion",
+                "notes": "NASA and DARPA are developing nuclear thermal rockets that could cut Mars travel time in half. Demonstrations planned for late 2020s.",
+                "prose": "Nuclear thermal propulsion could halve the journey to Mars, reducing radiation exposure and enabling faster response to emergencies."
+              }
+            ],
+            "children": []
+          }
+        ]
+      },
+      {
+        "node": "Long-Term Future (2040-2100)",
+        "weight": 85,
+        "prose": "Looking further ahead, humanity may establish self-sustaining colonies on Mars, mine asteroids for resources, construct massive space habitats, and send probes to nearby star systems. The first humans born off-Earth might live their entire lives in space.",
+        "widgets": [
+          {
+            "name": "https://www.youtube.com/watch?v=kmFOBoy2MZ8",
+            "title": "Mars Settlements",
+            "subtitle": "Cities on the Red Planet",
+            "notes": "Self-sustaining Mars cities could house millions. Terraforming remains controversial and centuries away. Underground habitats protect from radiation.",
+            "prose": "A permanent Mars settlement would represent humanity becoming truly multi-planetary, insurance against Earth-based catastrophes."
+          },
+          {
+            "name": "https://www.youtube.com/watch?v=6LcSTbVH0Ec",
+            "title": "O'Neill Cylinders",
+            "subtitle": "Rotating space habitats",
+            "notes": "Giant rotating cylinders could house millions in Earth-like conditions. They'd use centrifugal force to create artificial gravity and could be positioned anywhere in the solar system.",
+            "prose": "O'Neill cylinders might be the future of human civilization - massive rotating habitats that could exist anywhere, from orbit to the asteroid belt."
+          },
+          {
+            "name": "https://www.youtube.com/watch?v=QB2IKI6Th3U",
+            "title": "Interstellar Probes",
+            "subtitle": "Reaching nearby stars",
+            "notes": "Breakthrough Starshot proposes laser-propelled probes reaching Alpha Centauri in 20 years. Nuclear fusion or antimatter drives could enable crewed interstellar missions.",
+            "prose": "Within this century, we might launch probes to other star systems, sending back images of exoplanets orbiting nearby stars."
+          }
+        ],
+        "children": [
+          {
+            "node": "Terraforming",
+            "weight": 30,
+            "prose": "Transforming Mars or Venus into Earth-like worlds is theoretically possible but would take centuries and require massive resources. The ethics of altering entire planets are hotly debated.",
+            "widgets": [
+              {
+                "name": "https://www.youtube.com/watch?v=D3WjxIjYi3s",
+                "title": "Mars Terraforming Proposals",
+                "subtitle": "A centuries-long project",
+                "notes": "Ideas include releasing greenhouse gases from polar caps, importing ammonia from asteroids, or using orbital mirrors. Success is uncertain.",
+                "prose": "Terraforming Mars is humanity's most ambitious engineering concept, potentially creating a second Earth over centuries."
+              },
+              {
+                "name": "https://www.youtube.com/watch?v=aKKQFmJdR_M",
+                "title": "Ethical Considerations",
+                "subtitle": "Should we alter other worlds?",
+                "notes": "If life exists on Mars, terraforming could destroy it. Questions of planetary protection and whether humans have the right to modify worlds.",
+                "prose": "The ethics of terraforming are complex. Do we have the right to potentially destroy native ecosystems for human benefit?"
+              }
+            ],
+            "children": []
+          },
+          {
+            "node": "Space Elevators",
+            "weight": 25,
+            "prose": "A space elevator could revolutionize access to orbit, replacing rockets with a cable-based system. While requiring materials beyond current capabilities, carbon nanotube development continues.",
+            "widgets": [
+              {
+                "name": "https://www.youtube.com/watch?v=dc8_AuzeYKE",
+                "title": "The Concept",
+                "subtitle": "A cable to orbit",
+                "notes": "A space elevator uses a cable anchored to Earth and counterweight beyond geostationary orbit. Climbers would move cargo up at minimal cost.",
+                "prose": "Space elevators could reduce launch costs by orders of magnitude, making space truly accessible to everyone."
+              }
+            ],
+            "children": []
+          },
+          {
+            "node": "Dyson Swarms",
+            "weight": 20,
+            "prose": "Far future civilizations might surround stars with solar collectors, capturing vast amounts of energy. While speculative, such structures could power truly advanced civilizations.",
+            "widgets": [
+              {
+                "name": "https://www.youtube.com/watch?v=pP44EPBMb8A",
+                "title": "Harnessing Stellar Energy",
+                "subtitle": "The ultimate renewable resource",
+                "notes": "A Dyson swarm of orbiting solar collectors could harvest a star's entire energy output. Detection of these might indicate advanced alien civilizations.",
+                "prose": "Dyson swarms represent a civilization's ultimate energy solution, potentially visible across interstellar distances."
+              }
+            ],
+            "children": []
+          }
+        ]
+      },
+      {
+        "node": "Benefits and Challenges",
+        "weight": 65,
+        "prose": "Space exploration drives technological innovation, inspires generations, and provides insurance against Earth-based catastrophes. However, it faces challenges from cost, technical complexity, and competing priorities.",
+        "widgets": [
+          {
+            "name": "https://www.youtube.com/watch?v=YasCQRAWRwU",
+            "title": "Technological Spinoffs",
+            "subtitle": "Space tech improving life on Earth",
+            "notes": "GPS, satellite communications, weather forecasting, medical imaging, water purification, and countless materials came from space programs.",
+            "prose": "The technologies developed for space exploration have transformed life on Earth, from GPS navigation to medical devices."
+          },
+          {
+            "name": "https://www.youtube.com/watch?v=AW3gaelBypY",
+            "title": "Planetary Defense",
+            "subtitle": "Protecting Earth from asteroids",
+            "notes": "NASA's DART mission successfully deflected an asteroid in 2022. Detecting and deflecting potentially hazardous asteroids requires space infrastructure.",
+            "prose": "Space capabilities are essential for protecting Earth from asteroid impacts, which have caused mass extinctions in the past."
+          },
+          {
+            "name": "https://www.youtube.com/watch?v=Qi8IQGi-l4U",
+            "title": "Climate Monitoring",
+            "subtitle": "Satellites tracking Earth's health",
+            "notes": "Satellites monitor ice sheets, oceans, forests, and atmosphere. This data is crucial for understanding and addressing climate change.",
+            "prose": "Space-based observation is essential for understanding and responding to climate change, providing a global perspective impossible from the ground."
+          }
+        ],
+        "children": [
+          {
+            "node": "International Cooperation",
+            "weight": 40,
+            "prose": "Space exploration increasingly involves international partnerships. The ISS, Artemis Accords, and joint missions demonstrate that space can unite nations despite earthly conflicts.",
+            "widgets": [
+              {
+                "name": "https://www.youtube.com/watch?v=bLnKlAkuqNE",
+                "title": "ISS as Model",
+                "subtitle": "Peaceful cooperation in orbit",
+                "notes": "The ISS includes US, Russia, Europe, Japan, and Canada. It has maintained operations despite geopolitical tensions on Earth.",
+                "prose": "The ISS proves that international cooperation in space is possible even when nations disagree on Earth."
+              },
+              {
+                "name": "https://www.youtube.com/watch?v=oL3qDpubXU8",
+                "title": "Artemis Accords",
+                "subtitle": "Framework for lunar cooperation",
+                "notes": "The Artemis Accords establish principles for sustainable lunar exploration. Over 30 nations have signed, creating a coalition for space governance.",
+                "prose": "The Artemis Accords represent a new framework for international space cooperation, establishing norms for peaceful exploration."
+              }
+            ],
+            "children": []
+          },
+          {
+            "node": "Space Law and Governance",
+            "weight": 30,
+            "prose": "As space becomes more accessible, questions of jurisdiction, property rights, and environmental protection need answers. The Outer Space Treaty from 1967 is the foundation, but needs updating.",
+            "widgets": [
+              {
+                "name": "https://www.youtube.com/watch?v=RCR92WJXtF0",
+                "title": "Outer Space Treaty",
+                "subtitle": "The foundation of space law",
+                "notes": "Established space as domain of all humanity, banned weapons of mass destruction in orbit, and made nations responsible for their space activities.",
+                "prose": "The Outer Space Treaty provides basic principles, but needs updating for commercial space activities and resource extraction."
+              }
+            ],
+            "children": []
+          }
+        ]
+      }
+    ]
+  }
+}
