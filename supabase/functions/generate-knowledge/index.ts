@@ -544,18 +544,18 @@ function repairTruncatedJSON(input: string): string {
 }
 
 // Background task that runs the actual generation
-async function runGenerationJob(jobId: string) {
+async function runGenerationJob(jobId: string, userKey?: string) {
   const supabaseUrl = Deno.env.get('SUPABASE_URL')!;
   const supabaseServiceKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!;
   const supabase = createClient(supabaseUrl, supabaseServiceKey);
   
-  const anthropicKey = Deno.env.get('ANTHROPIC_API_KEY');
+  const anthropicKey = userKey || Deno.env.get('ANTHROPIC_API_KEY');
   const pexelsKey = Deno.env.get('PEXELS_API_KEY');
   
   if (!anthropicKey) {
     await supabase.from('knowledge_generation_jobs').update({
       status: 'failed',
-      error: 'ANTHROPIC_API_KEY not configured'
+      error: 'No Anthropic API key: add one in Settings'
     }).eq('id', jobId);
     return;
   }
@@ -619,7 +619,7 @@ async function runGenerationJob(jobId: string) {
       await fetch(`${supabaseUrl}/functions/v1/generate-knowledge`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${Deno.env.get('SUPABASE_ANON_KEY')}` },
-        body: JSON.stringify({ continueJobId: jobId, resumeToken }),
+        body: JSON.stringify({ continueJobId: jobId, resumeToken, anthropicKey: userKey }),
       }).catch((err) => console.error('handoff failed', err));
       return;
     }
@@ -737,7 +737,7 @@ serve(async (req) => {
       }
       // Burn the token so it can't be replayed
       await supabase.from('knowledge_generation_jobs').update({ result: { ...(cj.result as any), resumeToken: null } }).eq('id', cj.id);
-      (globalThis as any).EdgeRuntime?.waitUntil?.(runGenerationJob(cj.id));
+      (globalThis as any).EdgeRuntime?.waitUntil?.(runGenerationJob(cj.id, typeof body.anthropicKey === 'string' ? body.anthropicKey : undefined));
       return new Response(JSON.stringify({ ok: true }), { status: 202, headers: { ...corsHeaders, 'Content-Type': 'application/json' } });
     }
     
@@ -897,7 +897,7 @@ serve(async (req) => {
     
     // Use EdgeRuntime.waitUntil to run generation in background
     // This allows us to return immediately while processing continues
-    (globalThis as any).EdgeRuntime?.waitUntil?.(runGenerationJob(newJob.id));
+    (globalThis as any).EdgeRuntime?.waitUntil?.(runGenerationJob(newJob.id, typeof body.anthropicKey === 'string' && body.anthropicKey.trim() ? body.anthropicKey.trim() : undefined));
     
     // Return job ID immediately - client will poll for results
     return new Response(
