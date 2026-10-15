@@ -1,101 +1,74 @@
+# Tree-Based Immersive Presentations — On-Prem Install
 
-# Experimental Code for Tree-Based Immersive Presentations
+Free, self-hosted build. No sign-in, no license key, no access code: start the server and open the app in a browser.
 
-## To run in your own environment
-MAC OS:
+## Requirements
 
-$ npm install
+- Node.js 18 or newer (20 LTS recommended) — https://nodejs.org
+- npm (comes with Node.js)
+- Git (optional, to clone the repository)
 
-$ npm run dev
+## Install
 
-Then open a browser and navigate to http://localhost:8080/.
-
-## To make your own presentation
-1. Start crafting your own version of data/knowledge.json (an LLM can typically make this for you just by giving it the default example here and telling it what you want the talk to be about) and add a directory to data/examples to store your images, following the structure there. Hopefully the schema is self-explanatory.
-2. Copy your main JSON file to data/knowledge.json and it should just work.
-3. You will probably want to post-edit: add/fix images and links, adjust wording, editing nodes, etc. Give it your own touch.
-4. Use an IDE such as VS Code with an AI Assistant (like Github Copilot) to make your life much easier. It can help you auto-complete nodes and widgets as you go.
-5. Note if you're publishing this with Lovable (see below) you'll want to update your knowledge.json to reference images in the /public directory of your GitHub root. So if your images are in data/examples/MyProject you'll want to move them all to /public/examples/MyProject and add a '/' in front of all your file references.
-
------------------------------------------------------
-
- © 2025 Iron Action AI, LLC. All rights reserved.
-   
-   This software is patent pending. For licensing inquiries, 
-   contact: Nicholas Kersting / 1054h34@gmail.com
-
-
-   
-# Lovable project info below:
-
-## Project info
-
-**URL**: https://lovable.dev/projects/ee225e0a-a674-4085-b114-0dbd7e514f31
-
-## How can I edit this code?
-
-There are several ways of editing your application.
-
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/ee225e0a-a674-4085-b114-0dbd7e514f31) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+```bash
+git clone <your-repo-url> presentations
+cd presentations
+npm install
 ```
 
-**Edit a file directly in GitHub**
+## Run
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```bash
+npm start
+```
 
-**Use GitHub Codespaces**
+This builds the app and serves it at **http://localhost:5000**. Open that address in your browser and the app appears right away.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+### Development mode (live reload)
 
-## What technologies are used for this project?
+```bash
+npx vite --port 5000
+```
 
-This project is built with:
+### Make it reachable from other machines on your network
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+```bash
+npm run build
+npx vite preview --port 5000 --strictPort --host 0.0.0.0
+```
 
-## How can I deploy this project?
+Then open `http://<server-ip>:5000` from any machine on the network.
 
-Simply open [Lovable](https://lovable.dev/projects/ee225e0a-a674-4085-b114-0dbd7e514f31) and click on Share -> Publish.
+### Serve the built files with any web server
 
-## Can I connect a custom domain to my Lovable project?
+`npm run build` writes a static site to `dist/`. You can serve it with nginx, Apache, IIS, etc. Configure the server so unknown paths return `index.html` (single-page app fallback), e.g. for nginx:
 
-Yes, you can!
+```nginx
+server {
+  listen 5000;
+  root /path/to/presentations/dist;
+  location / { try_files $uri /index.html; }
+}
+```
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## Your own presentation content
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+1. Create your own `knowledge.json` (an LLM can draft it from the example in `data/`) and put its images in a folder under `public/examples/<YourProject>/`.
+2. Reference images with a leading `/`, e.g. `/examples/MyProject/photo.png`.
+3. Load it from the app, or copy it to `public/data/knowledge.json` to make it the default.
+4. Rebuild (`npm start`) after changing files in `public/`.
+
+In Chrome or Edge you can also open a local data folder directly from the app.
+
+## Notes
+
+- AI topic generation and museum collection search use online services, so they need an internet connection. Everything else (viewing, editing, 2D/3D navigation, PowerPoint import) runs locally.
+- Port in use? Change `5000` in the `start` script in `package.json`.
+
+## Troubleshooting
+
+| Problem | Fix |
+| --- | --- |
+| `npm install` fails | Update Node.js to 18+ and delete `node_modules` and `package-lock.json`, then retry |
+| Blank page after refresh on nginx/Apache | Add the `index.html` fallback shown above |
+| Port 5000 busy (macOS AirPlay uses it) | Turn off AirPlay Receiver in System Settings, or pick another port |
