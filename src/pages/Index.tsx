@@ -1501,28 +1501,6 @@ function IndexContent() {
           </div>
           <div className="absolute top-4 right-4 z-50 flex items-center gap-2">
             <ThemeToggle />
-            {user ? (
-              <DropdownMenu>
-                <DropdownMenuTrigger asChild>
-                  <Button variant="outline" size="sm" className="gap-2">
-                    <User className="h-4 w-4" />
-                    <span className="max-w-[100px] truncate">{user.user_metadata?.display_name || user.email}</span>
-                  </Button>
-                </DropdownMenuTrigger>
-                <DropdownMenuContent align="end">
-                  <DropdownMenuLabel>{user.email}</DropdownMenuLabel>
-                  <DropdownMenuSeparator />
-                  <DropdownMenuItem onClick={() => signOut()}>
-                    <LogOut className="h-4 w-4 mr-2" />
-                    Sign out
-                  </DropdownMenuItem>
-                </DropdownMenuContent>
-              </DropdownMenu>
-            ) : (
-              <Button variant="outline" size="sm" onClick={() => navigate('/auth')}>
-                Sign in
-              </Button>
-            )}
           </div>
         </header>
         <main className="flex items-center justify-center min-h-screen">
@@ -1914,28 +1892,6 @@ function IndexContent() {
             </Button>
           )}
           <ThemeToggle />
-          {user ? (
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <Button variant="outline" size="sm" className="gap-2">
-                  <User className="h-4 w-4" />
-                  <span className="max-w-[100px] truncate">{user.user_metadata?.display_name || user.email}</span>
-                </Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent align="end">
-                <DropdownMenuLabel>{user.email}</DropdownMenuLabel>
-                <DropdownMenuSeparator />
-                <DropdownMenuItem onClick={() => signOut()}>
-                  <LogOut className="h-4 w-4 mr-2" />
-                  Sign out
-                </DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
-          ) : (
-            <Button variant="outline" size="sm" onClick={() => navigate('/auth')}>
-              Sign in
-            </Button>
-          )}
         </div>
         {editMode && (
           <div className="absolute top-16 right-4 z-50 bg-orange-500 text-white px-3 py-1 rounded-md text-sm font-medium">
