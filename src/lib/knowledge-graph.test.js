@@ -56,7 +56,7 @@ describe('migrate_schema.py schema 1.0 standard', () => {
     loaded.knowledgeTree.prose = 'Edited';
     const saved = JSON.parse(serializeKnowledgeData(loaded));
     expect(saved.document).toEqual(original.document);
-    expect(saved.graph.nodes.map((n: any) => n.id)).toEqual(original.graph.nodes.map((n: any) => n.id));
+    expect(saved.graph.nodes.map((n) => n.id)).toEqual(original.graph.nodes.map((n) => n.id));
     expect(saved.graph.nodes[0].content).toEqual(original.graph.nodes[0].content);
     expect(saved.graph.nodes[0].description).toBe('Edited');
     expect(saved.graph.edges).toEqual(original.graph.edges);
@@ -77,7 +77,7 @@ describe('migrate_schema.py schema 1.0 standard', () => {
   test('converted sample loads with matching root and content', () => {
     const doc = JSON.parse(readFileSync('public/data/knowledge.json', 'utf8'));
     expect(doc.schemaVersion).toBe('1.0');
-    const root = doc.graph.nodes.find((n: any) => n.id === doc.graph.rootNodeId);
+    const root = doc.graph.nodes.find((n) => n.id === doc.graph.rootNodeId);
     const loaded = parseKnowledgeFile(doc);
     expect(loaded.knowledgeTree.node).toBe(root.name);
     expect(loaded.knowledgeTree.widgets.length).toBe(root.content.length);
