@@ -72,7 +72,13 @@ function IndexContent() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [generateProgress, setGenerateProgress] = useState(0);
-  const [genLogs, setGenLogs] = useState<string[]>([]);
+  // The generation log survives page reloads so a failed or interrupted run always leaves a record.
+  const [genLogs, setGenLogs] = useState<string[]>(() => {
+    try { const v = JSON.parse(localStorage.getItem('last-generation-log') || '[]'); return Array.isArray(v) ? v : []; } catch { return []; }
+  });
+  useEffect(() => {
+    try { localStorage.setItem('last-generation-log', JSON.stringify(genLogs.slice(-500))); } catch { /* storage full */ }
+  }, [genLogs]);
   const [genLogOpen, setGenLogOpen] = useState(false);
   const genLogEndRef = useRef<HTMLDivElement>(null);
   useEffect(() => { if (genLogOpen) genLogEndRef.current?.scrollIntoView({ block: "end" }); }, [genLogs, genLogOpen]);
@@ -1045,14 +1051,15 @@ function IndexContent() {
     setSpot({ x, y });
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!topic.trim()) {
+  const handleSubmit = async (e?: React.FormEvent, resume?: { jobId: string; topic: string }) => {
+    e?.preventDefault();
+    const genTopic = resume?.topic ?? topic;
+    if (!resume && !topic.trim()) {
       toast.error("Please enter a topic");
       return;
     }
     // Keys live in this browser only (incognito and each address such as localhost:5000 start empty)
-    if (!anthropicKey.trim()) {
+    if (!resume && !anthropicKey.trim()) {
       toast.error("Add your Anthropic API key in Settings (gear icon, top left) before generating. Keys are saved per browser, so incognito windows and new addresses start empty.", { duration: 12000 });
       return;
     }
@@ -1082,12 +1089,18 @@ function IndexContent() {
     setIsSubmitting(true);
     setGenerateProgress(0);
     const genStartMs = Date.now();
-    setGenLogs([`00:00  Starting generation for "${topic}"...`]);
-    if (pptxSourceText) {
-      setPptConvertProgress(0);
-      setPptConvertStage("");
+    if (resume) {
+      setGenLogs((prev) => [...prev, `Page was reloaded: resuming job ${resume.jobId.slice(0, 8)} for "${genTopic}"...`]);
+      setGenLogOpen(true);
+      toast.info(`Resuming generation for: ${genTopic}`);
+    } else {
+      setGenLogs([`00:00  Starting generation for "${genTopic}"...`]);
+      if (pptxSourceText) {
+        setPptConvertProgress(0);
+        setPptConvertStage("");
+      }
+      toast.info(`Generating knowledge tree for: ${genTopic}... This may take several minutes.`);
     }
-    toast.info(`Generating knowledge tree for: ${topic}... This may take several minutes.`);
 
     // Simulated progress - time-based asymptotic curve tuned so ~90% aligns with a ~5 minute total.
     // progress = 90 * (1 - exp(-t / tau)); tau chosen so t=300s → ~82%, t=450s → ~87%.
@@ -1107,6 +1120,10 @@ function IndexContent() {
     let didComplete = false;
 
     try {
+      let jobId: string;
+      if (resume) {
+        jobId = resume.jobId;
+      } else {
       // Read source file content - first check pptxSourceText, then try sourceFileHandle,
       // then fall back to reading from data folder
       let sourceText = pptxSourceText || '';
@@ -1162,14 +1179,19 @@ function IndexContent() {
         throw new Error(errorData.error || `Failed to start generation: ${startResponse.status}`);
       }
 
-      const { jobId } = await startResponse.json();
-      if (typeof jobId !== 'string' || !jobId) throw new Error('Generation did not return a job ID');
+      const started = await startResponse.json();
+      if (typeof started.jobId !== 'string' || !started.jobId) throw new Error('Generation did not return a job ID');
+      jobId = started.jobId;
       console.log(`Generation job started: ${jobId}`);
       localStorage.setItem('last-generation-job', jobId);
+      // Remembered until the result is handled, so a reload resumes instead of losing the run
+      localStorage.setItem('active-generation-job', JSON.stringify({ jobId, topic: genTopic }));
+      setGenLogs((prev) => [...prev, `00:0${Math.min(9, Math.floor((Date.now() - genStartMs) / 1000))}  Job queued (${jobId.slice(0, 8)})`]);
+      }
 
       // Poll for completion (no client-side timeout)
       const POLL_INTERVAL = 2000;
-      setGenLogs((prev) => [...prev, `00:0${Math.min(9, Math.floor((Date.now() - genStartMs) / 1000))}  Job queued (${jobId.slice(0, 8)})`]);
+      const keepLogs = resume ? genLogs.length : 2;
 
       let lastLogCount = 0;
       let lastLogChange = Date.now();
