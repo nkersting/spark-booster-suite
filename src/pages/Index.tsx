@@ -1118,6 +1118,7 @@ function IndexContent() {
 
     let pollInterval: ReturnType<typeof setInterval> | null = null;
     let didComplete = false;
+    let awaitingSave = false;
 
     try {
       let jobId: string;
@@ -1321,6 +1322,7 @@ function IndexContent() {
         setGenLogs((prev) => [...prev, `DONE: ${nodeCount} topics ready, choose where to save knowledge.json`]);
         setPendingSave({ blob, filename });
         setSaveDialogOpen(true);
+        awaitingSave = true;
       }
     } catch (error: any) {
       const msg = error?.message || 'Failed to generate knowledge tree';
@@ -1330,6 +1332,8 @@ function IndexContent() {
     } finally {
       if (pollInterval) clearInterval(pollInterval);
       clearInterval(progressInterval);
+      // Keep the job remembered while the save window is open, so a reload can still recover it
+      if (!awaitingSave) localStorage.removeItem('active-generation-job');
 
       if (didComplete) {
         // Smoothly animate the last stretch to 100% so it never jumps (e.g. 68 -> 100)
@@ -1395,18 +1399,37 @@ function IndexContent() {
     } finally {
       setSaveDialogOpen(false);
       setPendingSave(null);
+      localStorage.removeItem('active-generation-job');
     }
   }, [pendingSave, triggerDownload]);
+
+  // Resume a generation that was still running (or unsaved) when the page reloaded
+  const resumeCheckedRef = useRef(false);
+  useEffect(() => {
+    if (resumeCheckedRef.current || isSampleMode) return;
+    resumeCheckedRef.current = true;
+    try {
+      const saved = JSON.parse(localStorage.getItem('active-generation-job') || 'null');
+      if (saved && typeof saved.jobId === 'string') {
+        handleSubmit(undefined, { jobId: saved.jobId, topic: String(saved.topic || '') });
+      }
+    } catch { localStorage.removeItem('active-generation-job'); }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isSampleMode]);
 
   const SaveKnowledgeDialog = (
     <Dialog
       open={saveDialogOpen}
       onOpenChange={(open) => {
         setSaveDialogOpen(open);
-        if (!open) setPendingSave(null);
+        if (!open) { setPendingSave(null); localStorage.removeItem('active-generation-job'); }
       }}
     >
-      <DialogContent>
+      <DialogContent
+        // Only the buttons close this window; a stray click or focus change must not discard the result
+        onInteractOutside={(e) => e.preventDefault()}
+        onPointerDownOutside={(e) => e.preventDefault()}
+      >
         <DialogHeader>
           <DialogTitle>Save generated file</DialogTitle>
           <DialogDescription>
