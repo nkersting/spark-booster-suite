@@ -1443,6 +1443,8 @@ function IndexContent() {
             onClick={() => {
               setSaveDialogOpen(false);
               setPendingSave(null);
+              localStorage.removeItem('active-generation-job');
+              setGenLogs((prev) => [...prev, 'Save skipped: generated tree is shown but not saved to a file']);
             }}
           >
             Not now
