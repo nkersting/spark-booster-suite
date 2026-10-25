@@ -392,6 +392,9 @@ Return ONLY the JSON content, no explanations or markdown code blocks.`;
   if (!response.ok || !response.body) {
     const errorText = await response.text();
     console.error(`Anthropic API error: ${response.status} - ${errorText}`);
+    if (response.status === 401 || response.status === 403) {
+      throw new Error('Anthropic rejected the API key. Paste a valid key in Settings (gear icon) and try again.');
+    }
     throw new Error(`Anthropic API error: ${response.status}`);
   }
 
