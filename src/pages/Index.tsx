@@ -1158,6 +1158,7 @@ function IndexContent() {
       }
 
       const { jobId } = await startResponse.json();
+      if (typeof jobId !== 'string' || !jobId) throw new Error('Generation did not return a job ID');
       console.log(`Generation job started: ${jobId}`);
 
       // Poll for completion (no client-side timeout)
@@ -1180,6 +1181,17 @@ function IndexContent() {
               });
 
               if (!statusResponse.ok) {
+                if (statusResponse.status < 500 && statusResponse.status !== 429) {
+                  const errorData = await statusResponse.json().catch(() => ({}));
+                  if (pollInterval) clearInterval(pollInterval);
+                  reject(new Error(errorData.error || `Cannot retrieve generation: HTTP ${statusResponse.status}`));
+                  return;
+                }
+                if (Date.now() - lastLogChange > 6 * 60_000) {
+                  if (pollInterval) clearInterval(pollInterval);
+                  reject(new Error('Cannot retrieve generation progress. Check your connection and try again.'));
+                  return;
+                }
                 console.warn('Poll request failed, retrying...');
                 return;
               }
@@ -1211,8 +1223,6 @@ function IndexContent() {
       };
 
       const data = await pollForResult();
-      didComplete = true;
-      toast.success(`Knowledge tree generated for: ${topic}`);
 
       // If contextNodes were used, merge new children into existing tree
       let finalData = data;
@@ -1251,6 +1261,10 @@ function IndexContent() {
       }
 
       // Save directly to the data folder if one is selected
+      clearImageCache();
+      setKnowledgeData(finalData);
+      didComplete = true;
+      toast.success(`Knowledge tree generated for: ${topic}`);
       const outputDirHandle = pptDestinationDirRef.current ?? dirHandle;
       if (outputDirHandle) {
         try {
