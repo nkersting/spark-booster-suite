@@ -272,7 +272,19 @@ function IndexContent() {
       const fileHandle = await handle.getFileHandle('knowledge.json');
       const file = await fileHandle.getFile();
       const text = await file.text();
-      data = parseKnowledgeFile(JSON.parse(text));
+      const raw = JSON.parse(text);
+      data = parseKnowledgeFile(raw);
+      // Upgrade older-format files in place to schema 1.0
+      if (raw?.schemaVersion !== '1.0') {
+        try {
+          const writable = await fileHandle.createWritable();
+          await writable.write(serializeKnowledgeData(data));
+          await writable.close();
+          toast.info('Upgraded knowledge.json to schema 1.0');
+        } catch (e) {
+          console.warn('Could not upgrade knowledge.json', e);
+        }
+      }
       toast.success(`Loaded knowledge.json from ${handle.name}`);
     } catch (err: any) {
       if (err.name === 'NotFoundError') {
