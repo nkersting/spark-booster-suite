@@ -1165,6 +1165,7 @@ function IndexContent() {
       const { jobId } = await startResponse.json();
       if (typeof jobId !== 'string' || !jobId) throw new Error('Generation did not return a job ID');
       console.log(`Generation job started: ${jobId}`);
+      localStorage.setItem('last-generation-job', jobId);
 
       // Poll for completion (no client-side timeout)
       const POLL_INTERVAL = 2000;
@@ -1266,6 +1267,9 @@ function IndexContent() {
       }
 
       // Save directly to the data folder if one is selected
+      const countNodes = (n: any): number => 1 + (n?.children || []).reduce((a: number, c: any) => a + countNodes(c), 0);
+      const nodeCount = countNodes(finalData.knowledgeTree);
+      setGenLogs((prev) => [...prev, `Received tree with ${nodeCount} topics`]);
       clearImageCache();
       setKnowledgeData(finalData);
       didComplete = true;
@@ -1280,21 +1284,26 @@ function IndexContent() {
           
           clearImageCache();
           setKnowledgeData(finalData);
-          toast.success('Knowledge tree saved as knowledge.json');
-        } catch (err) {
+          setGenLogs((prev) => [...prev, `DONE: saved ${nodeCount} topics to ${outputDirHandle.name}/knowledge.json`]);
+          toast.success(`Saved ${nodeCount} topics to ${outputDirHandle.name}/knowledge.json`, { duration: 10000 });
+        } catch (err: any) {
           console.error('Error saving to data folder:', err);
+          setGenLogs((prev) => [...prev, `FAILED to save to folder: ${err?.message || err}`]);
+          setGenLogOpen(true);
           toast.error('Failed to save to data folder');
         }
       } else {
         const jsonString = serializeKnowledgeData(finalData);
         const blob = new Blob([jsonString], { type: 'application/json' });
         const filename = 'knowledge.json';
+        setGenLogs((prev) => [...prev, `DONE: ${nodeCount} topics ready, choose where to save knowledge.json`]);
         setPendingSave({ blob, filename });
         setSaveDialogOpen(true);
       }
     } catch (error: any) {
       const msg = error?.message || 'Failed to generate knowledge tree';
       setGenLogs((prev) => [...prev, `FAILED: ${msg}`]);
+      setGenLogOpen(true);
       toast.error(msg, { duration: 15000 });
     } finally {
       if (pollInterval) clearInterval(pollInterval);
@@ -1910,9 +1919,9 @@ function IndexContent() {
                   </span>
                 </Button>
               </form>
-              {isSubmitting && !pptxSourceText && (
+              {(isSubmitting || genLogs.length > 0) && !pptxSourceText && (
                 <div className="w-48">
-                  <Progress value={generateProgress} className="h-2" />
+                  {isSubmitting && <Progress value={generateProgress} className="h-2" />}
                   <button
                     type="button"
                     onClick={() => setGenLogOpen((o) => !o)}
@@ -1920,7 +1929,7 @@ function IndexContent() {
                     aria-expanded={genLogOpen}
                   >
                     <span className={`inline-block transition-transform ${genLogOpen ? "rotate-90" : ""}`}>▶</span>
-                    Estimated total time: ~5 minutes
+                    {isSubmitting ? "Estimated total time: ~5 minutes" : "Last generation log"}
                   </button>
                   {genLogOpen && (
                     <div className="fixed right-4 top-24 z-[600] w-[28rem] max-w-[90vw] rounded-md border border-border bg-background/95 shadow-lg backdrop-blur">
