@@ -1051,6 +1051,11 @@ function IndexContent() {
       toast.error("Please enter a topic");
       return;
     }
+    // Keys live in this browser only (incognito and each address such as localhost:5000 start empty)
+    if (!anthropicKey.trim()) {
+      toast.error("Add your Anthropic API key in Settings (gear icon, top left) before generating. Keys are saved per browser, so incognito windows and new addresses start empty.", { duration: 12000 });
+      return;
+    }
 
     const animateProgressTo = (target: number, durationMs = 900) => {
       return new Promise<void>((resolve) => {
@@ -1288,7 +1293,9 @@ function IndexContent() {
         setSaveDialogOpen(true);
       }
     } catch (error: any) {
-      toast.error(error.message || 'Failed to generate knowledge tree');
+      const msg = error?.message || 'Failed to generate knowledge tree';
+      setGenLogs((prev) => [...prev, `FAILED: ${msg}`]);
+      toast.error(msg, { duration: 15000 });
     } finally {
       if (pollInterval) clearInterval(pollInterval);
       clearInterval(progressInterval);
