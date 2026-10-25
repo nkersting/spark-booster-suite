@@ -1,5 +1,6 @@
 import { describe, test, expect } from 'bun:test';
 import { readFileSync } from 'node:fs';
+import { execFileSync } from 'node:child_process';
 import { coerceGeneratedDocument, emptyKnowledgeDocument, parseKnowledgeFile, serializeKnowledgeData } from './knowledge-graph';
 import { schemaToLegacyDocument, toSchemaDocument } from '../../supabase/functions/_shared/knowledge-schema';
 
@@ -20,6 +21,23 @@ const legacy = {
 };
 
 describe('migrate_schema.py schema 1.0 standard', () => {
+  test('matches the Python conversion script apart from newly assigned UUIDs', () => {
+    const python = JSON.parse(execFileSync('python3', ['-c',
+      'import json,sys; from migrate_schema import migrate; print(json.dumps(migrate(json.load(sys.stdin), source_name="knowledge.json", language="en-us", schema_version="1.0", edge_style="dict", random_ids=False)[0]))'],
+      { input: JSON.stringify(legacy), encoding: 'utf8' }));
+    const actual = toSchemaDocument(legacy);
+    const comparable = doc => {
+      const names = new Map(doc.graph.nodes.map(n => [n.id, n.name]));
+      return {
+        document: { ...doc.document, id: undefined, meta: { ...doc.document.meta, migratedFrom: undefined } },
+        nodes: doc.graph.nodes.map(n => ({ ...n, id: undefined, content: n.content.map(c => ({ ...c, id: undefined })) })),
+        root: names.get(doc.graph.rootNodeId),
+        edges: Object.fromEntries(Object.entries(doc.graph.edges).map(([s, targets]) => [names.get(s), Object.fromEntries(Object.entries(targets).map(([t, attrs]) => [names.get(t), attrs]))])),
+        extensions: doc.extensions,
+      };
+    };
+    expect(comparable(actual)).toEqual(comparable(python));
+  });
   test('writes document, graph, extensions and UUID node IDs', () => {
     const doc = toSchemaDocument(legacy);
     expect(Object.keys(doc).sort()).toEqual(['document', 'extensions', 'graph', 'schemaVersion']);
@@ -73,6 +91,13 @@ describe('migrate_schema.py schema 1.0 standard', () => {
     const doc = toSchemaDocument(legacy);
     doc.graph.edges[doc.graph.rootNodeId].missing = { weight: 1 };
     expect(() => schemaToLegacyDocument(doc)).toThrow('unknown node ID');
+  });
+  test('reads optional object edges and saves canonical adjacency-map edges', () => {
+    const doc = toSchemaDocument(legacy);
+    const [a, b] = doc.graph.nodes;
+    doc.graph.edges = [{ id: 'edge', source: a.id, target: b.id, weight: 2, relation: 'contains', note: 'Note' }];
+    const saved = JSON.parse(serializeKnowledgeData(parseKnowledgeFile(doc)));
+    expect(saved.graph.edges[a.id][b.id]).toEqual({ weight: 2, relation: 'contains', note: 'Note' });
   });
   test('converted sample loads with matching root and content', () => {
     const doc = JSON.parse(readFileSync('public/data/knowledge.json', 'utf8'));
