@@ -1,5 +1,6 @@
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
+import { toSchemaDocument } from "../_shared/knowledge-schema.ts";
 
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
@@ -665,7 +666,8 @@ async function runGenerationJob(jobId: string, userKey?: string) {
     // Emit the graph (nodes + connections) format expected by the app
     if (generatedJson.knowledgeTree) {
       generatedJson.knowledgeTree = treeToGraph(generatedJson.knowledgeTree);
-      jlog('Converted to graph format');
+      generatedJson = toSchemaDocument(generatedJson);
+      jlog('Converted to knowledge schema 1.0');
     }
 
     jlog('Saving result');

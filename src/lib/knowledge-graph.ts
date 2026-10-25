@@ -1,4 +1,5 @@
 import type { KnowledgeNode, Widget } from "@/types";
+import { isSchemaDocument, schemaToLegacyDocument, toSchemaDocument } from "../../supabase/functions/_shared/knowledge-schema";
 
 /**
  * Graph (DAG) representation of a knowledge tree.
@@ -156,14 +157,17 @@ export function treeToGraph(root: KnowledgeNode): KnowledgeGraph | undefined {
 export function serializeKnowledgeData(data: any): string {
   if (!data || typeof data !== "object") return JSON.stringify(data, null, 2);
   const tree = data.knowledgeTree;
-  if (!tree) return JSON.stringify(data, null, 2);
+  if (!tree) return JSON.stringify(toSchemaDocument(data), null, 2);
   const graph = isGraphFormat(tree) ? parseKnowledgeGraph(tree) : treeToGraph(tree as KnowledgeNode);
   if (!graph) return JSON.stringify(data, null, 2);
-  return JSON.stringify({ ...data, knowledgeTree: graph }, null, 2);
+  return JSON.stringify(toSchemaDocument({ ...data, knowledgeTree: graph }), null, 2);
 }
 
 /** Normalize a loaded knowledge.json document so `knowledgeTree` is a nested tree. */
 export function normalizeKnowledgeData<T extends Record<string, any>>(data: T): T {
+  if (isSchemaDocument(data) && !(data as any).knowledgeTree) {
+    return normalizeKnowledgeData(schemaToLegacyDocument(data)) as T;
+  }
   if (!data || typeof data !== "object" || !isGraphFormat((data as any).knowledgeTree)) return data;
   const graph = parseKnowledgeGraph((data as any).knowledgeTree);
   if (!graph) return data;
@@ -192,13 +196,14 @@ function fixNestedNode(n: any): KnowledgeNode | undefined {
  * nested-tree shape the UI uses, whatever shape the generator returned.
  */
 export function coerceGeneratedDocument(data: any): any {
-  if (!data || typeof data !== "object") return data;
+  if (!data) return data;
   let doc = data;
   if (typeof doc === "string") {
     try { doc = JSON.parse(doc); } catch { return data; }
   }
   // Some responses nest the document one level deeper.
-  if (!doc.knowledgeTree && doc.result?.knowledgeTree) doc = doc.result;
+  if (!doc.knowledgeTree && (doc.result?.knowledgeTree || isSchemaDocument(doc.result))) doc = doc.result;
+  if (isSchemaDocument(doc) && !doc.knowledgeTree) return normalizeKnowledgeData(doc);
   let tree = doc.knowledgeTree;
   if (!tree) return doc;
   if (isGraphFormat(tree)) {
@@ -212,7 +217,7 @@ export function coerceGeneratedDocument(data: any): any {
 
 /** Empty document used when creating a new knowledge.json (graph format). */
 export function emptyKnowledgeDocument() {
-  return {
+  return toSchemaDocument({
     seo: { title: "", description: "", prose: "" },
     pageTitle: "",
     pageDescription: "",
@@ -222,7 +227,7 @@ export function emptyKnowledgeDocument() {
       nodes: { root: { name: "root", weight: 100, prose: "" } },
       connections: { root: [] as string[] },
     },
-  };
+  });
 }
 
 /**
@@ -230,6 +235,9 @@ export function emptyKnowledgeDocument() {
  * supported — legacy nested trees are rejected.
  */
 export function parseKnowledgeFile<T extends Record<string, any>>(data: T): T {
+  if ((data as any)?.schemaVersion !== undefined) {
+    return normalizeKnowledgeData(schemaToLegacyDocument(data)) as T;
+  }
   if (!data || typeof data !== "object" || !isGraphFormat((data as any).knowledgeTree)) {
     throw new Error(
       'knowledge.json must use the graph format: "knowledgeTree": { "nodes": {...}, "connections": {...} }',

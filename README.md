@@ -60,6 +60,25 @@ server {
 
 In Chrome or Edge you can also open a local data folder directly from the app.
 
+### Knowledge file format
+
+Generated and saved files use **schema 1.0**, as defined by `migrate_schema.py`:
+
+- `document`: UUID, title, description, language and metadata.
+- `graph`: `rootNodeId`, a `nodes` array with UUIDs and `content`, and `edges` keyed by source UUID then target UUID.
+- `extensions.rendererSpecificProperties`: rendering settings such as `space`.
+- Content items store image/media paths in `properties.icon`, text in `properties.title` and `properties.notes`, and links in `properties.source_url`.
+
+Both `public/data/knowledge.json` and `data/knowledge.json` have been converted. Existing nodes/connections files remain loadable; saving writes schema 1.0.
+
+To convert an existing nodes/connections file yourself (Python 3 required):
+
+```bash
+python3 migrate_schema.py old-knowledge.json -o knowledge.json
+```
+
+The default edge format preserves weight, relation and note attributes. Optional node positions, hints and renderer settings are preserved too.
+
 ## Notes
 
 - AI topic generation and museum collection search use online services, so they need an internet connection. Everything else (viewing, editing, 2D/3D navigation, PowerPoint import) runs locally.
