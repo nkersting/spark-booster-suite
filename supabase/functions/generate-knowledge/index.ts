@@ -1,6 +1,7 @@
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 import { toSchemaDocument } from "../_shared/knowledge-schema.ts";
+import { readClaudeStream } from "./claude-stream.ts";
 
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
@@ -82,7 +83,7 @@ function jlog(msg: string) {
 }
 
 // Each worker gets a limited wall-clock budget; hand off to a fresh worker before it's killed.
-const WORKER_BUDGET_MS = 300_000;
+const WORKER_BUDGET_MS = 90_000;
 const MAX_PARTS = 8;
 class HandOff extends Error {
   constructor(public partial: string) { super('handoff'); }
@@ -394,42 +395,17 @@ Return ONLY the JSON content, no explanations or markdown code blocks.`;
     throw new Error(`Anthropic API error: ${response.status}`);
   }
 
-  let text = prefill;
   let lastLog = Date.now();
-  let stopReason = '';
-  const reader = response.body.getReader();
-  const dec = new TextDecoder();
-  let buf = '';
-  try {
-    while (true) {
-      const { value, done } = await reader.read();
-      if (done) break;
-      buf += dec.decode(value, { stream: true });
-      let idx;
-      while ((idx = buf.indexOf('\n')) >= 0) {
-        const line = buf.slice(0, idx).trim();
-        buf = buf.slice(idx + 1);
-        if (!line.startsWith('data:')) continue;
-        try {
-          const ev = JSON.parse(line.slice(5));
-          if (ev.type === 'content_block_delta' && ev.delta?.text) text += ev.delta.text;
-          else if (ev.type === 'message_delta' && ev.delta?.stop_reason) stopReason = ev.delta.stop_reason;
-          else if (ev.type === 'error') throw new Error(`Anthropic stream error: ${ev.error?.message ?? 'unknown'}`);
-        } catch (e) {
-          if (e instanceof Error && e.message.startsWith('Anthropic')) throw e;
-        }
-      }
-      if (Date.now() - lastLog > 10_000) {
-        lastLog = Date.now();
-        jlog(`  Claude is writing... ${text.length} chars received`);
-      }
-      if (Date.now() > deadline) {
-        ctrl.abort();
-        throw new HandOff(text);
-      }
+  const { text, stopReason, checkpoint } = await readClaudeStream(response.body, prefill, deadline, text => {
+    if (Date.now() - lastLog > 10_000) {
+      lastLog = Date.now();
+      jlog(`  Claude is writing... ${text.length} chars received`);
     }
-  } finally {
-    try { reader.releaseLock(); } catch { /* ignore */ }
+  });
+  if (checkpoint) {
+    ctrl.abort();
+    if (text.length <= prefill.length) throw new Error('Claude stopped responding before producing more content');
+    throw new HandOff(text);
   }
 
   jlog(`Claude finished (${text.length} chars${stopReason ? `, ${stopReason}` : ''}), parsing JSON...`);
@@ -614,14 +590,17 @@ async function runGenerationJob(jobId: string, userKey?: string) {
       clearInterval(flushTimer);
       await jobLogFlush();
       const resumeToken = crypto.randomUUID();
-      await supabase.from('knowledge_generation_jobs').update({
+      const { error: checkpointError } = await supabase.from('knowledge_generation_jobs').update({
         result: { ...prevResult, partial: e.partial, part: part + 1, resumeToken },
       }).eq('id', jobId);
-      await fetch(`${supabaseUrl}/functions/v1/generate-knowledge`, {
+      if (checkpointError) throw new Error(`Could not checkpoint generation: ${checkpointError.message}`);
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      const continuation = await fetch(`${supabaseUrl}/functions/v1/generate-knowledge`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${Deno.env.get('SUPABASE_ANON_KEY')}` },
         body: JSON.stringify({ continueJobId: jobId, resumeToken, anthropicKey: userKey }),
-      }).catch((err) => console.error('handoff failed', err));
+      });
+      if (!continuation.ok) throw new Error(`Generation continuation failed: HTTP ${continuation.status}`);
       return;
     }
     
@@ -674,10 +653,11 @@ async function runGenerationJob(jobId: string, userKey?: string) {
     clearInterval(flushTimer);
     await jobLogFlush();
     // Save result
-    await supabase.from('knowledge_generation_jobs').update({
+    const { error: saveError } = await supabase.from('knowledge_generation_jobs').update({
       status: 'completed',
       result: generatedJson
     }).eq('id', jobId);
+    if (saveError) throw new Error(`Could not save generated output: ${saveError.message}`);
 
     
     console.log(`Job ${jobId} completed successfully`);
@@ -738,7 +718,11 @@ serve(async (req) => {
         return new Response(JSON.stringify({ error: 'Invalid continuation' }), { status: 403, headers: { ...corsHeaders, 'Content-Type': 'application/json' } });
       }
       // Burn the token so it can't be replayed
-      await supabase.from('knowledge_generation_jobs').update({ result: { ...(cj.result as any), resumeToken: null } }).eq('id', cj.id);
+      const { data: claimed, error: claimError } = await supabase.from('knowledge_generation_jobs')
+        .update({ result: { ...(cj.result as any), resumeToken: null } })
+        .eq('id', cj.id).eq('status', 'processing').contains('result', { resumeToken: body.resumeToken })
+        .select('id').maybeSingle();
+      if (claimError || !claimed) return new Response(JSON.stringify({ error: 'Continuation already claimed' }), { status: 409, headers: { ...corsHeaders, 'Content-Type': 'application/json' } });
       (globalThis as any).EdgeRuntime?.waitUntil?.(runGenerationJob(cj.id, typeof body.anthropicKey === 'string' ? body.anthropicKey : undefined));
       return new Response(JSON.stringify({ ok: true }), { status: 202, headers: { ...corsHeaders, 'Content-Type': 'application/json' } });
     }
@@ -747,7 +731,7 @@ serve(async (req) => {
     if (jobId) {
       const { data: job, error } = await supabase
         .from('knowledge_generation_jobs')
-        .select('id, status, result, error, user_id, logs')
+        .select('id, status, result, error, user_id, logs, updated_at')
         .eq('id', jobId)
         .single();
       
@@ -770,6 +754,9 @@ serve(async (req) => {
         }
       }
       
+      if ((job.status === 'processing' || job.status === 'queued') && Date.now() - new Date(job.updated_at).getTime() > 5 * 60_000) {
+        return new Response(JSON.stringify({ id: job.id, status: 'failed', result: null, error: 'Generation worker stopped before saving. Please start a new generation.', logs: job.logs ?? [] }), { headers: { ...corsHeaders, 'Content-Type': 'application/json' } });
+      }
       return new Response(
         JSON.stringify({ id: job.id, status: job.status, result: job.status === 'completed' ? job.result : null, error: job.error, logs: (job as any).logs ?? [] }),
         { status: 200, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
