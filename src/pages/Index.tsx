@@ -1090,7 +1090,7 @@ function IndexContent() {
     setGenerateProgress(0);
     const genStartMs = Date.now();
     if (resume) {
-      setGenLogs((prev) => [...prev, `Page was reloaded: resuming job ${resume.jobId.slice(0, 8)} for "${genTopic}"...`]);
+      setGenLogs([`Page was reloaded: resuming job ${resume.jobId.slice(0, 8)} for "${genTopic}"...`]);
       setGenLogOpen(true);
       toast.info(`Resuming generation for: ${genTopic}`);
     } else {
@@ -1191,7 +1191,7 @@ function IndexContent() {
 
       // Poll for completion (no client-side timeout)
       const POLL_INTERVAL = 2000;
-      const keepLogs = resume ? genLogs.length : 2;
+      const keepLogs = resume ? 1 : 2;
 
       let lastLogCount = 0;
       let lastLogChange = Date.now();
@@ -1226,7 +1226,7 @@ function IndexContent() {
 
               const job = await statusResponse.json();
               if (Array.isArray(job.logs) && job.logs.length) {
-                setGenLogs((prev) => [...prev.slice(0, 2), ...job.logs]);
+                setGenLogs((prev) => [...prev.slice(0, keepLogs), ...job.logs]);
                 if (job.logs.length !== lastLogCount) { lastLogCount = job.logs.length; lastLogChange = Date.now(); }
               }
               if (job.status !== 'completed' && job.status !== 'failed' && Date.now() - lastLogChange > 6 * 60_000) {
@@ -1295,7 +1295,7 @@ function IndexContent() {
       clearImageCache();
       setKnowledgeData(finalData);
       didComplete = true;
-      toast.success(`Knowledge tree generated for: ${topic}`);
+      toast.success(`Knowledge tree generated for: ${genTopic}`);
       const outputDirHandle = pptDestinationDirRef.current ?? dirHandle;
       if (outputDirHandle) {
         try {
