@@ -1,0 +1,3 @@
+# Architecture rules
+- Keep schema 1.0 conversion in the pure shared knowledge-schema module used by the browser and generation worker, so saved files and job results follow migrate_schema.py consistently.
+- Use the existing nested-tree view model inside the UI; adapt schema document metadata, node/content IDs, and edge attributes at load/save boundaries to preserve editing behavior.
