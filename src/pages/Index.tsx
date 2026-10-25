@@ -72,7 +72,13 @@ function IndexContent() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [generateProgress, setGenerateProgress] = useState(0);
-  const [genLogs, setGenLogs] = useState<string[]>([]);
+  // The generation log survives page reloads so a failed or interrupted run always leaves a record.
+  const [genLogs, setGenLogs] = useState<string[]>(() => {
+    try { const v = JSON.parse(localStorage.getItem('last-generation-log') || '[]'); return Array.isArray(v) ? v : []; } catch { return []; }
+  });
+  useEffect(() => {
+    try { localStorage.setItem('last-generation-log', JSON.stringify(genLogs.slice(-500))); } catch { /* storage full */ }
+  }, [genLogs]);
   const [genLogOpen, setGenLogOpen] = useState(false);
   const genLogEndRef = useRef<HTMLDivElement>(null);
   useEffect(() => { if (genLogOpen) genLogEndRef.current?.scrollIntoView({ block: "end" }); }, [genLogs, genLogOpen]);
@@ -1045,14 +1051,15 @@ function IndexContent() {
     setSpot({ x, y });
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!topic.trim()) {
+  const handleSubmit = async (e?: React.FormEvent, resume?: { jobId: string; topic: string }) => {
+    e?.preventDefault();
+    const genTopic = resume?.topic ?? topic;
+    if (!resume && !topic.trim()) {
       toast.error("Please enter a topic");
       return;
     }
     // Keys live in this browser only (incognito and each address such as localhost:5000 start empty)
-    if (!anthropicKey.trim()) {
+    if (!resume && !anthropicKey.trim()) {
       toast.error("Add your Anthropic API key in Settings (gear icon, top left) before generating. Keys are saved per browser, so incognito windows and new addresses start empty.", { duration: 12000 });
       return;
     }
@@ -1082,12 +1089,18 @@ function IndexContent() {
     setIsSubmitting(true);
     setGenerateProgress(0);
     const genStartMs = Date.now();
-    setGenLogs([`00:00  Starting generation for "${topic}"...`]);
-    if (pptxSourceText) {
-      setPptConvertProgress(0);
-      setPptConvertStage("");
+    if (resume) {
+      setGenLogs([`Page was reloaded: resuming job ${resume.jobId.slice(0, 8)} for "${genTopic}"...`]);
+      setGenLogOpen(true);
+      toast.info(`Resuming generation for: ${genTopic}`);
+    } else {
+      setGenLogs([`00:00  Starting generation for "${genTopic}"...`]);
+      if (pptxSourceText) {
+        setPptConvertProgress(0);
+        setPptConvertStage("");
+      }
+      toast.info(`Generating knowledge tree for: ${genTopic}... This may take several minutes.`);
     }
-    toast.info(`Generating knowledge tree for: ${topic}... This may take several minutes.`);
 
     // Simulated progress - time-based asymptotic curve tuned so ~90% aligns with a ~5 minute total.
     // progress = 90 * (1 - exp(-t / tau)); tau chosen so t=300s → ~82%, t=450s → ~87%.
@@ -1105,8 +1118,13 @@ function IndexContent() {
 
     let pollInterval: ReturnType<typeof setInterval> | null = null;
     let didComplete = false;
+    let awaitingSave = false;
 
     try {
+      let jobId: string;
+      if (resume) {
+        jobId = resume.jobId;
+      } else {
       // Read source file content - first check pptxSourceText, then try sourceFileHandle,
       // then fall back to reading from data folder
       let sourceText = pptxSourceText || '';
@@ -1162,14 +1180,19 @@ function IndexContent() {
         throw new Error(errorData.error || `Failed to start generation: ${startResponse.status}`);
       }
 
-      const { jobId } = await startResponse.json();
-      if (typeof jobId !== 'string' || !jobId) throw new Error('Generation did not return a job ID');
+      const started = await startResponse.json();
+      if (typeof started.jobId !== 'string' || !started.jobId) throw new Error('Generation did not return a job ID');
+      jobId = started.jobId;
       console.log(`Generation job started: ${jobId}`);
       localStorage.setItem('last-generation-job', jobId);
+      // Remembered until the result is handled, so a reload resumes instead of losing the run
+      localStorage.setItem('active-generation-job', JSON.stringify({ jobId, topic: genTopic }));
+      setGenLogs((prev) => [...prev, `00:0${Math.min(9, Math.floor((Date.now() - genStartMs) / 1000))}  Job queued (${jobId.slice(0, 8)})`]);
+      }
 
       // Poll for completion (no client-side timeout)
       const POLL_INTERVAL = 2000;
-      setGenLogs((prev) => [...prev, `00:0${Math.min(9, Math.floor((Date.now() - genStartMs) / 1000))}  Job queued (${jobId.slice(0, 8)})`]);
+      const keepLogs = resume ? 1 : 2;
 
       let lastLogCount = 0;
       let lastLogChange = Date.now();
@@ -1204,7 +1227,7 @@ function IndexContent() {
 
               const job = await statusResponse.json();
               if (Array.isArray(job.logs) && job.logs.length) {
-                setGenLogs((prev) => [...prev.slice(0, 2), ...job.logs]);
+                setGenLogs((prev) => [...prev.slice(0, keepLogs), ...job.logs]);
                 if (job.logs.length !== lastLogCount) { lastLogCount = job.logs.length; lastLogChange = Date.now(); }
               }
               if (job.status !== 'completed' && job.status !== 'failed' && Date.now() - lastLogChange > 6 * 60_000) {
@@ -1273,7 +1296,7 @@ function IndexContent() {
       clearImageCache();
       setKnowledgeData(finalData);
       didComplete = true;
-      toast.success(`Knowledge tree generated for: ${topic}`);
+      toast.success(`Knowledge tree generated for: ${genTopic}`);
       const outputDirHandle = pptDestinationDirRef.current ?? dirHandle;
       if (outputDirHandle) {
         try {
@@ -1299,6 +1322,7 @@ function IndexContent() {
         setGenLogs((prev) => [...prev, `DONE: ${nodeCount} topics ready, choose where to save knowledge.json`]);
         setPendingSave({ blob, filename });
         setSaveDialogOpen(true);
+        awaitingSave = true;
       }
     } catch (error: any) {
       const msg = error?.message || 'Failed to generate knowledge tree';
@@ -1308,6 +1332,8 @@ function IndexContent() {
     } finally {
       if (pollInterval) clearInterval(pollInterval);
       clearInterval(progressInterval);
+      // Keep the job remembered while the save window is open, so a reload can still recover it
+      if (!awaitingSave) localStorage.removeItem('active-generation-job');
 
       if (didComplete) {
         // Smoothly animate the last stretch to 100% so it never jumps (e.g. 68 -> 100)
@@ -1373,18 +1399,37 @@ function IndexContent() {
     } finally {
       setSaveDialogOpen(false);
       setPendingSave(null);
+      localStorage.removeItem('active-generation-job');
     }
   }, [pendingSave, triggerDownload]);
+
+  // Resume a generation that was still running (or unsaved) when the page reloaded
+  const resumeCheckedRef = useRef(false);
+  useEffect(() => {
+    if (resumeCheckedRef.current || isSampleMode) return;
+    resumeCheckedRef.current = true;
+    try {
+      const saved = JSON.parse(localStorage.getItem('active-generation-job') || 'null');
+      if (saved && typeof saved.jobId === 'string') {
+        handleSubmit(undefined, { jobId: saved.jobId, topic: String(saved.topic || '') });
+      }
+    } catch { localStorage.removeItem('active-generation-job'); }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isSampleMode]);
 
   const SaveKnowledgeDialog = (
     <Dialog
       open={saveDialogOpen}
       onOpenChange={(open) => {
         setSaveDialogOpen(open);
-        if (!open) setPendingSave(null);
+        if (!open) { setPendingSave(null); localStorage.removeItem('active-generation-job'); }
       }}
     >
-      <DialogContent>
+      <DialogContent
+        // Only the buttons close this window; a stray click or focus change must not discard the result
+        onInteractOutside={(e) => e.preventDefault()}
+        onPointerDownOutside={(e) => e.preventDefault()}
+      >
         <DialogHeader>
           <DialogTitle>Save generated file</DialogTitle>
           <DialogDescription>
@@ -1398,6 +1443,8 @@ function IndexContent() {
             onClick={() => {
               setSaveDialogOpen(false);
               setPendingSave(null);
+              localStorage.removeItem('active-generation-job');
+              setGenLogs((prev) => [...prev, 'Save skipped: generated tree is shown but not saved to a file']);
             }}
           >
             Not now
