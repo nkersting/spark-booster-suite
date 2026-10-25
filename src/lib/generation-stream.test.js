@@ -11,7 +11,7 @@ test('checkpoints received output even when Claude stops sending bytes', async (
 });
 test('a fresh worker appends to checkpointed text without losing schema output', async () => {
   const body = new ReadableStream({ start(controller) {
-    controller.enqueue(encode('data: {"type":"content_block_delta","delta":{"text":"1.0\"}"}}\n\ndata: {"type":"message_delta","delta":{"stop_reason":"end_turn"}}\n\n'));
+    controller.enqueue(encode(`data: ${JSON.stringify({ type: 'content_block_delta', delta: { text: '1.0"}' } })}\n\ndata: {"type":"message_delta","delta":{"stop_reason":"end_turn"}}\n\n`));
     controller.close();
   } });
   const result = await readClaudeStream(body, '{"schemaVersion":"', Date.now() + 1000, () => {});
