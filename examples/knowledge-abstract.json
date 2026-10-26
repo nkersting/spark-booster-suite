@@ -1,0 +1,1008 @@
+{
+  "schemaVersion": "1.0",
+  "document": {
+    "id": "9e3137c9-b0e6-43b5-abda-2f48ce0612cd",
+    "meta": {
+      "seoProse": "Finetuning the Llama 3.2 3B model enables you to adapt Meta's powerful language model to your specific use case. This guide walks through the complete process, from environment setup and data preparation to training optimization and deployment. Whether you're building a domain-specific assistant, improving task performance, or customizing model behavior, understanding the finetuning pipeline is essential. We'll cover everything from hardware requirements and framework selection to advanced techniques like LoRA, quantization, and distributed training. By the end, you'll have the knowledge to successfully finetune Llama 3.2 3B for your applications while managing computational resources efficiently.",
+      "pagetitle": "How to Finetune Llama 3.2 3B Model",
+      "pageDescription": "A comprehensive technical guide covering the complete finetuning pipeline for Meta's Llama 3.2 3B model, including setup, training, optimization, and deployment strategies."
+    },
+    "title": "How to Finetune Llama 3.2 3B Model: Complete Guide",
+    "language": "en-us",
+    "description": "A comprehensive guide to finetuning Meta's Llama 3.2 3B model, covering setup, data preparation, training techniques, optimization strategies, and deployment best practices."
+  },
+  "graph": {
+    "edges": {
+      "9c4a5b76-46ab-41d1-bfff-7a07c3384ad0": {
+        "08360ada-eeeb-4041-9eb1-d966acc0307c": {
+          "weight": 1
+        },
+        "16ba73c0-87b6-405a-ad75-c9dfca2b97cf": {
+          "weight": 1
+        },
+        "1ede7d6b-7eac-4c8a-be8c-43fa712f51fb": {
+          "weight": 1
+        },
+        "2e6c94d1-34b0-484d-961a-b71432cec290": {
+          "weight": 1
+        },
+        "4834039e-7b26-4595-88d8-f19e254e83b8": {
+          "weight": 1
+        },
+        "51598c67-43b7-4fc7-bac2-b3b88bfa15cc": {
+          "weight": 1
+        }
+      },
+      "08360ada-eeeb-4041-9eb1-d966acc0307c": {
+        "0285c903-84f3-407d-a0a0-c395c0493d3e": {
+          "weight": 1
+        },
+        "22f324a2-50bd-46de-9ce9-eb4f82f8c767": {
+          "weight": 1
+        },
+        "539e0af5-7192-4d3a-ac2c-8fc8994bd90c": {
+          "weight": 1
+        },
+        "8c72eead-9105-406e-be1e-894d69b2d278": {
+          "weight": 1
+        }
+      },
+      "16ba73c0-87b6-405a-ad75-c9dfca2b97cf": {
+        "2e23b577-0333-4f3d-a1f7-06cf3403d6b0": {
+          "weight": 1
+        },
+        "ae19c341-5ec6-4c93-b8c9-6196f9b122ce": {
+          "weight": 1
+        },
+        "c4fec3d3-90f3-49dc-b5bb-3892725d6208": {
+          "weight": 1
+        },
+        "e0b29656-0db5-45d3-b8dd-850139e30656": {
+          "weight": 1
+        }
+      },
+      "2e6c94d1-34b0-484d-961a-b71432cec290": {
+        "385de08a-9d8e-4be7-a51a-8101726bea29": {
+          "weight": 1
+        },
+        "48912b59-5019-4d9d-ba22-7a8c7ed81152": {
+          "weight": 1
+        },
+        "b6641b5e-b172-4b10-a28f-69ebed4dcd90": {
+          "weight": 1
+        },
+        "f7757db8-739e-4f30-bac5-89fcbd078ca8": {
+          "weight": 1
+        }
+      },
+      "4834039e-7b26-4595-88d8-f19e254e83b8": {
+        "5138b060-96e2-4b8e-ada3-f2dbacdaaa46": {
+          "weight": 1
+        },
+        "58a88af2-0b3c-4cb1-be5d-8df64056ade9": {
+          "weight": 1
+        }
+      },
+      "51598c67-43b7-4fc7-bac2-b3b88bfa15cc": {
+        "10dae95f-e052-49c0-83a8-fde2402b9016": {
+          "weight": 1
+        },
+        "16001e5c-87d5-49a0-8636-cd4693217e09": {
+          "weight": 1
+        },
+        "8083787b-5054-48c0-926e-5e9b8f01400f": {
+          "weight": 1
+        },
+        "a5086f8a-7334-4b07-b2f8-a52547374c3b": {
+          "weight": 1
+        }
+      }
+    },
+    "nodes": [
+      {
+        "id": "9c4a5b76-46ab-41d1-bfff-7a07c3384ad0",
+        "icon": "https://images.pexels.com/photos/11791409/pexels-photo-11791409.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "name": "Finetuning Llama 3.2 3B",
+        "title": "Finetuning Llama 3.2 3B",
+        "weight": 100,
+        "content": [
+          {
+            "id": "fe9fc568-339e-4774-abc6-7fd11afcf8e0",
+            "name": "Llama 3.2 Model Family",
+            "type": "",
+            "weight": 1,
+            "properties": {
+              "icon": "https://images.pexels.com/photos/17029010/pexels-photo-17029010.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+              "notes": "Llama 3.2 3B is part of Meta's latest model family released in 2024. The 3B variant strikes a balance between the smaller 1B model and larger variants, offering strong performance while remaining finetune-able on consumer hardware. With 128K token context length and instruction-following capabilities out of the box, it serves as an excellent foundation for domain adaptation. The model uses a transformer architecture with grouped-query attention and was pre-trained on approximately 9 trillion tokens of diverse data.\n\n⦿ Part of Llama 3.2 release with 1B, 3B, 11B, 90B variants\n\n⦿ 3B model: 3 billion parameters, context length 128K tokens\n\n⦿ Optimized for efficiency and edge deployment",
+              "title": "Llama 3.2 Model Family — Understanding the 3B variant's position",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "e3dc890f-8581-4932-a852-335f481e191b",
+            "name": "Finetuning Pipeline Overview",
+            "type": "",
+            "weight": 1,
+            "properties": {
+              "icon": "https://images.pexels.com/photos/1181311/pexels-photo-1181311.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+              "notes": "The finetuning pipeline follows a structured workflow. First, you set up your environment with necessary libraries and obtain model access. Next, you prepare and format your training data according to the model's requirements. The training phase involves selecting hyperparameters and running the optimization process. Evaluation assesses the finetuned model's performance on your target tasks. Finally, deployment makes your model available for inference. This is typically an iterative process where evaluation results inform data and hyperparameter adjustments for subsequent training runs.\n\n⦿ Five major phases: Setup, Data Prep, Training, Evaluation, Deployment\n\n⦿ Iterative process with feedback loops\n\n⦿ Typical timeline: 1-2 weeks for first iteration",
+              "title": "Finetuning Pipeline Overview — End-to-end process flow",
+              "source_url": ""
+            }
+          }
+        ],
+        "description": "Finetuning Llama 3.2 3B involves adapting Meta's pre-trained 3 billion parameter language model to your specific domain or task. The 3B variant offers an excellent balance between performance and resource requirements, making it accessible for individual researchers and small teams. The process encompasses several key phases: preparing your environment and obtaining model access, curating and formatting your training data, selecting appropriate training methods and hyperparameters, executing the training process with proper monitoring, and finally evaluating and deploying your finetuned model. Understanding each phase ensures successful adaptation while avoiding common pitfalls like overfitting, catastrophic forgetting, or inefficient resource utilization."
+      },
+      {
+        "id": "08360ada-eeeb-4041-9eb1-d966acc0307c",
+        "icon": "https://images.pexels.com/photos/9661362/pexels-photo-9661362.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "name": "Training Configuration",
+        "title": "Training Configuration",
+        "weight": 50,
+        "content": [
+          {
+            "id": "90336c8a-6b8c-46c2-bd5c-561ca2758db3",
+            "name": "Training Configuration Components",
+            "type": "",
+            "weight": 1,
+            "properties": {
+              "icon": "https://images.pexels.com/photos/12586756/pexels-photo-12586756.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+              "notes": "Training configuration covers multiple interconnected aspects. Hyperparameters control the learning dynamics: learning rate determines update magnitude, batch size affects gradient quality and memory, epochs specify how many times to iterate over the data. Optimization settings include learning rate schedulers that adjust LR during training, weight decay for regularization, and gradient clipping for stability. Memory optimizations like mixed precision, gradient checkpointing, and gradient accumulation enable training within hardware constraints. Monitoring settings determine logging frequency and what metrics to track. All these interact—for example, batch size affects optimal learning rate. Start with proven defaults and adjust based on validation metrics.\n\n⦿ Hyperparameters: learning rate, batch size, epochs, warmup\n\n⦿ Optimization: scheduler, weight decay, gradient clipping\n\n⦿ Memory: mixed precision, gradient checkpointing, accumulation",
+              "title": "Training Configuration Components — Key settings for successful finetuning",
+              "source_url": ""
+            }
+          }
+        ],
+        "description": "Proper training configuration determines whether your finetuning succeeds or fails. This encompasses hyperparameters like learning rate, batch size, and number of epochs, optimization settings like scheduler type and weight decay, memory optimization techniques like gradient checkpointing and mixed precision, and monitoring setup for tracking progress. The right configuration depends on your method (full vs. LoRA), dataset size, and hardware. Conservative hyperparameters are safer for initial experiments—you can always increase learning rate or batch size after verifying training stability. Understanding each configuration option helps you diagnose issues and optimize training efficiency."
+      },
+      {
+        "id": "0285c903-84f3-407d-a0a0-c395c0493d3e",
+        "icon": "https://images.pexels.com/photos/27141311/pexels-photo-27141311.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "name": "Hyperparameters",
+        "title": "Hyperparameters",
+        "weight": 25,
+        "content": [
+          {
+            "id": "de05923d-2e13-46b5-9c09-c123b0712b5b",
+            "name": "Learning Rate Selection",
+            "type": "",
+            "weight": 1,
+            "properties": {
+              "icon": "https://images.pexels.com/photos/6203473/pexels-photo-6203473.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+              "notes": "Learning rate determines the magnitude of weight updates. For LoRA/QLoRA, typical values range from 1e-4 to 3e-4; the small number of trainable parameters tolerates higher learning rates. Full finetuning requires much lower rates (5e-6 to 5e-5) to avoid catastrophic forgetting of pre-trained knowledge. Start conservative—too low just means slower training, while too high can cause divergence. Monitor training loss: if it doesn't decrease in the first 100 steps, LR might be too low; if it spikes or becomes NaN, it's too high. Learning rate finders that incrementally increase LR and plot loss can help identify good ranges.\n\n⦿ LoRA/QLoRA: 1e-4 to 3e-4 typical range\n\n⦿ Full finetuning: 5e-6 to 5e-5 (much lower)\n\n⦿ Use learning rate finder or start conservative",
+              "title": "Learning Rate Selection — The most critical hyperparameter",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "c64c3d31-bdab-434a-8e26-36810cf2b8bd",
+            "name": "Batch Size Configuration",
+            "type": "",
+            "weight": 1,
+            "properties": {
+              "icon": "https://images.pexels.com/photos/30226348/pexels-photo-30226348.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+              "notes": "Batch size trades off memory usage and gradient quality. Per-device batch size is how many examples fit in GPU memory simultaneously—typically 1-4 for Llama 3.2 3B depending on sequence length and method. Larger batches provide more stable gradients but require more memory. Gradient accumulation splits a logical batch across multiple forward/backward passes, accumulating gradients before updating weights. This simulates larger batches within memory constraints. Effective batch size = per_device_batch_size × num_gpus × gradient_accumulation_steps. Aim for effective batch sizes of 32-128 for most finetuning tasks. Very large batches may require learning rate scaling.\n\n⦿ Per-device batch size: 1-4 typical for 3B model\n\n⦿ Gradient accumulation simulates larger batches\n\n⦿ Effective batch size = per_device * num_gpus * accumulation_steps",
+              "title": "Batch Size Configuration — Balancing memory and gradient quality",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "04254452-1eaf-4101-8559-d1e329aae89a",
+            "name": "Epochs and Warmup Steps",
+            "type": "",
+            "weight": 1,
+            "properties": {
+              "icon": "https://images.pexels.com/photos/7266766/pexels-photo-7266766.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+              "notes": "Epochs determine how many times you iterate over the entire dataset. For most finetuning, 1-3 epochs suffice; more epochs on small datasets risk overfitting. With large datasets, even a fraction of an epoch may be enough. Warmup steps gradually increase learning rate from zero to the target value over the first N steps (typically 100-500). This prevents instability from large updates when the model isn't yet adapted to your data. After warmup, the learning rate schedule takes over. Monitor validation loss: if it starts increasing while training loss decreases, you're overfitting and should stop. Early stopping based on validation performance often yields better models than completing all epochs.\n\n⦿ Epochs: 1-3 typical, more risks overfitting\n\n⦿ Warmup steps: 100-500, gradually increases LR from 0\n\n⦿ Monitor validation loss to prevent overtraining",
+              "title": "Epochs and Warmup Steps — Training duration and initialization",
+              "source_url": ""
+            }
+          }
+        ],
+        "description": "Hyperparameters are the settings that control the training process but aren't learned from data. The most critical are learning rate (how large each update step is), batch size (how many examples per gradient update), number of epochs (full passes through the data), and warmup steps (gradual learning rate increase at training start). Getting these right is essential—too high a learning rate causes instability, too low means slow convergence or poor local optima. Hyperparameters interact: larger batch sizes typically benefit from higher learning rates. Start with community-recommended defaults for Llama finetuning and adjust based on your specific dataset and hardware."
+      },
+      {
+        "id": "22f324a2-50bd-46de-9ce9-eb4f82f8c767",
+        "icon": "https://images.pexels.com/photos/27141313/pexels-photo-27141313.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "name": "Optimization Settings",
+        "title": "Optimization Settings",
+        "weight": 25,
+        "content": [
+          {
+            "id": "c3dda35d-fb63-42f6-afa5-fbaedc63f4a2",
+            "name": "Optimizer Selection",
+            "type": "",
+            "weight": 1,
+            "properties": {
+              "icon": "https://images.pexels.com/photos/14242188/pexels-photo-14242188.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+              "notes": "AdamW (Adam with decoupled weight decay) is the standard optimizer for finetuning language models. It maintains adaptive learning rates for each parameter and separates weight decay from gradient updates. Default hyperparameters (beta1=0.9, beta2=0.999, epsilon=1e-8) work well in most cases. AdaFactor is a memory-efficient alternative that eliminates storing per-parameter second moments, reducing optimizer memory significantly—useful for very memory-constrained setups. SGD with momentum is rarely used for transformers. Most training frameworks default to AdamW, and there's little reason to change unless facing specific memory constraints or unusual training dynamics.\n\n⦿ AdamW: Adam with decoupled weight decay, standard for LLMs\n\n⦿ Alternatives: AdaFactor (memory-efficient), SGD (rarely used)\n\n⦿ Betas (0.9, 0.999) and epsilon (1e-8) usually default",
+              "title": "Optimizer Selection — AdamW as the standard choice",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "8b9d33d6-079e-4b55-a7f4-41dc309a5a25",
+            "name": "Learning Rate Schedulers",
+            "type": "",
+            "weight": 1,
+            "properties": {
+              "icon": "https://images.pexels.com/photos/19915766/pexels-photo-19915766.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+              "notes": "Learning rate schedulers adjust LR during training. Cosine decay smoothly reduces learning rate from peak to (near) zero following a cosine curve—this is most popular for finetuning. Linear decay reduces LR linearly from peak to minimum. Constant LR maintains the peak rate after warmup—simpler but may not converge as well. Polynomial decay offers more control with a power parameter. For most Llama 3.2 finetuning, cosine or linear schedules with warmup work well. The scheduler is configured in TrainingArguments with lr_scheduler_type='cosine' and warmup_steps or warmup_ratio (fraction of total steps).\n\n⦿ Cosine decay: smooth reduction to 0, most popular\n\n⦿ Linear decay: simple linear reduction\n\n⦿ Constant with warmup: LR stays fixed after warmup",
+              "title": "Learning Rate Schedulers — Adjusting LR during training",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "9d669bfc-2809-46bf-904c-27ae2b3b3293",
+            "name": "Weight Decay and Gradient Clipping",
+            "type": "",
+            "weight": 1,
+            "properties": {
+              "icon": "https://images.pexels.com/photos/8545561/pexels-photo-8545561.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+              "notes": "Weight decay adds L2 regularization, penalizing large weights to prevent overfitting. Values of 0.01 to 0.1 are typical; higher values provide stronger regularization but may limit model capacity. For small datasets, higher weight decay helps prevent memorization. Gradient clipping caps gradient norms to a maximum value (typically 1.0), preventing instability from occasional large gradients. This is especially important in early training. Both are safety mechanisms: weight decay for generalization, clipping for stability. They're specified in TrainingArguments as weight_decay=0.01 and max_grad_norm=1.0. These defaults work well for most scenarios.\n\n⦿ Weight decay: 0.01-0.1 for regularization, prevents overfitting\n\n⦿ Gradient clipping: max_grad_norm=1.0 prevents instability\n\n⦿ Both are safety mechanisms for robust training",
+              "title": "Weight Decay and Gradient Clipping — Regularization and stability techniques",
+              "source_url": ""
+            }
+          }
+        ],
+        "description": "Optimization settings control how gradients are used to update model parameters. The optimizer algorithm (AdamW is standard for transformer models), learning rate scheduler (how LR changes during training), weight decay (L2 regularization to prevent overfitting), and gradient clipping (preventing excessively large updates) all influence training dynamics. AdamW with cosine learning rate decay and moderate weight decay works well as a default. These settings interact with hyperparameters—for example, weight decay serves a similar purpose to reducing learning rate or training for fewer epochs. Proper optimization settings improve training stability and final model quality."
+      },
+      {
+        "id": "539e0af5-7192-4d3a-ac2c-8fc8994bd90c",
+        "icon": "https://images.pexels.com/photos/6285131/pexels-photo-6285131.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "name": "Monitoring and Logging",
+        "title": "Monitoring and Logging",
+        "weight": 25,
+        "content": [
+          {
+            "id": "f19170d1-5084-4e24-b75a-4b7e61b32791",
+            "name": "Logging Configuration",
+            "type": "",
+            "weight": 1,
+            "properties": {
+              "icon": "https://images.pexels.com/photos/33903905/pexels-photo-33903905.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+              "notes": "Configure logging frequency with logging_steps in TrainingArguments—values like 10-50 provide frequent feedback without overwhelming output. Standard metrics include training loss, learning rate (to verify scheduler), gradient norm (to detect instability), and training throughput (samples/second). Validation loss is logged every eval_steps. For experiment tracking, HuggingFace Trainer integrates with Weights & Biases (report_to='wandb'), TensorBoard (report_to='tensorboard'), and MLflow. These tools provide dashboards for comparing runs, tracking metrics over time, and sharing results. Proper logging is essential for debugging—sudden loss spikes or gradient norm explosions indicate problems requiring attention.\n\n⦿ Log every 10-50 steps for frequent feedback\n\n⦿ Track: loss, learning rate, gradient norm, throughput\n\n⦿ Integrate with WandB, TensorBoard, or MLflow",
+              "title": "Logging Configuration — Tracking training metrics",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "e3bdc503-59bc-470e-a7eb-154794a8cd86",
+            "name": "Checkpoint Management",
+            "type": "",
+            "weight": 1,
+            "properties": {
+              "icon": "https://images.pexels.com/photos/10640271/pexels-photo-10640271.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+              "notes": "Checkpoints save model state at intervals, enabling resumption if training is interrupted and selection of the best model post-training. Configure save_strategy='steps' or 'epoch' and save_steps=500 in TrainingArguments. Set save_total_limit=3 to keep only the N most recent checkpoints, saving disk space. For model selection, use load_best_model_at_end=True with metric_for_best_model='eval_loss' and greater_is_better=False. This loads the checkpoint with lowest validation loss at training completion. For LoRA, checkpoints are small (10-50MB); for full finetuning, they're ~6GB each. Checkpoint management prevents losing training progress and ensures you deploy the best-performing model.\n\n⦿ Save checkpoints every N steps or each epoch\n\n⦿ Load best checkpoint based on validation metric\n\n⦿ Keep limited checkpoints to save disk space",
+              "title": "Checkpoint Management — Saving and selecting models",
+              "source_url": ""
+            }
+          }
+        ],
+        "description": "Monitoring training progress helps you detect issues early and make informed decisions about when to stop training or adjust hyperparameters. Configure logging to track metrics like training loss, learning rate, gradient norms, and validation performance at regular intervals. Integration with tools like Weights & Biases, TensorBoard, or MLflow provides visualization and experiment tracking. Save checkpoints periodically so you can resume training or select the best model based on validation metrics. Effective monitoring turns training from a black box into an observable process where you can intervene when problems arise or stop when performance plateaus."
+      },
+      {
+        "id": "8c72eead-9105-406e-be1e-894d69b2d278",
+        "icon": "https://images.pexels.com/photos/38361775/pexels-photo-38361775.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "name": "Memory Optimization",
+        "title": "Memory Optimization",
+        "weight": 25,
+        "content": [
+          {
+            "id": "7bb6a1f3-452d-447c-9b77-8cb49cd1a85f",
+            "name": "Mixed Precision Training",
+            "type": "",
+            "weight": 1,
+            "properties": {
+              "icon": "https://images.pexels.com/photos/38093935/pexels-photo-38093935.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+              "notes": "Mixed precision training uses 16-bit floating point formats (fp16 or bf16) for most operations instead of fp32, reducing memory usage and increasing speed on modern GPUs with Tensor Cores. BFloat16 (bf16) is preferred on Ampere and newer GPUs because it has the same exponent range as fp32, providing better numerical stability than fp16. HuggingFace Trainer enables this with fp16=True or bf16=True in TrainingArguments. The framework automatically handles loss scaling (for fp16) and master weight copies to prevent underflow. Mixed precision is essentially free performance on compatible hardware and should always be enabled.\n\n⦿ FP16 or BF16: half precision for most computation\n\n⦿ ~2x memory reduction and speedup on modern GPUs\n\n⦿ BF16 preferred on Ampere+ GPUs (better stability)",
+              "title": "Mixed Precision Training — Using fp16/bf16 for efficiency",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "ad341d31-6582-45c8-b233-fdd3c3d9f1c8",
+            "name": "Gradient Checkpointing",
+            "type": "",
+            "weight": 1,
+            "properties": {
+              "icon": "https://images.pexels.com/photos/38042838/pexels-photo-38042838.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+              "notes": "Gradient checkpointing (also called activation checkpointing) reduces memory by not storing all intermediate activations during the forward pass. Instead, it only stores activations at checkpoints and recomputes the others during backpropagation. This trades ~30% additional computation for substantial memory savings—often 2x reduction in activation memory. Enable it with gradient_checkpointing=True in TrainingArguments and model.gradient_checkpointing_enable() on the model. For memory-constrained setups, the speed tradeoff is worthwhile since it may be the only way to fit your model. It's especially effective with LoRA/QLoRA where the base model's frozen weights don't need gradients.\n\n⦿ Doesn't store all activations during forward pass\n\n⦿ Recomputes activations during backward pass\n\n⦿ ~30% slower, but enables ~2x larger models/batches",
+              "title": "Gradient Checkpointing — Trading compute for memory",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "34c38181-2435-457b-ba34-bb72c032531a",
+            "name": "Gradient Accumulation Details",
+            "type": "",
+            "weight": 1,
+            "properties": {
+              "icon": "https://images.pexels.com/photos/12981879/pexels-photo-12981879.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+              "notes": "Gradient accumulation runs multiple forward and backward passes on small micro-batches, accumulating gradients before updating weights. Set gradient_accumulation_steps=N in TrainingArguments. The effective batch size becomes per_device_batch_size × gradient_accumulation_steps × num_gpus. For example, per_device=2 with accumulation=8 on 2 GPUs gives effective batch size of 32. This simulates large-batch training within memory limits. The tradeoff is training time—more accumulation steps mean more iterations to process the dataset. However, larger effective batches often improve convergence, making the time investment worthwhile. Balance accumulation steps with per-device batch size to maximize GPU utilization.\n\n⦿ Accumulate gradients over N micro-batches\n\n⦿ Update weights only after accumulation complete\n\n⦿ Effective batch = per_device_batch × accumulation_steps",
+              "title": "Gradient Accumulation Details — Simulating large batches efficiently",
+              "source_url": ""
+            }
+          }
+        ],
+        "description": "Memory optimization techniques enable finetuning larger models or larger batch sizes within GPU memory constraints. Mixed precision training uses lower-precision formats (fp16 or bf16) for most computations while maintaining fp32 for critical operations, roughly halving memory usage. Gradient checkpointing trades computation for memory by not storing all intermediate activations, recomputing them during backpropagation as needed. Gradient accumulation simulates larger batches by accumulating gradients over multiple forward/backward passes. These techniques can be combined—QLoRA with gradient checkpointing and gradient accumulation can finetune 3B models on GPUs with as little as 8GB VRAM."
+      },
+      {
+        "id": "16ba73c0-87b6-405a-ad75-c9dfca2b97cf",
+        "icon": "https://images.pexels.com/photos/6963944/pexels-photo-6963944.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "name": "Training Execution",
+        "title": "Training Execution",
+        "weight": 50,
+        "content": [
+          {
+            "id": "c3b2134c-5ba5-4d86-bbeb-81da06fc949a",
+            "name": "Training Script Structure",
+            "type": "",
+            "weight": 1,
+            "properties": {
+              "icon": "https://images.pexels.com/photos/8086362/pexels-photo-8086362.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+              "notes": "A typical finetuning script follows a standard structure. First, load the base model and tokenizer using AutoModelForCausalLM and AutoTokenizer. If using QLoRA, configure BitsAndBytesConfig and apply it during model loading. Apply PEFT configuration with get_peft_model() for LoRA. Load your processed dataset using datasets.load_dataset() or load_from_disk(). Initialize TrainingArguments with all your hyperparameters and settings. Create a Trainer instance with the model, arguments, datasets, and data collator. Call trainer.train() to start training—this handles the entire training loop. After training, save the model with trainer.save_model() and push to HuggingFace Hub if desired.\n\n⦿ Load model, tokenizer, and dataset\n\n⦿ Configure LoRA/quantization if using PEFT\n\n⦿ Initialize Trainer with arguments and data\n\n⦿ Call trainer.train() and save results",
+              "title": "Training Script Structure — Components of a finetuning script",
+              "source_url": ""
+            }
+          }
+        ],
+        "description": "Training execution brings together your data, model, and configuration to actually run the finetuning process. This involves setting up the training script with HuggingFace Trainer or a custom training loop, initializing the model and data loaders, running the training iterations while monitoring progress, and handling any issues that arise. The Trainer API simplifies this process by abstracting away much of the boilerplate, but understanding what happens under the hood helps with debugging. Training can take hours to days depending on dataset size and hardware, so setting it up to run stably and monitoring it effectively is crucial."
+      },
+      {
+        "id": "2e23b577-0333-4f3d-a1f7-06cf3403d6b0",
+        "icon": "https://images.pexels.com/photos/28824718/pexels-photo-28824718.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "name": "Custom Training Loops",
+        "title": "Custom Training Loops",
+        "weight": 25,
+        "content": [
+          {
+            "id": "c0aa617d-4b1e-4681-907e-843d23ec4b31",
+            "name": "Custom Training Loop Structure",
+            "type": "",
+            "weight": 1,
+            "properties": {
+              "icon": "https://images.pexels.com/photos/21274242/pexels-photo-21274242.png?auto=compress&cs=tinysrgb&h=650&w=940",
+              "notes": "A custom training loop manually implements each training step. Outer loop iterates over epochs, inner loop over batches. For each batch: move data to GPU, run forward pass to get logits, compute loss, call loss.backward() to compute gradients, optionally clip gradients, call optimizer.step() to update weights, and optimizer.zero_grad() to reset gradients. Implement gradient accumulation by skipping optimizer.step() until accumulation counter reaches target. For mixed precision, wrap forward and backward in autocast and GradScaler contexts. Log metrics periodically and save checkpoints. The Accelerate library's Accelerator class simplifies distributed training, mixed precision, and gradient accumulation in custom loops.\n\n⦿ Iterate: load batch → forward → loss → backward → step\n\n⦿ Handle: gradient accumulation, mixed precision, logging manually\n\n⦿ Use Accelerate library for distributed training support",
+              "title": "Custom Training Loop Structure — Manual implementation of training",
+              "source_url": ""
+            }
+          }
+        ],
+        "description": "While HuggingFace Trainer handles most use cases, custom training loops offer maximum flexibility for advanced scenarios. You might need a custom loop for non-standard loss functions, complex multi-task learning, or integration with frameworks not supported by Trainer. Custom loops require manually implementing the training iteration: loading batches, forward pass, loss computation, backward pass, optimizer step, and logging. Libraries like Accelerate simplify distributed training in custom loops. However, custom loops require careful implementation to handle edge cases, gradient accumulation, mixed precision, and checkpointing correctly. Only use custom loops when Trainer's flexibility is insufficient."
+      },
+      {
+        "id": "ae19c341-5ec6-4c93-b8c9-6196f9b122ce",
+        "icon": "https://images.pexels.com/photos/31343630/pexels-photo-31343630.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "name": "Troubleshooting Training Issues",
+        "title": "Troubleshooting Training Issues",
+        "weight": 25,
+        "content": [
+          {
+            "id": "3ef09463-522d-4e32-8181-56f46bffed4e",
+            "name": "Out-of-Memory Errors",
+            "type": "",
+            "weight": 1,
+            "properties": {
+              "icon": "https://images.pexels.com/photos/4439425/pexels-photo-4439425.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+              "notes": "Out-of-memory (OOM) errors occur when training exceeds GPU memory. First, verify you're using mixed precision (bf16=True) and QLoRA if appropriate. Reduce per_device_batch_size to 1 if necessary. Enable gradient_checkpointing=True for ~2x memory reduction. Reduce max sequence length if examples are very long. Use gradient accumulation to compensate for smaller batch sizes—accumulation_steps=16 with batch=1 simulates batch=16. Clear cache with torch.cuda.empty_cache() between runs. For full finetuning, consider DeepSpeed ZeRO or switching to LoRA. Monitor GPU memory with nvidia-smi during training to see peak usage. If all optimizations fail, use a larger GPU or reduce model size.\n\n⦿ Reduce per_device_batch_size and sequence length\n\n⦿ Enable gradient_checkpointing and mixed precision\n\n⦿ Use gradient accumulation to maintain effective batch size",
+              "title": "Out-of-Memory Errors — Handling GPU memory exhaustion",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "c522e148-44bc-42a0-8a7e-09a6fc7e7668",
+            "name": "Loss Not Decreasing or Diverging",
+            "type": "",
+            "weight": 1,
+            "properties": {
+              "icon": "https://images.pexels.com/photos/7172860/pexels-photo-7172860.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+              "notes": "If loss doesn't decrease or spikes to infinity/NaN, several causes are possible. Most common: learning rate too high. Reduce LR by 5-10x and retry. Verify gradient clipping is enabled (max_grad_norm=1.0). Check data formatting—ensure labels aren't all -100 (masked), and attention masks are correct. For mixed precision, ensure you're using bf16 on Ampere+ GPUs or proper loss scaling for fp16. Inspect a few batches manually to verify data looks correct. If loss oscillates wildly, try smaller batch size or more warmup steps. Very occasional spikes can be ignored if training recovers, but consistent instability requires hyperparameter adjustment or data debugging.\n\n⦿ Learning rate too high: reduce by 2-10x\n\n⦿ Gradient clipping: ensure max_grad_norm=1.0 is set\n\n⦿ Check data quality: ensure labels are correct and loss is computed properly",
+              "title": "Loss Not Decreasing or Diverging — Addressing training instability",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "3970d8a1-af3f-441a-9ddc-ef689edf38fb",
+            "name": "Slow Training Speed",
+            "type": "",
+            "weight": 1,
+            "properties": {
+              "icon": "https://images.pexels.com/photos/7526093/pexels-photo-7526093.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+              "notes": "Slow training can stem from suboptimal configuration or hardware bottlenecks. First, ensure mixed precision is enabled—bf16 on Ampere+ GPUs provides ~2x speedup. Increase batch size as much as memory allows for better GPU utilization. Set dataloader_num_workers=4 in TrainingArguments for parallel data loading. Check GPU utilization with nvidia-smi—if it's low, you're bottlenecked on data loading or CPU preprocessing. Use torch.compile() on PyTorch 2.0+ for faster execution. For LoRA, disable gradient checkpointing if memory permits since it trades speed for memory. Profile with PyTorch Profiler to identify specific bottlenecks. Sometimes training is simply hardware-limited.\n\n⦿ Enable mixed precision (bf16 or fp16)\n\n⦿ Increase batch size and use gradient accumulation\n\n⦿ Use DataLoader num_workers for faster data loading\n\n⦿ Profile with PyTorch Profiler to find bottlenecks",
+              "title": "Slow Training Speed — Optimizing training throughput",
+              "source_url": ""
+            }
+          }
+        ],
+        "description": "Training issues can arise from various sources: configuration errors, data problems, hardware limitations, or software bugs. Common issues include out-of-memory errors, loss not decreasing or diverging, training being too slow, or checkpointing failures. Systematic troubleshooting helps identify root causes quickly. Start by verifying your configuration and data, then check resource utilization. Many issues have standard solutions: reduce batch size for OOM, lower learning rate for instability, enable gradient checkpointing for memory. Understanding common failure modes and their remedies makes finetuning more reliable and less frustrating."
+      },
+      {
+        "id": "c4fec3d3-90f3-49dc-b5bb-3892725d6208",
+        "icon": "https://images.pexels.com/photos/4581902/pexels-photo-4581902.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "name": "Distributed Training",
+        "title": "Distributed Training",
+        "weight": 25,
+        "content": [
+          {
+            "id": "a9f3a875-b4ab-4324-b545-effd6851dedc",
+            "name": "Data Parallel Training",
+            "type": "",
+            "weight": 1,
+            "properties": {
+              "icon": "https://images.pexels.com/photos/39612987/pexels-photo-39612987.png?auto=compress&cs=tinysrgb&h=650&w=940",
+              "notes": "Data parallelism is the most common distributed training approach. Each GPU holds a complete copy of the model and processes different batches of data. After the backward pass, gradients are averaged across all GPUs, and weights are updated synchronously. For Llama 3.2 3B with LoRA, the model fits on single GPUs, so data parallelism mainly accelerates training by processing more examples per step. Launch with 'accelerate launch --num_processes=N script.py' or 'torchrun --nproc_per_node=N script.py'. The effective batch size becomes per_device_batch_size × num_gpus × gradient_accumulation_steps. Trainer handles the distributed logic automatically.\n\n⦿ Each GPU has full model copy, processes different batches\n\n⦿ Gradients averaged across GPUs before weight update\n\n⦿ Launch with: accelerate launch or torchrun",
+              "title": "Data Parallel Training — Splitting data across GPUs",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "9fd78fca-c425-46f9-90ce-ccffa9448a1d",
+            "name": "DeepSpeed Integration",
+            "type": "",
+            "weight": 1,
+            "properties": {
+              "icon": "https://images.pexels.com/photos/30530415/pexels-photo-30530415.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+              "notes": "DeepSpeed is a distributed training library with advanced optimizations. ZeRO (Zero Redundancy Optimizer) partitions model states across GPUs to reduce per-GPU memory. ZeRO Stage 1 partitions optimizer states, Stage 2 adds gradient partitioning, Stage 3 partitions parameters too. For Llama 3.2 3B, ZeRO helps when doing full finetuning across multiple GPUs or enables larger batch sizes. Configure DeepSpeed with a JSON config file and pass it to Trainer with --deepspeed deepspeed_config.json. DeepSpeed also offers CPU offloading and NVMe offloading for training models that don't fit in GPU memory. It's overkill for typical LoRA finetuning but valuable for full finetuning or larger models.\n\n⦿ ZeRO: partitions optimizer states, gradients, parameters\n\n⦿ Enables training larger models with less memory per GPU\n\n⦿ Configure via deepspeed_config.json passed to Trainer",
+              "title": "DeepSpeed Integration — Advanced distributed training optimizations",
+              "source_url": ""
+            }
+          }
+        ],
+        "description": "Distributed training parallelizes training across multiple GPUs or machines, reducing training time and enabling larger batch sizes. For Llama 3.2 3B, distributed training might use data parallelism (each GPU processes different data but has full model copy) or model parallelism (model split across GPUs). HuggingFace Trainer supports distributed training automatically when launched with torchrun or accelerate launch. DeepSpeed integration offers advanced optimizations like ZeRO (partitioning optimizer states and gradients across GPUs). Distributed training adds complexity but significantly accelerates training for large datasets or when you have access to multi-GPU systems."
+      },
+      {
+        "id": "e0b29656-0db5-45d3-b8dd-850139e30656",
+        "icon": "https://images.pexels.com/photos/7867332/pexels-photo-7867332.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "name": "Using HuggingFace Trainer",
+        "title": "Using HuggingFace Trainer",
+        "weight": 25,
+        "content": [
+          {
+            "id": "4fc52e03-8994-49f3-963a-3722af9f5578",
+            "name": "Trainer Initialization",
+            "type": "",
+            "weight": 1,
+            "properties": {
+              "icon": "https://images.pexels.com/photos/47084/gym-exercise-fitness-workout-47084.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+              "notes": "Initialize Trainer with required and optional components. Required: the model (with PEFT applied if using LoRA), TrainingArguments, and train_dataset. Optional but recommended: eval_dataset for validation, data_collator for batching (DataCollatorForLanguageModeling), compute_metrics function for custom metrics, and callbacks for advanced behavior. Example: trainer = Trainer(model=model, args=training_args, train_dataset=train_data, eval_dataset=eval_data, data_collator=data_collator). The Trainer inspects the model to determine task type and sets up appropriate loss computation. For causal language modeling, it automatically creates labels by shifting input_ids.\n\n⦿ Requires: model, args, train_dataset, eval_dataset\n\n⦿ Optional: data_collator, compute_metrics, callbacks\n\n⦿ Handles training loop, evaluation, checkpointing automatically",
+              "title": "Trainer Initialization — Setting up the Trainer object",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "68c5d706-76b8-4574-b758-1ff8c6edcb02",
+            "name": "Running Training with Trainer",
+            "type": "",
+            "weight": 1,
+            "properties": {
+              "icon": "https://images.pexels.com/photos/40211337/pexels-photo-40211337.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+              "notes": "Call trainer.train() to start the training process. The Trainer runs the full training loop based on your TrainingArguments—iterating through epochs, computing loss, updating weights, evaluating on validation data, and saving checkpoints. If training is interrupted, resume with trainer.train(resume_from_checkpoint='path/to/checkpoint'). The method returns a TrainOutput object containing final metrics and the path to the best checkpoint. During training, logs appear showing loss, learning rate, and throughput. After training completes, call trainer.save_model(output_dir) to save the final model. For LoRA, this saves only the adapter weights; for full finetuning, it saves all weights.\n\n⦿ trainer.train() starts training from scratch\n\n⦿ trainer.train(resume_from_checkpoint=path) resumes training\n\n⦿ Returns TrainOutput with metrics and final checkpoint",
+              "title": "Running Training with Trainer — The train() method and its options",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "80e0a37f-7fe0-4fc3-899d-3b35780b92d8",
+            "name": "Evaluation with Trainer",
+            "type": "",
+            "weight": 1,
+            "properties": {
+              "icon": "https://images.pexels.com/photos/8654753/pexels-photo-8654753.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+              "notes": "Evaluation assesses model performance on held-out data. If eval_strategy='steps' or 'epoch' is set in TrainingArguments, Trainer automatically evaluates during training at specified intervals. Manually trigger evaluation with trainer.evaluate(), which returns a dictionary of metrics including eval_loss and eval_samples_per_second. For language modeling, perplexity (exp(loss)) is a common metric. Custom metrics can be computed by providing a compute_metrics function that takes predictions and returns a dict. Evaluation helps detect overfitting—if training loss decreases but eval loss increases, you're overfitting and should stop training or increase regularization.\n\n⦿ trainer.evaluate() runs evaluation on eval_dataset\n\n⦿ Returns metrics dict with eval_loss, perplexity, etc.\n\n⦿ Automatic evaluation during training if eval_strategy set",
+              "title": "Evaluation with Trainer — Assessing model performance",
+              "source_url": ""
+            }
+          }
+        ],
+        "description": "The HuggingFace Trainer class provides a high-level API for training transformers, handling most of the complexity automatically. It manages the training loop, evaluation, logging, checkpointing, and distributed training. For Llama 3.2 3B finetuning, Trainer works seamlessly with PEFT, quantization, and mixed precision. You simply instantiate it with your model, training arguments, and datasets, then call train(). The Trainer handles batching, gradient accumulation, optimizer steps, learning rate scheduling, and logging. While custom training loops offer more control, Trainer is the recommended approach for most users due to its reliability and extensive testing with various models and configurations."
+      },
+      {
+        "id": "1ede7d6b-7eac-4c8a-be8c-43fa712f51fb",
+        "icon": "https://images.pexels.com/photos/15351348/pexels-photo-15351348.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "name": "Evaluation and Testing",
+        "title": "Evaluation and Testing",
+        "weight": 50,
+        "content": [
+          {
+            "id": "b7ea3ca8-e22e-4d2d-ba22-0aab64f282ac",
+            "name": "Evaluation Metrics",
+            "type": "",
+            "weight": 1,
+            "properties": {
+              "icon": "https://images.pexels.com/photos/7948002/pexels-photo-7948002.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+              "notes": "Evaluation metrics quantify model performance. For language modeling, perplexity (exp of cross-entropy loss) is standard—lower values indicate better modeling. For classification tasks, use accuracy, precision, recall, and F1. For generation, BLEU (for translation) or ROUGE (for summarization) measure n-gram overlap with references. For instruction following, human eval or automated metrics like win rate against baselines work. Always compare finetuned model to the base model to quantify improvement. Check if test set performance aligns with validation performance—large gaps suggest overfitting or distribution mismatch. Use multiple metrics for a comprehensive view.\n\n⦿ Perplexity: measures language modeling quality (lower is better)\n\n⦿ Task-specific: accuracy, F1, BLEU, ROUGE depending on task\n\n⦿ Compare to base model and validation performance",
+              "title": "Evaluation Metrics — Quantitative performance assessment",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "88ab9a24-993b-43a8-9453-668976990ee7",
+            "name": "Qualitative Testing",
+            "type": "",
+            "weight": 1,
+            "properties": {
+              "icon": "https://images.pexels.com/photos/590041/pexels-photo-590041.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+              "notes": "Qualitative evaluation involves manually testing the model on diverse inputs and inspecting outputs for quality, relevance, and correctness. Create a test set of representative examples covering common cases and edge cases. Generate outputs from both base and finetuned models for comparison. Check for issues like hallucinations (fabricated information), tone mismatches, failure to follow instructions, or degraded capabilities on general tasks. This catches problems that metrics miss, like subtle tone shifts or safety issues. Document failure cases to guide data collection and training iterations. Qualitative eval is especially important for user-facing applications where user experience matters more than benchmark scores.\n\n⦿ Test on diverse, representative examples\n\n⦿ Check for hallucinations, factual errors, tone issues\n\n⦿ Compare outputs to base model and expected behavior",
+              "title": "Qualitative Testing — Manual inspection of outputs",
+              "source_url": ""
+            }
+          }
+        ],
+        "description": "Evaluation assesses whether your finetuned model achieves its intended objectives. This involves quantitative metrics like perplexity, accuracy, or task-specific scores, and qualitative evaluation through manual testing of outputs. Proper evaluation uses held-out test data not seen during training or validation to estimate real-world performance. For Llama 3.2 3B, evaluation might include benchmarking on standard datasets, testing on representative examples from your use case, and comparing to the base model and other baselines. Rigorous evaluation prevents deploying underperforming models and guides iterations of data collection and hyperparameter tuning."
+      },
+      {
+        "id": "2e6c94d1-34b0-484d-961a-b71432cec290",
+        "icon": "https://images.pexels.com/photos/32357004/pexels-photo-32357004.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "name": "Finetuning Methods",
+        "title": "Finetuning Methods",
+        "weight": 50,
+        "content": [
+          {
+            "id": "83d34041-9f25-41b6-8774-86c62fa83113",
+            "name": "Finetuning Approaches Comparison",
+            "type": "",
+            "weight": 1,
+            "properties": {
+              "icon": "https://images.pexels.com/photos/28921504/pexels-photo-28921504.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+              "notes": "Full finetuning updates all model parameters through standard backpropagation. It offers maximum adaptation capability but requires approximately 40GB+ GPU memory for the 3B model due to optimizer states and gradients. LoRA (Low-Rank Adaptation) injects trainable rank decomposition matrices into attention layers while freezing the base model, reducing trainable parameters to <1% of the total. This cuts memory requirements to ~16GB with 8-bit base model quantization. QLoRA combines LoRA with 4-bit quantization of the base model, achieving finetuning on 8-12GB VRAM. For most use cases with limited hardware, QLoRA offers the best balance.\n\n⦿ Full finetuning: updates all 3B parameters, needs 40GB+ VRAM\n\n⦿ LoRA: updates <1% parameters, needs 16GB VRAM with quantization\n\n⦿ QLoRA: LoRA + 4-bit quantization, needs 8-12GB VRAM",
+              "title": "Finetuning Approaches Comparison — Full vs. parameter-efficient methods",
+              "source_url": ""
+            }
+          }
+        ],
+        "description": "Multiple approaches exist for finetuning Llama 3.2 3B, each with different tradeoffs between resource requirements, training speed, and final model quality. Full finetuning updates all 3 billion parameters, offering maximum flexibility but requiring substantial GPU memory. Parameter-efficient finetuning (PEFT) methods like LoRA update only a small subset of parameters, dramatically reducing memory requirements while achieving comparable performance. Quantization techniques reduce precision to 8-bit or 4-bit, further decreasing memory usage. Selecting the right method depends on your hardware constraints, dataset size, and how different your target domain is from the pre-training distribution."
+      },
+      {
+        "id": "385de08a-9d8e-4be7-a51a-8101726bea29",
+        "icon": "https://images.pexels.com/photos/16350206/pexels-photo-16350206.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "name": "LoRA (Low-Rank Adaptation)",
+        "title": "LoRA (Low-Rank Adaptation)",
+        "weight": 25,
+        "content": [
+          {
+            "id": "4fbb9832-bffa-4605-b038-ae435411c438",
+            "name": "LoRA Architecture",
+            "type": "",
+            "weight": 1,
+            "properties": {
+              "icon": "https://images.pexels.com/photos/32894980/pexels-photo-32894980.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+              "notes": "LoRA works by adding trainable low-rank matrices to existing weight matrices in attention layers. For a weight matrix W, the forward pass computes Wx + BAx where B and A are the trainable low-rank matrices. The rank r (typically 8-64) determines the capacity of the adaptation. Lower ranks use less memory and train faster but may limit expressiveness. LoRA is typically applied to query, key, value, and output projection matrices in each attention layer. The alpha parameter (often 16-32) scales the LoRA contribution. After training, the LoRA weights can be merged back into the base model for efficient inference.\n\n⦿ Injects trainable rank decomposition (BA) into frozen weights\n\n⦿ Typical rank: 8-64, determines capacity vs. efficiency tradeoff\n\n⦿ Applied to query, key, value, and output projection matrices",
+              "title": "LoRA Architecture — Low-rank adaptation mechanism",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "eb3592b0-a5be-4c97-a33c-d7d5bb6e4bca",
+            "name": "LoRA Hyperparameters",
+            "type": "",
+            "weight": 1,
+            "properties": {
+              "icon": "https://images.pexels.com/photos/32894980/pexels-photo-32894980.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+              "notes": "Key LoRA hyperparameters include rank (r), alpha, and target modules. Rank determines how many parameters you're adding—higher rank means more capacity but increased memory. Start with r=16 for most tasks. Alpha scales the LoRA contribution; a common heuristic is alpha=2r, though this can be tuned. Target modules specify which layers get LoRA adapters. For Llama models, target the attention projections: q_proj, k_proj, v_proj, and o_proj. Adding LoRA to MLP layers (gate_proj, up_proj, down_proj) increases capacity but also memory. Dropout can be applied to LoRA layers for regularization—typically 0.05-0.1.\n\n⦿ Rank (r): 8 for simple tasks, 16-32 for complex, 64 for maximum capacity\n\n⦿ Alpha: typically 2r, controls update magnitude\n\n⦿ Target modules: q_proj, k_proj, v_proj, o_proj recommended",
+              "title": "LoRA Hyperparameters — Configuring rank, alpha, and target modules",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "1f72007c-86a0-4b21-af62-85dc34e7561a",
+            "name": "Implementing LoRA with PEFT",
+            "type": "",
+            "weight": 1,
+            "properties": {
+              "icon": "https://images.pexels.com/photos/32894980/pexels-photo-32894980.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+              "notes": "Implementing LoRA is straightforward with the HuggingFace PEFT library. First, import and configure: 'from peft import LoraConfig, get_peft_model'. Create a LoraConfig specifying r, lora_alpha, target_modules, lora_dropout, and task_type='CAUSAL_LM'. Wrap your loaded model with get_peft_model(model, lora_config). This freezes the base model and adds trainable LoRA adapters. The resulting model works with standard training loops—HuggingFace Trainer, or custom PyTorch training. Only LoRA parameters are updated during backpropagation. After training, save with model.save_pretrained() which stores only the small LoRA weights (typically 10-50MB), not the full model.\n\n⦿ Install peft library: pip install peft\n\n⦿ Configure LoraConfig with rank, alpha, target_modules\n\n⦿ Wrap model with get_peft_model(), train normally",
+              "title": "Implementing LoRA with PEFT — Using HuggingFace PEFT library",
+              "source_url": ""
+            }
+          }
+        ],
+        "description": "LoRA is a parameter-efficient finetuning technique that injects trainable low-rank decomposition matrices into the model's attention layers while keeping the pre-trained weights frozen. Instead of updating weight matrix W directly, LoRA learns a low-rank update ΔW = BA where B and A are small matrices. For a 4096×4096 weight matrix with rank 8, you train only 65K parameters instead of 16M. This dramatically reduces memory requirements and training time while achieving performance comparable to full finetuning. LoRA has become the de facto standard for finetuning large language models on consumer hardware."
+      },
+      {
+        "id": "48912b59-5019-4d9d-ba22-7a8c7ed81152",
+        "icon": "https://images.pexels.com/photos/276452/pexels-photo-276452.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "name": "QLoRA (Quantized LoRA)",
+        "title": "QLoRA (Quantized LoRA)",
+        "weight": 25,
+        "content": [
+          {
+            "id": "9b52a560-c9f9-4804-b639-c9b52747bb22",
+            "name": "4-bit Quantization in QLoRA",
+            "type": "",
+            "weight": 1,
+            "properties": {
+              "icon": "https://images.pexels.com/photos/17402643/pexels-photo-17402643.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+              "notes": "QLoRA uses 4-bit NormalFloat (NF4) quantization, which is information-theoretically optimal for normally distributed weights. The base model weights are quantized to 4 bits, reducing memory from ~6GB to ~1.5GB for the 3B model. During forward passes, weights are dequantized on-the-fly to compute activations. LoRA adapters remain in bfloat16 or float16 for training. Double quantization further compresses the quantization constants themselves. This aggressive quantization of frozen weights has minimal impact on performance since the trainable LoRA adapters compensate. The technique makes finetuning accessible on consumer GPUs like RTX 3090 or 4090.\n\n⦿ Base model quantized to 4-bit NF4 format\n\n⦿ LoRA adapters remain in bf16/fp16 for training\n\n⦿ Reduces memory by ~75% vs. fp16 baseline",
+              "title": "4-bit Quantization in QLoRA — NF4 quantization for memory efficiency",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "19eeb02c-878c-404a-aef1-50796f0eeae0",
+            "name": "Setting Up QLoRA",
+            "type": "",
+            "weight": 1,
+            "properties": {
+              "icon": "https://images.pexels.com/photos/28896170/pexels-photo-28896170.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+              "notes": "To implement QLoRA, install bitsandbytes ('pip install bitsandbytes') which provides 4-bit quantization kernels. Create a BitsAndBytesConfig with load_in_4bit=True, bnb_4bit_quant_type='nf4', bnb_4bit_compute_dtype=torch.bfloat16, and bnb_4bit_use_double_quant=True. Load the model with this config: model = AutoModelForCausalLM.from_pretrained(model_name, quantization_config=bnb_config). Then apply LoRA as usual with PEFT. The combination of 4-bit base model and LoRA adapters enables training on 8-12GB GPUs. Training speed is comparable to full precision since compute happens at higher precision after dequantization.\n\n⦿ Requires bitsandbytes library for quantization\n\n⦿ Configure BitsAndBytesConfig with load_in_4bit=True\n\n⦿ Combine with LoraConfig for complete setup",
+              "title": "Setting Up QLoRA — Configuration with bitsandbytes",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "978a3733-8102-462a-800f-d6ce1a245f33",
+            "name": "QLoRA Performance Characteristics",
+            "type": "",
+            "weight": 1,
+            "properties": {
+              "icon": "https://images.pexels.com/photos/14010690/pexels-photo-14010690.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+              "notes": "QLoRA achieves remarkable memory efficiency—finetuning Llama 3.2 3B requires only 8-12GB VRAM depending on batch size and sequence length. Training speed is similar to regular LoRA since the bottleneck is dequantization and LoRA computation, not memory transfers. Quality is nearly identical to full precision LoRA in most benchmarks; the 4-bit quantization of frozen weights has minimal impact when combined with trainable adapters. For tasks requiring maximum precision, 8-bit quantization (load_in_8bit=True) offers a middle ground. QLoRA has democratized LLM finetuning by making it accessible to anyone with a modern gaming GPU.\n\n⦿ Memory: 8-12GB for Llama 3.2 3B (vs. 40GB+ full finetuning)\n\n⦿ Speed: comparable to fp16 LoRA, slower than full precision\n\n⦿ Quality: minimal degradation vs. full precision methods",
+              "title": "QLoRA Performance Characteristics — Memory, speed, and quality tradeoffs",
+              "source_url": ""
+            }
+          }
+        ],
+        "description": "QLoRA extends LoRA by loading the base model in 4-bit quantized format, further reducing memory requirements. The frozen pre-trained weights are quantized to 4-bit precision using NF4 (Normal Float 4) quantization, while LoRA adapters remain in higher precision for training. This enables finetuning Llama 3.2 3B on GPUs with as little as 8-12GB VRAM. QLoRA achieves performance nearly indistinguishable from full 16-bit finetuning while using 4-5x less memory. It's the most accessible approach for individual researchers and small teams with limited hardware."
+      },
+      {
+        "id": "b6641b5e-b172-4b10-a28f-69ebed4dcd90",
+        "icon": "https://images.pexels.com/photos/11882071/pexels-photo-11882071.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "name": "Full Finetuning",
+        "title": "Full Finetuning",
+        "weight": 25,
+        "content": [
+          {
+            "id": "144ac119-0aef-44b9-baf1-1c833b526124",
+            "name": "Full Finetuning Process",
+            "type": "",
+            "weight": 1,
+            "properties": {
+              "icon": "https://images.pexels.com/photos/37688157/pexels-photo-37688157.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+              "notes": "Full finetuning treats the pre-trained model as initialization and updates all weights through gradient descent. Load the model normally without freezing any layers. Use automatic mixed precision (AMP) with fp16 or bf16 to reduce memory consumption by approximately 2x. The memory footprint includes 6GB for FP16 weights, similar for gradients, and 12GB+ for optimizer states with AdamW. Gradient accumulation can simulate larger batch sizes on limited memory. Train for 1-3 epochs on your dataset—more epochs risk overfitting. This approach makes sense for well-funded projects or when parameter-efficient methods prove insufficient.\n\n⦿ All 3B parameters trainable, maximum adaptation capability\n\n⦿ Requires 40-50GB GPU memory with mixed precision\n\n⦿ Best for substantial domain shifts",
+              "title": "Full Finetuning Process — Standard supervised learning approach",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "f0b8f0f2-6490-4384-be2e-14331b21a9de",
+            "name": "Full Finetuning Tradeoffs",
+            "type": "",
+            "weight": 1,
+            "properties": {
+              "icon": "https://images.pexels.com/photos/19891035/pexels-photo-19891035.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+              "notes": "Full finetuning excels when your task requires learning substantially new behaviors or knowledge not represented in pre-training. It can fundamentally alter model behavior. However, it risks catastrophic forgetting where the model loses general capabilities while adapting to your data. Careful learning rate scheduling and mixing in general data can mitigate this. The high memory cost restricts full finetuning to well-resourced setups with multiple high-end GPUs. For most practitioners with limited hardware, parameter-efficient alternatives like LoRA achieve 90%+ of the performance at a fraction of the cost.\n\n⦿ Pros: Maximum flexibility, can learn substantial new behaviors\n\n⦿ Cons: High memory cost, risk of catastrophic forgetting\n\n⦿ When to use: Large domain shift, abundant compute",
+              "title": "Full Finetuning Tradeoffs — Advantages and disadvantages",
+              "source_url": ""
+            }
+          }
+        ],
+        "description": "Full finetuning updates all parameters of Llama 3.2 3B through standard supervised learning. This approach offers maximum flexibility and adaptation capability since every weight can be modified. It's most appropriate when you have sufficient computational resources and your task differs substantially from the pre-training distribution. Full finetuning requires careful learning rate tuning and regularization to avoid catastrophic forgetting of pre-trained capabilities. Memory requirements include space for the model weights, gradients, and optimizer states, totaling 40-50GB for the 3B model with AdamW optimizer."
+      },
+      {
+        "id": "f7757db8-739e-4f30-bac5-89fcbd078ca8",
+        "icon": "https://images.pexels.com/photos/25626448/pexels-photo-25626448.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "name": "Other PEFT Methods",
+        "title": "Other PEFT Methods",
+        "weight": 25,
+        "content": [
+          {
+            "id": "440c0b1b-de26-42ea-bf36-abe9898da975",
+            "name": "Alternative PEFT Techniques",
+            "type": "",
+            "weight": 1,
+            "properties": {
+              "icon": "https://images.pexels.com/photos/7055316/pexels-photo-7055316.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+              "notes": "Prefix tuning learns continuous task-specific vectors prepended to the key and value matrices in each attention layer, acting as virtual tokens that condition model behavior. Adapter layers insert small bottleneck modules (down-project, activation, up-project) between transformer layers, adding only a few million parameters. IA3 learns vectors that rescale activations via element-wise multiplication, requiring even fewer parameters than LoRA. Each method has specific advantages: prefix tuning doesn't modify weights, adapters offer strong performance on diverse tasks, IA3 is extremely parameter-efficient. However, LoRA's simplicity, performance, and ability to merge adapters back into base weights have made it the community favorite.\n\n⦿ Prefix tuning: learnable embeddings prepended to layers\n\n⦿ Adapter layers: small bottleneck modules between layers\n\n⦿ IA3: learned rescaling of activations",
+              "title": "Alternative PEFT Techniques — Prefix tuning, adapters, and others",
+              "source_url": ""
+            }
+          }
+        ],
+        "description": "Beyond LoRA and QLoRA, several other parameter-efficient finetuning methods exist, each with unique characteristics. Prefix tuning prepends trainable embeddings to each layer. Prompt tuning learns soft prompts prepended to inputs. Adapter layers insert small trainable modules between transformer layers. IA3 (Infused Adapter by Inhibiting and Amplifying Inner Activations) rescales activations with learned vectors. While these methods can be effective, LoRA and QLoRA have emerged as the most popular due to their strong performance, ease of implementation, and efficient inference after merging. Understanding alternatives helps you choose the best approach for specific constraints."
+      },
+      {
+        "id": "4834039e-7b26-4595-88d8-f19e254e83b8",
+        "icon": "https://images.pexels.com/photos/16695184/pexels-photo-16695184.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "name": "Prerequisites and Setup",
+        "title": "Prerequisites and Setup",
+        "weight": 50,
+        "content": [
+          {
+            "id": "712bcbbe-7b09-43be-ac63-f02d941e9331",
+            "name": "Hardware Requirements",
+            "type": "",
+            "weight": 1,
+            "properties": {
+              "icon": "https://images.pexels.com/photos/37368175/pexels-photo-37368175.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+              "notes": "Hardware requirements vary based on your finetuning approach. For parameter-efficient methods like LoRA with 4-bit quantization, a 16GB VRAM GPU suffices. Full finetuning of all 3 billion parameters requires 40GB+ VRAM or distributed training across multiple GPUs. RAM requirements are typically 32GB+ system memory. For optimal training speed, NVMe SSD storage is recommended for dataset loading. Cloud options include AWS EC2 g5.xlarge instances, Google Cloud A2 instances, or Lambda Labs GPU cloud if local hardware is unavailable.\n\n⦿ Minimum: 16GB VRAM GPU (e.g., RTX 4090, A4000)\n\n⦿ Recommended: 24GB+ VRAM (e.g., RTX 4090, A5000, L40)\n\n⦿ Full finetuning: 40GB+ VRAM or multi-GPU setup",
+              "title": "Hardware Requirements — GPU and memory specifications",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "fd5f61e2-a970-4775-a417-57b58ee34b8a",
+            "name": "Software Dependencies",
+            "type": "",
+            "weight": 1,
+            "properties": {
+              "icon": "https://images.pexels.com/photos/270373/pexels-photo-270373.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+              "notes": "The software stack centers on PyTorch and HuggingFace libraries. Install PyTorch with CUDA support matching your driver version. The Transformers library provides model architecture and tokenizer. PEFT enables parameter-efficient finetuning methods. Bitsandbytes offers quantization for memory efficiency. Accelerate simplifies distributed training. Optional libraries include DeepSpeed for advanced optimization, Flash Attention 2 for faster attention computation, and TRL (Transformer Reinforcement Learning) for alignment techniques. Using a conda or virtual environment helps manage dependencies cleanly.\n\n⦿ Python 3.9+, PyTorch 2.0+, CUDA 11.8+\n\n⦿ Transformers, PEFT, bitsandbytes, accelerate\n\n⦿ Optional: DeepSpeed, Flash Attention 2, TRL",
+              "title": "Software Dependencies — Libraries and frameworks needed",
+              "source_url": ""
+            }
+          }
+        ],
+        "description": "Before finetuning Llama 3.2 3B, you need to prepare your environment with appropriate hardware, software dependencies, and model access. The 3B model is more accessible than larger variants but still requires careful resource planning. You'll need GPU acceleration for practical training times, appropriate Python libraries including PyTorch and HuggingFace Transformers, and proper authentication to access the model weights. Setting up a well-configured environment prevents issues during training and ensures you can leverage optimization techniques like mixed precision and gradient checkpointing effectively."
+      },
+      {
+        "id": "5138b060-96e2-4b8e-ada3-f2dbacdaaa46",
+        "icon": "https://images.pexels.com/photos/5050305/pexels-photo-5050305.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "name": "Environment Configuration",
+        "title": "Environment Configuration",
+        "weight": 25,
+        "content": [
+          {
+            "id": "744cec65-621c-47f7-b01c-1c26a26e95a2",
+            "name": "Python Environment Setup",
+            "type": "",
+            "weight": 1,
+            "properties": {
+              "icon": "https://images.pexels.com/photos/1181281/pexels-photo-1181281.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+              "notes": "Create a dedicated Python environment for finetuning to avoid dependency conflicts. Using conda, run 'conda create -n llama-ft python=3.10' then activate it. Alternatively, use venv with 'python -m venv llama-env'. First install PyTorch with CUDA support matching your driver—visit pytorch.org to get the correct install command. For CUDA 11.8, this might be 'pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118'. Verify GPU access with 'torch.cuda.is_available()'. Then install HuggingFace libraries: transformers, peft, accelerate, bitsandbytes, datasets, and trl.\n\n⦿ Use conda or venv for isolation\n\n⦿ Python 3.9, 3.10, or 3.11 recommended\n\n⦿ Install PyTorch with matching CUDA version first",
+              "title": "Python Environment Setup — Creating isolated workspace",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "f325fccc-823c-46fc-ae07-6d7c1b3beab5",
+            "name": "GPU and Memory Settings",
+            "type": "",
+            "weight": 1,
+            "properties": {
+              "icon": "https://images.pexels.com/photos/34956924/pexels-photo-34956924.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+              "notes": "Configure GPU settings for optimal performance. Enable TF32 precision on Ampere and newer GPUs with 'torch.backends.cuda.matmul.allow_tf32 = True' for ~2x speedup. Set 'torch.backends.cudnn.benchmark = True' for faster training after the first few iterations. For memory management, consider environment variables like 'PYTORCH_CUDA_ALLOC_CONF=max_split_size_mb:512' to reduce fragmentation. Enable gradient checkpointing in training arguments to trade computation for memory, allowing larger batch sizes. Monitor GPU utilization with nvidia-smi or tools like nvtop to ensure you're effectively using available resources.\n\n⦿ Enable TF32 for faster Ampere+ GPU computation\n\n⦿ Set memory growth and allocation strategies\n\n⦿ Configure gradient checkpointing for memory savings",
+              "title": "GPU and Memory Settings — Optimizing hardware utilization",
+              "source_url": ""
+            }
+          }
+        ],
+        "description": "Proper environment configuration ensures reproducible finetuning experiments and optimal performance. This includes setting up Python virtual environments, configuring CUDA and GPU settings, installing compatible library versions, and setting important environment variables. Many finetuning issues stem from version mismatches or suboptimal configurations. Taking time to properly configure your environment pays dividends by preventing debugging headaches later and enabling efficient hardware utilization through settings like TF32 precision and memory optimization flags."
+      },
+      {
+        "id": "58a88af2-0b3c-4cb1-be5d-8df64056ade9",
+        "icon": "https://images.pexels.com/photos/12070939/pexels-photo-12070939.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "name": "Model Access and Download",
+        "title": "Model Access and Download",
+        "weight": 25,
+        "content": [
+          {
+            "id": "d4d65cad-cdc1-431a-8681-7c4b6d0227f8",
+            "name": "Requesting Model Access",
+            "type": "",
+            "weight": 1,
+            "properties": {
+              "icon": "https://images.pexels.com/photos/37043590/pexels-photo-37043590.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+              "notes": "To access Llama 3.2 3B, visit the model page on HuggingFace (meta-llama/Llama-3.2-3B or meta-llama/Llama-3.2-3B-Instruct). Click to request access and accept Meta's license terms. Once approved, generate a HuggingFace access token from your account settings with at least read permissions. Store this token securely as an environment variable or in a HuggingFace CLI configuration. The token enables programmatic access to download and load model weights. Both the base and instruct variants are available, with the instruct version pre-finetuned for following instructions.\n\n⦿ Create HuggingFace account and accept Llama 3.2 license\n\n⦿ Generate access token with read permissions\n\n⦿ Approval typically granted within minutes to hours",
+              "title": "Requesting Model Access — HuggingFace authentication process",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "237481a4-c16f-41bb-9f72-1559c3d5dc8a",
+            "name": "Downloading Model Weights",
+            "type": "",
+            "weight": 1,
+            "properties": {
+              "icon": "https://images.pexels.com/photos/34964970/pexels-photo-34964970.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+              "notes": "Model weights can be loaded directly from HuggingFace Hub using AutoModelForCausalLM.from_pretrained() with your authentication token. The first load downloads weights to a local cache directory (typically ~/.cache/huggingface). For offline use or multiple experiments, use huggingface_hub.snapshot_download() to explicitly download all model files. The 3B model in FP16 format is approximately 6-7GB. Consider downloading to fast storage and setting the cache directory appropriately. Verify the download completed successfully by checking for config.json, tokenizer files, and model weight shards.\n\n⦿ Download size: approximately 6-7GB for FP16 weights\n\n⦿ Load directly from hub or cache locally\n\n⦿ Use snapshot_download for offline storage",
+              "title": "Downloading Model Weights — Loading from HuggingFace Hub",
+              "source_url": ""
+            }
+          }
+        ],
+        "description": "Accessing Llama 3.2 3B requires acceptance of Meta's license agreement through HuggingFace. The model weights are gated, meaning you must request access and be approved before downloading. Once approved, you can download the model using the HuggingFace Hub with your authentication token. The model can be loaded directly from the hub or downloaded for offline use. Understanding the different model variants (base vs. instruct) and choosing the appropriate starting point for your use case is important."
+      },
+      {
+        "id": "51598c67-43b7-4fc7-bac2-b3b88bfa15cc",
+        "icon": "https://images.pexels.com/photos/7821540/pexels-photo-7821540.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "name": "Data Preparation",
+        "title": "Data Preparation",
+        "weight": 50,
+        "content": [
+          {
+            "id": "5239918a-5b0d-49ac-ab14-254ed97ab650",
+            "name": "Data Quality Principles",
+            "type": "",
+            "weight": 1,
+            "properties": {
+              "icon": "https://images.pexels.com/photos/19891028/pexels-photo-19891028.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+              "notes": "High-quality training data should be relevant to your target application, accurate in its content, and diverse enough to generalize. Each example should demonstrate the desired behavior clearly. For instruction tuning, this means clear prompts paired with appropriate responses. Avoid noisy, contradictory, or low-quality examples that might degrade model performance. Include edge cases and difficult scenarios the model should handle. Diversity in phrasing, topics, and complexity helps the model generalize better. A smaller dataset of high-quality examples typically outperforms larger datasets with significant noise or irrelevance.\n\n⦿ Relevance: matches your target use case\n\n⦿ Quality: accurate, well-formed examples\n\n⦿ Diversity: covers various scenarios and edge cases",
+              "title": "Data Quality Principles — What makes good training data",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "38bc9c99-baa6-4c9f-b077-3a32777cf3cb",
+            "name": "Data Format Requirements",
+            "type": "",
+            "weight": 1,
+            "properties": {
+              "icon": "https://images.pexels.com/photos/7731371/pexels-photo-7731371.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+              "notes": "Llama 3.2 instruct models expect data in conversational format with distinct roles. Each training example is a conversation with 'user' and 'assistant' messages. Use the tokenizer's chat template to format conversations correctly with special tokens. A typical example: [{'role': 'user', 'content': 'question'}, {'role': 'assistant', 'content': 'answer'}]. The tokenizer.apply_chat_template() method handles special tokens automatically. For base models, you can use simpler formats, but instruct-tuned models benefit from maintaining the conversational structure they were trained on. System prompts can set context or behavior guidelines.\n\n⦿ Use conversational format with user/assistant roles\n\n⦿ Apply proper chat template from tokenizer\n\n⦿ Include system prompts where appropriate",
+              "title": "Data Format Requirements — Structuring data for Llama models",
+              "source_url": ""
+            }
+          }
+        ],
+        "description": "Data preparation is arguably the most critical phase of finetuning. The quality, format, and diversity of your training data directly determine the finetuned model's capabilities and limitations. For Llama 3.2 3B, you need to collect relevant data for your use case, clean and preprocess it, format it according to the model's expected structure (typically conversational format for instruct models), and split it into training and validation sets. Poor data quality leads to poor model performance regardless of training techniques. Aim for high-quality, diverse examples that represent the distribution of inputs you expect at inference time."
+      },
+      {
+        "id": "10dae95f-e052-49c0-83a8-fde2402b9016",
+        "icon": "https://images.pexels.com/photos/270366/pexels-photo-270366.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "name": "Dataset Collection",
+        "title": "Dataset Collection",
+        "weight": 25,
+        "content": [
+          {
+            "id": "5d559c49-b0a0-4b64-9f59-a097ad3f2537",
+            "name": "Data Source Options",
+            "type": "",
+            "weight": 1,
+            "properties": {
+              "icon": "https://images.pexels.com/photos/270366/pexels-photo-270366.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+              "notes": "Multiple sources exist for training data. HuggingFace Datasets Hub hosts thousands of public datasets across domains—search for tasks similar to yours. Academic datasets from papers often target specific capabilities. Synthetic data generation uses larger models (GPT-4, Claude) to create training examples following your specifications; this works well for formatting tasks or style transfer. Custom dataset creation involves manual authoring by domain experts, which produces the highest quality but is labor-intensive. Application logs can provide real-world examples if privacy-compliant. Often, combining multiple sources creates the most robust training set.\n\n⦿ Public datasets: HuggingFace Hub, academic repositories\n\n⦿ Synthetic generation: using larger models to create examples\n\n⦿ Custom creation: manual authoring or domain experts",
+              "title": "Data Source Options — Where to obtain training data",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "92632f0d-0565-484a-b72f-723cebe03d33",
+            "name": "Dataset Size Considerations",
+            "type": "",
+            "weight": 1,
+            "properties": {
+              "icon": "https://images.pexels.com/photos/270366/pexels-photo-270366.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+              "notes": "Required dataset size varies by task complexity and domain shift from pre-training. For adapting the model's style or format with minimal new knowledge, 500-1000 high-quality examples may suffice. Teaching domain-specific knowledge or new reasoning patterns typically requires 5,000-20,000 examples. More complex multi-turn conversations or nuanced tasks might need 20,000+. However, quality matters more than quantity—1,000 carefully curated examples often outperform 10,000 noisy ones. Start with a smaller curated dataset, evaluate performance, and expand strategically based on error analysis. Over-training on too little data causes overfitting.\n\n⦿ Minimum: 500-1000 examples for simple adaptation\n\n⦿ Recommended: 5000-20000 for robust performance\n\n⦿ Quality over quantity: small curated > large noisy",
+              "title": "Dataset Size Considerations — How much data do you need",
+              "source_url": ""
+            }
+          }
+        ],
+        "description": "Dataset collection involves gathering or creating training examples relevant to your finetuning objective. Sources include existing public datasets, synthetic data generation, human-authored examples, or data from your application logs (with appropriate privacy considerations). The dataset size depends on your task complexity and how different it is from the model's pre-training distribution. For domain adaptation, a few thousand high-quality examples often suffice. For teaching entirely new capabilities, you may need tens of thousands. Balance quantity with quality—manual curation of smaller datasets often yields better results than large uncurated collections."
+      },
+      {
+        "id": "16001e5c-87d5-49a0-8636-cd4693217e09",
+        "icon": "https://images.pexels.com/photos/36950633/pexels-photo-36950633.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "name": "Train-Validation Split",
+        "title": "Train-Validation Split",
+        "weight": 25,
+        "content": [
+          {
+            "id": "b4d9ca30-f499-4703-a198-cb82f82ca171",
+            "name": "Splitting Strategies",
+            "type": "",
+            "weight": 1,
+            "properties": {
+              "icon": "https://images.pexels.com/photos/39595385/pexels-photo-39595385.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+              "notes": "Choose a splitting strategy based on your data characteristics. Random splitting works for most cases—shuffle your dataset and allocate 5-10% to validation. For imbalanced or multi-category datasets, use stratified splitting to maintain class proportions in both sets. For temporal data (conversations over time), consider temporal splitting where validation comes from later time periods to test generalization to new data. Use libraries like scikit-learn's train_test_split with stratify parameter or manual splitting with HuggingFace datasets. Set a random seed for reproducibility. Document your split to ensure validation examples never leak into training.\n\n⦿ Random split: 90-10 or 95-5 for large datasets\n\n⦿ Stratified split: maintains category proportions\n\n⦿ Temporal split: for time-sensitive data",
+              "title": "Splitting Strategies — Creating train and validation sets",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "4719ce52-e3c0-4678-b4e9-1fff3ee1a61a",
+            "name": "Validation Set Usage",
+            "type": "",
+            "weight": 1,
+            "properties": {
+              "icon": "https://images.pexels.com/photos/32327868/pexels-photo-32327868.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+              "notes": "The validation set monitors training progress and detects overfitting. Configure your training script to evaluate on validation data every few hundred steps. Track metrics like validation loss, perplexity, and task-specific metrics. If training loss decreases while validation loss increases or plateaus, you're overfitting. Use validation performance for early stopping—halt training when validation metrics stop improving for several evaluations. Save checkpoints based on best validation performance rather than just the final epoch. This often yields better real-world performance than the last checkpoint. The validation set helps tune hyperparameters like learning rate and weight decay.\n\n⦿ Evaluate on validation set every N steps\n\n⦿ Watch for diverging train/validation metrics\n\n⦿ Use for early stopping and checkpoint selection",
+              "title": "Validation Set Usage — Monitoring training progress",
+              "source_url": ""
+            }
+          }
+        ],
+        "description": "Splitting your data into training and validation sets enables monitoring for overfitting and evaluating model performance during training. The validation set should be representative of your target distribution but completely separate from training data. Typical splits are 90-10 or 95-5 for larger datasets, or 80-20 for smaller ones. Ensure the split is random but stratified if your data has distinct categories. The validation set serves as a proxy for real-world performance—significant divergence between training and validation metrics indicates overfitting. Some practitioners also hold out a separate test set for final evaluation."
+      },
+      {
+        "id": "8083787b-5054-48c0-926e-5e9b8f01400f",
+        "icon": "https://images.pexels.com/photos/4578660/pexels-photo-4578660.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "name": "Data Preprocessing",
+        "title": "Data Preprocessing",
+        "weight": 25,
+        "content": [
+          {
+            "id": "c0c43f58-d3b8-4824-9b8e-696b62bf5e6f",
+            "name": "Text Cleaning Steps",
+            "type": "",
+            "weight": 1,
+            "properties": {
+              "icon": "https://images.pexels.com/photos/6195900/pexels-photo-6195900.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+              "notes": "Text cleaning ensures consistent formatting and removes artifacts that might confuse training. Remove control characters and excessive whitespace. Normalize unicode to consistent forms (NFC normalization). For code snippets, preserve formatting while ensuring proper escaping. URLs can be kept if relevant or replaced with placeholders. Remove personally identifiable information if present. Handle markdown, HTML, or other markup consistently—either preserve it if your use case involves formatted text, or strip it for plain text applications. Test your cleaning pipeline on diverse examples to catch edge cases.\n\n⦿ Remove control characters and unwanted formatting\n\n⦿ Normalize whitespace and unicode\n\n⦿ Handle special content (code, math, tables)",
+              "title": "Text Cleaning Steps — Normalizing and sanitizing data",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "60b561f4-9618-43af-ac10-2113840ae880",
+            "name": "Deduplication and Filtering",
+            "type": "",
+            "weight": 1,
+            "properties": {
+              "icon": "https://images.pexels.com/photos/2644597/pexels-photo-2644597.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+              "notes": "Deduplication prevents the model from memorizing repeated examples. Implement exact deduplication by hashing examples and removing duplicates. Near-duplicate detection using MinHash or embedding similarity catches paraphrases. Filter examples by quality heuristics: remove very short or excessively long examples, filter by perplexity using a language model, check for completeness. Use content moderation APIs or libraries to filter toxic, hateful, or inappropriate content. Remove examples with excessive repetition, garbled text, or nonsensical content. Logging filtered examples helps refine your criteria and identify systematic issues in data collection.\n\n⦿ Exact and near-duplicate removal\n\n⦿ Filter by quality heuristics (length, perplexity)\n\n⦿ Remove toxic or inappropriate content",
+              "title": "Deduplication and Filtering — Removing redundancy and noise",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "596ee9b9-8af8-4efd-a278-e31179e8da2a",
+            "name": "Sequence Length Handling",
+            "type": "",
+            "weight": 1,
+            "properties": {
+              "icon": "https://images.pexels.com/photos/30901563/pexels-photo-30901563.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+              "notes": "While Llama 3.2 3B supports 128K token contexts, training typically uses shorter sequences for memory efficiency. Choose a max length based on your use case and hardware—2048 or 4096 tokens is common. Examples exceeding this length should be truncated or split. For conversations, truncate from the beginning to preserve recent context. For documents, split into chunks with overlap or use only relevant sections. Very short examples can be packed together in a single sequence with attention masking to separate them. Balance completeness with computational efficiency when setting sequence lengths.\n\n⦿ Llama 3.2 3B supports 128K context, but training uses less\n\n⦿ Typical training lengths: 512-4096 tokens\n\n⦿ Truncate or split long examples appropriately",
+              "title": "Sequence Length Handling — Managing context window constraints",
+              "source_url": ""
+            }
+          }
+        ],
+        "description": "Data preprocessing transforms raw data into the clean, consistent format required for training. This includes text cleaning (removing unwanted characters, normalizing whitespace), handling special cases (code blocks, URLs, formatting), deduplication to prevent overfitting, and filtering low-quality or inappropriate examples. For Llama 3.2 3B, you also need to consider sequence length limits—while the model supports 128K context, training on very long sequences increases memory requirements substantially. Most finetuning uses sequences of 512-4096 tokens. Proper preprocessing improves training stability and final model quality."
+      },
+      {
+        "id": "a5086f8a-7334-4b07-b2f8-a52547374c3b",
+        "icon": "https://images.pexels.com/photos/25626434/pexels-photo-25626434.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+        "name": "Data Formatting and Tokenization",
+        "title": "Data Formatting and Tokenization",
+        "weight": 25,
+        "content": [
+          {
+            "id": "62f5d105-c79f-452c-be61-daad9e6eb1f3",
+            "name": "Applying Chat Templates",
+            "type": "",
+            "weight": 1,
+            "properties": {
+              "icon": "https://images.pexels.com/photos/1111368/pexels-photo-1111368.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+              "notes": "Chat templates structure conversations with proper special tokens. For Llama 3.2 instruct models, provide conversations as lists of dictionaries with 'role' and 'content' keys. The tokenizer.apply_chat_template() method formats this automatically, adding tokens like <|start_header_id|>user<|end_header_id|> and <|eot_id|>. Set tokenize=False to get the formatted string or tokenize=True to get token IDs directly. For training, set add_generation_prompt=False to include the assistant response in training. Review the formatted output initially to verify correct structure. This ensures consistency with the model's instruction tuning format.\n\n⦿ Use tokenizer.apply_chat_template() method\n\n⦿ Handles special tokens (<|begin_of_text|>, <|end_of_text|>)\n\n⦿ Maintains role structure (system, user, assistant)",
+              "title": "Applying Chat Templates — Formatting conversations correctly",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "f9973fbb-7d7d-4f14-8b40-879d36820c48",
+            "name": "Tokenization Details",
+            "type": "",
+            "weight": 1,
+            "properties": {
+              "icon": "https://images.pexels.com/photos/30901563/pexels-photo-30901563.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+              "notes": "The Llama 3.2 tokenizer uses a tiktoken-based approach with approximately 128,000 vocabulary tokens, enabling efficient encoding across languages and technical content. Tokenize using tokenizer(text, truncation=True, max_length=2048) with appropriate max_length. For batch processing, use padding='max_length' or 'longest' and return_tensors='pt'. The tokenizer returns input_ids (token indices) and attention_mask (indicating real vs. padding tokens). For causal language modeling, create labels by copying input_ids and masking positions you don't want to compute loss on (like user prompts). Most training scripts handle this automatically.\n\n⦿ Llama 3.2 uses tiktoken-based tokenizer (~128K vocabulary)\n\n⦿ Subword tokenization handles rare words\n\n⦿ Pay attention to padding and truncation strategies",
+              "title": "Tokenization Details — Converting text to token IDs",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "bcaca08e-5feb-44fa-a338-e15247df4d12",
+            "name": "Data Collation and Batching",
+            "type": "",
+            "weight": 1,
+            "properties": {
+              "icon": "https://images.pexels.com/photos/8297126/pexels-photo-8297126.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+              "notes": "Data collation combines individual examples into batches. The DataCollatorForLanguageModeling handles padding and label creation for causal language modeling. Set mlm=False for autoregressive training. For efficiency, group examples of similar length together to minimize padding overhead. Dynamic padding (padding to the longest sequence in each batch rather than global max) reduces computation. The collator automatically creates labels by shifting input_ids one position. Some training libraries offer DataCollatorForCompletionOnly which only computes loss on completion tokens, not prompts—useful for instruction tuning where you only want to train on assistant responses.\n\n⦿ Use DataCollatorForLanguageModeling for causal LM\n\n⦿ Batch examples of similar length for efficiency\n\n⦿ Dynamic padding reduces wasted computation",
+              "title": "Data Collation and Batching — Preparing batches for training",
+              "source_url": ""
+            }
+          }
+        ],
+        "description": "Converting preprocessed data into the exact format expected by Llama 3.2 3B involves applying chat templates, tokenizing text into token IDs, creating attention masks, and organizing data into batches. The HuggingFace tokenizer handles most of this automatically if you provide properly structured conversations. Understanding the formatting process helps debug issues and optimize for your use case. Proper formatting ensures the model learns from the data effectively and maintains compatibility with the pre-trained model's expectations around special tokens and conversation structure."
+      }
+    ],
+    "rootNodeId": "9c4a5b76-46ab-41d1-bfff-7a07c3384ad0"
+  },
+  "extensions": {
+    "rendererSpecificProperties": {
+      "space": "Default"
+    }
+  }
+}
