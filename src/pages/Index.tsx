@@ -70,6 +70,9 @@ function IndexContent() {
   const [anthropicKey, setAnthropicKey] = useState(() => {
     try { return localStorage.getItem('anthropic-api-key') || ""; } catch { return ""; }
   });
+  const [pexelsKey, setPexelsKey] = useState(() => {
+    try { return localStorage.getItem('pexels-api-key') || ""; } catch { return ""; }
+  });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [generateProgress, setGenerateProgress] = useState(0);
   // The generation log survives page reloads so a failed or interrupted run always leaves a record.
@@ -1172,6 +1175,7 @@ function IndexContent() {
           maxNodes,
           contextNodes: contextNodes.length > 0 ? contextNodes : undefined,
           anthropicKey: anthropicKey.trim() || undefined,
+          pexelsKey: pexelsKey.trim() || undefined,
         }),
       });
 
@@ -1489,6 +1493,17 @@ function IndexContent() {
                   <p className="text-xs text-muted-foreground">Saved only in this browser. Used for topic generation.</p>
                 </div>
                 <div className="space-y-2">
+                  <Label htmlFor="pexelsKey1">Pexels API Key</Label>
+                  <Input
+                    id="pexelsKey1"
+                    type="password"
+                    placeholder="Pexels API key"
+                    value={pexelsKey}
+                    onChange={(e) => { setPexelsKey(e.target.value); try { localStorage.setItem('pexels-api-key', e.target.value); } catch {} }}
+                    autoComplete="off"
+                  />
+                </div>
+                <div className="space-y-2">
                     <Label htmlFor="dataFolder">Data Folder Location</Label>
                     <div className="flex gap-2">
                       <Input
@@ -1724,6 +1739,17 @@ function IndexContent() {
                     autoComplete="off"
                   />
                   <p className="text-xs text-muted-foreground">Saved only in this browser. Used for topic generation.</p>
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="pexelsKey2">Pexels API Key</Label>
+                  <Input
+                    id="pexelsKey2"
+                    type="password"
+                    placeholder="Pexels API key"
+                    value={pexelsKey}
+                    onChange={(e) => { setPexelsKey(e.target.value); try { localStorage.setItem('pexels-api-key', e.target.value); } catch {} }}
+                    autoComplete="off"
+                  />
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="dataFolder2">Data Folder Location</Label>
