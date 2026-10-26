@@ -2,6 +2,7 @@ import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 import { toSchemaDocument } from "../_shared/knowledge-schema.ts";
 import { readClaudeStream } from "./claude-stream.ts";
+import { resolveGenerationKeys } from "../_shared/generation-keys.ts";
 
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
@@ -524,13 +525,15 @@ function repairTruncatedJSON(input: string): string {
 }
 
 // Background task that runs the actual generation
-async function runGenerationJob(jobId: string, userKey?: string) {
+async function runGenerationJob(jobId: string, userKey?: string, userPexelsKey?: string) {
   const supabaseUrl = Deno.env.get('SUPABASE_URL')!;
   const supabaseServiceKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!;
   const supabase = createClient(supabaseUrl, supabaseServiceKey);
   
-  const anthropicKey = userKey || Deno.env.get('ANTHROPIC_API_KEY');
-  const pexelsKey = Deno.env.get('PEXELS_API_KEY');
+  const { anthropicKey, pexelsKey } = resolveGenerationKeys(
+    { anthropicKey: userKey, pexelsKey: userPexelsKey },
+    { anthropicKey: Deno.env.get('ANTHROPIC_API_KEY'), pexelsKey: Deno.env.get('PEXELS_API_KEY') },
+  );
   
   if (!anthropicKey) {
     await supabase.from('knowledge_generation_jobs').update({
@@ -601,7 +604,7 @@ async function runGenerationJob(jobId: string, userKey?: string) {
       const continuation = await fetch(`${supabaseUrl}/functions/v1/generate-knowledge`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${Deno.env.get('SUPABASE_ANON_KEY')}` },
-        body: JSON.stringify({ continueJobId: jobId, resumeToken, anthropicKey: userKey }),
+        body: JSON.stringify({ continueJobId: jobId, resumeToken, ...resolveGenerationKeys({ anthropicKey: userKey, pexelsKey: userPexelsKey }) }),
       });
       if (!continuation.ok) throw new Error(`Generation continuation failed: HTTP ${continuation.status}`);
       return;
@@ -726,7 +729,8 @@ serve(async (req) => {
         .eq('id', cj.id).eq('status', 'processing').contains('result', { resumeToken: body.resumeToken })
         .select('id').maybeSingle();
       if (claimError || !claimed) return new Response(JSON.stringify({ error: 'Continuation already claimed' }), { status: 409, headers: { ...corsHeaders, 'Content-Type': 'application/json' } });
-      (globalThis as any).EdgeRuntime?.waitUntil?.(runGenerationJob(cj.id, typeof body.anthropicKey === 'string' ? body.anthropicKey : undefined));
+      const keys = resolveGenerationKeys(body);
+      (globalThis as any).EdgeRuntime?.waitUntil?.(runGenerationJob(cj.id, keys.anthropicKey, keys.pexelsKey));
       return new Response(JSON.stringify({ ok: true }), { status: 202, headers: { ...corsHeaders, 'Content-Type': 'application/json' } });
     }
     
@@ -889,7 +893,8 @@ serve(async (req) => {
     
     // Use EdgeRuntime.waitUntil to run generation in background
     // This allows us to return immediately while processing continues
-    (globalThis as any).EdgeRuntime?.waitUntil?.(runGenerationJob(newJob.id, typeof body.anthropicKey === 'string' && body.anthropicKey.trim() ? body.anthropicKey.trim() : undefined));
+    const keys = resolveGenerationKeys(body);
+    (globalThis as any).EdgeRuntime?.waitUntil?.(runGenerationJob(newJob.id, keys.anthropicKey, keys.pexelsKey));
     
     // Return job ID immediately - client will poll for results
     return new Response(
