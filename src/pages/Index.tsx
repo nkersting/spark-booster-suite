@@ -70,6 +70,9 @@ function IndexContent() {
   const [anthropicKey, setAnthropicKey] = useState(() => {
     try { return localStorage.getItem('anthropic-api-key') || ""; } catch { return ""; }
   });
+  const [pexelsKey, setPexelsKey] = useState(() => {
+    try { return localStorage.getItem('pexels-api-key') || ""; } catch { return ""; }
+  });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [generateProgress, setGenerateProgress] = useState(0);
   // The generation log survives page reloads so a failed or interrupted run always leaves a record.
@@ -1172,6 +1175,7 @@ function IndexContent() {
           maxNodes,
           contextNodes: contextNodes.length > 0 ? contextNodes : undefined,
           anthropicKey: anthropicKey.trim() || undefined,
+          pexelsKey: pexelsKey.trim() || undefined,
         }),
       });
 
