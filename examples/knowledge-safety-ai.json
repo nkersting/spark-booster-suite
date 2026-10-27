@@ -1,0 +1,3308 @@
+{
+  "schemaVersion": "1.0",
+  "document": {
+    "id": "1e8089a8-c6a2-5e24-aa3c-f9af28dc9311",
+    "title": "Safety and Humanity in the Age of AI",
+    "description": "Nick Kersting",
+    "language": "en-us",
+    "meta": {
+      "pagetitle": "Safety and Humanity in the Age of AI",
+      "seoProse": "Today I'm going to be talking about a topic that I think everyone can appreciate: namely how can we most palatably deal with the rise of AI that seems and is everywhere. Well, first of all the hard pill we have to swallow is that AI is inevitable --- it's not quite a bubble, but is over-hyped at times --- and it will infiltrate every aspect of our life within years (probably less than 15 to be conservative). Once we accept that, we naturally wonder how we should deal with that. My thesis is we need Safety and we need Humanity, realized in certain ways, to make this a future worth having.",
+      "pageDescription": "A Dynamic Tree representation",
+      "migratedFrom": "knowledge.json"
+    }
+  },
+  "graph": {
+    "rootNodeId": "d4f03c26-4dce-547c-8ba1-8ed9dcef24f8",
+    "nodes": [
+      {
+        "id": "d4f03c26-4dce-547c-8ba1-8ed9dcef24f8",
+        "name": "Safety First",
+        "title": "Safety First",
+        "weight": 100,
+        "description": "So I'd like to start with Safety, as we've all heard this a countless number of times, Safety First, though I think you'll agree that we've also ignored that same another countless number of times.  But probably my favorite example of Safety in practice because it is so singularly exciting, fascinating, and terrifying at the same time is the Apollo 11 Moon Landing in 1969. This was really the epitome of a 0-1 situation: either boots touch the lunar surface or they don't. And there were a million very plausible ways you could fail. Add to that the national and scientific pressure and prestige, the fact that 3 highly valuable and respected human lives were at stake, and oh yes the whole world is watching on live TV. But the people at NASA really thought hard about this and prepared incredibly well for a huge number of failure scenarios, the vast majority of which thankfully never showed a hint of occuring. And you know they have their list of safety and engineering guidelines, of course, but I think of it from my perspective and it seems to me you can collect all that safety preparation in 3 principles which probably applies to any large, fault-tolerant system or mission, in particular our own mission to come to grips with AI. But I call these out as Frequent Recalibration, Loose Coupling, and a Backup Plan for Everything. ",
+        "content": [
+          {
+            "id": "4d1ed0b7-6619-5bb9-837a-22d5611e0074",
+            "name": "Frequent Recalibration",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/agc.jpg",
+              "title": "Frequent Recalibration — (no system is perfectly calibrated)",
+              "notes": "So first, Frequent Recalibration. No system, no matter how well-designed, stays true to its purpose forever. It needs to be tuned and readjusted. And in the Apollo Mission nothing exhibited this more poignantly than the AGC, the Apollo Guidance Computer. It's a really beautiful 32kg chunk of copper and electronics, with this little interactive panel called the DSKY. There's a link here to a great lecture on this computer and a lot of what it did during the mission --- and believe me it got out of whack in numerous ways. In particular its  IMU (Inertial Measurement Unit) reported the spacecraft's orientation, which is crucial to anything you're doing out there, and it had to be continually aligned via astronauts looking out the window and reading star positions with a sextant -- yes just like ancient mariners. Another great example of this was during the so-called P63 landing phase when the spacecraft was in position to lower to the surface at a controlled speed via its thrusters. Now remember you're falling rapidly towards the lunar surface at 5000ft altitude and you really do need to slow down, but you just don't fire the thrusters and hope for the best --- you measure and calibrate first, by firing at 10% thrust and observing whether the spacecraft rotates. If there is any rotation, you then adjust the position before retrying this exercise, and then eventually going to maximum thrust (actually 94%, but there's another safety reason for that). So recalibration --- obviously incredibly important for safety. Likewise with AI in our lives, we need to constantly recalibrate where we're going and how fast.\n\n⦿  Even the best-designed systems can drift/go-out-of-whack \n\n ⦿  e.g. continual recalibration of Apollo Guidance Computer (AGC) \n without updating Inertial Measurement Unit (IMU), errors accumulate unacceptably \n https://space.stackexchange.com/questions/31279/how-was-the-apollo-imu-calibrated \n\n ⦿  e.g., 10% thrust for 30s to measure spaceship stability (P63 landing phase, 50k ft alt.)  \n\n ⦿  e.g. with AI, constantly re-evaluate our alignment",
+              "source_url": "https://www.youtube.com/watch?v=B1J2RMorJXM&t=1410s",
+              "extra": {
+                "image_only": true
+              }
+            }
+          },
+          {
+            "id": "914f263a-1ea7-51e3-a421-a40b136ca7f2",
+            "name": "Loose Coupling",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/gemini.jpeg",
+              "title": "Loose Coupling — (learn to accommodate imperfection)",
+              "notes": "The next principle I call Loose Coupling, or try to accommodate imperfection everywhere. And again I think a great example from the Apollo mission was the way the Gemini spacecraft would dock with a Target Vehicle -- I mean you have these two massive hunks of metal floating in space, how do you get them to couple together with sub-millimeter precision? And there's even a game here you can play to try this yourself in a simulation, it's quite challenging (I've done it at Kennedy Space Center I think) as you need to get the two ends very close without crashing into eachother, but the key is that they don't need to be perfectly aligned because you have magnets here that pull them to perfect alignment within a certain distance. You accommodate the imperfect way the human is inevitably going to steer these things. So what you've done here with this arrangement is you've smoothed out a possible single point of failure, i.e. the spacecraft misaligning with and damaging its docking station, which would you know scrap the whole mission. So when components need to come together, you make it soft. Likewise in our relationship with AI, we need to emphasize soft interfaces. Human-in-the-loop, which I talked about in my last INFORMS talk 10 years ago, you've all heard of by now, and is a great example of that.\n\n⦿  dilute single points of failure \n\n ⦿  interrupt domino effects \n\n ⦿  e.g. Gemini spacecraft magnetic docking \n\n ⦿  e.g. with AI, Human-in-the-Loop",
+              "source_url": "https://space1.com/pdf/gemini_docking_simV2_1.pdf",
+              "extra": {
+                "image_only": true
+              }
+            }
+          },
+          {
+            "id": "202825d4-c921-5b3a-bb90-8fa302303c15",
+            "name": "A Backup Plan for Everything",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/Apollo_Pad_Abort_Test_-2.jpg",
+              "title": "A Backup Plan for Everything — don't be caught without a parachute (or two)",
+              "notes": "My final principle, I call have a Backup Plan for Everything. And that should be familiar to everyone in some way or another. Again in the Apollo mission, countless backup plans. My favorite here is called the Apollo Launch Escape System, which is a little side thruster that fires in case something were to go wrong with the enormous Saturn rocket: you want to decouple the lunar module and get the astronauts as quickly away as possible from the possibly-going-to-explode Saturn rocket, and sideways is your best bet. In AI, an example of a Plan B would be to have low or no-tech backup solutions, because if the AI has failed, then you can't trust any of the technology behind it which is probably controlling everything else hi-tech. And we'll get back to discuss this point later.\n\n⦿  e.g. Apollo Launch Escape System \n\n ⦿  e.g. in AI, have low/no-tech backups",
+              "source_url": "https://spaceflighthistory.blogspot.com/2015/08/failure-was-option-what-if-apollo.html"
+            }
+          }
+        ]
+      },
+      {
+        "id": "8c791489-2b81-529c-b47d-735f13dcee76",
+        "name": "Back-reaction to Safety",
+        "title": "Back-reaction to Safety",
+        "weight": 50,
+        "description": "Now, despite all our great safety principles and enjoyment of an increasingly long and healthy lifespan in step, there's an awful amount of backlash against Safety. Whether it's mockery for being overly cautious, or pride in shirking safety, or indignance against protocol, Safety doesn't have the perfect reputation it deserves.",
+        "content": [
+          {
+            "id": "67ea00ba-2c93-5092-a70a-509d98f6c60d",
+            "name": "Satire",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/safety_satire.png",
+              "title": "Satire — (all over the mainstream culture)",
+              "notes": "seen as overly cautious",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "21198a14-15bd-5aec-ac85-6f38cca2b842",
+            "name": "Just Say No",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/sayno.png",
+              "title": "Just Say No — (this kind of backfired)",
+              "notes": "intent was good, but delivery too weak \n\n drug overdoses increasing exponentially since 1980s \n\n 'drug' = 'anything that chemically changes your body'",
+              "source_url": "https://nationalaffairs.com/publications/detail/how-to-think-about-the-drug-crisis",
+              "extra": {
+                "image_only": true
+              }
+            }
+          },
+          {
+            "id": "9dc669f7-f9f4-5496-b5ae-6f1d1aa5706e",
+            "name": "Look Ma, No Hands!",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/lookma.png",
+              "title": "Look Ma, No Hands! — (pride in the unsafe)",
+              "notes": "",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "d0d4b0c1-dbd0-5920-8019-ded27feda506",
+            "name": "Glorification of Risk",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/top_gun.png",
+              "title": "Glorification of Risk — (Top Gun and MI, etc.)",
+              "notes": "bravado and machismo, disregard all protocol! \n Deepwater Horizon oil rig disaster",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "0ef1f808-6e39-52e4-a977-31034126bf7c",
+            "name": "Let's Safety Dance",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/safety_dance.png",
+              "title": "Let's Safety Dance — (some satire here)",
+              "notes": "safety as a euphemism for xenophobia, protectionism, isolationism",
+              "source_url": ""
+            }
+          }
+        ]
+      },
+      {
+        "id": "0ee5096d-fca5-5db4-9d65-87bf1113189e",
+        "name": "Safety => Progress",
+        "title": "Safety => Progress",
+        "weight": 50,
+        "description": "Yet I would argue that Safety is Integral to Progress",
+        "content": [
+          {
+            "id": "231ab92e-2276-5a1b-a277-61778a29fd27",
+            "name": "Sword Hilts",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/sword.jpg",
+              "title": "Sword Hilts",
+              "notes": "I'm sure once the sword guard was invented the earlier versions without that quickly disappeared.\n\nwithout a hand, you can't use a sword",
+              "source_url": "https://www.metmuseum.org/art/collection/search/35367",
+              "extra": {
+                "image_only": true
+              }
+            }
+          },
+          {
+            "id": "32269e50-1b3f-577c-9a72-fa559c97bbac",
+            "name": "Gun Safeties",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/gun_safety.jpg",
+              "title": "Gun Safeties",
+              "notes": "Likewise with guns and other triggered devices like table saws, the safety versions quickly took over.\n\naccidental discharge = bad \n accidental gun deaths down 4x since 1980s \n applies to other triggered devices (table saws, gas stoves, etc.)",
+              "source_url": "https://www.gunfacts.info/wp-content/uploads/2025/02/ACCIDENTAL-GUN-DEATHS-U.S.-Accidental-Firearm-Death-Count-and-Rate-1981-through-2016-b.png",
+              "extra": {
+                "image_only": true
+              }
+            }
+          },
+          {
+            "id": "5b2520f4-a98a-5ef2-b4ba-b141ea409364",
+            "name": "Seat Belts",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/seatbelt.jpg",
+              "title": "Seat Belts",
+              "notes": "And seatbelts of course, who would dream of not using one today?\n\nseatbelts reduce the risk of fatal injury to front-seat occupants by 45%",
+              "source_url": "https://www.nhtsa.gov/book/countermeasures-that-work/seat-belts-and-child-restraints",
+              "extra": {
+                "image_only": true
+              }
+            }
+          },
+          {
+            "id": "fee0edb4-c98b-5f93-855c-a400f8b390fa",
+            "name": "Web Security",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/internet.jpg",
+              "title": "Web Security",
+              "notes": "But even less obvious things like the Internet -- without secure protocols that safeguard your private information, I mean the .com revolution would have never happened, and how many of us could live without Amazon and Online Banking, right?\n\n0-1 type enabler \n SSL/TLS \n SHA \n RSA \n e-commerce depends on this",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "ffd89610-fdb7-5ec8-9d7a-d5d1ad42082d",
+            "name": "Quit and Save",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/ultima.png",
+              "title": "Quit and Save — (in gaming)",
+              "notes": "Um, Quit and Save ... this was done as a safe courtesy but look what it enabled in video game progress\n\nZork (1980) \n Ultima \n Civilization ...",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "c57cf7fb-50f7-5532-91ff-4b0ad9522f08",
+            "name": "The Tautology",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/note7.jpg",
+              "title": "The Tautology — unsafe tech is naturally selected away",
+              "notes": "So I think it really may be a Tautology -- that progress in tech needs to be Safe. And that applies to AI as well of course.\n\n⦿  No one will use it if they have a choice \n e.g., Samsung Galaxy Note 7 \n Do not use the phone while charging (!) \n\n  ⦿  Would you use ChatGPT if it turned on you?",
+              "source_url": "https://blog.easyacc.com/2016/10/14/how-to-avoid-samsung-note-7-from-explosio/",
+              "extra": {
+                "image_only": true
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "76c09942-48e0-5e30-8204-2b8878f242ea",
+        "name": "Safety ~ Classical Physics",
+        "title": "Safety ~ Classical Physics",
+        "weight": 30,
+        "description": "Now I want to say one more thing about Safety from the perspective of a Physicist. And that is that many of the things we associate with Safety, like determinism, reproducibility, stability, are central tenets of Classical Physics.",
+        "content": [
+          {
+            "id": "fb92b6c5-7b5e-5045-b81a-d37bfe93e4e9",
+            "name": "Classical Physics = Minimal Action",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/action.png",
+              "title": "Classical Physics = Minimal Action",
+              "notes": "You see, there is this principle in classical mechanics of Minimal Action. This basically says that in any process the average difference between kinetic and potential energy, the action, is the smallest it could ever be. When you throw a ball up in the air, it takes the path it does precisely because it minimizes this action. Now it also takes that path, which many of you remember can be a parabola, due to Newton's Laws of Motion, and it turns out that is equivalent. But the Minimal Action Principle is a much mor elegant way of saying it, and it is useful in understanding something beyond Classical Physics, namely Quantum Physics.\n\n• S = <KE> – <PE> is minimal \n\n • Energy is Conserved at All Times \n\n • Deterministic Motion \n\n • Only One Path between A and B \n\n • e.g., ballistics, orbital motion, electricity, fluids, etc.",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "3a97cec6-086d-574a-b6f5-22dd14160725",
+            "name": "Quantum Physics = Measured Deviations from Classical",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/quantum.png",
+              "title": "Quantum Physics = Measured Deviations from Classical — (measured by Planck's Constant, h)",
+              "notes": "In Quantum Physics, Action is no longer always minimal. In fact it is almost never minimal, but strays from the minimum with a certain probability that depends on how far it strays. So the Polonium nucleus here has an alpha particle wandering about inside that has a probability of leaking outside of the nucleus causing the whole thing to fall apart, even though that would require briefly breaking energy conservation. Yes, shocking things happen when you violate the Minimal Action Principle. Or two metal plates in space start attracting each other due to virtual photons, which spontaneously arise from the vacuum for a brief interval of time, violating energy conservation, before disappearing again. But during their brief lifetime they cause the plates to attract. And other things you may have heard of like Hawking Radiation, there is a huge list of weird Quantum Physics phenomena. The thing is, no one is really comfortable with Quantum Physics. Even Nature is uncomfortable with it which is why the departures from the Minimal Action are so small (controlled by something called Planck's Constant, which in standard units is on the order of 10^-34 Joule-seconds.\n\n• S = <KE> – <PE> swings around minimum \n\n • Energy Can Be Violated (for short times) \n\n • Non-Deterministic Motion \n\n • Many Paths between A and B (all coexist) \n\n • e.g., decay of a Uranium atom, Casimir Effect, Hawking Radiation, etc.",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "0dac6a6e-bbcf-5f27-88b3-58b572ef5869",
+            "name": "This is Why Safety First",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/pipe.png",
+              "title": "This is Why Safety First",
+              "notes": "So Nature is usually classical, that is what we see, but with a little quantum wiggling around. Like when you walk down a pipe, you stay at the bottom right? You don't go up and down the sides too much unless you're a sk8er or a rebel. But that's alright in moderation, in units of Planck's constant. The point is that Safety is like Classical Physics: it's what you want most of the time, otherwise the world would be too crazy.\n\nThe lowest order (classical) solution should be paramount \n Then add perturbations (quantum) as needed",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "eeecb403-b11d-580a-996b-7ea29574af73",
+            "name": "A Banking Analogy",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/banking.png",
+              "title": "A Banking Analogy — (don't spend what you don't have)",
+              "notes": "In fact, there's a nice banking analogy I often used in my classes to explain the difference between Classical and Quantum Physics. Classical Physics is like only taking money out of the bank that you have. Quantum Physics is like taking a loan. Most of the time we do the former, but Nature, like a good financier, is an inventive opportunist and sees the use cases for wanting to borrow money sometimes, as long as it's paid back. And I think with any new technology like AI we need to be like prudent consumers.\n\nClassical: buy only what you can afford \n Quantum: use credit (in moderation ... that's why Planck's Constant is small!)",
+              "source_url": ""
+            }
+          }
+        ]
+      },
+      {
+        "id": "04edcbf2-4965-5ae6-b341-e8c0c0de4995",
+        "name": "Motivation/Urgency",
+        "title": "Motivation/Urgency",
+        "weight": 90,
+        "description": "So anyways what's the Urgency here? Why should we be very, very motivated to discuss this?",
+        "content": []
+      },
+      {
+        "id": "e0d399fb-122f-5e83-9c90-cb940530d251",
+        "name": "The next ChatGPT Moment",
+        "title": "The next ChatGPT Moment",
+        "weight": 70,
+        "description": "Well I ask you, how many of you were taken surprise by ChatGPT? Just by show of hands or comments. And how many of you are still struggling to keep up with it? Well what if this talk was being given 5 years ago and I told you the ChatGPT moment was coming? Wouldn't you have liked to know that? ",
+        "content": [
+          {
+            "id": "979d52b4-9348-5bd3-ab2e-fdd38cebed02",
+            "name": "A failed revolution?",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/failed.png",
+              "title": "A failed revolution? — (not)",
+              "notes": "I mean it wasn't too long ago, and people were very down on chatbots, calling it a failed revolution and so on.\n\ncopious media attention to this, e.g., https://www.wired.com/story/facebooks-virtual-assistant-m-is-dead-so-are-chatbots/",
+              "source_url": "https://www.cbinsights.com/research/report/most-successful-chatbots/",
+              "extra": {
+                "image_only": true
+              }
+            }
+          },
+          {
+            "id": "62beecd0-b591-5593-acea-40442d5d40fa",
+            "name": "The next ChatGPT Moment",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/chatgpt.png",
+              "title": "The next ChatGPT Moment",
+              "notes": "But then look at the technological adoption just a year later, the fastest in recorded history of any technology including the telephone, the internet, smartphones, you name it.",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "359a73b5-7220-5306-b259-dc4e845e8578",
+            "name": "Warnings and Precursors to the ChatGPT Moment",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/chatgpt-warnings.png",
+              "title": "Warnings and Precursors to the ChatGPT Moment",
+              "notes": "And to be sure there were precursors, warning signs if you will. We had transformer technology, afterall, and I was even working on a financial chatbot using BERT in a very limited domain with some success. We had GAN models that could generate human faces (remember thispersondoesnotexist.com ?) which definitely raised eyebrows and probably led to more than a few fake IDs.\n\nBERT \n GAN",
+              "source_url": ""
+            }
+          }
+        ]
+      },
+      {
+        "id": "3969fd3c-2b5f-5755-b59c-9cf95e8c11ed",
+        "name": "Robo Moment",
+        "title": "Robo Moment",
+        "weight": 60,
+        "description": "Well with that in mind get ready for the next big revolution, what I call the Robo Moment --- this is going to rock the very foundations of society 100x or more than chatGPT did. We're going to suddenly have robots in the home, robots at work, robots on the street. Everywhere. ",
+        "content": [
+          {
+            "id": "9dd27a13-9d42-5140-9206-169d3b49757a",
+            "name": "Robots at Work",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/robots_at_work.png",
+              "title": "Robots at Work",
+              "notes": "",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "35121ad6-1ae5-52d9-a0eb-7ce94cae49bf",
+            "name": "Robots in the Home",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/robots_at_home.png",
+              "title": "Robots in the Home",
+              "notes": "",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "981f5c44-1224-5de3-9e50-3380dd272ec8",
+            "name": "Robots in the Street",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/robots_street.png",
+              "title": "Robots in the Street",
+              "notes": "",
+              "source_url": ""
+            }
+          }
+        ]
+      },
+      {
+        "id": "691eb1a7-39e6-5461-bfac-1dd53698ef1b",
+        "name": "AI-Robo Precursors",
+        "title": "AI-Robo Precursors",
+        "weight": 50,
+        "description": "And like with ChatGPT there are warning signs and precursors right now if you look. I mean it's really hard to imagine things progressing more efficiently than they are now. ",
+        "content": [
+          {
+            "id": "ced55bb8-a15f-54b6-a1f2-4d4554716c07",
+            "name": "Agentic AI",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/agentic.png",
+              "title": "Agentic AI",
+              "notes": "First, you've had self-driving vehicles and drones in civilian and military uses for quite a few years now -- because let's face it, hardware is hard to get right and disastrous if you get wrong because the effects are physical. In the meantime we've quietly been devising ways for AI systems to talk to each other, and that's what this rise of Agentic AI in the last year or so has been about.\n\n• Agentic AI is about organizing AI \n\n • Similar to industrial organization early 1900s \n\n • Like the app store revolution for iPhones",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "20c66696-c646-5004-b9d6-cf39bb6bde88",
+            "name": "Autonomous Vehicles",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/autonomous_vehicles.png",
+              "title": "Autonomous Vehicles",
+              "notes": "",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "a22f17e1-eef3-565e-87ba-4e57ac7a388a",
+            "name": "Autonomous Vehicles",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/autonomous_vehicles2.png",
+              "title": "Autonomous Vehicles",
+              "notes": "",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "1a012d4a-0d82-5d0e-bf56-dc9c1f0ef2ce",
+            "name": "Drones",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/drones.png",
+              "title": "Drones",
+              "notes": "",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "5b61877b-6baa-5615-a62c-49d9482ce523",
+            "name": "Drones",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/drones2.png",
+              "title": "Drones",
+              "notes": "",
+              "source_url": ""
+            }
+          }
+        ]
+      },
+      {
+        "id": "7f834a3c-40ed-5350-8968-3ecace770491",
+        "name": "Humanoid Robots",
+        "title": "Humanoid Robots",
+        "weight": 70,
+        "description": "And humanoid robots have been developing very noticeably, maybe because we're more attuned or perhaps threatened by it.",
+        "content": [
+          {
+            "id": "a4b695c4-ecbe-5621-9308-9ce21a1aa43d",
+            "name": "Tesla Optimus",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "https://www.youtube.com/watch?v=eCNVet_wXGA",
+              "title": "Tesla Optimus — ... a bit more than a sideshow now",
+              "notes": "I mean here you see Tesla's Optimus doing a whole load of chores\n\n0:56 for overview",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "998c17fa-07d2-5b20-a6fc-f0e62bb640e3",
+            "name": "NVIDIA NEO",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "https://www.youtube.com/shorts/EdIAA1zROiA",
+              "title": "NVIDIA NEO",
+              "notes": "",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "f0325f1f-2ed3-5654-bb95-b7343a880aaa",
+            "name": "Boston Dynamics Atlas",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "https://www.youtube.com/watch?v=-e1_QhJ1EhQ",
+              "title": "Boston Dynamics Atlas",
+              "notes": "Impressive acrobatics from Boston Dynamics\n\n0:52 for stunt",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "025fe92e-4018-597a-a855-6d231736cc58",
+            "name": "Unitree",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "https://www.youtube.com/watch?v=mSPxRVTJW1I",
+              "title": "Unitree",
+              "notes": "Very realistic looking kungfu from Unitree. I mean you're either impressed or terrified by this, maybe both.",
+              "source_url": ""
+            }
+          }
+        ]
+      },
+      {
+        "id": "d6010587-84f6-5d13-82eb-e7cd1b4201d5",
+        "name": "Why Humanoid?",
+        "title": "Why Humanoid?",
+        "weight": 30,
+        "description": "But why the focus on humanoid robots anyways? Well humans have been debating this for as long as we've had the word robotics, which Isaac Asimov invented by the way early last century, and in one of his books he even spells out the logic in favor of humanoid vs. specialized robots.",
+        "content": [
+          {
+            "id": "872d078d-aed4-51f7-90bb-88a3841f1ea2",
+            "name": "Asimov's Argument",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/asimov-humanoid.png",
+              "title": "Asimov's Argument",
+              "notes": "What it comes down to, speaking through the characters in his books, is that humans have already devised a massive infrastructure that is made for humans -- so having a robot that is humanoid means you don't have to change any infrastructure, and moreover the robots can help us optimize that infrastructure for both humans and robots at the same time. Contrast to the need to develop a specialized robot for every domain, which itself may be shifting, and that's not scalable.\n\n⦿  Infrastructure can help them \n\n ⦿  They can help the Infrastructure \n\n ⦿  Social Acceptance",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "9594be5b-652a-5986-95fc-29e98d894416",
+            "name": "We like it? (see integration below)",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/life-humanoid.png",
+              "title": "We like it? (see integration below)",
+              "notes": "Also, there is the somewhat slippery reason of social acceptance, which is our desire yet our fear at the same time. We want robots to fit in to the society we've already built, but at the same time it is disturbing to have to share it with them, as we have to worry about the dividing lines between human and robot. Asimov again dealt with many situations like this in his books, with Robotic Politicans, Spouses, and so on, all with their certain advantages.",
+              "source_url": ""
+            }
+          }
+        ]
+      },
+      {
+        "id": "53626116-39de-563c-8bba-eb72519cb064",
+        "name": "Robotic Rights",
+        "title": "Robotic Rights",
+        "weight": 20,
+        "description": "Now that being said about the inevitability of humanoid robots, we will have a pandoras box to deal with in terms of robotic rights and priveleges. I recently chatted with a fellow at the UN who told me they are indeed working on a Universal Declaration of Robotic Rights. I mean look at how we treat robots today: ",
+        "content": [
+          {
+            "id": "2754af65-ec95-54f9-b7c8-e75b85fa735c",
+            "name": "Universal Declation of Robotic Rights",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/robotic-udrr.png",
+              "title": "Universal Declation of Robotic Rights",
+              "notes": "",
+              "source_url": "https://lawandthesenses.org/robot-rights-sentience-as-a-basis-for-moral-rights/",
+              "extra": {
+                "image_only": true
+              }
+            }
+          },
+          {
+            "id": "41a587ee-c57c-510e-99a0-34253b54b10c",
+            "name": "Asimov anticipated this",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/foundation.png",
+              "title": "Asimov anticipated this — (70 years ago)",
+              "notes": "Robotic servants/slaves \n Robotic spouses",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "a5b553da-28cf-5062-b292-788c392b5379",
+            "name": "Abuse is Happening",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "https://www.youtube.com/watch?v=mSPxRVTJW1I",
+              "title": "Abuse is Happening — Would you stand for this?",
+              "notes": "• If this doesn't scare the hell out of you ... \n\n • Abuse at 1:33 \n\n • What if this weren't a robot, but a newly integrated human, or even (sub)human ?",
+              "source_url": ""
+            }
+          }
+        ]
+      },
+      {
+        "id": "a3e3c838-5873-5855-8b74-1b855a809189",
+        "name": "Aliens",
+        "title": "Aliens",
+        "weight": 30,
+        "description": "Now I won't delve too much into this possibility, except to point out that there's an excellent argument, again from Asimov, that if and when we make contact with an intelligent alient civilization, it will probably be not with them, but their robots.",
+        "content": [
+          {
+            "id": "d204ec74-a43b-5827-892c-46b8aa0ca0b9",
+            "name": "Are we alone?",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/aliens.png",
+              "title": "Are we alone?",
+              "notes": "",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "6e9c108a-fed8-5503-bc01-de1a988204b7",
+            "name": "The Fermi Paradox",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/drake.png",
+              "title": "The Fermi Paradox",
+              "notes": "roughly between 1,000 and 100,000,000 civilizations in the Milky Way galaxy",
+              "source_url": "https://en.wikipedia.org/wiki/Fermi_paradox",
+              "extra": {
+                "image_only": true
+              }
+            }
+          },
+          {
+            "id": "04c1b39d-3659-5389-8998-ec989c524cb5",
+            "name": "The Great Filter",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/great-filter.png",
+              "title": "The Great Filter",
+              "notes": "There are counterarguments --- can you think of some?",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "fc065710-4122-54f3-9335-69668b8ac410",
+            "name": "We'll see their robots first",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/asimov-victory.png",
+              "title": "We'll see their robots first",
+              "notes": "",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "a6f2decc-3ece-50d1-ad0b-e113185e7b05",
+            "name": "Or maybe no warning instant annihilation",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/annihilation.png",
+              "title": "Or maybe no warning instant annihilation",
+              "notes": "",
+              "source_url": ""
+            }
+          }
+        ]
+      },
+      {
+        "id": "73a791ba-c64b-5759-acf3-fa91803bfbe9",
+        "name": "What if we don't deal with this?",
+        "title": "What if we don't deal with this?",
+        "weight": 10,
+        "description": "Now finally I want to spend even less time on this; I just cover apathy for completeness sake.",
+        "content": [
+          {
+            "id": "0332deb4-5902-59e3-92cf-c628988f8ebc",
+            "name": "Ignore It",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/ostrich.png",
+              "title": "Ignore It",
+              "notes": "We also do this already with climate change, the inner workings of our bodies, etc.",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "52871620-ed73-5dcb-9bad-fa8df4bdeb79",
+            "name": "塞翁失馬 (Sài Wēng Shī Mǎ)",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/fatalism.png",
+              "title": "塞翁失馬 (Sài Wēng Shī Mǎ)",
+              "notes": "Some merit to this \n But, can we really just sit by and watch?",
+              "source_url": "https://en.wikipedia.org/wiki/The_old_man_lost_his_horse",
+              "extra": {
+                "image_only": true
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "ba9e709c-5521-5893-bd6e-d64a7774442c",
+        "name": "How do we deal with this?",
+        "title": "How do we deal with this?",
+        "weight": 60,
+        "description": "Next I'm going to dive into practical ways we can deal with the impending robotic revolution, and as you see we're sort of in the second big branch of this talk.",
+        "content": []
+      },
+      {
+        "id": "aaa98146-2a1f-5caa-9506-a0a51c4a8662",
+        "name": "Controls, Bounds, Accountability",
+        "title": "Controls, Bounds, Accountability",
+        "weight": 50,
+        "description": "Well you've probably already read a lot about these words: Controls and Bounds (or guardrails) and Accountability, central tenets of Responsible AI. But you know, Responsible AI can have a nebulous air to it, so what can you really do about it?",
+        "content": []
+      },
+      {
+        "id": "ead196d9-897e-5c19-af86-fdeee8285f33",
+        "name": "Governance",
+        "title": "Governance",
+        "weight": 20,
+        "description": "",
+        "content": [
+          {
+            "id": "4b1e5ffb-be9b-5afc-a483-34695373949b",
+            "name": "Traditional Metrics",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/predictive_AI.png",
+              "title": "Traditional Metrics",
+              "notes": "That just leaves us with traditional metrics, which are pretty weak and outdated for things like LLMs.",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "c7547cff-a0de-55d5-aa19-caff7b6baa42",
+            "name": "Training + Filters + Guardrails + Explainability",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/guardrails.png",
+              "title": "Training + Filters + Guardrails + Explainability",
+              "notes": "",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "a9a572db-0983-55e4-b09e-1a43319d99ad",
+            "name": "The Three Laws of Robotics",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/irobot.png",
+              "title": "The Three Laws of Robotics — (Asimov, 1942)",
+              "notes": "1. A robot may not injure a human being or, through inaction, allow a human being to come to harm. \n 2. A robot must obey the orders given it by human beings except where such orders would conflict with the First Law. \n 3. A robot must protect its own existence as long as such protection does not conflict with the First or Second Law.",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "5ece8c9b-d391-57ed-be1a-97bd469ef96c",
+            "name": "Accountability",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/accountability.png",
+              "title": "Accountability",
+              "notes": "",
+              "source_url": ""
+            }
+          }
+        ],
+        "hints": {
+          "pose": "Well in terms of raw governance, I think we've seen that this is not very effective --- I mean the politicians themselves barely understand AI, so they don't really know how to govern it. Indeed, even Asimov conceded implicitly that his 3 Laws of Robotics were woefully insufficient. Guardrails to keep AI in line are likewise very fragile. "
+        }
+      },
+      {
+        "id": "e57b9216-4c5a-5749-990a-1c80c0467d07",
+        "name": "IronAction AI",
+        "title": "IronAction AI",
+        "weight": 30,
+        "description": "So a bit of a pitch for myself here, IronAction is about keeping AI in line with rock solid, well iron solid, mathematical principles. Because I believe at the end of the day, truth and righteousness is mathematical, so let's see if we can find a suitable mathematical framework to keep AI in line. ",
+        "content": [
+          {
+            "id": "f7018f83-b5ce-5869-9b07-caf410fcf22d",
+            "name": "IronAction AI",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/ironaction.jpeg",
+              "title": "IronAction AI",
+              "notes": "Iron: the most stable element in the universe \n Action: average (PE - KE), optimal dynamic",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "a155d982-ab9b-5694-ab2d-49cce87f4f49",
+            "name": "Manifold of Safety",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/harmonic.png",
+              "title": "Manifold of Safety — (start with Harmonic Functions)",
+              "notes": "I define something which I call the Manifold of Safety. If AI is on this manifold, great. If not, we best do something about it. Ok so that's all very abstract, but how do we proceed. Well it turns out that Harmonic Manifolds are very nice. They have the minimal curvature required to fit training data, and it's easy to test if a machine learning system is harmonic or not by this so-called Mean Value Property. And yes this is really amazing but it's true, that the function is equal to the average value of all the points around it. So if you think about it, this is very nice because it's minimal (the machine learning or AI only models what it has to, not extra hallucination stuff) and it's easy to check with the Mean Value Property, which also provides explainability.\n\nStable \n Predictable \n Minimal",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "fea4f2c6-86ef-5c02-9307-b433842a4549",
+            "name": "Nature Likes Harmonic Functions",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/harmonic_examples.png",
+              "title": "Nature Likes Harmonic Functions — (the laziness principle)",
+              "notes": "Now Nature actually like Harmonic Functions, probably for similar reasons. Soap films, electrostatic potentials, heat distributions, these are all described with Harmonic Functions.\n\nMinimizing Surface Tension \n Heat Exchange \n Electrostatic Potential Drop",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "54c07c48-525f-5d93-ae42-26030f81ec11",
+            "name": "Direct Application to Machine Learning",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/harmonic_measure.png",
+              "title": "Direct Application to Machine Learning — (this is OPEN SOURCE: https://github.com/nkersting/harmonic_robustness)",
+              "notes": "This is actually directly applicable to machine learning, which I leave as open source.\n\nTraining/Validation \n Drift Detection \n Real-time Monitoring",
+              "source_url": "https://github.com/nkersting/harmonic_robustness",
+              "extra": {
+                "image_only": true
+              }
+            }
+          },
+          {
+            "id": "524ec5e2-9677-5b06-b227-e687a858e514",
+            "name": "Blackbox Metrics",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/blackbox.png",
+              "title": "Blackbox Metrics — (everyone must be empowered to measure safety)",
+              "notes": "And I note this is also a blackbox technique, because in the robotic future we won't know what system is inside the robot --- we need model agnostic techniques to gauge whether the AI is trustworthy or not.\n\nSimple \n Affordable \n Effective",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "0b784000-51d0-5bd8-97b5-970032fee37a",
+            "name": "Empowering Everyone",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/empower.png",
+              "title": "Empowering Everyone — (again comes through safety)",
+              "notes": "Ultimately, what this is all about is giving us an assured and meaningful future.\n\nHumanity \n Self-worth \n Motivation \n Ambition",
+              "source_url": ""
+            }
+          }
+        ]
+      },
+      {
+        "id": "bcc533fa-ac7b-568f-97d7-89098f26b380",
+        "name": "Explainable AI",
+        "title": "Explainable AI",
+        "weight": 50,
+        "description": "Now another thing we can do to help stay in control is make sure that we understand the reason  behind any AI decisions",
+        "content": []
+      },
+      {
+        "id": "db1a95be-3d59-5868-aa09-26312f2b1735",
+        "name": "XAI",
+        "title": "XAI",
+        "weight": 20,
+        "description": "This has been dubbed XAI in the literature, and is a rapidly burgeoning field of itself.",
+        "content": [
+          {
+            "id": "b6ec78f0-3295-569e-9394-855281370377",
+            "name": "What is an Explanation?",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/explainable_ai2.png",
+              "title": "What is an Explanation?",
+              "notes": "First of all, what constitutes an explanation? Most critically, to whom? People come from all kinds of backgrounds so you'll probably have to have a way to translate among explanations, itself a non-trivial task. Then there's the question of what kind of explanation you want.\n\n⦿  To whom? (age, language, culture, education, etc.) \n\n ⦿  What kind? \n    ‣  causal: 'The daytime is warmer because the Earth has rotated to face the Sun' \n    ‣ deep scientific: '... because the greater intensity of high-energy photons impinges on ...' \n     ‣ religious: '... because God wanted us to wake up and serve Him \n    ‣ existential/anthropic:  '... because if it weren't, intelligent Life would not have developed to ponder this question'",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "d259dbdf-c19f-5f00-84a0-789902a39f26",
+            "name": "Traditional Explainability",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/traditional_explain.png",
+              "title": "Traditional Explainability — (sometimes the model provides)",
+              "notes": "But I think at least this audience can agree on Mathematics as a suitable explainer. There are models, for example, that just make mathematical sense: the Linear Regression, i.e. curve-fitting, which makes sense as the best curve between the points, or the Logistic Regression and Naive Bayes with probabilistic interpretations, or more logic-based decision trees and rule-based systems. Notably not, however Neural Nets, at least not to the same degree of explainability as these other models.",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "5f0c5d92-b4f4-5ac7-a289-a018ce4415fd",
+            "name": "General Techniques",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/general_explain.png",
+              "title": "General Techniques — (still traditionally-based)",
+              "notes": "And there are general techniques for any model, most notably SHAP and LIME, which basically attribute model predictions to how much they are controlled by individual features.\n\nLIME \n SHAP \n Saliency Maps",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "3bce628a-1974-5356-9cff-7de148a785d1",
+            "name": "Stability as a proxy for Explainability",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/stability.png",
+              "title": "Stability as a proxy for Explainability — (e.g., Harmoniticity)",
+              "notes": "Another mathematical type of explainability is through stability. We've talked before, for example, on Harmonic Stability.\n\nPredictions on a Manifold that we Trust \n Harmonic Functions are explainable and minimal",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "6a69130a-c698-5377-bf33-8a9f4fead8a4",
+            "name": "Harmonic Machine Learning",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/harmonic_ML.png",
+              "title": "Harmonic Machine Learning — (a principle for explainability)",
+              "notes": "And here you can see it in action on a real machine learning problem.\n\nMeasure departure from harmoniticity \n Useful as a validation metric \n Useful in real-time drift detection",
+              "source_url": ""
+            }
+          }
+        ]
+      },
+      {
+        "id": "628a2777-4f65-5616-98e1-c244ee2a2063",
+        "name": "How do you want them to explain?",
+        "title": "How do you want them to explain?",
+        "weight": 20,
+        "description": "I'll just note here that two traditional tests of explainability, the Chinese Room and the Turing Test, have both become outdated or moot thought experiments in the face of recent rapid LLM progress.",
+        "content": [
+          {
+            "id": "a23d1a19-43ad-54e0-a2dd-4cbaac854729",
+            "name": "What is an Explanation?",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/explanation.png",
+              "title": "What is an Explanation?",
+              "notes": "",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "71e585fc-d9e6-5e69-b155-40e3ec6e1808",
+            "name": "To Whom?",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/explanation_whom.png",
+              "title": "To Whom?",
+              "notes": "",
+              "source_url": ""
+            }
+          }
+        ]
+      },
+      {
+        "id": "e05f0575-13fe-54f4-b064-9b567ba5ed9a",
+        "name": "The Chinese Room",
+        "title": "The Chinese Room",
+        "weight": 10,
+        "description": "",
+        "content": [
+          {
+            "id": "77734e0d-bfe9-56d3-80e7-00fb42ca14c5",
+            "name": "A Chinese Room",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/chinese-room.png",
+              "title": "A Chinese Room",
+              "notes": "",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "bf94a5f3-6615-592f-9bdf-b0b370f4a735",
+            "name": "The Chinese Room is Broken",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/chinese-room2.png",
+              "title": "The Chinese Room is Broken",
+              "notes": "",
+              "source_url": "https://ai.gopubby.com/ai-breaks-the-chinese-room-0c860e20b623",
+              "extra": {
+                "image_only": true
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "e4974d9d-37c6-5169-beb6-e1a4a445cffa",
+        "name": "The Turing Test",
+        "title": "The Turing Test",
+        "weight": 10,
+        "description": "",
+        "content": [
+          {
+            "id": "b6295ebd-2921-5502-be8d-8cadb1ed3546",
+            "name": "The Turing Test",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/turing-test.png",
+              "title": "The Turing Test",
+              "notes": "",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "c6731814-a554-5c28-a1a5-d30f94402587",
+            "name": "The Turing Test is Broken",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/turing-test2.png",
+              "title": "The Turing Test is Broken",
+              "notes": "",
+              "source_url": "https://www.nature.com/articles/d41586-023-02361-7",
+              "extra": {
+                "image_only": true
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "aa92c14c-768f-517f-b64f-b637b81c9c78",
+        "name": "Do LLMs Think?",
+        "title": "Do LLMs Think?",
+        "weight": 40,
+        "description": "But they do set up the interesting philosophical question of whether LLMs actually think, which is interesting to me only because I see at least two promising mathematical directions that provide some positive evidence for this",
+        "content": [
+          {
+            "id": "5a95c458-c29f-5c06-83ae-a6b737222d6f",
+            "name": "What is Thought, Anyway?",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/thought.png",
+              "title": "What is Thought, Anyway?",
+              "notes": "",
+              "source_url": "https://yogajala.com/what-is-a-thought/ ",
+              "extra": {
+                "image_only": true
+              }
+            }
+          },
+          {
+            "id": "69e53d7c-ec4d-5fef-9c3c-c142a31cd4f6",
+            "name": "Do We Care?",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/do-we-care.png",
+              "title": "Do We Care?",
+              "notes": "",
+              "source_url": ""
+            }
+          }
+        ]
+      },
+      {
+        "id": "469e9dd4-6a8a-5bac-8a0e-b86ce983efc9",
+        "name": "Grokking",
+        "title": "Grokking",
+        "weight": 10,
+        "description": "",
+        "content": [
+          {
+            "id": "4b2c97d1-79d4-5c34-8411-ad278459476b",
+            "name": "Stranger in a Strange Land",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/grok.png",
+              "title": "Stranger in a Strange Land",
+              "notes": "First, there is the phenomenon of Grokking, a term invented by this classic sci-fi novel, which manifests itself as a sudden ability of the LLM to generalize beyond its training data, which is a sort of Hegelian qualitative effect brought about by scale.",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "95896c85-6e84-5b04-9617-bf6be9c5044f",
+            "name": "Grokking2",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/grok2.png",
+              "title": "Grokking2",
+              "notes": "",
+              "source_url": "https://pair.withgoogle.com/explorables/grokking/",
+              "extra": {
+                "image_only": true
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "98948e6e-2c80-5631-b694-7646abe2e687",
+        "name": "Interpolation Power",
+        "title": "Interpolation Power",
+        "weight": 30,
+        "description": "Then you have another effect that has been emerging for a number of years, which is that when you cast words into numbers, there is a sort of interpolative logic that emerges as a de facto simulation of thought'.",
+        "content": [
+          {
+            "id": "130fa10e-a328-5a61-9e62-3c748ebfd2e3",
+            "name": "The Manifold of Truth",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/manifold.png",
+              "title": "The Manifold of Truth",
+              "notes": "But if it does, then this is huge. It means that human knowledge and logic, everything you can possibly say that is not contradictory or false, lives on a higher dimensional manifold, the Manifold of Truth. And it is in this sense that LLMs can think -- they are exploring this manifold every time we use them.",
+              "source_url": "https://peterjamesthomas.com/2009/06/25/a-single-version-of-the-truth/",
+              "extra": {
+                "image_only": true
+              }
+            }
+          },
+          {
+            "id": "1eea304b-a2ee-5389-9876-9dd3c0d1a5c5",
+            "name": "Words to Vectors",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/vector-embedding.png",
+              "title": "Words to Vectors",
+              "notes": "Take word embeddings, for example. It has long been observed that there are more than coincidental, almost eerie logical connections established among words without the model being explicitly told to do so. Now as a reminder that back in 2014 or so these word embeddings were originally trained with nothing more than statistical co-occurence: you initialize all the embeddings to random vectors and then feed billions of phrases and non-phrases with instructions to a neural net to output 1 if the phrase is real, 0 if fake. And the embeddings gradually converge. Now when all your embeddings converge you stop the process and look: you have vector algebra among the vectors exhibiting real logic. In fact if you didn't know the word 'man', you could predict it by 'queen-woman+king'. Presumably this 'AI' is able to predict new words with real logical meaning we haven't even thought of. And that's budding intelligences, i.e., kids, do!",
+              "source_url": "https://www.nvidia.com/en-us/glossary/vector-database/",
+              "extra": {
+                "image_only": true
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "2f8d9db8-134f-5eec-a164-d9964a787069",
+        "name": "LLM Hallucination",
+        "title": "LLM Hallucination",
+        "weight": 40,
+        "description": "But now speaking of Truth, let's consider the opposite, which has become known as Hallucination. It's not an ideal term, but it basically stands for at least two kinds of false information: 1. when the LLM is so confident it knows the answer but really it has no knowledge about the topic and is just making stuff up, and 2. when the LLM should have the information it needs but gives you garbage instead. Either one of these possibilities is straying from the manifold of truth, which however, is also trained on garbage, also gives you a third type of hallucination where the LLM is just telling you what you trained it on, so I'm sure you've heard the phrase 'garbage in, garbage out'. ",
+        "content": [
+          {
+            "id": "f318f0b0-2e2c-5056-8392-5e3b66d37aac",
+            "name": "Type I (HK+) Hallucination",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/llm_hallucination.png",
+              "title": "Type I (HK+) Hallucination — bad answer despite having the knowledge",
+              "notes": "like getting the wrong delivery",
+              "source_url": "https://arxiv.org/abs/2410.22071 ",
+              "extra": {
+                "image_only": true
+              }
+            }
+          },
+          {
+            "id": "6f3a4bb0-9e40-58d1-9887-85045e8b2d95",
+            "name": "Type II (HK-) Hallucination",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/llm_hallucination2.png",
+              "title": "Type II (HK-) Hallucination — bad answer because it doesn't have the knowledge",
+              "notes": "",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "95911e16-d8d0-5f06-b529-9060bc713e8a",
+            "name": "RAG is the only trusted application",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/RAG.png",
+              "title": "RAG is the only trusted application — (because we can verify the hallucination)",
+              "notes": "Now what's interesting is that we're almost 3 years on from the ChatGPT revolution, and we still haven't found anything more trustworthy than RAG which actually pre-dates ChatGPT.",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "b80440a9-aa4a-5c75-ad24-82c7eb2d0391",
+            "name": "Straying from the Manifold of Truth?",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/llm_hallucination3.png",
+              "title": "Straying from the Manifold of Truth? — measure the degree of violation",
+              "notes": "",
+              "source_url": ""
+            }
+          }
+        ]
+      },
+      {
+        "id": "def2daf6-35f0-564c-a1b0-1aaf03fe132e",
+        "name": "Stability as a Proxy for Trustworthiness",
+        "title": "Stability as a Proxy for Trustworthiness",
+        "weight": 20,
+        "description": "Now we've seen this before, Stability being a proxy for Explainability, for LLMs this translates to hallucination detection. So how does this work?",
+        "content": [
+          {
+            "id": "249dd8a2-cf75-5810-b67e-ddb9e7d3f186",
+            "name": "Should LLMs live on Harmonic Manifolds?",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/harmonic_LLM.png",
+              "title": "Should LLMs live on Harmonic Manifolds?",
+              "notes": "Well just like for vanilla ML we look in the neighborhood of the input point and check if the outputs satisfy the harmonic condition. In general, LLMs do not, but the degree of violation may indicate liklihood of hallucination.",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "eff2f754-25b8-5b05-b5d8-b387692fa05a",
+            "name": "Borrowing from Interrogation Techniques",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/interrogate.png",
+              "title": "Borrowing from Interrogation Techniques",
+              "notes": "Ask the same question in different ways \n Look for variation in response",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "5076572c-9073-5bfc-9d35-09dbfe047a1b",
+            "name": "Trustworthy -> low Gamma",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/gamma.png",
+              "title": "Trustworthy -> low Gamma",
+              "notes": "",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "9df37de0-fd9d-51e0-a9de-1b801050ad2b",
+            "name": "Untrustworthy/Ambiguous -> high Gamma",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/gamma_1.png",
+              "title": "Untrustworthy/Ambiguous -> high Gamma",
+              "notes": "",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "55ff84c2-9e41-52ef-be84-bd15209dd956",
+            "name": "Adversarial Example",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/xenon.png",
+              "title": "Adversarial Example",
+              "notes": "",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "96c6e8da-77be-5dde-a952-b3604b681173",
+            "name": "Statistically Makes Sense",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/gamma_trends.png",
+              "title": "Statistically Makes Sense — the higher gamma is, more likely to be hallucination",
+              "notes": "",
+              "source_url": "https://arxiv.org/pdf/2404.19708",
+              "extra": {
+                "image_only": true
+              }
+            }
+          },
+          {
+            "id": "78c6cf90-3515-532d-99b8-e20b3b529506",
+            "name": "At the 2024 Olympics",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/visa_olympics.png",
+              "title": "At the 2024 Olympics — (we used gamma to filter out bad answers)",
+              "notes": "You may be interested to know this was actually deployed at the Paris 2024 Summer Olympics in a chatbot, which allowed us to avoid giving embarrassingly hallucinatory answers with GPT-4 to literally the 100% level.\n\nHere we got away with N=1 ! \n In general, need larger N \n Further work needed to maximize potential",
+              "source_url": ""
+            }
+          }
+        ]
+      },
+      {
+        "id": "83aa560e-2eeb-5d98-9486-8220053a157c",
+        "name": "AI Alignment",
+        "title": "AI Alignment",
+        "weight": 30,
+        "description": "Now there are a few more nodes here I'm just going to gloss over, we can come back to them if you'd like to ask questions afterwards, but 'The Alignment Problem', highly recommend this book because it really talks about what do we really want from AI, and it isn't all that trivial. And these other topics again I'm just going to flash by in the interest of time. But again feel free to ask about them in the QA afterwards.",
+        "content": [
+          {
+            "id": "8e78513c-6ece-5778-950c-c6884380b3aa",
+            "name": "The AI Alignment Problem",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/alignment_problem.png",
+              "title": "The AI Alignment Problem",
+              "notes": "We want AI to do everything \n\n • But we don't want it to do everything \n\n • How do we specify what we want, and what we don't want? \n\n • Problem is we don't even understand ourselves",
+              "source_url": ""
+            }
+          }
+        ]
+      },
+      {
+        "id": "bbd24471-109d-562f-832f-fe1370e6a90f",
+        "name": "AI Ethics",
+        "title": "AI Ethics",
+        "weight": 10,
+        "description": "",
+        "content": [
+          {
+            "id": "81758684-e18d-5e74-9db6-a95329bf2954",
+            "name": "AI Ethics",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/ai_ethics.png",
+              "title": "AI Ethics",
+              "notes": "BECAUSE:",
+              "source_url": ""
+            }
+          }
+        ]
+      },
+      {
+        "id": "883754c1-853f-59f8-ae1d-a9fa64e4fe32",
+        "name": "Positronic Brain Shutoffs",
+        "title": "Positronic Brain Shutoffs",
+        "weight": 10,
+        "description": "",
+        "content": [
+          {
+            "id": "8c378ee5-30d1-5916-bdad-184686fd906f",
+            "name": "Positronic Brain Shutoffs",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/positronic_brain.png",
+              "title": "Positronic Brain Shutoffs — (or similar hardware controls)",
+              "notes": "",
+              "source_url": ""
+            }
+          }
+        ]
+      },
+      {
+        "id": "30568896-1c0b-5787-b887-ce13fec10eb6",
+        "name": "Regulation",
+        "title": "Regulation",
+        "weight": 10,
+        "description": "",
+        "content": [
+          {
+            "id": "26204e2b-70c7-5d93-9d14-35a3de12c6d6",
+            "name": "Regulation of AI and Robotics",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/regulation.png",
+              "title": "Regulation of AI and Robotics",
+              "notes": "",
+              "source_url": ""
+            }
+          }
+        ]
+      },
+      {
+        "id": "a0dd1f86-eee2-5ff7-ab1b-d9f13b3e18fe",
+        "name": "MCP Agentic AI",
+        "title": "MCP Agentic AI",
+        "weight": 10,
+        "description": "OK now remember, we're still talking about how to deal with this coming revolution, and so far we've emphasized very control-oriented things. Now what about other ways to deal with it?",
+        "content": [
+          {
+            "id": "a7009b93-4ceb-5208-96b0-0e9a70c3ca52",
+            "name": "MCP Agentic AI",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/mcp.png",
+              "title": "MCP Agentic AI — see my MCP server",
+              "notes": "Well for the positively-minded among you, there is the MCP micro-revolution happening now. This is akin to the App Store micro-revolution when the iPad came out and every 1-year-old suddenly wanted 1000 apps. It was a golden age for developers to get ideas out there and make a quick buck.\n\nDistributed P2P Functionality \n\n Gated (controllable, putting $$ back to people) \n\n New Cottage Industry (like apps for smartphones)",
+              "source_url": "https://addyo.substack.com/p/mcp-what-it-is-and-why-it-matters",
+              "extra": {
+                "image_only": true
+              }
+            }
+          },
+          {
+            "id": "0fd27f8f-680a-5106-83ec-c9c9ebc32ca3",
+            "name": "Hallucination Detection MCP Server",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/mcp2.png",
+              "title": "Hallucination Detection MCP Server",
+              "notes": "So here's my idea, which hasn't made a quick buck yet, but it was incredibly easy to make a MCP server running on the free HuggingFace Spaces which can easily integrate to Claude Desktop to detection hallucination realtime. My point is this is a really meritocritous way for people to get involved in the AI revolution --- and the sooner your tool is out there to use, the more effect you will have on the future of humanity, literally. So make it good.\n\n⦿  Hosted on HuggingFace Spaces (free)\n\n ⦿  About 20 minutes of Python programming (with AI) \n\n ⦿  10 minutes struggling to integrate with Claude Desktop \n\n ⦿   But now the whole world can use!",
+              "source_url": "https://medium.com/@1054h34/make-a-free-mcp-server-next-weekend-adacea5fa698",
+              "extra": {
+                "image_only": true
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "dc6c12c6-9a34-5b8a-a671-7289db2416fc",
+        "name": "Integration",
+        "title": "Integration",
+        "weight": 40,
+        "description": "But now aside from directly contributing to this revolution with your development skills making an MCP server, there are other things which will be, perhaps, more passive.",
+        "content": [
+          {
+            "id": "ddd60871-f24f-5120-8204-9a198dc1d19b",
+            "name": "Integration of AI and Robotics",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/integration.png",
+              "title": "Integration of AI and Robotics",
+              "notes": "You know we might not want to always frame this as an AI vs Human situation .... Integration is highly likely.",
+              "source_url": ""
+            }
+          }
+        ]
+      },
+      {
+        "id": "786256bb-e897-5013-8af0-4393f652043f",
+        "name": "Historical Precedent",
+        "title": "Historical Precedent",
+        "weight": 20,
+        "description": "I mean look at the precedent, we've been preparing for this all along with prosthetic limbs, artificial hearts, and now ChatGPT is doing most of your work for you by now, right? It's part of you.",
+        "content": [
+          {
+            "id": "ac305d23-880e-5c0a-83fe-87310108a1d9",
+            "name": "Pacemakers",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/history1.png",
+              "title": "Pacemakers",
+              "notes": "",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "329a083d-b5c1-57af-81af-e55da91e96ce",
+            "name": "Prosthetic Limbs",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/history2.png",
+              "title": "Prosthetic Limbs",
+              "notes": "",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "91d6c57d-94c8-5ee7-a752-07f6f4f36456",
+            "name": "ChatGPT in your Life",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/history3.png",
+              "title": "ChatGPT in your Life",
+              "notes": "",
+              "source_url": ""
+            }
+          }
+        ]
+      },
+      {
+        "id": "6a2ce80e-7b3a-5de9-830d-5675291a7425",
+        "name": "The Remedy to Superintelligence",
+        "title": "The Remedy to Superintelligence",
+        "weight": 20,
+        "description": "Now there's plenty of negative press about the AI Doomsday, Nick Bostrom's book comes to mind, and check out All Tomorrows for some truly horrific science fiction",
+        "content": [
+          {
+            "id": "6030be40-ebf6-58e5-b1ee-00175510d2d6",
+            "name": "Dealing with Superintelligence",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/superintelligence.png",
+              "title": "Dealing with Superintelligence — You can't beat it",
+              "notes": "Nick Bostrom ...",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "a0e1fc9b-88f9-5c17-85fb-e2f4fbdc9a9f",
+            "name": "Navigating the Uncannny Valley",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/uncanny.png",
+              "title": "Navigating the Uncannny Valley",
+              "notes": "",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "c2c58ff7-25b5-549a-80a6-208d6b1972c0",
+            "name": "Uncanny is Everywhere",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "https://www.youtube.com/watch?v=or0iYHjoptE",
+              "title": "Uncanny is Everywhere",
+              "notes": "(see first 3 minutes) \n rest of the video is full of Chinese wow innovations",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "91558773-b0be-52ff-979e-389fd3b46398",
+            "name": "Might is Right",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/superintelligence3.png",
+              "title": "Might is Right — ...what choice do you really have?",
+              "notes": "But you know, I offer the very real possibility that this is what the universe wants ... can you really argue with a supernova? Well this is part of this process, perhaps.",
+              "source_url": "https://en.wikipedia.org/wiki/Near-Earth_supernova",
+              "extra": {
+                "image_only": true
+              }
+            }
+          },
+          {
+            "id": "4ea75849-2bf5-5475-90ea-c26345afe042",
+            "name": "All Tomorrows?",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "https://www.youtube.com/watch?v=imNtSPM3-r4&list=LL&index=89&t=300s&pp=gAQBiAQB",
+              "title": "All Tomorrows? — ...changing ourselves is inevitable?",
+              "notes": "",
+              "source_url": ""
+            }
+          }
+        ]
+      },
+      {
+        "id": "8d1bef83-c497-5028-97b2-a61f0a4e2ddf",
+        "name": "Optimizing Ourselves",
+        "title": "Optimizing Ourselves",
+        "weight": 10,
+        "description": "On that note, there is plenty of discourse on this topic, see for example this 8 hour video ... no really it's worth watching, it's quite good.",
+        "content": [
+          {
+            "id": "c58ddf96-5266-5464-bd37-53bba57ca4f0",
+            "name": "Transhumanism",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "https://www.youtube.com/watch?v=2rhbh6BpxVc&list=LL&index=138&pp=gAQBiAQB",
+              "title": "Transhumanism",
+              "notes": "",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "316cd130-e4fd-59db-99f6-35eebd42e3b9",
+            "name": "Karl Sims' experiments",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/KarlSims.png",
+              "title": "Karl Sims' experiments",
+              "notes": "Or perhaps the lesser-known work of Karl Sims, who magnificently showed how you can evolve efficient body topologies given a goal",
+              "source_url": "https://www.karlsims.com/evolved-virtual-creatures.html"
+            }
+          },
+          {
+            "id": "496d54b6-dc5b-5e04-9238-4bebe5a4dbd0",
+            "name": "Evolved Creatures",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "https://www.youtube.com/watch?v=JBgG_VSP7f8",
+              "title": "Evolved Creatures",
+              "notes": "",
+              "source_url": ""
+            }
+          }
+        ]
+      },
+      {
+        "id": "06f81e76-d7eb-5e25-9d1d-8e3da65762a7",
+        "name": "An LLM for Motion?",
+        "title": "An LLM for Motion?",
+        "weight": 10,
+        "description": "Another idea under my active research is developing a ChatGPT for Motion, if you will. Partly because I believe we can teach robots how to move more efficiently this way in say collaborative 3D printing, but also because this will also give us ideas on how to move efficiently, either in artistic domains like dance or more practical ones like martial arts and motion in life. ",
+        "content": [
+          {
+            "id": "f0b499c7-bb52-5130-8bf7-f15fb0a09409",
+            "name": "An LLM for Motion?",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/pose.png",
+              "title": "An LLM for Motion? — Sequences of Words -> Sequences of Poses",
+              "notes": "Starting with pose sequences, can we predict the next pose?\n\n• First make for Humans \n\n • Consider other body topologies as needed",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "90d7785f-ab57-5828-9533-6e915f0c3784",
+            "name": "Dance",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "https://www.youtube.com/watch?v=zV1qLYukTH8",
+              "title": "Dance",
+              "notes": "• What motions are natural? \n\n • What motions are beautiful? \n\n • Unexplored regimes of the Art?\n\n • Collaborative Choreography",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "86cfa934-6185-59a0-865d-7664940eae51",
+            "name": "Wushu (Kungfu)",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "https://www.youtube.com/watch?v=3uHxgQ_hHs8&t=80s",
+              "title": "Wushu (Kungfu) — (martial arts in general)",
+              "notes": "• What motions are efficient? \n\n • What motions are unexpected? \n\n • Hidden/unexplored techniques? \n\n • Adversarial applications",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "fea6e4a0-f8bf-5e44-9f3e-94b8317e4bf9",
+            "name": "Collaborative Robotics",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "https://www.youtube.com/watch?v=UcK2XtwaK5M",
+              "title": "Collaborative Robotics — (creative dancing)",
+              "notes": "• 3D Printing \n\n • Swarm/Group Coordination \n\n • Transformers?",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "8d80ccaf-0a5c-5a47-a4b8-690156ff3ed3",
+            "name": "Industrial Motion",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "https://www.youtube.com/shorts/n33eMQ3GNgY",
+              "title": "Industrial Motion",
+              "notes": "• What worker motions are dominant? \n\n • Robotic training \n\n • Efficiency/Ergonomics",
+              "source_url": ""
+            }
+          }
+        ]
+      },
+      {
+        "id": "6881e8fc-ab58-5f21-a7fa-f5879c3c064d",
+        "name": "Losing Control",
+        "title": "Losing Control",
+        "weight": 20,
+        "description": "Finally, remembering we're considering ways of dealing with the coming Robo Moment, we look at controls and positive contributions, well there are negative and apathetic possibilities as well, either something Matrix-like, Chaos, or perhaps just acceptance of AI as the new master or God. But I think that's all a little extreme, so what's my real Proposition here?",
+        "content": [
+          {
+            "id": "6beb98fd-b824-5f5a-ad41-7a62dd8ec54f",
+            "name": "Humanity Enslaved",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/losing_control.png",
+              "title": "Humanity Enslaved",
+              "notes": "",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "ec9a0f6e-16c0-54d0-9ac2-f2b7f8e87b47",
+            "name": "Humanity Eliminated",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "https://www.youtube.com/watch?v=1UufaK3pQMg",
+              "title": "Humanity Eliminated — AI 2027",
+              "notes": "5:13",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "95b4ceaa-3c50-5476-baec-3c9fd4c9d200",
+            "name": "Chaos",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/chaos.png",
+              "title": "Chaos — (though there may be structure)",
+              "notes": "Some people like Jackson Pollock",
+              "source_url": ""
+            }
+          }
+        ]
+      },
+      {
+        "id": "054c5077-4141-53b1-860c-c6176c4bcce4",
+        "name": "Religion, Acceptance",
+        "title": "Religion, Acceptance",
+        "weight": 10,
+        "description": "",
+        "content": [
+          {
+            "id": "c5f6566b-2da8-57a7-9168-ba3c2830df9d",
+            "name": "Ignoring It All",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/religion_acceptance.png",
+              "title": "Ignoring It All",
+              "notes": "",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "765c4d35-cc8c-5ce9-ad22-a23a6fa48db3",
+            "name": "Acceptance of AI as the new God",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/religion_acceptance2.png",
+              "title": "Acceptance of AI as the new God",
+              "notes": "Another Asimov prediction!",
+              "source_url": "https://www.msn.com/en-gb/money/technology/rise-of-ai-religion-robotheism-inevitable-as-tech-won-t-be-humanity-s-slave-for-long/ar-AA1DHqcr",
+              "extra": {
+                "image_only": true
+              }
+            }
+          },
+          {
+            "id": "b6423636-c884-5d04-8f41-03dc1cf984bc",
+            "name": "Acceptance of AI as our new Master",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/religion_acceptance3.png",
+              "title": "Acceptance of AI as our new Master",
+              "notes": "Thresholds we cannot ignore: Kasparov losing to Deep Blue, Ken Jennings losing to IBM Watson in Jeopardy, AlphaGo ...",
+              "source_url": ""
+            }
+          }
+        ]
+      },
+      {
+        "id": "94175908-3000-55b6-947c-b00a02695169",
+        "name": "Proposal",
+        "title": "Proposal",
+        "weight": 90,
+        "description": "So what's my Proposal?",
+        "content": []
+      },
+      {
+        "id": "c81dada8-11fb-58f1-a827-fd345c441399",
+        "name": "natural safeguards",
+        "title": "natural safeguards",
+        "weight": 50,
+        "description": " First of all, it's important to remember that Humans are still in control, so we have first-movers advantage. In order to safely integrate AI into our society, let's apply natural safeguards, things that can't really fail, because AI has no way to change physics.",
+        "content": [
+          {
+            "id": "932968e6-701e-51d9-bc94-0de43446aacf",
+            "name": "Physical Limits",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/natural_safeguards.png",
+              "title": "Physical Limits",
+              "notes": "so you know, the first natural safeguard is plate glass, keep AI well contained as long as possible.\n\n• We trust things which are naturally constrained \n\n • 'Dont Be There' is one of the 'extra' 36 miliary stratgems of Sun Tzu \n\n • e.g. we trust Target shoppers to buy knives because their destructive power is very limited (relative to the car they drive to get there) \n\n • We trust drivers will not cross the yellow line because of strong negative motivation",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "53792c4e-47c2-5828-ad15-31b167ae0666",
+            "name": "Manifolds of Truth",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/natural_safeguards2.png",
+              "title": "Manifolds of Truth",
+              "notes": "And instill some mathematical guarantees it will stay in bounds. Or at least give ourselves the power to measure that. Remember my Recalibration principle --- we're always checking whether AI is within bounds, and correcting it if not.\n\n• Mathematical safeguards are even better",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "bbd00d65-2bec-53be-a5d3-cab3cf432999",
+            "name": "Expiration",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/natural_safeguards3.png",
+              "title": "Expiration",
+              "notes": "Expiration is also a natural bound. Like radioactive items, incredibly dangerous but by their very nature they get weaker over time. We CAN let AI expire. Don't build it to last. We can always rebuild it if needed, and probably better than before.",
+              "source_url": ""
+            }
+          }
+        ]
+      },
+      {
+        "id": "76789c91-22ae-5808-a151-2e87a880e607",
+        "name": "low-tech",
+        "title": "low-tech",
+        "weight": 50,
+        "description": "Remember my other maxim, A Backup Plan for Everything. Well, keep low-tech around. Because if AI fails, every other high-tech system will be unreliable. Only the ancient technology will be resistant.",
+        "content": [
+          {
+            "id": "d1d48f27-20dc-594b-b857-8d15dd388bfe",
+            "name": "Classic Cars",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/land-rover.png",
+              "title": "Classic Cars",
+              "notes": "",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "a1f0251a-dda6-5051-877b-3d2875381604",
+            "name": "Legacy Data Formats",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/nuclear-tapes.png",
+              "title": "Legacy Data Formats",
+              "notes": "",
+              "source_url": "https://www.zmescience.com/research/technology/floppy-disks-nuclear-arsenal/",
+              "extra": {
+                "image_only": true
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "210d25c5-8b72-5de1-ac30-d8c3ed351377",
+        "name": "kung-fu",
+        "title": "kung-fu",
+        "weight": 50,
+        "description": "Finally, and this is no joke, Kung-fu, not just the martial art but the spirit to do good, that is tantamount to my principle of Loose Coupling --- AI may fail in a million ways, but you keep the core goal of doing good, and being efficient, that will smooth over any hiccups in development.",
+        "content": [
+          {
+            "id": "00adbc20-7c28-55ac-82f2-7993973e7351",
+            "name": "Efficient and Responsible Motion",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/kung_fu.png",
+              "title": "Efficient and Responsible Motion",
+              "notes": "",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "438ceee1-f4f7-52da-a6f6-f96f06a3cebf",
+            "name": "Doing Good Work",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/kung_fu2.png",
+              "title": "Doing Good Work",
+              "notes": "",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "3c2152ff-5d11-516a-afd6-5a5565e9a222",
+            "name": "Work with your Environment",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/kung_fu3.png",
+              "title": "Work with your Environment",
+              "notes": "",
+              "source_url": ""
+            }
+          }
+        ]
+      },
+      {
+        "id": "d1977633-0041-564b-9bfa-c13e01b1ff44",
+        "name": "communication",
+        "title": "communication",
+        "weight": 50,
+        "description": "Next we have to pay careful attention to how we communicate. Because let's not forget communication is central to humanity's progress throughout the millenia, from the spoken word, to the invention of writing, telegraph, telephone, and internet. We are a species that massively benefits from sharing ideas, and conversely atropies when we can't. But in the AI age we need to safeguard Privacy, Security, and Integrity. ",
+        "content": [
+          {
+            "id": "399f1aa9-8b9a-52d3-8dd1-d65495d5d26b",
+            "name": "Internet",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/communication.png",
+              "title": "Internet",
+              "notes": "",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "9d61ac59-75ac-5a43-a874-9bc95cd14f25",
+            "name": "Phone",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/communication2.png",
+              "title": "Phone",
+              "notes": "",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "20eb4fd5-b641-5101-828c-cd003d5a793c",
+            "name": "Radio",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/communication3.png",
+              "title": "Radio",
+              "notes": "",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "2dce9e37-0e85-5148-91f8-090a65ba0a76",
+            "name": "Telegraph",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/communication4.png",
+              "title": "Telegraph",
+              "notes": "",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "00d8f7b2-46c9-5900-8133-583180026705",
+            "name": "Voice",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/communication5.png",
+              "title": "Voice",
+              "notes": "",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "5f106b76-cf5e-52be-a9ce-b7a3bdaed39e",
+            "name": "Smoke Signals",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/communication6.png",
+              "title": "Smoke Signals",
+              "notes": "",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "84086779-e5cf-5f17-b079-442c33e571ae",
+            "name": "Carrier Pigeons",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/communication7.png",
+              "title": "Carrier Pigeons",
+              "notes": "",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "f4b6f53e-ee3f-5c70-857e-b62727fac311",
+            "name": "Papyrus",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/communication8.png",
+              "title": "Papyrus",
+              "notes": "",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "aa192e39-1c71-5925-b63a-c7c019e4e66e",
+            "name": "Stone Tablets",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/communication9.png",
+              "title": "Stone Tablets",
+              "notes": "",
+              "source_url": ""
+            }
+          }
+        ]
+      },
+      {
+        "id": "44f25a52-a9b1-5077-9499-be8401272e34",
+        "name": "Privacy",
+        "title": "Privacy",
+        "weight": 30,
+        "description": "Privacy is paramount in my mind -- historically we have safeguarded intellectual property from other humans, with a legal system to uphold that, but who's going to defend us if critical information is leaked to AI? Chances are that would lead to immediate loss of privacy with no one held accountable, at best, and at worst it could enable AI to monitor us and optimize its own survival over ours. Aside from low-tech solutions we mentioned earlier (like passing hand-written notes), do we also have technological solutions? ",
+        "content": [
+          {
+            "id": "73cdbd01-8139-5410-b41a-dd5569cd0998",
+            "name": "Quantum Repoire",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/qr.png",
+              "title": "Quantum Repoire",
+              "notes": "Well here's one at least I've developed, which was originally meant as a privacy-preserving social network among humans, but now I think it may be highly applicable to the problem we have at hand, namely how can humans communicate amongst themselves without including the eyes and ears of AI.",
+              "source_url": "https://quantumrepoire.com/"
+            }
+          },
+          {
+            "id": "f07201bd-81f6-561f-9bb9-301571ab8870",
+            "name": "Haven",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/haven.png",
+              "title": "Haven — Self-host a private blog instead of using Facebook",
+              "notes": "And here's another type of solution developed by my friend and fellow PCI colleague, Matt Wise. Which is to say you completely decouple from something like FB managing your content visibility.\n\n• Haven is an open-source, self-hosted blog designed as a private alternative to platforms like Facebook. It allows sharing posts and photos with a select group of invited peers, rather than the general public.\n\n • Complete User Control: Complete control of content, data, and access. There are no mechanism for ads, user tracking, or censorship of content. \n\n • Invite-Only Access: The platform is inherently private and secure. There is no public directory or search function; users must be directly invited for access. \n\n • Built-in Personal Feed: Haven includes a reader that allows creation of a curated feed of other websites and other Havens, free from algorithms and advertisements. \n\n • Aligned incentives: The user controls the platform. There are no vectors for misaligned incentives between the user and service-provider (eg. Facebook/Tiktok engagement-hacking)",
+              "source_url": "https://havenweb.org/",
+              "extra": {
+                "image_only": true
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "02779720-a2a6-5974-ae95-c90433f71dc5",
+        "name": "Security",
+        "title": "Security",
+        "weight": 30,
+        "description": "",
+        "content": [
+          {
+            "id": "88d346eb-a4e1-548e-ae59-6ce28108ea55",
+            "name": "Security",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/security.png",
+              "title": "Security",
+              "notes": "",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "a1b4aac7-c597-5493-a2e5-ac365d57784b",
+            "name": "Encryption",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/security2.png",
+              "title": "Encryption",
+              "notes": "",
+              "source_url": ""
+            }
+          }
+        ]
+      },
+      {
+        "id": "0c37a981-9e72-5359-acb4-f4bd63f57c3d",
+        "name": "Integrity",
+        "title": "Integrity",
+        "weight": 30,
+        "description": "",
+        "content": [
+          {
+            "id": "f00ede9f-8939-5ca5-b640-2016647b64f6",
+            "name": "How do we know it's Human?",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/integrity.png",
+              "title": "How do we know it's Human?",
+              "notes": "",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "2ef475ef-331c-5cd4-9003-007190d8ade8",
+            "name": "Data Integrity",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/integrity2.png",
+              "title": "Data Integrity",
+              "notes": "",
+              "source_url": ""
+            }
+          }
+        ]
+      },
+      {
+        "id": "6fe8b5b6-9c56-55fe-abb2-4d3674a917fc",
+        "name": "P2P",
+        "title": "P2P",
+        "weight": 30,
+        "description": "Another aspect of communication I want to stress is moving away from centralized compute. P2P is a trend which has been gaining speed in recent years, as we find monolithic datacenters are becoming harder to pay for and also provide single points of failure. P2P avoid those problems and we see signs that, for example SLMs are just as good or better than LLMs on benchmarks, and especially with cost factored in. There are many exciting directions in P2P which are proving themselves quite worthy.",
+        "content": [
+          {
+            "id": "087275cd-3de4-5f8b-8e21-04255b6361bb",
+            "name": "Peer to Peer (P2P) Networks",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/P2P.png",
+              "title": "Peer to Peer (P2P) Networks — moving away from centralized servers",
+              "notes": "Problems with Centralized Compute: \n Expensive \n Vulnerable \n Despotic",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "4604ae42-94ff-5264-8838-aaa7b106bcf9",
+            "name": "Small Language Models",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/SLM.png",
+              "title": "Small Language Models — the many small beat the few large",
+              "notes": "",
+              "source_url": "https://arxiv.org/pdf/2506.02153",
+              "extra": {
+                "image_only": true
+              }
+            }
+          },
+          {
+            "id": "823c6447-4282-5ed5-a6d6-03a120acd8d7",
+            "name": "Pending Energy Crisis",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/datacenters.png",
+              "title": "Pending Energy Crisis",
+              "notes": "",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "1d8fdb99-8a76-5b05-8371-1e347c671d69",
+            "name": "Catastrophe Theory",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/catastrophe.png",
+              "title": "Catastrophe Theory",
+              "notes": "Large central systems are single points of failure",
+              "source_url": ""
+            }
+          }
+        ]
+      },
+      {
+        "id": "6c60565b-8277-571d-9217-9fc2fd8a304b",
+        "name": "Virtual Currency",
+        "title": "Virtual Currency",
+        "weight": 5,
+        "description": "",
+        "content": [
+          {
+            "id": "bd93d8e9-e087-5e3e-bc53-6e337a2e6099",
+            "name": "Bitcoin",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/bitcoin.png",
+              "title": "Bitcoin — The most popular Blockchain",
+              "notes": "Name crypto currency. The epitome of P2P supporting a global structure.",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "580ee554-e729-5091-bab7-f26666eac770",
+            "name": "Ethereum",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/ethereum.png",
+              "title": "Ethereum — Smart Contracts",
+              "notes": "",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "946cf059-5358-56ed-8f91-99f99e13d7d5",
+            "name": "Blockchatin",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/blockchain.png",
+              "title": "Blockchatin — Essential Technology",
+              "notes": "",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "689d8f06-970d-5300-8af3-d44ef38c5de5",
+            "name": "Space-Friendly Currency",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/marsmoney.png",
+              "title": "Space-Friendly Currency — how else are you going to send cash to Mars?",
+              "notes": "",
+              "source_url": ""
+            }
+          }
+        ]
+      },
+      {
+        "id": "c2d2de6c-5c4a-5f21-b669-1a8c5e121caa",
+        "name": "Distributed Compute",
+        "title": "Distributed Compute",
+        "weight": 5,
+        "description": "And with Distributed Computation, you have the classical example of the SETI project, where everyone's home computer can help find extraterrestrial Life. But it may not be the wisest thing.  You have of course Distributed Storage which has been around a while, but oh how crucial it is! And Federated Learning is making headwinds, for example NVIDIA's Flare library. ",
+        "content": [
+          {
+            "id": "f71fe4ed-9dcf-50d8-9ce3-55d2a2466311",
+            "name": "Federated Learning",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/federated.png",
+              "title": "Federated Learning",
+              "notes": "Financial Institutions / Credit Card Companies like this \n\n e.g. NVIDIA FLARE",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "3fdd238c-27e1-5ffc-b1dc-3f5632e018b9",
+            "name": "Distributed Data",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/distributed.png",
+              "title": "Distributed Data",
+              "notes": "",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "00a2c0df-cb4c-54cd-8150-716a9b1c02ae",
+            "name": "SETI",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/seti.png",
+              "title": "SETI — (the canonical example of Crowd Compute)",
+              "notes": "But probably best to turn it off!",
+              "source_url": ""
+            }
+          }
+        ]
+      },
+      {
+        "id": "ef1796a7-36c4-5699-bffc-fea80f2b4677",
+        "name": "Digital Democracy",
+        "title": "Digital Democracy",
+        "weight": 3,
+        "description": "And don't forget, the Internet was probably the first P2P egalatarian network, nobody denies it is a great thing. And we all have smartphones and this is really the Edge Compute revolution. Of course there is always some doubt whether Pure Democracy is really stable on huge scales (in fact the Greeks probably never imagined it going beyond 500-people communities), and would be shocked that the US still functions.",
+        "content": [
+          {
+            "id": "ffffe376-9c51-5656-86b1-5b537acdbeae",
+            "name": "The Internet",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/internet.png",
+              "title": "The Internet — (aspired to be digitally democratic)",
+              "notes": "Anyone can make and serve a website \n DNS is centralized \n ISPs are centralized \n Cloud providers are centralized",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "fc644137-a748-5d11-bddf-b0560972bcc7",
+            "name": "Edge Compute",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/smartphones.png",
+              "title": "Edge Compute — We are all carrying supercomputers in our pockets",
+              "notes": "",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "4d63dd49-d0fa-595d-ab9e-7b10a75cef9c",
+            "name": "Is Pure Democracy really the best system?",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/democracy.png",
+              "title": "Is Pure Democracy really the best system? — (we like to think so)",
+              "notes": "A lot of totalitarianism lately \n Oligarchy is a natural attractor \n Republic is a compromise",
+              "source_url": ""
+            }
+          }
+        ]
+      },
+      {
+        "id": "07c16444-63c7-5d8a-95f9-fe71434105f7",
+        "name": "New Methods from AI",
+        "title": "New Methods from AI",
+        "weight": 10,
+        "description": "Finally, don't forget that AI itself may give us new ways to communicate. This presentation for example.",
+        "content": [
+          {
+            "id": "060371e2-9dab-58ac-98f5-5531b3a88749",
+            "name": "New Methosd from AI",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/ai_comm_methods.png",
+              "title": "New Methosd from AI — Can AI Make us better communicators?",
+              "notes": "AI can give us new variations on present methods \n (see Interpolation disussion above)",
+              "source_url": ""
+            }
+          }
+        ]
+      },
+      {
+        "id": "093864ec-ff90-5729-9046-e7ee773206f5",
+        "name": "This Talk",
+        "title": "This Talk",
+        "weight": 5,
+        "description": "",
+        "content": [
+          {
+            "id": "9035d3d0-391b-54aa-9c68-224012a31ebf",
+            "name": "Lovable",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/Lovable.png",
+              "title": "Lovable",
+              "notes": "• A platform for webapp development \n • Powered by LLMs \n • Generates code from natural language \n • Commits to GitHub automatically \n • Makes web development accessible to everyone",
+              "source_url": "https://lovable.dev/",
+              "extra": {
+                "image_only": true
+              }
+            }
+          },
+          {
+            "id": "c66a230a-0dd6-5694-ad26-3a7e968eef87",
+            "name": "GitHub Copilot",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/githubcopilot.png",
+              "title": "GitHub Copilot — (AI generation is not the panacea we thought)",
+              "notes": "• Human needs to get involved with the code \n • Lovable is not perfect \n • Some things easier to do by hand (save credits!) \n • Interpolation limit encountered quickly \n • 'Cmon, Try Harder!''",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "5931fbcc-abad-5d36-b3fa-9052f7f370fe",
+            "name": "Knowledge Tree",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/KnowledgeTree.png",
+              "title": "Knowledge Tree",
+              "notes": "• Thought starts out as a structured graph \n • Put talk in structured JSON \n • DIY from scratch, or ... \n • AI can do this for you from prose text!",
+              "source_url": ""
+            }
+          }
+        ]
+      },
+      {
+        "id": "c7888197-7471-52e6-b656-3f823133fff4",
+        "name": "Human Industry",
+        "title": "Human Industry",
+        "weight": 50,
+        "description": "Now getting on to the last part of my proposal: Human Industry",
+        "content": [
+          {
+            "id": "a6ff1f92-46a8-5d0a-9f43-d3b9807f3a98",
+            "name": "What We Do",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/human_industry.png",
+              "title": "What We Do",
+              "notes": "I think everyone wants their job, or what they do in society, to be like this: meaningful, healthful, useful to everyone else, and fun.\n\nElevating, meaningful work \n Healthful work \n Necessary Work \n Sometimes just Fun work",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "30a94543-6ea6-56e5-8c1a-e2af5fecb691",
+            "name": "How We Do it",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/human_industry2.png",
+              "title": "How We Do it",
+              "notes": "And I think everyone prefers to work together rather than against one another (what I call bosonic versus the fermionic 0-sum game\n\nWorking bosonically (not fermionically) \n Degree of Selflessness",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "04d19e47-1805-51bb-8cfe-908b250e1f82",
+            "name": "We already know this",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/human_industry3.png",
+              "title": "We already know this",
+              "notes": "And I think most religions and belief systems have these tenets in there, so hopefully we can agree on that.\n\nMost belief systems of the world have these ideas at their core",
+              "source_url": ""
+            }
+          }
+        ]
+      },
+      {
+        "id": "6793f791-88bc-5a0a-bbba-10581005d2bf",
+        "name": "Humane => Progress",
+        "title": "Humane => Progress",
+        "weight": 50,
+        "description": "Now requiring our activity be Human is also something of a Tautology --- if it weren't, if we treated ourselves like these prisoners all the time, and trashed our environment everywhere so we lived in filth, obviously that's not human and no one is going to tolerate that. But it's best to recognize it before it happens, and prevent it. Like you recognize the stove is hot before putting your hand on it.",
+        "content": [
+          {
+            "id": "2f8722c9-f8e3-5e76-b0b3-00d4d9cc5211",
+            "name": "The Tautology",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/tautology.png",
+              "title": "The Tautology — if it wasn't humane, it would kill us!",
+              "notes": "",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "28003b5f-8916-5819-82d0-ffd39df96af7",
+            "name": "We can do better than this",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/inhumane1.png",
+              "title": "We can do better than this",
+              "notes": "(no one will tolerate this for long)",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "70015840-e193-5a03-ab55-019c3da50482",
+            "name": "Pollution = Inhumane",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/inhumane2.png",
+              "title": "Pollution = Inhumane",
+              "notes": "",
+              "source_url": ""
+            }
+          }
+        ]
+      },
+      {
+        "id": "29bd6fa7-2a39-53a9-ab6b-3c8e418ec385",
+        "name": "Variety",
+        "title": "Variety",
+        "weight": 20,
+        "description": "Now, Human activity isn't just blind altruism. We like Variety. In fact we NEED this to function, I believe. So what is Variety and how do we recognize it?",
+        "content": [
+          {
+            "id": "924b2f3d-587e-53fc-aff8-faba01b3ef10",
+            "name": "Variety's the (very) Spice of Life",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/variety.png",
+              "title": "Variety's the (very) Spice of Life — (That gives it all its flavour)",
+              "notes": "⦿  Leibniz (recall your calculus?): the best world is the one that yields the greatest variety of phenomena governed by the simplest set of laws \n\n ⦿  Physicists Julian Barbour and Lee Smolin pursued this idea to derive fundamental physics (like gravity and quantum mechanics).",
+              "source_url": "https://medium.com/@1054h34/identifying-chatgpt-with-variety-ce392b09e38e",
+              "extra": {
+                "image_only": true
+              }
+            }
+          },
+          {
+            "id": "50a9594e-8ca2-55ad-a3d8-60c2b03d286a",
+            "name": "Don't Spend Too Much Energy",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/energy.png",
+              "title": "Don't Spend Too Much Energy",
+              "notes": "Now in the course of my exploration I found it useful to define Energy. This isn't quite the physical energy we learn in physics, though it is motivated by it. For example, looking at these two musical compositions, it is apparent that Beethoven's notes move around a lot less than the AI-generated music. It has less Energy. How do we quantify that? ... so we see that Fur Elise has less energy, but a higher V/E. This pattern seems to be repeated across various human-generated vs. AI-generated media, for example text, and images. My hypothesis, therefore, is that V/E is a measure of humanity, because we're good at it. So, what are we going to do with that?",
+              "source_url": "https://medium.com/@1054h34/identifying-ai-content-with-variety-128b4c728724",
+              "extra": {
+                "image_only": true
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "27c75eda-4e46-589d-8bae-74f610b1f6ac",
+        "name": "Art",
+        "title": "Art",
+        "weight": 30,
+        "description": "For one thing, Art. Now, I wrote a short treatise on what is Art, Science, and Math. Because they're all related. Art is arbitrariness. The Mona Lisa is Art becuase you can change her a little bit and it is still acceptable. Math is the opposite. You can't change the Pythagorean Theorem, not one iota. And Science is the process of Art becoming Math. If you haven't read Robert Persig's book, a classic, well it's similarly confirming this: Art is anything you put your mind to that has space to explore; and that's why we have so many title like 'zen and the art of xyz'. ",
+        "content": [
+          {
+            "id": "6cde6852-9de8-5d64-bce2-030c77830ac5",
+            "name": "Can Anything Be Art?",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/motorcycle.png",
+              "title": "Can Anything Be Art? — (read this book)",
+              "notes": "• Compare Author's take on motorcyle maintence to his friend's \n\n • Also many good notes on how to Write (and Think)",
+              "source_url": "",
+              "extra": {
+                "image_only": true
+              }
+            }
+          },
+          {
+            "id": "1ba79db4-3530-58e5-b803-7fac8ffc3e46",
+            "name": "What is Art",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/mona-lisa.png",
+              "title": "What is Art — Arbitrary Creation",
+              "notes": "• Is it Art? Only if it's ambiguous! \n\n • e.g. reduce Mona Lisa to a mathematical formula -> no longer art",
+              "source_url": "https://medium.com/@1054h34/defining-art-and-science-for-ai-ad32b789fa1e",
+              "extra": {
+                "image_only": true
+              }
+            }
+          },
+          {
+            "id": "8ba69f38-661d-50e7-84ec-1b841d79105f",
+            "name": "What is Science?",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/science.png",
+              "title": "What is Science?",
+              "notes": "Science is the process of Art becoming Mathematics",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "84e5aadc-9cd4-5c33-b2f8-aa49049da126",
+            "name": "What is Math?",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/math.png",
+              "title": "What is Math?",
+              "notes": "Mathematics is zero-ambiguity Universal Truth.",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "5b07d603-53ab-5df1-8393-01990a711908",
+            "name": "Why are Humans best fit for this?",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/human-art.png",
+              "title": "Why are Humans best fit for this? — (we are quite random and noisy)",
+              "notes": "Now why are humans always going to be better than machines at Art? First of all, we are very random, messy biological computer-animals. No metallic computer can compete with that degree of ambiguity. And we  have finite lifespans and a tradition of passing on knowledge to our offspring --- every generation has a different zeitgeist, and thus the pool of social beliefs keeps churning and spewing out new things. Computers can also beget other computers but there is a priori no limit to their lifespans, so they stagnate. This is actually also Asimov's argument why humans are so good at taking over the galaxy versus other lifeforms with long stable lives and few offspring.\n\nAsimov's argument: our short lifespans and decent reproductive ratio",
+              "source_url": ""
+            }
+          }
+        ]
+      },
+      {
+        "id": "e8f475f4-1e60-5701-9b74-5a70b85fa50a",
+        "name": "Music",
+        "title": "Music",
+        "weight": 20,
+        "description": "",
+        "content": [
+          {
+            "id": "bdf10c77-d3f4-53c7-8cc2-578f73a77a1e",
+            "name": "Classical Music",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/classical.png",
+              "title": "Classical Music",
+              "notes": "",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "73108ccc-cebf-52aa-8c43-46c4877cddb7",
+            "name": "Jazz",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/jazz.png",
+              "title": "Jazz",
+              "notes": "",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "f5cd6811-6fab-5394-a837-03c7033d5787",
+            "name": "Rock",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/rock.png",
+              "title": "Rock",
+              "notes": "",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "a971eeb4-45fe-5bde-b44a-c99e0032f474",
+            "name": "Pop",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/pop.png",
+              "title": "Pop",
+              "notes": "",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "81b214b7-cc87-51ff-b6c5-362fd9b08289",
+            "name": "Hip Hop",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/hip-hop.png",
+              "title": "Hip Hop",
+              "notes": "",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "add707dd-5fe9-5569-a25c-aa11d35907a7",
+            "name": "Experimental Music",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/experimental-music.png",
+              "title": "Experimental Music",
+              "notes": "",
+              "source_url": ""
+            }
+          }
+        ]
+      },
+      {
+        "id": "b40cf44b-bdf0-5509-bf71-3a032d644649",
+        "name": "Literature",
+        "title": "Literature",
+        "weight": 20,
+        "description": "",
+        "content": [
+          {
+            "id": "59d4dbc4-e21e-5a4f-8a6a-99ce3aeef999",
+            "name": "Poetry",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/poetry.png",
+              "title": "Poetry",
+              "notes": "",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "4cd5e4b1-dffd-5b9e-bc3e-b5141b3fbf71",
+            "name": "Fiction",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/fiction.png",
+              "title": "Fiction",
+              "notes": "",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "0d62b95e-155b-5fbc-b0ab-399904c62537",
+            "name": "Non-Fiction",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/non-fiction.png",
+              "title": "Non-Fiction",
+              "notes": "",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "b70765a9-64fc-50ec-8bc2-52bb84892296",
+            "name": "Drama",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/drama.png",
+              "title": "Drama",
+              "notes": "",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "897d8a82-6951-5437-9dc6-ea87f255e373",
+            "name": "Experimental Music",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/experimental-lit.png",
+              "title": "Experimental Music",
+              "notes": "",
+              "source_url": ""
+            }
+          }
+        ]
+      },
+      {
+        "id": "aa97afb0-4b69-58f3-8fdb-05e3020cff66",
+        "name": "Visual Arts",
+        "title": "Visual Arts",
+        "weight": 20,
+        "description": "",
+        "content": [
+          {
+            "id": "21d9e2f3-b8f5-52c1-97cf-965df31a8c95",
+            "name": "Painting",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/painting.png",
+              "title": "Painting",
+              "notes": "",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "60d93aa4-823c-55ea-aa4e-f0cfc92a9093",
+            "name": "Sculpture",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/sculpture.png",
+              "title": "Sculpture",
+              "notes": "",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "6a430b1b-8019-54eb-888b-32d569ca078b",
+            "name": "Photography",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/photography.png",
+              "title": "Photography",
+              "notes": "",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "c3105931-67ea-5e6b-8f44-d42abfda46a7",
+            "name": "Digital Art",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/digital-art.png",
+              "title": "Digital Art",
+              "notes": "",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "a58d6bb4-f278-5e03-aa1b-319b8bf1a6f3",
+            "name": "Street Art",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/street-art.png",
+              "title": "Street Art",
+              "notes": "",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "aba6d402-01cd-507e-86c8-0f3687e31c42",
+            "name": "Experimental Visual",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/experimental-visual.png",
+              "title": "Experimental Visual",
+              "notes": "",
+              "source_url": ""
+            }
+          }
+        ]
+      },
+      {
+        "id": "c3be617b-ed81-5da4-98b2-f219e10aff6a",
+        "name": "Performing Arts",
+        "title": "Performing Arts",
+        "weight": 20,
+        "description": "",
+        "content": [
+          {
+            "id": "97942966-4860-5228-a585-ce0549971073",
+            "name": "Theatre",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/theater.png",
+              "title": "Theatre",
+              "notes": "",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "b2f4781a-98cc-555a-a657-e7c9292484cf",
+            "name": "Dance",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/dance.png",
+              "title": "Dance",
+              "notes": "",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "bc5cff02-4cdd-53a0-87ce-a2e20b69c009",
+            "name": "Magic",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/magic.png",
+              "title": "Magic",
+              "notes": "",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "95807dc6-890b-5c07-8e9e-8078e6c2bd38",
+            "name": "Vaudeville",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/vaudeville.png",
+              "title": "Vaudeville",
+              "notes": "",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "d323d16a-dda8-5d2b-809e-de5970eaf4e9",
+            "name": "Martial Arts",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/martial-arts.png",
+              "title": "Martial Arts",
+              "notes": "",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "6e3fadba-5c9f-5b3e-9d21-012300a642a2",
+            "name": "Experimental Performance",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/experimental-performance.png",
+              "title": "Experimental Performance",
+              "notes": "",
+              "source_url": ""
+            }
+          }
+        ]
+      },
+      {
+        "id": "999a556e-90a9-5d33-8025-8153ea9af50f",
+        "name": "Infinite Arts",
+        "title": "Infinite Arts",
+        "weight": 20,
+        "description": "",
+        "content": [
+          {
+            "id": "9f537800-4499-5f90-a50b-2e382443f40c",
+            "name": "Fermionic Matter",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/fermions.png",
+              "title": "Fermionic Matter",
+              "notes": "",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "1edd72f7-4590-5212-ae8c-9e3bd416ffb2",
+            "name": "Bosonic Matter",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/bosons.png",
+              "title": "Bosonic Matter",
+              "notes": "Elementary (e.g., Higgs) \n Composite (e.g., Pion)",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "bc6551a4-0dd9-5d9f-81cb-5a32aab80f88",
+            "name": "Other Stuff?",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/undiscovered.png",
+              "title": "Other Stuff?",
+              "notes": "Dark Matter \n Dark Energy \n Exotic Matter \n etc.",
+              "source_url": ""
+            }
+          }
+        ]
+      },
+      {
+        "id": "a4bc60a9-c605-55fa-b467-f5296de4ca31",
+        "name": "Art is Satisfying",
+        "title": "Art is Satisfying",
+        "weight": 20,
+        "description": "But basically, you know Art is satisfying. Who ever has regrets about visiting an Art gallery or attending a concert? Chances are it opened up your mind to new avenues. And I think this is about freedom, to show you are not just an algorithm in a machine, you have to try something new.",
+        "content": [
+          {
+            "id": "6a0307b2-a1bc-50ef-9881-55ae2899af98",
+            "name": "Is it all about Freedom?",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/freedom.png",
+              "title": "Is it all about Freedom?",
+              "notes": "Prove your freedom -> Try something new",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "2ba7d20e-3ce4-5991-be6d-4f35b003020d",
+            "name": "Art Galleries",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/gallery.png",
+              "title": "Art Galleries",
+              "notes": "",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "59d13adc-a14a-54e3-9681-2cb2ed0722e9",
+            "name": "Concerts",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/concert.png",
+              "title": "Concerts",
+              "notes": "",
+              "source_url": ""
+            }
+          }
+        ]
+      },
+      {
+        "id": "b8f17ad6-7aa5-530e-9fad-bdd9ded9d6c0",
+        "name": "Disruption",
+        "title": "Disruption",
+        "weight": 20,
+        "description": "Now finally, aside from Art, what are Humans good at? Well, messing things up. Disruption. It's not as negative as you think. In fact since Darwin's time I think we've accepted that evolution requires disruption of the genome. Interestingly, it was also discovered not too long ago that Neural Nets require disruption (in the form of DropOut) to trian efficiently.",
+        "content": [
+          {
+            "id": "f5ae8478-639d-5557-bd94-2f96650a9aa1",
+            "name": "What is Disruption",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/disruption.png",
+              "title": "What is Disruption — Arbitrary Destruction",
+              "notes": "Can't really pin down a definition, because that is the core of disruption itself! \n Revolution \n Counter-culture \n The Unpalatable Valley",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "b2858cd7-0d91-5e8c-a9b7-bec2a6b3a924",
+            "name": "Why do we need disruption?",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/need-for-disruption.png",
+              "title": "Why do we need disruption? — (no one really understands the universe)",
+              "notes": "Realization of early 21st century in business/economics \n Evolution requires some disruption or mutation \n Machines / AI by itself does not have enough (we hope)",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "64c6f133-7937-543e-81c3-942253798d3e",
+            "name": "Dropping Out",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/dropout.png",
+              "title": "Dropping Out — (not just for high school)",
+              "notes": "It was discovered early on that Neural Nets with drop-out perform better \n Drop-out is a form of regularization \n It is a form of noise \n Noise is good for us",
+              "source_url": ""
+            }
+          },
+          {
+            "id": "f193b0ef-47a7-505e-ba29-a46e3196da09",
+            "name": "Why are Humans best fit for this?",
+            "weight": 1,
+            "type": "",
+            "properties": {
+              "icon": "/INFORMS/human-disruption.png",
+              "title": "Why are Humans best fit for this? — (we are quite random and noisy)",
+              "notes": "So again, this is something privvy to our Human Legacy. We are random. We are emotional, We like to muck things up. No computer program is ever going to compete with that. So it is our advantage and we should leverage that in the coming tech revolution. As a result, you know I highly support counter-culture movements and anything against-the-grain as long as it is done safely, of course. Worried about losing your job? Find something artful and disruptive --- guaranteed you will form a long career!\n\nAsimov's argument: our short lifespans and decent reproductive ratio \n We get bored with regularity (Variety is the Spice of Life) \n We are naturally curious \n But not too much (we have some need for safety and self-preservation)",
+              "source_url": ""
+            }
+          }
+        ]
+      }
+    ],
+    "edges": {
+      "d4f03c26-4dce-547c-8ba1-8ed9dcef24f8": {
+        "8c791489-2b81-529c-b47d-735f13dcee76": {
+          "weight": 1
+        },
+        "0ee5096d-fca5-5db4-9d65-87bf1113189e": {
+          "weight": 1
+        },
+        "76c09942-48e0-5e30-8204-2b8878f242ea": {
+          "weight": 1
+        },
+        "04edcbf2-4965-5ae6-b341-e8c0c0de4995": {
+          "weight": 1
+        },
+        "94175908-3000-55b6-947c-b00a02695169": {
+          "weight": 1
+        }
+      },
+      "04edcbf2-4965-5ae6-b341-e8c0c0de4995": {
+        "e0d399fb-122f-5e83-9c90-cb940530d251": {
+          "weight": 1
+        },
+        "7f834a3c-40ed-5350-8968-3ecace770491": {
+          "weight": 1
+        },
+        "a3e3c838-5873-5855-8b74-1b855a809189": {
+          "weight": 1
+        },
+        "73a791ba-c64b-5759-acf3-fa91803bfbe9": {
+          "weight": 1
+        },
+        "ba9e709c-5521-5893-bd6e-d64a7774442c": {
+          "weight": 1
+        }
+      },
+      "e0d399fb-122f-5e83-9c90-cb940530d251": {
+        "3969fd3c-2b5f-5755-b59c-9cf95e8c11ed": {
+          "weight": 1
+        },
+        "691eb1a7-39e6-5461-bfac-1dd53698ef1b": {
+          "weight": 1
+        }
+      },
+      "7f834a3c-40ed-5350-8968-3ecace770491": {
+        "d6010587-84f6-5d13-82eb-e7cd1b4201d5": {
+          "weight": 1
+        },
+        "53626116-39de-563c-8bba-eb72519cb064": {
+          "weight": 1
+        }
+      },
+      "ba9e709c-5521-5893-bd6e-d64a7774442c": {
+        "aaa98146-2a1f-5caa-9506-a0a51c4a8662": {
+          "weight": 1
+        },
+        "a0dd1f86-eee2-5ff7-ab1b-d9f13b3e18fe": {
+          "weight": 1
+        },
+        "dc6c12c6-9a34-5b8a-a671-7289db2416fc": {
+          "weight": 1
+        },
+        "6881e8fc-ab58-5f21-a7fa-f5879c3c064d": {
+          "weight": 1
+        },
+        "054c5077-4141-53b1-860c-c6176c4bcce4": {
+          "weight": 1
+        }
+      },
+      "aaa98146-2a1f-5caa-9506-a0a51c4a8662": {
+        "ead196d9-897e-5c19-af86-fdeee8285f33": {
+          "weight": 1
+        },
+        "e57b9216-4c5a-5749-990a-1c80c0467d07": {
+          "weight": 1
+        },
+        "bcc533fa-ac7b-568f-97d7-89098f26b380": {
+          "weight": 1
+        }
+      },
+      "bcc533fa-ac7b-568f-97d7-89098f26b380": {
+        "db1a95be-3d59-5868-aa09-26312f2b1735": {
+          "weight": 1
+        },
+        "628a2777-4f65-5616-98e1-c244ee2a2063": {
+          "weight": 1
+        },
+        "aa92c14c-768f-517f-b64f-b637b81c9c78": {
+          "weight": 1
+        },
+        "2f8d9db8-134f-5eec-a164-d9964a787069": {
+          "weight": 1
+        },
+        "83aa560e-2eeb-5d98-9486-8220053a157c": {
+          "weight": 1
+        },
+        "bbd24471-109d-562f-832f-fe1370e6a90f": {
+          "weight": 1
+        },
+        "883754c1-853f-59f8-ae1d-a9fa64e4fe32": {
+          "weight": 1
+        },
+        "30568896-1c0b-5787-b887-ce13fec10eb6": {
+          "weight": 1
+        }
+      },
+      "628a2777-4f65-5616-98e1-c244ee2a2063": {
+        "e05f0575-13fe-54f4-b064-9b567ba5ed9a": {
+          "weight": 1
+        },
+        "e4974d9d-37c6-5169-beb6-e1a4a445cffa": {
+          "weight": 1
+        }
+      },
+      "aa92c14c-768f-517f-b64f-b637b81c9c78": {
+        "469e9dd4-6a8a-5bac-8a0e-b86ce983efc9": {
+          "weight": 1
+        },
+        "98948e6e-2c80-5631-b694-7646abe2e687": {
+          "weight": 1
+        }
+      },
+      "2f8d9db8-134f-5eec-a164-d9964a787069": {
+        "def2daf6-35f0-564c-a1b0-1aaf03fe132e": {
+          "weight": 1
+        }
+      },
+      "dc6c12c6-9a34-5b8a-a671-7289db2416fc": {
+        "786256bb-e897-5013-8af0-4393f652043f": {
+          "weight": 1
+        },
+        "6a2ce80e-7b3a-5de9-830d-5675291a7425": {
+          "weight": 1
+        }
+      },
+      "6a2ce80e-7b3a-5de9-830d-5675291a7425": {
+        "8d1bef83-c497-5028-97b2-a61f0a4e2ddf": {
+          "weight": 1
+        },
+        "06f81e76-d7eb-5e25-9d1d-8e3da65762a7": {
+          "weight": 1
+        }
+      },
+      "94175908-3000-55b6-947c-b00a02695169": {
+        "c81dada8-11fb-58f1-a827-fd345c441399": {
+          "weight": 1
+        },
+        "76789c91-22ae-5808-a151-2e87a880e607": {
+          "weight": 1
+        },
+        "210d25c5-8b72-5de1-ac30-d8c3ed351377": {
+          "weight": 1
+        },
+        "d1977633-0041-564b-9bfa-c13e01b1ff44": {
+          "weight": 1
+        },
+        "c7888197-7471-52e6-b656-3f823133fff4": {
+          "weight": 1
+        }
+      },
+      "d1977633-0041-564b-9bfa-c13e01b1ff44": {
+        "44f25a52-a9b1-5077-9499-be8401272e34": {
+          "weight": 1
+        },
+        "02779720-a2a6-5974-ae95-c90433f71dc5": {
+          "weight": 1
+        },
+        "0c37a981-9e72-5359-acb4-f4bd63f57c3d": {
+          "weight": 1
+        },
+        "6fe8b5b6-9c56-55fe-abb2-4d3674a917fc": {
+          "weight": 1
+        },
+        "07c16444-63c7-5d8a-95f9-fe71434105f7": {
+          "weight": 1
+        }
+      },
+      "6fe8b5b6-9c56-55fe-abb2-4d3674a917fc": {
+        "6c60565b-8277-571d-9217-9fc2fd8a304b": {
+          "weight": 1
+        },
+        "c2d2de6c-5c4a-5f21-b669-1a8c5e121caa": {
+          "weight": 1
+        },
+        "ef1796a7-36c4-5699-bffc-fea80f2b4677": {
+          "weight": 1
+        }
+      },
+      "07c16444-63c7-5d8a-95f9-fe71434105f7": {
+        "093864ec-ff90-5729-9046-e7ee773206f5": {
+          "weight": 1
+        }
+      },
+      "c7888197-7471-52e6-b656-3f823133fff4": {
+        "6793f791-88bc-5a0a-bbba-10581005d2bf": {
+          "weight": 1
+        },
+        "29bd6fa7-2a39-53a9-ab6b-3c8e418ec385": {
+          "weight": 1
+        },
+        "27c75eda-4e46-589d-8bae-74f610b1f6ac": {
+          "weight": 1
+        },
+        "b8f17ad6-7aa5-530e-9fad-bdd9ded9d6c0": {
+          "weight": 1
+        }
+      },
+      "27c75eda-4e46-589d-8bae-74f610b1f6ac": {
+        "e8f475f4-1e60-5701-9b74-5a70b85fa50a": {
+          "weight": 1
+        },
+        "b40cf44b-bdf0-5509-bf71-3a032d644649": {
+          "weight": 1
+        },
+        "aa97afb0-4b69-58f3-8fdb-05e3020cff66": {
+          "weight": 1
+        },
+        "c3be617b-ed81-5da4-98b2-f219e10aff6a": {
+          "weight": 1
+        },
+        "999a556e-90a9-5d33-8025-8153ea9af50f": {
+          "weight": 1
+        },
+        "a4bc60a9-c605-55fa-b467-f5296de4ca31": {
+          "weight": 1
+        }
+      }
+    }
+  },
+  "extensions": {
+    "rendererSpecificProperties": {}
+  }
+}
